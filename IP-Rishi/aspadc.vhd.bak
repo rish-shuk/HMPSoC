@@ -1,0 +1,109 @@
+
+library ieee;
+library altera_mf;
+library work;
+
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+use altera_mf.all;
+
+--use work.TdmaMinTypes.all;
+use work.macros.all;
+
+entity aspadc is
+    port(
+        clock               : in std_logic;
+        reset               : in std_logic;
+
+        adc_data_request    : in std_logic;
+        adc_data_ready      : out std_logic;
+        adc_data            : out std_logic_vector((data_width-1) downto 0);
+
+        --recv                : in  tdma_min_port;
+        --send                : out tdma_min_port
+    );
+end entity aspadc;
+
+architecture behaviour of aspadc is
+
+    COMPONENT altsyncram
+	GENERIC (
+		clock_enable_input_a		: STRING;
+		clock_enable_output_a		: STRING;
+		init_file		            : STRING;
+		intended_device_family		: STRING;
+		lpm_hint		            : STRING;
+		lpm_type		            : STRING;
+		numwords_a		            : NATURAL;
+		operation_mode		        : STRING;
+		outdata_aclr_a		        : STRING;
+		outdata_reg_a		        : STRING;
+		ram_block_type		        : STRING;
+		widthad_a		            : NATURAL;
+		width_a		                : NATURAL;
+		width_byteena_a		        : NATURAL
+	);
+	PORT(
+		address_a	: in std_logic_vector (11 downto 0);
+		clock0	    : in std_logic;
+		q_a	        : out std_logic_vector(11 downto 0)
+	);
+	END COMPONENT;
+
+    signal address              : std_logic_vector(11 downto 0) := (others => '0');
+    signal data                 : std_logic_vector(11 downto 0) := (others => '0');
+    signal sampling_counter     : std_logic_vector(13 downto 0) := (others => '0');
+    signal clock_n              : std_logic := '1';
+
+begin
+    clock_n <= not clock;
+
+    altsyncram_component : altsyncram
+	GENERIC MAP (
+		clock_enable_input_a    => "BYPASS",
+		clock_enable_output_a   => "BYPASS",
+		init_file               => "/signal_8bit.mif",
+		intended_device_family  => "Cyclone V",
+		lpm_hint                => "ENABLE_RUNTIME_MOD=NO",
+		lpm_type                => "altsyncram",
+		numwords_a              => 1600,
+		operation_mode          => "ROM",
+		outdata_aclr_a          => "NONE",
+		outdata_reg_a           => "UNREGISTERED",
+		ram_block_type          => "M4K",
+		widthad_a               => 12,
+		width_a                 => 12,
+		width_byteena_a         => 1
+	)
+	PORT MAP (
+		address_a => address,
+		clock0 => clock_n,
+		q_a => data
+	);
+
+    process(clock, reset)
+    begin 
+
+        if reset = '1' then
+                address <= (others => '0');
+                sampling_counter <= (others => '0');
+        elsif rising_edge(clock) then
+            sampling_counter <= sampling_counter + conv_std_logic_vector(1, 14);
+            if sampling_counter = conv_std_logic_vector(sampling_delay - 1, 14) then
+                sampling_counter <= (others => '0');
+                address <= address + conv_std_logic_vector(1, data_width);
+                if address = conv_std_logic_vector(1599, data_width) then
+                    address <= (others => '0');
+                end if;
+            end if;
+        end if;
+
+    end process;
+    adc_data <= data when adc_data_request = '1' else (others => '0');
+    adc_data_ready <= '1' when adc_data_request = '1' else '0';
+
+   
+end architecture behaviour;

@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity testadc is
+end testadc;
+
+architecture behaviour of testadc is
+
+    -- Constants
+    constant clock_period : time := 10 ns;  -- 100 MHz clock
+    constant sampling_delay : integer := 6251;
+
+    -- Signals
+    signal clock : std_logic := '0';
+    signal reset : std_logic := '0';
+    signal adc_data_request : std_logic := '0';
+    signal adc_data_ready : std_logic;
+    signal adc_data : std_logic_vector(11 downto 0); -- 12 bits for data
+
+begin
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: entity work.aspadc
+        port map (
+            clock => clock,
+            reset => reset,
+            adc_data_request => adc_data_request,
+            adc_data_ready => adc_data_ready,
+            adc_data => adc_data
+        );
+
+    -- Clock generation
+    clock_process : process
+    begin
+        clock <= '0';
+        wait for clock_period / 2;
+        clock <= '1';
+        wait for clock_period / 2;
+    end process;
+
+    -- Stimulus process
+    stimulus: process
+    begin
+        -- Initial reset
+        reset <= '1';
+        wait for 100 ns;
+        reset <= '0';
+        
+        -- Wait for some time and then start requesting data
+        wait for 100 ns;
+        adc_data_request <= '1';
+        
+        -- Wait for a few sampling delays
+        wait for (sampling_delay * clock_period);
+        
+        -- Stop requesting data
+        adc_data_request <= '0';
+        
+        -- End simulation
+        wait for 200 ns;
+        assert false report "Simulation Ended" severity note;
+        wait;
+    end process;
+
+end architecture behaviour;
