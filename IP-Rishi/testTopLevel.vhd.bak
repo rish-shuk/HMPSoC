@@ -54,7 +54,7 @@ begin
         clock => clock,
         send => send_port(1),
         recv => recv_port(1)
-    );
+    )
     
         recv_port(0).data <= "0001" & "0000" & "0000" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns;
         reset             <= '0' after 15 ns;

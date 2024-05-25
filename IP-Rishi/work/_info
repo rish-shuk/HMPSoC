@@ -71,9 +71,9 @@ VoIBfFZdn0RL`Smb9Fm4433
 !s100 GIHH^FY1f?<mnH@ijQXeE3
 R11
 32
-Z21 !s110 1716677435
+Z21 !s110 1716678620
 !i10b 1
-Z22 !s108 1716677435.000000
+Z22 !s108 1716678620.000000
 Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 !i113 1
@@ -679,7 +679,7 @@ R118
 R16
 R17
 Etesttoplevel
-Z119 w1716677695
+Z119 w1716678707
 R2
 R105
 R5
@@ -694,9 +694,9 @@ V[edIg>Akkz<65;zU]6JR52
 !s100 NaTgHonWVnY3<B;gCo3Rd2
 R11
 32
-Z122 !s110 1716677735
+Z122 !s110 1716678710
 !i10b 1
-Z123 !s108 1716677735.000000
+Z123 !s108 1716678710.000000
 Z124 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/testTopLevel.vhd|
 Z125 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/testTopLevel.vhd|
 !i113 1
@@ -709,10 +709,10 @@ R5
 R6
 R7
 Z126 DEx4 work 12 testtoplevel 0 22 [edIg>Akkz<65;zU]6JR52
-l34
+l41
 L12
-Z127 VFZa^O]KSEX?Jjg^ZJBdG=0
-Z128 !s100 Yb87A=7H^31ONFD15d4982
+V91PX_n=FG1PO8ol:;2OOb3
+!s100 =SRBT@oeRCKHjjfQ5PKNH1
 R11
 32
 R122
@@ -728,19 +728,19 @@ R49
 R6
 R5
 R8
-Z129 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht
-Z130 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht
+Z127 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht
+Z128 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht
 l0
 L31
 VZFX7iJ9`9Pe`gDWF>U67Y2
 !s100 ]gV]>YLEnW<G7=30zdUPO1
 R11
 32
-Z131 !s110 1716677348
+Z129 !s110 1716677348
 !i10b 1
-Z132 !s108 1716677348.000000
-Z133 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht|
-Z134 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht|
+Z130 !s108 1716677348.000000
+Z131 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht|
+Z132 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/simulation/modelsim/ADCWaveform.vwf.vht|
 !i113 1
 R16
 R17
@@ -754,11 +754,11 @@ V4O_Tc]_L;5@DO52CTEWbB3
 !s100 346[FUzDIMG[RI@o^8WGI1
 R11
 32
-R131
+R129
 !i10b 1
+R130
+R131
 R132
-R133
-R134
 !i113 1
 R16
 R17
