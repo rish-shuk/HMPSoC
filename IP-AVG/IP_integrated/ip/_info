@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701
+Eaudioclock
+Z1 w1716273704
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/AudioClock.vhd
+Z6 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/AudioClock.vhd
+l0
+L9
+VkzoJMBWcUGM2eh[;E[``62
+!s100 ?]V=nD1YN]MfnMQ9ZF@XP2
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1716339082
+!i10b 1
+Z9 !s108 1716339082.000000
+Z10 !s90 -reportprogress|300|-work|ip|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/AudioClock.vhd|
+Z11 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/AudioClock.vhd|
+!i113 1
+Z12 o-work ip
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 10 audioclock 0 22 kzoJMBWcUGM2eh[;E[``62
+l28
+L18
+Z15 VTT8^>j6AMdSm2OoX>2Q7Z2
+Z16 !s100 gEa:]G7l6k;X7AW=Y70TR0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eaudiofifo
+Z17 w1716273705
+R3
+R4
+R0
+Z18 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+Z19 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+l0
+L43
+Vn<oY7jX2iioBb_f`1Sk=h3
+!s100 hzfBADS2jz8efhYoW2WSO2
+R7
+32
+Z20 !s110 1716339070
+!i10b 1
+Z21 !s108 1716339070.000000
+Z22 !s90 -reportprogress|300|-work|ip|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+Z23 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 9 audiofifo 0 22 n<oY7jX2iioBb_f`1Sk=h3
+l92
+L58
+V;;f?j_F^>FE>C;iXEiJWa1
+!s100 DFEC5]6nd;^@Gjg`?;L]o3
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R12
+R13
+Eaudiorom
+R17
+Z24 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R3
+R4
+R0
+Z25 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+Z26 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+l0
+L43
+V<Wz:iS]d9WK4[noB^R;bB1
+!s100 `zhij<A8?O;TTj8[PRKke3
+R7
+32
+Z27 !s110 1716339074
+!i10b 1
+Z28 !s108 1716339074.000000
+Z29 !s90 -reportprogress|300|-work|ip|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+Z30 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+!i113 1
+R12
+R13
+Asyn
+R24
+R3
+R4
+DEx4 work 8 audiorom 0 22 <Wz:iS]d9WK4[noB^R;bB1
+l57
+L53
+VnYKF[0eJz?03ZPDo;`YK;0
+!s100 >haM?bMIA8m3IF:F1EmdN1
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Etdmaminfifo
+R17
+R3
+R4
+R0
+Z31 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z32 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+l0
+L43
+V3RgC52PX=;I71WkR@A_7C2
+!s100 8FemG`GCM5dSE;ZO1MWzf2
+R7
+32
+Z33 !s110 1716339078
+!i10b 1
+Z34 !s108 1716339078.000000
+Z35 !s90 -reportprogress|300|-work|ip|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z36 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 11 tdmaminfifo 0 22 3RgC52PX=;I71WkR@A_7C2
+l89
+L57
+Vl4Xf]Yi04HB0O7;Gm>kA]3
+!s100 nV:U_b?O:ZbYEG97<H`3G1
+R7
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R12
+R13
