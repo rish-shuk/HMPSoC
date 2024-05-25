@@ -77,6 +77,6 @@ print('First few samples (10-bit):', signal_10bit[:10])
 print('First few samples (12-bit):', signal_12bit[:10])
 
 # Write the data to .mif files
-write_mif_file('signal_8bit.mif', signal_8bit, 8)
-write_mif_file('signal_10bit.mif', signal_10bit, 10)
-write_mif_file('signal_12bit.mif', signal_12bit, 12)
+write_mif_file('input-generator/signal_8bit.mif', signal_8bit, 8)
+write_mif_file('input-generator/signal_10bit.mif', signal_10bit, 10)
+write_mif_file('input-generator/signal_12bit.mif', signal_12bit, 12)
