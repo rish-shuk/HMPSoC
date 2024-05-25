@@ -40,7 +40,7 @@ begin
         recv => recv_port(0)
 
     );
-        recv_port(0).data <= "0001" & "0000" & "0000" & "0000" & "0000" & "0000" & "0000" & "0001" after 20 ns;
+        recv_port(0).data <= "0001" & "0000" & "0000" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns;
         reset             <= '0' after 15 ns;
         clock             <= not  clock after 5 ns;
 end architecture;
