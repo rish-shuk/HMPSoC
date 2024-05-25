@@ -64,7 +64,7 @@ begin
 	GENERIC MAP (
 		clock_enable_input_a    => "BYPASS",
 		clock_enable_output_a   => "BYPASS",
-		init_file               => "signal_8bit.mif",
+		init_file               => "input-generator/signal_8bit.mif",
 		intended_device_family  => "Cyclone V",
 		lpm_hint                => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type                => "altsyncram",
@@ -105,7 +105,7 @@ begin
 	begin
 		if rising_edge(clock) then
 			if (recv.data(31 downto 28) = "0001") then 	-- if config message is received
-				addr   <= recv.data(23 downto 20);		-- Address to where to port
+				addr   <= recv.data(23 downto 20);		-- Address to where to port, should be defaulted to port 1 addr <= "0001"
 				data_bit <= recv.data(2 downto 0);		-- Data-bit configuration
 				data_request <= recv.data(3);
 			end if;	
@@ -125,11 +125,13 @@ begin
 					when others =>data_width := 12;
 				end case;
 				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
-				send.addr <= "0000" & addr;
+				-- send.addr <= "0000" & addr;
+				send.addr <= x"01"; -- for testing, send to avg in port 1
 				send.data <= "1000000000000000" & data_to_send(15 downto 0);
 				adc_data_ready <= '1';
 			else
-				send.addr <= "0000" & addr;
+				-- send.addr <= "0000" & addr;
+				send.addr <= x"01"; -- for testing, send to avg in port 1
 				send.data <= (others => '0');
 				adc_data_ready <= '0';
 			end if;
