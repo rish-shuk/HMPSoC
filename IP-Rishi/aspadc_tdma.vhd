@@ -85,6 +85,8 @@ begin
 
 	-- To access ROM
     process(clock, reset)
+	variable data_width :integer;
+	variable data_to_send : std_logic_vector(15 downto 0) := (others => '0');
     begin 
         if (reset = '1') then
         elsif rising_edge(clock) then
@@ -95,9 +97,22 @@ begin
                 if (rom_address = conv_std_logic_vector(1600, 12)) then
                     rom_address <= conv_std_logic_vector(0, 12);
                 end if;
-				data_request <= '1';
-			else 
-				data_request <= '0';
+
+				case data_bit is
+					when "001" => data_width := 8;
+					when "010" => data_width := 10;
+					when "011" => data_width := 12;
+					when others =>data_width := 12;
+				end case;
+				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
+				send.addr <= "0000" & addr;	
+				send.data <= "1000000000000000" & data_to_send(15 downto 0);
+				adc_data_ready <= '1';
+			else
+				send.addr <= "0000" & addr;
+					-- send.addr <= "0000" & "0001";
+					send.data <= (others => '0');
+					adc_data_ready <= '0';
             end if;
         end if;
 
@@ -115,30 +130,30 @@ begin
 		end if;
 	end process;
 
-	process(clock)
-		variable data_width :integer;
-		variable data_to_send : std_logic_vector(15 downto 0) := (others => '0');
-	begin
-		if rising_edge(clock) then
-			if data_request = '1' then
-				case data_bit is
-					when "001" => data_width := 8;
-					when "010" => data_width := 10;
-					when "011" => data_width := 12;
-					when others =>data_width := 12;
-				end case;
-				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
-				send.addr <= "0000" & addr;	
-				-- send.addr <= "0000" & "0001";
-				send.data <= "1000000000000000" & data_to_send(15 downto 0);
-				adc_data_ready <= '1';
-			else
-				send.addr <= "0000" & addr;
-				-- send.addr <= "0000" & "0001";
-				send.data <= (others => '0');
-				adc_data_ready <= '0';
-			end if;
-		end if;
-	end process;
+	-- process(clock)
+	-- 	variable data_width :integer;
+	-- 	variable data_to_send : std_logic_vector(15 downto 0) := (others => '0');
+	-- begin
+	-- 	if rising_edge(clock) then
+	-- 		if data_request = '1' then
+	-- 			case data_bit is
+	-- 				when "001" => data_width := 8;
+	-- 				when "010" => data_width := 10;
+	-- 				when "011" => data_width := 12;
+	-- 				when others =>data_width := 12;
+	-- 			end case;
+	-- 			data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
+	-- 			send.addr <= "0000" & addr;	
+	-- 			-- send.addr <= "0000" & "0001";
+	-- 			send.data <= "1000000000000000" & data_to_send(15 downto 0);
+	-- 			adc_data_ready <= '1';
+	-- 		else
+	-- 			send.addr <= "0000" & addr;
+	-- 			-- send.addr <= "0000" & "0001";
+	-- 			send.data <= (others => '0');
+	-- 			adc_data_ready <= '0';
+	-- 		end if;
+	-- 	end if;
+	-- end process;
    
 end architecture behaviour;
