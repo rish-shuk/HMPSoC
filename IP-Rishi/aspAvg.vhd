@@ -65,6 +65,7 @@ begin
 
     -- Calculate average
     avg <= resize(sum /  to_signed(WINDOWSIZE, 32), 16);
-    send.data <= "0100000000000000" & std_logic_vector(avg);
+    send.data <= "1000000000000000" & std_logic_vector(avg);
+    send.addr <= x"02"; -- send to autocorrelator in port 2
 
 end sim;

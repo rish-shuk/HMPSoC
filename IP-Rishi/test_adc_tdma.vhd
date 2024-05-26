@@ -7,6 +7,9 @@ use work.macros.all;
 use work.TdmaMinTypes.all;
 
 entity test_adc_tdma is
+    generic (
+		ports : positive := 3
+	);
 end entity;
 
 architecture sim of test_adc_tdma is
@@ -15,8 +18,9 @@ architecture sim of test_adc_tdma is
 
     	signal adc_data_ready : std_logic := '0';
 
-   	    signal send_port  : tdma_min_ports(0 to 8);
-	    signal recv_port  : tdma_min_ports(0 to 8);
+   	    signal send_port  : tdma_min_ports(0 to 2);
+	    signal recv_port  : tdma_min_ports(0 to 2);
+
 
     component aspadc is
         port (
@@ -38,16 +42,18 @@ architecture sim of test_adc_tdma is
         );
     end component;
 
-    -- component aspamp is
-    --     port (
-    --         clock : in std_logic;
-    --         send : out tdma_min_port;
-    --         recv : in tdma_min_port
-    --     );
-    -- end component;
-
-
 begin
+
+    tdma_min : entity work.TdmaMin
+	generic map (
+		ports => ports
+	)
+	port map (
+		clock => clock,
+		sends => send_port,
+		recvs => recv_port
+	);
+
     asp_adc : aspadc port map(
         clock   => clock,
         reset   => reset,
@@ -65,12 +71,7 @@ begin
         recv => recv_port(1)
     );
 
-    -- asp_amp : aspAmp port map(
-    --     clock => clock,
-    --     send => send_port(1),
-    --     recv => recv_port(1)
-    -- );
-
+        recv_port(0).addr <= x"00";
         recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns; -- config packet
         reset             <= '0' after 15 ns;
         clock             <= not  clock after 5 ns;
