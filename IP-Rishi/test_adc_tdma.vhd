@@ -18,7 +18,7 @@ architecture sim of test_adc_tdma is
    	    signal send_port  : tdma_min_ports(0 to 8);
 	    signal recv_port  : tdma_min_ports(0 to 8);
 
-    component aspadc_tdma is
+    component aspadc is
         port (
             	clock               : in std_logic;
             	reset               : in std_logic;
@@ -40,7 +40,7 @@ architecture sim of test_adc_tdma is
 
 
 begin
-    asp_adc : aspadc_tdma port map(
+    asp_adc : aspadc port map(
         clock   => clock,
         reset   => reset,
 
@@ -57,7 +57,7 @@ begin
         recv => recv_port(1)
     );
 
-        recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns;
+        recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns; -- config packet
         reset             <= '0' after 15 ns;
         clock             <= not  clock after 5 ns;
 end architecture;

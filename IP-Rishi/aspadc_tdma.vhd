@@ -52,7 +52,7 @@ architecture behaviour of AspAdc is
     signal data                 : std_logic_vector(11 downto 0) := (others => '0');
     signal sampling_counter     : std_logic_vector(13 downto 0) := (others => '0');
     signal clock_a              : std_logic := '1';
-	signal addr 				: std_logic_vector(3 downto 0) := "0010";
+	signal addr 				: std_logic_vector(3 downto 0) := "0001";
 	signal data_bit 			: std_logic_vector(2 downto 0) := (others => '0');
 	signal data_request 		: std_logic := '0';
 
@@ -126,10 +126,12 @@ begin
 				end case;
 				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
 				send.addr <= "0000" & addr;
+				-- send.addr <= "0000" & "0001";
 				send.data <= "1000000000000000" & data_to_send(15 downto 0);
 				adc_data_ready <= '1';
 			else
 				send.addr <= "0000" & addr;
+				-- send.addr <= "0000" & "0001";
 				send.data <= (others => '0');
 				adc_data_ready <= '0';
 			end if;
