@@ -1,7 +1,3 @@
-
-/HMPSOC/db
-/HMPSOC/incremental_db
-*.flock
 # Working with Altera Quartus II (Q2) and do proper versioning is not that easy
 # but if you follow some rules it can be accomplished. :)
 # This file should be placed into the main directory where the .qpf file is
@@ -71,3 +67,4 @@ incremental_db/
 db/
 _output_files/
 PLLJ_PLLSPE_INFO.txt
+IP-Rishi/wlftg5qq24
