@@ -10,7 +10,6 @@ use ieee.std_logic_unsigned.all;
 
 use altera_mf.all;
 
---use work.TdmaMinTypes.all;
 use work.macros.all;
 
 entity aspadc is
@@ -20,10 +19,8 @@ entity aspadc is
 
         adc_data_request    : in std_logic;
         adc_data_ready      : out std_logic;
-        adc_data            : out std_logic_vector((data_width-1) downto 0);
+        adc_data            : out std_logic_vector(11 downto 0)
 
-        --recv                : in  tdma_min_port;
-        --send                : out tdma_min_port
     );
 end entity aspadc;
 
@@ -64,7 +61,7 @@ begin
 	GENERIC MAP (
 		clock_enable_input_a    => "BYPASS",
 		clock_enable_output_a   => "BYPASS",
-		init_file               => "signal_8bit.mif",
+		init_file               => "input-generator/signal_8bit.mif",
 		intended_device_family  => "Cyclone V",
 		lpm_hint                => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type                => "altsyncram",
@@ -86,8 +83,6 @@ begin
     begin 
 
         if (reset = '1') then
-                --rom_address <= (others => '0');
-                --sampling_counter <= (others => '0');
 
         elsif rising_edge(clock) then
             sampling_counter <= sampling_counter + conv_std_logic_vector(1, 14);

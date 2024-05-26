@@ -1,0 +1,514 @@
+/*
+ * system.h - SOPC Builder system and BSP software package information
+ *
+ * Machine generated for CPU 'cpu' in SOPC Builder design 'NOC'
+ * SOPC Builder design path: ../../NOC.sopcinfo
+ *
+ * Generated: Wed May 01 12:52:10 NZST 2024
+ */
+
+/*
+ * DO NOT MODIFY THIS FILE
+ *
+ * Changing this file will have subtle consequences
+ * which will almost certainly lead to a nonfunctioning
+ * system. If you do modify this file, be aware that your
+ * changes will be overwritten and lost when this file
+ * is generated again.
+ *
+ * DO NOT MODIFY THIS FILE
+ */
+
+/*
+ * License Agreement
+ *
+ * Copyright (c) 2008
+ * Altera Corporation, San Jose, California, USA.
+ * All rights reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+ *
+ * This agreement shall be governed in all respects by the laws of the State
+ * of California and by the laws of the United States of America.
+ */
+
+#ifndef __SYSTEM_H_
+#define __SYSTEM_H_
+
+/* Include definitions from linker script generator */
+#include "linker.h"
+
+
+/*
+ * CPU configuration
+ *
+ */
+
+#define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
+#define ALT_CPU_BIG_ENDIAN 0
+#define ALT_CPU_BREAK_ADDR 0x00008820
+#define ALT_CPU_CPU_ARCH_NIOS2_R1
+#define ALT_CPU_CPU_FREQ 50000000u
+#define ALT_CPU_CPU_ID_SIZE 1
+#define ALT_CPU_CPU_ID_VALUE 0x00000001
+#define ALT_CPU_CPU_IMPLEMENTATION "fast"
+#define ALT_CPU_DATA_ADDR_WIDTH 0x10
+#define ALT_CPU_DCACHE_BYPASS_MASK 0x80000000
+#define ALT_CPU_DCACHE_LINE_SIZE 32
+#define ALT_CPU_DCACHE_LINE_SIZE_LOG2 5
+#define ALT_CPU_DCACHE_SIZE 4096
+#define ALT_CPU_EXCEPTION_ADDR 0x00000020
+#define ALT_CPU_FLASH_ACCELERATOR_LINES 0
+#define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
+#define ALT_CPU_FLUSHDA_SUPPORTED
+#define ALT_CPU_FREQ 50000000
+#define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
+#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 1
+#define ALT_CPU_HARDWARE_MULX_PRESENT 0
+#define ALT_CPU_HAS_DEBUG_CORE 1
+#define ALT_CPU_HAS_DEBUG_STUB
+#define ALT_CPU_HAS_EXTRA_EXCEPTION_INFO
+#define ALT_CPU_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define ALT_CPU_HAS_JMPI_INSTRUCTION
+#define ALT_CPU_ICACHE_LINE_SIZE 32
+#define ALT_CPU_ICACHE_LINE_SIZE_LOG2 5
+#define ALT_CPU_ICACHE_SIZE 1024
+#define ALT_CPU_INITDA_SUPPORTED
+#define ALT_CPU_INST_ADDR_WIDTH 0x10
+#define ALT_CPU_NAME "cpu"
+#define ALT_CPU_NUM_OF_SHADOW_REG_SETS 0
+#define ALT_CPU_OCI_VERSION 1
+#define ALT_CPU_RESET_ADDR 0x00000000
+
+
+/*
+ * CPU configuration (with legacy prefix - don't use these anymore)
+ *
+ */
+
+#define NIOS2_BIG_ENDIAN 0
+#define NIOS2_BREAK_ADDR 0x00008820
+#define NIOS2_CPU_ARCH_NIOS2_R1
+#define NIOS2_CPU_FREQ 50000000u
+#define NIOS2_CPU_ID_SIZE 1
+#define NIOS2_CPU_ID_VALUE 0x00000001
+#define NIOS2_CPU_IMPLEMENTATION "fast"
+#define NIOS2_DATA_ADDR_WIDTH 0x10
+#define NIOS2_DCACHE_BYPASS_MASK 0x80000000
+#define NIOS2_DCACHE_LINE_SIZE 32
+#define NIOS2_DCACHE_LINE_SIZE_LOG2 5
+#define NIOS2_DCACHE_SIZE 4096
+#define NIOS2_EXCEPTION_ADDR 0x00000020
+#define NIOS2_FLASH_ACCELERATOR_LINES 0
+#define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
+#define NIOS2_FLUSHDA_SUPPORTED
+#define NIOS2_HARDWARE_DIVIDE_PRESENT 0
+#define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
+#define NIOS2_HARDWARE_MULX_PRESENT 0
+#define NIOS2_HAS_DEBUG_CORE 1
+#define NIOS2_HAS_DEBUG_STUB
+#define NIOS2_HAS_EXTRA_EXCEPTION_INFO
+#define NIOS2_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define NIOS2_HAS_JMPI_INSTRUCTION
+#define NIOS2_ICACHE_LINE_SIZE 32
+#define NIOS2_ICACHE_LINE_SIZE_LOG2 5
+#define NIOS2_ICACHE_SIZE 1024
+#define NIOS2_INITDA_SUPPORTED
+#define NIOS2_INST_ADDR_WIDTH 0x10
+#define NIOS2_NUM_OF_SHADOW_REG_SETS 0
+#define NIOS2_OCI_VERSION 1
+#define NIOS2_RESET_ADDR 0x00000000
+
+
+/*
+ * Define for each module class mastered by the CPU
+ *
+ */
+
+#define __ALTERA_AVALON_ONCHIP_MEMORY2
+#define __ALTERA_AVALON_PIO
+#define __ALTERA_NIOS2_GEN2
+
+
+/*
+ * System configuration
+ *
+ */
+
+#define ALT_DEVICE_FAMILY "Cyclone V"
+#define ALT_IRQ_BASE NULL
+#define ALT_LOG_PORT "/dev/null"
+#define ALT_LOG_PORT_BASE 0x0
+#define ALT_LOG_PORT_DEV null
+#define ALT_LOG_PORT_TYPE ""
+#define ALT_NUM_EXTERNAL_INTERRUPT_CONTROLLERS 0
+#define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
+#define ALT_NUM_INTERRUPT_CONTROLLERS 1
+#define ALT_STDERR "/dev/null"
+#define ALT_STDERR_BASE 0x0
+#define ALT_STDERR_DEV null
+#define ALT_STDERR_TYPE ""
+#define ALT_STDIN "/dev/null"
+#define ALT_STDIN_BASE 0x0
+#define ALT_STDIN_DEV null
+#define ALT_STDIN_TYPE ""
+#define ALT_STDOUT "/dev/null"
+#define ALT_STDOUT_BASE 0x0
+#define ALT_STDOUT_DEV null
+#define ALT_STDOUT_TYPE ""
+#define ALT_SYSTEM_NAME "NOC"
+
+
+/*
+ * addr_pio configuration
+ *
+ */
+
+#define ADDR_PIO_BASE 0x9010
+#define ADDR_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define ADDR_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define ADDR_PIO_CAPTURE 0
+#define ADDR_PIO_DATA_WIDTH 8
+#define ADDR_PIO_DO_TEST_BENCH_WIRING 0
+#define ADDR_PIO_DRIVEN_SIM_VALUE 0
+#define ADDR_PIO_EDGE_TYPE "NONE"
+#define ADDR_PIO_FREQ 50000000
+#define ADDR_PIO_HAS_IN 1
+#define ADDR_PIO_HAS_OUT 1
+#define ADDR_PIO_HAS_TRI 0
+#define ADDR_PIO_IRQ -1
+#define ADDR_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ADDR_PIO_IRQ_TYPE "NONE"
+#define ADDR_PIO_NAME "/dev/addr_pio"
+#define ADDR_PIO_RESET_VALUE 0
+#define ADDR_PIO_SPAN 16
+#define ADDR_PIO_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_addr_pio altera_avalon_pio
+
+
+/*
+ * buttons_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_buttons_pio altera_avalon_pio
+#define BUTTONS_PIO_BASE 0x90a0
+#define BUTTONS_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTONS_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define BUTTONS_PIO_CAPTURE 0
+#define BUTTONS_PIO_DATA_WIDTH 4
+#define BUTTONS_PIO_DO_TEST_BENCH_WIRING 0
+#define BUTTONS_PIO_DRIVEN_SIM_VALUE 0
+#define BUTTONS_PIO_EDGE_TYPE "NONE"
+#define BUTTONS_PIO_FREQ 50000000
+#define BUTTONS_PIO_HAS_IN 1
+#define BUTTONS_PIO_HAS_OUT 0
+#define BUTTONS_PIO_HAS_TRI 0
+#define BUTTONS_PIO_IRQ -1
+#define BUTTONS_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define BUTTONS_PIO_IRQ_TYPE "NONE"
+#define BUTTONS_PIO_NAME "/dev/buttons_pio"
+#define BUTTONS_PIO_RESET_VALUE 0
+#define BUTTONS_PIO_SPAN 16
+#define BUTTONS_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * data_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_data_pio altera_avalon_pio
+#define DATA_PIO_BASE 0x9000
+#define DATA_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DATA_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DATA_PIO_CAPTURE 0
+#define DATA_PIO_DATA_WIDTH 32
+#define DATA_PIO_DO_TEST_BENCH_WIRING 0
+#define DATA_PIO_DRIVEN_SIM_VALUE 0
+#define DATA_PIO_EDGE_TYPE "NONE"
+#define DATA_PIO_FREQ 50000000
+#define DATA_PIO_HAS_IN 1
+#define DATA_PIO_HAS_OUT 1
+#define DATA_PIO_HAS_TRI 0
+#define DATA_PIO_IRQ -1
+#define DATA_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DATA_PIO_IRQ_TYPE "NONE"
+#define DATA_PIO_NAME "/dev/data_pio"
+#define DATA_PIO_RESET_VALUE 0
+#define DATA_PIO_SPAN 16
+#define DATA_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display0_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display0_pio altera_avalon_pio
+#define DISPLAY0_PIO_BASE 0x9070
+#define DISPLAY0_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY0_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY0_PIO_CAPTURE 0
+#define DISPLAY0_PIO_DATA_WIDTH 7
+#define DISPLAY0_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY0_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY0_PIO_EDGE_TYPE "NONE"
+#define DISPLAY0_PIO_FREQ 50000000
+#define DISPLAY0_PIO_HAS_IN 0
+#define DISPLAY0_PIO_HAS_OUT 1
+#define DISPLAY0_PIO_HAS_TRI 0
+#define DISPLAY0_PIO_IRQ -1
+#define DISPLAY0_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY0_PIO_IRQ_TYPE "NONE"
+#define DISPLAY0_PIO_NAME "/dev/display0_pio"
+#define DISPLAY0_PIO_RESET_VALUE 0
+#define DISPLAY0_PIO_SPAN 16
+#define DISPLAY0_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display1_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display1_pio altera_avalon_pio
+#define DISPLAY1_PIO_BASE 0x9060
+#define DISPLAY1_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY1_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY1_PIO_CAPTURE 0
+#define DISPLAY1_PIO_DATA_WIDTH 7
+#define DISPLAY1_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY1_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY1_PIO_EDGE_TYPE "NONE"
+#define DISPLAY1_PIO_FREQ 50000000
+#define DISPLAY1_PIO_HAS_IN 0
+#define DISPLAY1_PIO_HAS_OUT 1
+#define DISPLAY1_PIO_HAS_TRI 0
+#define DISPLAY1_PIO_IRQ -1
+#define DISPLAY1_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY1_PIO_IRQ_TYPE "NONE"
+#define DISPLAY1_PIO_NAME "/dev/display1_pio"
+#define DISPLAY1_PIO_RESET_VALUE 0
+#define DISPLAY1_PIO_SPAN 16
+#define DISPLAY1_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display2_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display2_pio altera_avalon_pio
+#define DISPLAY2_PIO_BASE 0x9050
+#define DISPLAY2_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY2_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY2_PIO_CAPTURE 0
+#define DISPLAY2_PIO_DATA_WIDTH 7
+#define DISPLAY2_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY2_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY2_PIO_EDGE_TYPE "NONE"
+#define DISPLAY2_PIO_FREQ 50000000
+#define DISPLAY2_PIO_HAS_IN 0
+#define DISPLAY2_PIO_HAS_OUT 1
+#define DISPLAY2_PIO_HAS_TRI 0
+#define DISPLAY2_PIO_IRQ -1
+#define DISPLAY2_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY2_PIO_IRQ_TYPE "NONE"
+#define DISPLAY2_PIO_NAME "/dev/display2_pio"
+#define DISPLAY2_PIO_RESET_VALUE 0
+#define DISPLAY2_PIO_SPAN 16
+#define DISPLAY2_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display3_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display3_pio altera_avalon_pio
+#define DISPLAY3_PIO_BASE 0x9040
+#define DISPLAY3_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY3_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY3_PIO_CAPTURE 0
+#define DISPLAY3_PIO_DATA_WIDTH 7
+#define DISPLAY3_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY3_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY3_PIO_EDGE_TYPE "NONE"
+#define DISPLAY3_PIO_FREQ 50000000
+#define DISPLAY3_PIO_HAS_IN 0
+#define DISPLAY3_PIO_HAS_OUT 1
+#define DISPLAY3_PIO_HAS_TRI 0
+#define DISPLAY3_PIO_IRQ -1
+#define DISPLAY3_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY3_PIO_IRQ_TYPE "NONE"
+#define DISPLAY3_PIO_NAME "/dev/display3_pio"
+#define DISPLAY3_PIO_RESET_VALUE 0
+#define DISPLAY3_PIO_SPAN 16
+#define DISPLAY3_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display4_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display4_pio altera_avalon_pio
+#define DISPLAY4_PIO_BASE 0x9030
+#define DISPLAY4_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY4_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY4_PIO_CAPTURE 0
+#define DISPLAY4_PIO_DATA_WIDTH 7
+#define DISPLAY4_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY4_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY4_PIO_EDGE_TYPE "NONE"
+#define DISPLAY4_PIO_FREQ 50000000
+#define DISPLAY4_PIO_HAS_IN 0
+#define DISPLAY4_PIO_HAS_OUT 1
+#define DISPLAY4_PIO_HAS_TRI 0
+#define DISPLAY4_PIO_IRQ -1
+#define DISPLAY4_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY4_PIO_IRQ_TYPE "NONE"
+#define DISPLAY4_PIO_NAME "/dev/display4_pio"
+#define DISPLAY4_PIO_RESET_VALUE 0
+#define DISPLAY4_PIO_SPAN 16
+#define DISPLAY4_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * display5_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_display5_pio altera_avalon_pio
+#define DISPLAY5_PIO_BASE 0x9020
+#define DISPLAY5_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define DISPLAY5_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DISPLAY5_PIO_CAPTURE 0
+#define DISPLAY5_PIO_DATA_WIDTH 7
+#define DISPLAY5_PIO_DO_TEST_BENCH_WIRING 0
+#define DISPLAY5_PIO_DRIVEN_SIM_VALUE 0
+#define DISPLAY5_PIO_EDGE_TYPE "NONE"
+#define DISPLAY5_PIO_FREQ 50000000
+#define DISPLAY5_PIO_HAS_IN 0
+#define DISPLAY5_PIO_HAS_OUT 1
+#define DISPLAY5_PIO_HAS_TRI 0
+#define DISPLAY5_PIO_IRQ -1
+#define DISPLAY5_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DISPLAY5_PIO_IRQ_TYPE "NONE"
+#define DISPLAY5_PIO_NAME "/dev/display5_pio"
+#define DISPLAY5_PIO_RESET_VALUE 0
+#define DISPLAY5_PIO_SPAN 16
+#define DISPLAY5_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * hal configuration
+ *
+ */
+
+#define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
+#define ALT_MAX_FD 32
+#define ALT_SYS_CLK none
+#define ALT_TIMESTAMP_CLK none
+
+
+/*
+ * led_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_led_pio altera_avalon_pio
+#define LED_PIO_BASE 0x9080
+#define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define LED_PIO_CAPTURE 0
+#define LED_PIO_DATA_WIDTH 10
+#define LED_PIO_DO_TEST_BENCH_WIRING 0
+#define LED_PIO_DRIVEN_SIM_VALUE 0
+#define LED_PIO_EDGE_TYPE "NONE"
+#define LED_PIO_FREQ 50000000
+#define LED_PIO_HAS_IN 0
+#define LED_PIO_HAS_OUT 1
+#define LED_PIO_HAS_TRI 0
+#define LED_PIO_IRQ -1
+#define LED_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define LED_PIO_IRQ_TYPE "NONE"
+#define LED_PIO_NAME "/dev/led_pio"
+#define LED_PIO_RESET_VALUE 0
+#define LED_PIO_SPAN 16
+#define LED_PIO_TYPE "altera_avalon_pio"
+
+
+/*
+ * onchip_memory configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_onchip_memory altera_avalon_onchip_memory2
+#define ONCHIP_MEMORY_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
+#define ONCHIP_MEMORY_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
+#define ONCHIP_MEMORY_BASE 0x0
+#define ONCHIP_MEMORY_CONTENTS_INFO ""
+#define ONCHIP_MEMORY_DUAL_PORT 0
+#define ONCHIP_MEMORY_GUI_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY_INIT_CONTENTS_FILE "NOC_onchip_memory"
+#define ONCHIP_MEMORY_INIT_MEM_CONTENT 1
+#define ONCHIP_MEMORY_INSTANCE_ID "NONE"
+#define ONCHIP_MEMORY_IRQ -1
+#define ONCHIP_MEMORY_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ONCHIP_MEMORY_NAME "/dev/onchip_memory"
+#define ONCHIP_MEMORY_NON_DEFAULT_INIT_FILE_ENABLED 0
+#define ONCHIP_MEMORY_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY_READ_DURING_WRITE_MODE "DONT_CARE"
+#define ONCHIP_MEMORY_SINGLE_CLOCK_OP 0
+#define ONCHIP_MEMORY_SIZE_MULTIPLE 1
+#define ONCHIP_MEMORY_SIZE_VALUE 20480
+#define ONCHIP_MEMORY_SPAN 20480
+#define ONCHIP_MEMORY_TYPE "altera_avalon_onchip_memory2"
+#define ONCHIP_MEMORY_WRITABLE 1
+
+
+/*
+ * switches_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_switches_pio altera_avalon_pio
+#define SWITCHES_PIO_BASE 0x9090
+#define SWITCHES_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define SWITCHES_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SWITCHES_PIO_CAPTURE 0
+#define SWITCHES_PIO_DATA_WIDTH 10
+#define SWITCHES_PIO_DO_TEST_BENCH_WIRING 0
+#define SWITCHES_PIO_DRIVEN_SIM_VALUE 0
+#define SWITCHES_PIO_EDGE_TYPE "NONE"
+#define SWITCHES_PIO_FREQ 50000000
+#define SWITCHES_PIO_HAS_IN 1
+#define SWITCHES_PIO_HAS_OUT 0
+#define SWITCHES_PIO_HAS_TRI 0
+#define SWITCHES_PIO_IRQ -1
+#define SWITCHES_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SWITCHES_PIO_IRQ_TYPE "NONE"
+#define SWITCHES_PIO_NAME "/dev/switches_pio"
+#define SWITCHES_PIO_RESET_VALUE 0
+#define SWITCHES_PIO_SPAN 16
+#define SWITCHES_PIO_TYPE "altera_avalon_pio"
+
+#endif /* __SYSTEM_H_ */

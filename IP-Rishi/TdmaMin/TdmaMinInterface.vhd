@@ -2,7 +2,7 @@ library ieee;
 use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
-library ip;
+--library ip;
 
 library work;
 use work.TdmaMinTypes.all;
@@ -41,7 +41,7 @@ begin
 
 	addr <= id xor (id'high downto stages => '0') & slot;
 
-	fifo : entity ip.TdmaMinFifo
+	fifo : entity work.TdmaMinFifo
 	port map (
 		clock => clock,
 		data  => enqu,

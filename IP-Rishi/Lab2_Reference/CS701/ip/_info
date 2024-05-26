@@ -1,0 +1,180 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d//Mac/Home/Documents/Lab2 Reference Design 2024/CS701
+Eaudioclock
+Z1 w1640995200
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd
+Z6 F//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd
+l0
+L9 1
+VkzoJMBWcUGM2eh[;E[``62
+!s100 ?]V=nD1YN]MfnMQ9ZF@XP2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1712275249
+!i10b 1
+Z9 !s108 1712275249.000000
+Z10 !s90 -reportprogress|300|-work|ip|//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd|
+Z11 !s107 //Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd|
+!i113 1
+Z12 o-work ip
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 10 audioclock 0 22 kzoJMBWcUGM2eh[;E[``62
+!i122 2
+l28
+L18 21
+VTT8^>j6AMdSm2OoX>2Q7Z2
+!s100 gEa:]G7l6k;X7AW=Y70TR0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eaudiofifo
+R1
+R3
+R4
+!i122 3
+R0
+Z14 8//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+Z15 F//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+l0
+Z16 L43 1
+Vn<oY7jX2iioBb_f`1Sk=h3
+!s100 hzfBADS2jz8efhYoW2WSO2
+R7
+32
+Z17 !s110 1712275255
+!i10b 1
+Z18 !s108 1712275255.000000
+Z19 !s90 -reportprogress|300|-work|ip|//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+Z20 !s107 //Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 9 audiofifo 0 22 n<oY7jX2iioBb_f`1Sk=h3
+!i122 3
+l92
+L58 67
+V;;f?j_F^>FE>C;iXEiJWa1
+!s100 DFEC5]6nd;^@Gjg`?;L]o3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Eaudiorom
+R1
+Z21 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R3
+R4
+!i122 4
+R0
+Z22 8//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+Z23 F//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+l0
+R16
+V<Wz:iS]d9WK4[noB^R;bB1
+!s100 `zhij<A8?O;TTj8[PRKke3
+R7
+32
+Z24 !s110 1712275265
+!i10b 1
+Z25 !s108 1712275265.000000
+Z26 !s90 -reportprogress|300|-work|ip|//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+Z27 !s107 //Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+!i113 1
+R12
+R13
+Asyn
+R21
+R3
+R4
+DEx4 work 8 audiorom 0 22 <Wz:iS]d9WK4[noB^R;bB1
+!i122 4
+l57
+L53 33
+VnYKF[0eJz?03ZPDo;`YK;0
+!s100 >haM?bMIA8m3IF:F1EmdN1
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Etdmaminfifo
+R1
+R3
+R4
+!i122 5
+R0
+Z28 8//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z29 F//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+l0
+R16
+V3RgC52PX=;I71WkR@A_7C2
+!s100 8FemG`GCM5dSE;ZO1MWzf2
+R7
+32
+Z30 !s110 1712275274
+!i10b 1
+Z31 !s108 1712275274.000000
+Z32 !s90 -reportprogress|300|-work|ip|//Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z33 !s107 //Mac/Home/Documents/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+Z34 DEx4 work 11 tdmaminfifo 0 22 3RgC52PX=;I71WkR@A_7C2
+!i122 5
+l89
+Z35 L57 63
+Z36 Vl4Xf]Yi04HB0O7;Gm>kA]3
+Z37 !s100 nV:U_b?O:ZbYEG97<H`3G1
+R7
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
