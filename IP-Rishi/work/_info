@@ -57,7 +57,7 @@ R15
 R16
 R17
 Easpavg
-Z18 w1716692706
+Z18 w1716711180
 R2
 R5
 R6
@@ -71,9 +71,9 @@ VoIBfFZdn0RL`Smb9Fm4433
 !s100 GIHH^FY1f?<mnH@ijQXeE3
 R11
 32
-Z21 !s110 1716692714
+Z21 !s110 1716711185
 !i10b 1
-Z22 !s108 1716692714.000000
+Z22 !s108 1716711185.000000
 Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 !i113 1
@@ -87,8 +87,8 @@ R7
 DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
 l27
 L16
-VTkI:^ni0DHbkmm0UE;Eo02
-!s100 R1L1f_1iM]eH;ECbIXa7T1
+VhZz[FMH33W`3X4]J2fmd02
+!s100 iU;]ng=?W[P1mhfFBoKN<1
 R11
 32
 R21
@@ -647,9 +647,9 @@ V9`95J;:4n6FGF4@[OJ0O;1
 !s100 1AGj>Rh`XOhZbgf6lf3:c2
 R11
 32
-Z114 !s110 1716692717
+Z114 !s110 1716711188
 !i10b 1
-Z115 !s108 1716692717.000000
+Z115 !s108 1716711188.000000
 Z116 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
 Z117 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
 !i113 1
