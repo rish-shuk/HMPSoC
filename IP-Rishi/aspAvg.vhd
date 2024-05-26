@@ -15,7 +15,7 @@ end entity;
 
 architecture sim of aspAvg is
     constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
-    signal WINDOWSIZE : integer := 64;  -- window size 
+    signal WINDOWSIZE : integer := 16;  -- window size 
     type memory_type is array (0 to MAX_DEPTH-1) of std_logic_vector(15 downto 0);
     signal mem     : memory_type;
     signal count   : integer range 0 to MAX_DEPTH := 0;
@@ -50,7 +50,7 @@ begin
                 else
                     for i in 0 to MAX_DEPTH - 2 loop
                         if i < WINDOWSIZE - 1 then
-                            mem(i) <= mem(i+1); -- shift everything down, fill window
+                            mem(i) <= mem(i+1); -- shift everything down, fill window, remove tail
                         end if;
                     end loop;
 
@@ -62,7 +62,7 @@ begin
                     newData <= '0';
                 end if;
             else
-                data <= x"0000";
+                -- data <= x"0000";
             end if;
         end if;
     end process;

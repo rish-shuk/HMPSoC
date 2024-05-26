@@ -48,7 +48,7 @@ def write_mif_file(filename, signal, n_bits):
 f0 = 50  # Fundamental frequency in Hz
 fs = 16000  # Sampling frequency in Hz
 duration = 5 * (1 / f0)  # Duration for 5 cycles
-snr_db = -10  # Signal-to-Noise Ratio in dB (lowered further to make it even noisier)
+snr_db = 20  # Signal-to-Noise Ratio in dB
 
 # Generate the signal
 t, signal = generate_power_signal(f0, fs, duration, snr_db)
@@ -60,23 +60,23 @@ signal_12bit = quantize_signal(signal, 12)
 
 # Plot the signals
 plt.figure(figsize=(12, 6))
-plt.plot(t, signal, label='Even Noisier Power Signal', alpha=0.5)
+plt.plot(t, signal, label='Noisy Power Signal', alpha=0.5)
 plt.plot(t, signal_8bit, label='8-bit Quantized Signal', alpha=0.7)
 plt.plot(t, signal_10bit, label='10-bit Quantized Signal', alpha=0.7)
 plt.plot(t, signal_12bit, label='12-bit Quantized Signal', alpha=0.7)
-plt.title('Power Signal with Even More Noise and Quantized Versions')
+plt.title('Power Signal with Noise and Quantized Versions')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
 plt.legend()
 plt.grid()
 plt.show()
 
-# Display first few samples for verification
+# Display first few samples for verification    
 print('First few samples (8-bit):', signal_8bit[:10])
 print('First few samples (10-bit):', signal_10bit[:10])
 print('First few samples (12-bit):', signal_12bit[:10])
 
 # Write the data to .mif files
-write_mif_file('input-generator/signal_8bit_noisier.mif', signal_8bit, 8)
-write_mif_file('input-generator/signal_10bit_noisier.mif', signal_10bit, 10)
-write_mif_file('input-generator/signal_12bit_noisier.mif', signal_12bit, 12)
+write_mif_file('input-generator/signal_8bit.mif', signal_8bit, 8)
+write_mif_file('input-generator/signal_10bit.mif', signal_10bit, 10)
+write_mif_file('input-generator/signal_12bit.mif', signal_12bit, 12)

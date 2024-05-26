@@ -50,7 +50,7 @@ architecture behaviour of AspAdc is
 
     signal rom_address          : std_logic_vector(11 downto 0) := (others => '0');
     signal data                 : std_logic_vector(11 downto 0) := (others => '0');
-    signal sampling_counter     : std_logic_vector(13 downto 0) := (others => '0');
+    signal sampling_counter     : std_logic_vector(31 downto 0) := (others => '0');
     signal clock_a              : std_logic := '1';
 	signal addr 				: std_logic_vector(3 downto 0) := "0001";
 	signal data_bit 			: std_logic_vector(2 downto 0) := "011";-- (others => '0'); -- 001 = 8bit, 010 = 10bit, 011 = 12bit
@@ -88,13 +88,16 @@ begin
     begin 
         if (reset = '1') then
         elsif rising_edge(clock) then
-            sampling_counter <= sampling_counter + conv_std_logic_vector(1, 14);
-            if (sampling_counter = conv_std_logic_vector(6249, 14)) then
-                sampling_counter <= conv_std_logic_vector(0, 14);
+            sampling_counter <= sampling_counter + conv_std_logic_vector(1, 32);
+            if (sampling_counter = conv_std_logic_vector(6249, 32)) then -- sampling rate configurable here
+                sampling_counter <= conv_std_logic_vector(0, 32);
                 rom_address <= rom_address + conv_std_logic_vector(1, 12);
                 if (rom_address = conv_std_logic_vector(1600, 12)) then
                     rom_address <= conv_std_logic_vector(0, 12);
                 end if;
+				data_request <= '1';
+			else 
+				data_request <= '0';
             end if;
         end if;
 
@@ -125,7 +128,7 @@ begin
 					when others =>data_width := 12;
 				end case;
 				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0);
-				send.addr <= "0000" & addr;
+				send.addr <= "0000" & addr;	
 				-- send.addr <= "0000" & "0001";
 				send.data <= "1000000000000000" & data_to_send(15 downto 0);
 				adc_data_ready <= '1';
