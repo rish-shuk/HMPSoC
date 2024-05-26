@@ -29,8 +29,18 @@ architecture sim of test_adc_tdma is
 		        recv : in tdma_min_port
         );
     end component;
+
+    component aspAvg is
+        port (
+            clock   : in std_logic;
+            send : out tdma_min_port;
+            recv : in tdma_min_port
+        );
+    end component;
+
+
 begin
-    DUT : aspadc_tdma port map(
+    asp_adc : aspadc_tdma port map(
         clock   => clock,
         reset   => reset,
 
@@ -40,7 +50,14 @@ begin
         recv => recv_port(0)
 
     );
-        recv_port(0).data <= "0001" & "0000" & "0000" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns;
+
+    asp_avg : aspavg port map(
+        clock => clock,
+        send => send_port(1),
+        recv => recv_port(1)
+    );
+
+        recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns;
         reset             <= '0' after 15 ns;
         clock             <= not  clock after 5 ns;
 end architecture;

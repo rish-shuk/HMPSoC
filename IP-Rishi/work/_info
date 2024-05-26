@@ -10,31 +10,31 @@ z2
 cModel Technology
 Z0 dZ:/projects/IP
 Easpadc
-Z1 w1716548580
-Z2 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
+Z1 w1716683726
+Z2 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-!i122 148
+!i122 178
 Z8 dZ:/projects/HMPSoC/IP-Rishi
-Z9 8Z:/projects/HMPSoC/IP-Rishi/aspadc.vhd
-Z10 FZ:/projects/HMPSoC/IP-Rishi/aspadc.vhd
+Z9 8Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd
+Z10 FZ:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd
 l0
-L15 1
-Vj:KF?]I]GVVVL<bN8>BbA2
-!s100 TXcUn@i>CCPOoD;;B?>>f3
-Z11 OV;C;2020.1;71
+Z11 L14 1
+VXk1GMP]J_:MlhM>cb0dJn2
+!s100 H9Ld6_F?<kj1>W;YI6>@c3
+Z12 OV;C;2020.1;71
 32
-Z12 !s110 1716548670
+Z13 !s110 1716683728
 !i10b 1
-Z13 !s108 1716548670.000000
-Z14 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/aspadc.vhd|
-Z15 !s107 Z:/projects/HMPSoC/IP-Rishi/aspadc.vhd|
+Z14 !s108 1716683728.000000
+Z15 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
+Z16 !s107 Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
 !i113 1
-Z16 o-work work
-Z17 tExplicit 1 CvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
 Abehaviour
 R2
 R3
@@ -42,25 +42,25 @@ R4
 R5
 R6
 R7
-DEx4 work 6 aspadc 0 22 j:KF?]I]GVVVL<bN8>BbA2
-!i122 148
-l57
-L27 77
-VhzFG86D6M6>bj;;GhT<gS2
-!s100 5IgVl8HDTX<IklQK3ji]:0
-R11
-32
+DEx4 work 6 aspadc 0 22 Xk1GMP]J_:MlhM>cb0dJn2
+!i122 178
+l60
+Z19 L25 115
+V>8od=iSb^JZRSMWXY_Z5I1
+!s100 <T4FWcPa;?^3ZlhlXFS]K0
 R12
-!i10b 1
+32
 R13
+!i10b 1
 R14
 R15
-!i113 1
 R16
+!i113 1
 R17
+R18
 Easpadc_tdma
-Z18 w1716611386
-Z19 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
+Z20 w1716611386
+R2
 R3
 R4
 R5
@@ -68,24 +68,24 @@ R6
 R7
 !i122 169
 R8
-Z20 8Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd
-Z21 FZ:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd
+R9
+R10
 l0
-L14 1
+R11
 VAhkRb_RT3gl^dS1dXzPOU2
 !s100 DgPS:P1RR>2W:AARUS=iF2
-R11
+R12
 32
-Z22 !s110 1716611433
+Z21 !s110 1716611433
 !i10b 1
-Z23 !s108 1716611433.000000
-Z24 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
-Z25 !s107 Z:/projects/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
-!i113 1
+Z22 !s108 1716611433.000000
+R15
 R16
+!i113 1
 R17
+R18
 Abehaviour
-R19
+R2
 R3
 R4
 R5
@@ -94,42 +94,87 @@ R7
 DEx4 work 11 aspadc_tdma 0 22 AhkRb_RT3gl^dS1dXzPOU2
 !i122 169
 l60
-L25 115
+R19
 VVF1<IlTXVRhb3jIbT_bh:0
 !s100 PTGOa=QcCzB[>b@N[9=kz3
-R11
+R12
 32
-R22
+R21
 !i10b 1
-R23
-R24
-R25
-!i113 1
+R22
+R15
 R16
+!i113 1
 R17
+R18
+Easpavg
+Z23 w1716683303
+R2
+R5
+R6
+R7
+!i122 173
+R8
+Z24 8Z:/projects/HMPSoC/IP-Rishi/aspAvg.vhd
+Z25 FZ:/projects/HMPSoC/IP-Rishi/aspAvg.vhd
+l0
+L8 1
+VoIBfFZdn0RL`Smb9Fm4433
+!s100 GIHH^FY1f?<mnH@ijQXeE3
+R12
+32
+Z26 !s110 1716683320
+!i10b 1
+Z27 !s108 1716683319.000000
+Z28 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/aspAvg.vhd|
+Z29 !s107 Z:/projects/HMPSoC/IP-Rishi/aspAvg.vhd|
+!i113 1
+R17
+R18
+Asim
+R2
+R5
+R6
+R7
+DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
+!i122 173
+l27
+L16 55
+V_eDLV7DX72hghjH6Mo=KB0
+!s100 Fd_FVd=IO6=zkGX<Wh]Sn2
+R12
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R17
+R18
 Eaudioclock
-Z26 w1716464524
+Z30 w1716464524
 R7
 R6
 R5
 !i122 29
 R0
-Z27 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
-Z28 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z31 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z32 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
 l0
 L9 1
 VmI069NaX1L3M<GlBV[mC?2
 !s100 ?]V=nD1YN]MfnMQ9ZF@XP2
-R11
+R12
 32
-Z29 !s110 1716464709
+Z33 !s110 1716464709
 !i10b 1
-Z30 !s108 1716464708.000000
-Z31 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
-Z32 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z34 !s108 1716464708.000000
+Z35 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z36 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
 R7
 R6
@@ -140,38 +185,38 @@ l28
 L18 21
 V3XJ9QR0TYa`cglNeOFaE62
 !s100 gEa:]G7l6k;X7AW=Y70TR0
-R11
+R12
 32
-R29
+R33
 !i10b 1
-R30
-R31
-R32
+R34
+R35
+R36
 !i113 1
-R16
 R17
+R18
 Eaudiofifo
-R26
+R30
 R6
 R5
 !i122 25
 R0
-Z33 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
-Z34 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
+Z37 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
+Z38 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
 l0
-Z35 L43 1
+Z39 L43 1
 VXfF;I>z]3;GUdLHjJ=IZf3
 !s100 hzfBADS2jz8efhYoW2WSO2
-R11
+R12
 32
-Z36 !s110 1716464693
+Z40 !s110 1716464693
 !i10b 1
-Z37 !s108 1716464693.000000
-Z38 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
-Z39 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
+Z41 !s108 1716464693.000000
+Z42 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
+Z43 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
 !i113 1
-R16
 R17
+R18
 Asyn
 R6
 R5
@@ -181,41 +226,41 @@ l92
 L58 67
 VHgI^R8H8_:gao]:X4JGYR0
 !s100 DFEC5]6nd;^@Gjg`?;L]o3
-R11
+R12
 32
-R36
+R40
 !i10b 1
-R37
-R38
-R39
+R41
+R42
+R43
 !i113 1
-R16
 R17
+R18
 Eaudiorom
-R26
-Z40 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R30
+Z44 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
 R6
 R5
 !i122 22
 R0
-Z41 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
-Z42 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z45 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z46 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
 l0
-R35
+R39
 V<hPgN;endSF@_Y85X;^nD3
 !s100 `zhij<A8?O;TTj8[PRKke3
-R11
+R12
 32
-Z43 !s110 1716464666
+Z47 !s110 1716464666
 !i10b 1
-Z44 !s108 1716464665.000000
-Z45 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
-Z46 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z48 !s108 1716464665.000000
+Z49 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z50 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
 !i113 1
-R16
 R17
+R18
 Asyn
-R40
+R44
 R6
 R5
 DEx4 work 8 audiorom 0 22 <hPgN;endSF@_Y85X;^nD3
@@ -224,16 +269,16 @@ l57
 L53 33
 VYOkS7@8Q1_^`7BU@Z3Xci3
 !s100 >haM?bMIA8m3IF:F1EmdN1
-R11
+R12
 32
-R43
+R47
 !i10b 1
-R44
-R45
-R46
+R48
+R49
+R50
 !i113 1
-R16
 R17
+R18
 Pmacros
 !i122 143
 w1716521579
@@ -244,7 +289,7 @@ l0
 L1 1
 V8QlPUF7I4d@0@Xg>ndO[<0
 !s100 Q`=Qa1zgohB9Qa?0YggCm3
-R11
+R12
 32
 !s110 1716548108
 !i10b 1
@@ -252,11 +297,11 @@ R11
 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/macros.vhd|
 !s107 Z:/projects/HMPSoC/IP-Rishi/macros.vhd|
 !i113 1
-R16
 R17
+R18
 Etdmamin
-Z47 w1716434214
-R19
+Z51 w1716434214
+R2
 R5
 R6
 R7
@@ -268,7 +313,7 @@ l0
 L8 1
 V=S6e89o6o0;L?4kiAPgXo0
 !s100 6;L8z`bBSW^j[_>G_J?Gd2
-R11
+R12
 32
 !s110 1716542041
 !i10b 1
@@ -276,35 +321,35 @@ R11
 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
 !i113 1
-R16
 R17
+R18
 Etdmaminfabric
-R47
-R19
+R51
+R2
 R5
 R6
 R7
 !i122 94
 R8
-Z48 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
-Z49 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
+Z52 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
+Z53 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
 l0
 L8 1
 V=XdmE:2YnL8N6`N_i3QlI2
 !s100 gPIDA1YCE:[;DEnj@Y>0i3
-R11
+R12
 32
-Z50 !s110 1716542040
+Z54 !s110 1716542040
 !i10b 1
-Z51 !s108 1716542039.000000
-Z52 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
-Z53 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
+Z55 !s108 1716542039.000000
+Z56 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
+Z57 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
-Z54 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
-R19
+Z58 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
+R2
 R5
 R6
 R7
@@ -314,84 +359,84 @@ l27
 L20 26
 VOK^jicn78;lPom<<2X`?I2
 !s100 JSmh>bieLZoMlenZQ0T<:1
-R11
+R12
 32
-R50
+R54
 !i10b 1
-R51
-R52
-R53
+R55
+R56
+R57
 !i113 1
-R16
 R17
+R18
 Etdmaminfifo
-R26
+R30
 R6
 R5
 !i122 97
 R8
-Z55 8Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
-Z56 FZ:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z59 8Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z60 FZ:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
 l0
-R35
+R39
 VOz?]G`AV^1>^4iQa[;O>Q3
 !s100 8FemG`GCM5dSE;ZO1MWzf2
-R11
+R12
 32
-Z57 !s110 1716542163
+Z61 !s110 1716542163
 !i10b 1
-Z58 !s108 1716542162.000000
-Z59 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
-Z60 !s107 Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z62 !s108 1716542162.000000
+Z63 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z64 !s107 Z:/projects/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
 !i113 1
-R16
 R17
+R18
 Asyn
 R6
 R5
-Z61 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
+Z65 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
 !i122 97
 l89
 L57 63
 VnVRAKhDUaT;OPaUVX48@d3
 !s100 nV:U_b?O:ZbYEG97<H`3G1
-R11
+R12
 32
-R57
+R61
 !i10b 1
-R58
-R59
-R60
+R62
+R63
+R64
 !i113 1
-R16
 R17
+R18
 Etdmamininterface
-Z62 w1716542259
-R19
+Z66 w1716542259
+R2
 R5
 R6
 R7
 !i122 102
 R8
-Z63 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
-Z64 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
+Z67 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
+Z68 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
 l0
 L10 1
 VgT^kX:2W=4RT7PNm7H11F2
 !s100 ;1PD82_<6I>fjQK=G=U0B2
-R11
+R12
 32
-Z65 !s110 1716542292
+Z69 !s110 1716542292
 !i10b 1
-Z66 !s108 1716542292.000000
-Z67 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
-Z68 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
+Z70 !s108 1716542292.000000
+Z71 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
+Z72 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
-R61
-R19
+R65
+R2
 R5
 R6
 R7
@@ -401,39 +446,39 @@ l40
 L26 52
 Vl@^iSDgmIz_n^ARnEXD8<3
 !s100 7CB8agV:j<NBePY8lM1^^1
-R11
+R12
 32
-R65
+R69
 !i10b 1
-R66
-R67
-R68
+R70
+R71
+R72
 !i113 1
-R16
 R17
+R18
 Etdmaminslots
-R47
+R51
 R5
 R6
 R7
 !i122 93
 R8
-Z69 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
-Z70 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
+Z73 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
+Z74 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
 l0
 L5 1
 Vmk_HdOSQUCX0X[0_`0G111
 !s100 bY70hkiSWIonW84Wkb5=Y2
-R11
+R12
 32
-Z71 !s110 1716542037
+Z75 !s110 1716542037
 !i10b 1
-Z72 !s108 1716542037.000000
-Z73 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
-Z74 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
+Z76 !s108 1716542037.000000
+Z77 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
+Z78 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
 R5
 R6
@@ -444,133 +489,133 @@ l19
 L15 16
 VNi03TlYW8E7nkCedUWQNj3
 !s100 8ZE?LJj4zV?JVY`ITHFDQ1
-R11
+R12
 32
-R71
+R75
 !i10b 1
-R72
-R73
-R74
+R76
+R77
+R78
 !i113 1
-R16
 R17
+R18
 Etdmaminstage
-R47
-R19
+R51
+R2
 R5
 R6
 R7
 !i122 92
 R8
-Z75 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
-Z76 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
+Z79 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
+Z80 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
 l0
 L8 1
 Vl@eJX5;XGK`nhfZQ7j:[F2
 !s100 FF_3G3M34h_O0k2e3RoCo2
-R11
+R12
 32
-Z77 !s110 1716542032
+Z81 !s110 1716542032
 !i10b 1
-Z78 !s108 1716542032.000000
-Z79 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
-Z80 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
+Z82 !s108 1716542032.000000
+Z83 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
+Z84 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
-Z81 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
-R19
+Z85 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
+R2
 R5
 R6
 R7
-R54
+R58
 !i122 92
 l20
 L19 15
 V^i[Se9TNAQW]l[XH=z?zU3
 !s100 S;h7UbjJAC@j?j@O3^C@D1
-R11
+R12
 32
-R77
+R81
 !i10b 1
-R78
-R79
-R80
+R82
+R83
+R84
 !i113 1
-R16
 R17
+R18
 Etdmaminswitch
-R47
-R19
+R51
+R2
 R5
 R6
 R7
 !i122 91
 R8
-Z82 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
-Z83 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
+Z86 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
+Z87 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
 l0
 L8 1
 Vha<ZO:0=<6zJT>@X_3kc92
 !s100 h[e;lEbjCXFWZ]MK6d]=d1
-R11
+R12
 32
-Z84 !s110 1716542031
+Z88 !s110 1716542031
 !i10b 1
-Z85 !s108 1716542031.000000
-Z86 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
-Z87 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
+Z89 !s108 1716542031.000000
+Z90 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
+Z91 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
 !i113 1
-R16
 R17
+R18
 Artl
-R19
+R2
 R5
 R6
 R7
-R81
+R85
 !i122 91
 l19
 L18 7
 V`KlX9@nTfmU@A?GQQK4>23
 !s100 1a`QCVX^=HfRSbXEgSbnN1
-R11
+R12
 32
-R84
+R88
 !i10b 1
-R85
-R86
-R87
+R89
+R90
+R91
 !i113 1
-R16
 R17
+R18
 Ptdmamintypes
 R5
 R6
 R7
 !i122 90
-R47
+R51
 R8
-Z88 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
-Z89 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
+Z92 8Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
+Z93 FZ:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
 l0
 L5 1
 VzUbdIXj5XgoVHmag:X:zR3
 !s100 RO]^LXRIn]Gj8NO>kodKH0
-R11
+R12
 32
 b1
-Z90 !s110 1716542029
+Z94 !s110 1716542029
 !i10b 1
-Z91 !s108 1716542028.000000
-Z92 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
-Z93 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
+Z95 !s108 1716542028.000000
+Z96 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
+Z97 !s107 Z:/projects/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
 !i113 1
-R16
 R17
+R18
 Bbody
-R19
+R2
 R5
 R6
 R7
@@ -579,42 +624,42 @@ l0
 L23 1
 V<A1G_[MEAzN9V>]FnD[HW1
 !s100 0>WOSehlFYi]icGfEjD0:1
-R11
+R12
 32
-R90
+R94
 !i10b 1
-R91
-R92
-R93
+R95
+R96
+R97
 !i113 1
-R16
 R17
+R18
 Etest_adc
-Z94 w1716548734
-R2
+Z98 w1716548734
+Z99 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
 R5
 R6
 R7
 !i122 156
 R8
-Z95 8Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd
-Z96 FZ:/projects/HMPSoC/IP-Rishi/test_adc.vhd
+Z100 8Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd
+Z101 FZ:/projects/HMPSoC/IP-Rishi/test_adc.vhd
 l0
 L8 1
 V1bHo_>_f`NjJ2ghB=Jd?[0
 !s100 0QoYS@L>CVCf^aGQGH]S]1
-R11
+R12
 32
-Z97 !s110 1716606753
+Z102 !s110 1716606753
 !i10b 1
-Z98 !s108 1716606753.000000
-Z99 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd|
-Z100 !s107 Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd|
+Z103 !s108 1716606753.000000
+Z104 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd|
+Z105 !s107 Z:/projects/HMPSoC/IP-Rishi/test_adc.vhd|
 !i113 1
-R16
 R17
+R18
 Asim
-R2
+R99
 R5
 R6
 R7
@@ -624,86 +669,86 @@ l30
 L11 34
 V@InlMcKcDoR:k3]Kk[k[g3
 !s100 kM3cgYZ6e2MnS?OazhUXf0
-R11
+R12
 32
-R97
+R102
 !i10b 1
-R98
-R99
-R100
+R103
+R104
+R105
 !i113 1
-R16
 R17
+R18
 Etest_adc_tdma
-Z101 w1716611397
-R19
+Z106 w1716683537
 R2
+R99
 R5
 R6
 R7
-!i122 170
+!i122 179
 R8
-Z102 8Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd
-Z103 FZ:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd
+Z107 8Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd
+Z108 FZ:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd
 l0
 L9 1
 VF6_nPd5:R2kK01Df2W1311
 !s100 XFMICM`@Ch5RWe147@CPg3
-R11
+R12
 32
-Z104 !s110 1716611435
+Z109 !s110 1716683786
 !i10b 1
-Z105 !s108 1716611434.000000
-Z106 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
-Z107 !s107 Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
+Z110 !s108 1716683785.000000
+Z111 !s90 -reportprogress|300|-work|work|Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
+Z112 !s107 Z:/projects/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
 !i113 1
-R16
 R17
+R18
 Asim
-R19
 R2
+R99
 R5
 R6
 R7
-Z108 DEx4 work 13 test_adc_tdma 0 22 F6_nPd5:R2kK01Df2W1311
-!i122 170
-l32
-Z109 L12 35
-Z110 VI1AF@E0ezY5IN1APU?ZDl3
-Z111 !s100 m8jQo7=hTcg7<SD8Y9EA41
-R11
+Z113 DEx4 work 13 test_adc_tdma 0 22 F6_nPd5:R2kK01Df2W1311
+!i122 179
+l42
+Z114 L12 52
+Z115 V<RL2_E6MGVVSS=E[@>d8<1
+Z116 !s100 5F9ONVel?<HE:Ebl^e[IZ1
+R12
 32
-R104
+R109
 !i10b 1
-R105
-R106
-R107
+R110
+R111
+R112
 !i113 1
-R16
 R17
+R18
 Etestadc
-Z112 w1716473403
+Z117 w1716473403
 R7
 R6
 R5
 !i122 57
 R0
-Z113 8Z:/projects/IP/testadc.vhd
-Z114 FZ:/projects/IP/testadc.vhd
+Z118 8Z:/projects/IP/testadc.vhd
+Z119 FZ:/projects/IP/testadc.vhd
 l0
 L5 1
 V1MoIbe5CeK>2kV1_LBh@30
 !s100 mlimDVim5V>`P6QUPWJ:<1
-R11
+R12
 32
-Z115 !s110 1716473799
+Z120 !s110 1716473799
 !i10b 1
-Z116 !s108 1716473799.000000
-Z117 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
-Z118 !s107 Z:/projects/IP/testadc.vhd|
+Z121 !s108 1716473799.000000
+Z122 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
+Z123 !s107 Z:/projects/IP/testadc.vhd|
 !i113 1
-R16
 R17
+R18
 Abehaviour
 DPx4 work 6 macros 0 22 C7j3jB?3W0;ia9j><S41b1
 R3
@@ -718,38 +763,38 @@ l21
 L8 59
 VNEJZ:KTEJKTIKlc^8HoXZ1
 !s100 Dab5SV@V@RjFV9X=[^:i62
-R11
+R12
 32
-R115
+R120
 !i10b 1
-R116
-R117
-R118
+R121
+R122
+R123
 !i113 1
-R16
 R17
+R18
 Etoplevel_vhd_vec_tst
-Z119 w1716476323
+Z124 w1716476323
 R6
 R5
 !i122 59
 R0
-Z120 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
-Z121 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z125 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z126 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
 l0
 L31 1
 VZFX7iJ9`9Pe`gDWF>U67Y2
 !s100 ]gV]>YLEnW<G7=30zdUPO1
-R11
+R12
 32
-Z122 !s110 1716476489
+Z127 !s110 1716476489
 !i10b 1
-Z123 !s108 1716476489.000000
-Z124 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
-Z125 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z128 !s108 1716476489.000000
+Z129 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z130 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
 !i113 1
-R16
 R17
+R18
 Atoplevel_arch
 R6
 R5
@@ -759,13 +804,13 @@ l50
 L33 54
 VY]cY>m6@?Gz0LF7Y>3KzS3
 !s100 J11fzh4RMHDJO=]UJ[MXd1
-R11
+R12
 32
-R122
+R127
 !i10b 1
-R123
-R124
-R125
+R128
+R129
+R130
 !i113 1
-R16
 R17
+R18

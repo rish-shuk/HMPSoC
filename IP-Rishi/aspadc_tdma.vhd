@@ -64,7 +64,7 @@ begin
 	GENERIC MAP (
 		clock_enable_input_a    => "BYPASS",
 		clock_enable_output_a   => "BYPASS",
-		init_file               => "signal_8bit.mif",
+		init_file               => "input-generator/signal_8bit.mif",
 		intended_device_family  => "Cyclone V",
 		lpm_hint                => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type                => "altsyncram",
