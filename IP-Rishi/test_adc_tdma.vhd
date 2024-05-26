@@ -72,7 +72,7 @@ begin
     );
 
         recv_port(0).addr <= x"00";
-        recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" after 20 ns; -- config packet
+        recv_port(0).data <= "0001" & "0000" & "0001" & "0000" & "0000" & "0000" & "0000" & "1001" for 20 ns; -- config packet
         reset             <= '0' after 15 ns;
         clock             <= not  clock after 5 ns;
 end architecture;
