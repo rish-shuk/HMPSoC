@@ -1,0 +1,227 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\skend\OneDrive - The University of Auckland\701\Lab2 Reference Design 2024\CS701\ip
+valtera_up_altpll
+I8fgEPS5PXRkRF6ZNBI?P42
+V4:UkB87??HBz=1FlZDI`E2
+Z1 dC:\Users\skend\OneDrive - The University of Auckland\701\Lab2 Reference Design 2024\CS701\ip
+Z2 w1716446919
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/submodules/altera_up_altpll.v
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/submodules/altera_up_altpll.v
+L0 29
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-work ip -O0
+!s100 O?kgbYAL4N>>EfjFUb^N30
+!s108 1716450307.192000
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/submodules/altera_up_altpll.v|
+!s90 -reportprogress|300|-work|ip|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/submodules/altera_up_altpll.v|
+!i10b 1
+!s85 0
+!s101 -O0
+valtera_up_avalon_reset_from_locked_signal
+I>1iPzV?<b>:SJ8AnMf7a^0
+V>P`PO>2n6i>IHOeHiKlkU1
+R1
+w1716446917
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/altera_up_avalon_reset_from_locked_signal.v
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/altera_up_avalon_reset_from_locked_signal.v
+L0 28
+R3
+r1
+31
+R4
+!s100 hScWK=k^T538Nj_5bUTi?3
+!s108 1716450327.481000
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!s90 -reportprogress|300|-work|ip|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!i10b 1
+!s85 0
+!s101 -O0
+Eaudioclock
+R2
+Z5 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dC:\repos\Lab2 Reference Design 2024\CS701\ip
+Z9 8C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd
+Z10 FC:/repos/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd
+l0
+L9
+V446^Oa[[WgVN9YYbIo3E[0
+Z11 OV;C;10.1d;51
+32
+Z12 !s108 1716720073.459000
+Z13 !s90 -reportprogress|300|-work|ip|C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd|
+Z14 !s107 C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioClock_2/AudioClock.vhd|
+R4
+Z15 tExplicit 1
+!s100 7E<3GnIIZALbVQ;BB49>G0
+!i10b 1
+Artl
+R5
+R6
+R7
+DEx4 work 10 audioclock 0 22 446^Oa[[WgVN9YYbIo3E[0
+l28
+L18
+V1nf5FQfYO^ae;75=[<3MX0
+R11
+32
+R12
+R13
+R14
+R4
+R15
+!s100 2=OS9IJ`i32N@748F;jOP1
+!i10b 1
+vAudioClock_audio_pll_0
+I1[<Ci?<TzFm>>fEmbg9XC3
+VVz3j;iM:AzI1Fbak_LO2e3
+R1
+Z16 w1716446918
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0.v
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0.v
+L0 9
+R3
+r1
+31
+R4
+n@audio@clock_audio_pll_0
+!s100 hJGMFz=7:oeeFJH26h90F3
+!s108 1716450327.834000
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0.v|
+!s90 -reportprogress|300|-work|ip|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAudioClock_audio_pll_0_audio_pll
+IYj3BT;@ADfK`]NT=kk1F13
+Vmd0K>bzE7BBm6fSLEJTgz3
+R1
+R16
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0_audio_pll.v
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0_audio_pll.v
+L0 2
+R3
+r1
+31
+R4
+n@audio@clock_audio_pll_0_audio_pll
+!i10b 1
+!s100 CWZMPoT7bdAzS5GUfIY]E0
+!s85 0
+!s108 1716450328.200000
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0_audio_pll.v|
+!s90 -reportprogress|300|-work|ip|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/ip/AudioClock_1/submodules/AudioClock_audio_pll_0_audio_pll.v|
+!s101 -O0
+Eaudiofifo
+Z17 w1716446920
+R6
+R7
+R8
+Z18 8C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+Z19 FC:/repos/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd
+l0
+L43
+VIWfCKcW9CabkCE?TQjVC51
+R11
+32
+Z20 !s108 1716720079.572000
+Z21 !s90 -reportprogress|300|-work|ip|C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+Z22 !s107 C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioFifo/AudioFifo.vhd|
+R4
+R15
+!s100 m5J_fLH9AW?=7bBTB1faV1
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 9 audiofifo 0 22 IWfCKcW9CabkCE?TQjVC51
+l92
+L58
+VBm@If9`cIh2:cKOZSbb170
+R11
+32
+R20
+R21
+R22
+R4
+R15
+!s100 ^9=WLPm25I@`TV2ASGgWU0
+!i10b 1
+Eaudiorom
+R17
+Z23 DPx9 altera_mf 20 altera_mf_components 0 22 No]@D`cShSLI4UOb8Ijo62
+R6
+R7
+R8
+Z24 8C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+Z25 FC:/repos/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd
+l0
+L43
+VgBcd5hCdg@jSM9oG42NGW1
+R11
+32
+Z26 !s108 1716720085.880000
+Z27 !s90 -reportprogress|300|-work|ip|C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+Z28 !s107 C:/repos/Lab2 Reference Design 2024/CS701/ip/AudioRom/AudioRom.vhd|
+R4
+R15
+!s100 7MV5Ef575Xd[2FCzWnk[z0
+!i10b 1
+Asyn
+R23
+R6
+R7
+DEx4 work 8 audiorom 0 22 gBcd5hCdg@jSM9oG42NGW1
+l57
+L53
+VkVJ:nDGHAIePacUALZ9BM3
+!s100 fD[MORVMJnMgG1:i==A]<0
+R11
+32
+R26
+R27
+R28
+R4
+R15
+!i10b 1
+Etdmaminfifo
+Z29 w1716446921
+R6
+R7
+R8
+Z30 8C:/repos/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z31 FC:/repos/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd
+l0
+L43
+V>f6MVFi81<`AQ[FA50]1L3
+!s100 EO0F40UXUVSK`U[3_<LhH0
+R11
+32
+!i10b 1
+Z32 !s108 1716720097.803000
+Z33 !s90 -reportprogress|300|-work|ip|C:/repos/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z34 !s107 C:/repos/Lab2 Reference Design 2024/CS701/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+R4
+R15
+Asyn
+R6
+R7
+Z35 DEx4 work 11 tdmaminfifo 0 22 >f6MVFi81<`AQ[FA50]1L3
+l89
+L57
+Z36 VSVG?V_14hX?53e7I>XVG?0
+Z37 !s100 GBnNI2To7PVQ3HLPSBF7S3
+R11
+32
+!i10b 1
+R32
+R33
+R34
+R4
+R15

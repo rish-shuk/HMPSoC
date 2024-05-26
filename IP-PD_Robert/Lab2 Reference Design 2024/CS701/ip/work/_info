@@ -1,0 +1,1288 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\skend\OneDrive - The University of Auckland\701\Lab2 Reference Design 2024\CS701\ip
+Easpadc
+Z0 w1716446947
+Z1 DPx4 work 12 tdmamintypes 0 22 V@oKhRG0DScNUkH3^aUSf3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 dC:\repos\Lab2 Reference Design 2024\CS701\ip
+Z6 8C:/repos/Lab2 Reference Design 2024/CS701/src/AspAdc.vhd
+Z7 FC:/repos/Lab2 Reference Design 2024/CS701/src/AspAdc.vhd
+l0
+L8
+VnUi=WmbdWO0deTIl9?F>43
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1716726102.508000
+Z10 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/AspAdc.vhd|
+Z11 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/AspAdc.vhd|
+Z12 o-work work -O0
+Z13 tExplicit 1
+!s100 0f=V38TD_IE^cof5mR[?21
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+Z14 DEx4 work 6 aspadc 0 22 nUi=WmbdWO0deTIl9?F>43
+l29
+L20
+VTd5=]0`Cz6`kmk^BZDALn2
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 fUd;1BC1eM70oidElo2;B2
+!i10b 1
+Easpcustom
+Z15 w1716447947
+R1
+R2
+R3
+R4
+R5
+Z16 8C:/repos/Lab2 Reference Design 2024/CS701/src/AspCustom.vhd
+Z17 FC:/repos/Lab2 Reference Design 2024/CS701/src/AspCustom.vhd
+l0
+L8
+VFZfBdn<6`WB=oSFJTVc7P3
+R8
+32
+Z18 !s108 1716726102.856000
+Z19 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/AspCustom.vhd|
+Z20 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/AspCustom.vhd|
+R12
+R13
+!s100 5BoTMY6nMV?A`U1bbokgz2
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+Z21 DEx4 work 9 aspcustom 0 22 FZfBdn<6`WB=oSFJTVc7P3
+l18
+L16
+V;gd3lokVg7n<T7FV^:`PE1
+R8
+32
+R18
+R19
+R20
+R12
+R13
+!s100 jh;dY:4Pl57jiQnU_B@6i0
+!i10b 1
+Easpdac
+Z22 w1716446948
+R1
+R2
+R3
+R4
+R5
+Z23 8C:/repos/Lab2 Reference Design 2024/CS701/src/AspDac.vhd
+Z24 FC:/repos/Lab2 Reference Design 2024/CS701/src/AspDac.vhd
+l0
+L8
+VD6LS@P7J>^K`QM_0PoKnn3
+R8
+32
+Z25 !s108 1716726103.143000
+Z26 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/AspDac.vhd|
+Z27 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/AspDac.vhd|
+R12
+R13
+!s100 OeJoBHD<aFV@21YGZIeA21
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+Z28 DEx4 work 6 aspdac 0 22 D6LS@P7J>^K`QM_0PoKnn3
+l27
+L20
+Vf@I=B6k5ET@b2bndZE90H3
+R8
+32
+R25
+R26
+R27
+R12
+R13
+!s100 ]Ho1NZRO1M;0Z;FBz^bV^1
+!i10b 1
+Easpexample
+Z29 w1716454904
+R1
+R2
+R3
+R4
+R5
+Z30 8C:/repos/Lab2 Reference Design 2024/CS701/src/AspExample.vhd
+Z31 FC:/repos/Lab2 Reference Design 2024/CS701/src/AspExample.vhd
+l0
+L8
+VV3zBFObRZVF]Q^HYnG[ma2
+R8
+32
+Z32 !s108 1716726103.427000
+Z33 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/AspExample.vhd|
+Z34 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/AspExample.vhd|
+R12
+R13
+!s100 MeK9L=MIiJ0WP:8b>IPZ22
+!i10b 1
+Artl
+Z35 DEx4 work 7 hexseg6 0 22 d:7L<E9S`O:jS84N=m7mM2
+R1
+R2
+R3
+R4
+Z36 DEx4 work 10 aspexample 0 22 V3zBFObRZVF]Q^HYnG[ma2
+l30
+L26
+VKCgJgES:7cmF<m;C^=MdZ1
+R8
+32
+R32
+R33
+R34
+R12
+R13
+!s100 j]_Xlf88G[Nl@MK[hRZ781
+!i10b 1
+Eaudio
+Z37 w1716446949
+R1
+R2
+R3
+R4
+R5
+Z38 8C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/Audio.vhd
+Z39 FC:/repos/Lab2 Reference Design 2024/CS701/src/Audio/Audio.vhd
+l0
+L10
+VDGeh>a[4_hDekmaUOL_990
+R8
+32
+Z40 !s108 1716726103.684000
+Z41 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/Audio.vhd|
+Z42 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/Audio.vhd|
+R12
+R13
+!s100 8YcjWRTT^i9bSaWKO=KiC0
+!i10b 1
+Artl
+Z43 DEx4 work 8 audioout 0 22 Vm;bh2QezS0ol?:Z4oP`e2
+Z44 DEx4 work 7 audioin 0 22 912In:iX[kaV_B[mAzTB03
+Z45 DEx4 work 10 audiotones 0 22 _:IiKI>Jhd0HHT>Z^a6A13
+Z46 DEx4 work 12 audiocontrol 0 22 Gj6iBhG4lI2nW]9UV8KLL2
+DEx2 ip 10 audioclock 0 22 446^Oa[[WgVN9YYbIo3E[0
+R1
+R2
+R3
+R4
+Z47 DEx4 work 5 audio 0 22 DGeh>a[4_hDekmaUOL_990
+l36
+L35
+Vf?5o`XSVVEfhoOk=@[Q6h2
+R8
+32
+R40
+R41
+R42
+R12
+R13
+!s100 H1Rzi_fdz5LdmXZYCV8AQ3
+!i10b 1
+Eaudiocontrol
+R37
+R2
+R3
+R4
+R5
+Z48 8C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioControl.vhd
+Z49 FC:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioControl.vhd
+l0
+L5
+VGj6iBhG4lI2nW]9UV8KLL2
+R8
+32
+Z50 !s108 1716726103.993000
+Z51 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioControl.vhd|
+Z52 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioControl.vhd|
+R12
+R13
+!s100 6>hH8GW9GC=HFM4mbd4^O0
+!i10b 1
+Artl
+R2
+R3
+R4
+R46
+l46
+L13
+Vc0C=Uhdim;[lPHABk`VMA2
+R8
+32
+R50
+R51
+R52
+R12
+R13
+!s100 2I=C[fC63`W1PJ1;o]74B3
+!i10b 1
+Eaudioin
+R37
+R2
+R3
+R4
+R5
+Z53 8C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioIn.vhd
+Z54 FC:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioIn.vhd
+l0
+L7
+V912In:iX[kaV_B[mAzTB03
+R8
+32
+Z55 !s108 1716726104.220000
+Z56 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioIn.vhd|
+Z57 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioIn.vhd|
+R12
+R13
+!s100 fAlF`7IEgIJ=GgaBn`WKF2
+!i10b 1
+Artl
+Z58 DEx2 ip 9 audiofifo 0 22 IWfCKcW9CabkCE?TQjVC51
+R2
+R3
+R4
+R44
+l25
+L20
+V:>fzGH[NSBWzgVA=:BP051
+R8
+32
+R55
+R56
+R57
+R12
+R13
+!s100 7abi?Z=oIBK;cm^cbi4F@1
+!i10b 1
+Eaudioout
+Z59 w1716446950
+R2
+R3
+R4
+R5
+Z60 8C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioOut.vhd
+Z61 FC:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioOut.vhd
+l0
+L7
+VVm;bh2QezS0ol?:Z4oP`e2
+R8
+32
+Z62 !s108 1716726104.484000
+Z63 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioOut.vhd|
+Z64 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioOut.vhd|
+R12
+R13
+!s100 4k;c6YA4bMI3]CJ`KL?>T1
+!i10b 1
+Artl
+R58
+R2
+R3
+R4
+R43
+l30
+L20
+V^:10RZN<MHK6AM<im281c2
+R8
+32
+R62
+R63
+R64
+R12
+R13
+!s100 YA>C6XbkJj8<Hg0FiK93:3
+!i10b 1
+Eaudiotones
+R59
+R2
+R3
+R4
+R5
+Z65 8C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioTones.vhd
+Z66 FC:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioTones.vhd
+l0
+L7
+V_:IiKI>Jhd0HHT>Z^a6A13
+R8
+32
+Z67 !s108 1716726104.758000
+Z68 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioTones.vhd|
+Z69 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Audio/AudioTones.vhd|
+R12
+R13
+!s100 B8e>1Zg75Qz4?ES3@GjVa3
+!i10b 1
+Artl
+Z70 DPx9 altera_mf 20 altera_mf_components 0 22 No]@D`cShSLI4UOb8Ijo62
+Z71 DEx2 ip 8 audiorom 0 22 gBcd5hCdg@jSM9oG42NGW1
+R58
+R2
+R3
+R4
+R45
+l28
+L20
+V?6Wk]<<4eR>T=e>Wd085b2
+R8
+32
+R67
+R68
+R69
+R12
+R13
+!s100 S8N?60HBYL^ShK_LnXf<d1
+!i10b 1
+Ehexseg
+R59
+R2
+R3
+R4
+R5
+Z72 8C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg.vhd
+Z73 FC:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg.vhd
+l0
+L5
+VaOW1;PR>8f85K`dXTUgzV3
+R8
+32
+Z74 !s108 1716726105.049000
+Z75 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg.vhd|
+Z76 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg.vhd|
+R12
+R13
+!s100 96Q]1gIS7THeXUMTzg@b20
+!i10b 1
+Artl
+R2
+R3
+R4
+Z77 DEx4 work 6 hexseg 0 22 aOW1;PR>8f85K`dXTUgzV3
+l13
+L12
+V62EZ6fV_K0>ZfLXoe=cBk1
+R8
+32
+R74
+R75
+R76
+R12
+R13
+!s100 3e81l91JhW?Jdca=z>TDL0
+!i10b 1
+Ehexseg6
+R59
+R2
+R3
+R4
+R5
+Z78 8C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg6.vhd
+Z79 FC:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg6.vhd
+l0
+L5
+Vd:7L<E9S`O:jS84N=m7mM2
+R8
+32
+Z80 !s108 1716726105.262000
+Z81 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg6.vhd|
+Z82 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/Misc/HexSeg6.vhd|
+R12
+R13
+!s100 aKLgKhj<g`>oT=b0IPzX>3
+!i10b 1
+Artl
+R77
+R2
+R3
+R4
+R35
+l18
+L17
+Vl?k]BYnEmVeAMR?o4m@5j0
+R8
+32
+R80
+R81
+R82
+R12
+R13
+!s100 ;gm_kZI78W6PbX7UXcHz63
+!i10b 1
+Epd_asp
+Z83 w1716727158
+R1
+R4
+R3
+R2
+R5
+Z84 8C:/repos/Lab2 Reference Design 2024/CS701/src/PD_ASP.vhd
+Z85 FC:/repos/Lab2 Reference Design 2024/CS701/src/PD_ASP.vhd
+l0
+L18
+V<6SOA1bif4NF<6F:W5A<Z2
+R8
+32
+Z86 !s108 1716727179.371000
+Z87 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/PD_ASP.vhd|
+Z88 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/PD_ASP.vhd|
+R12
+R13
+!s100 meYmDa3A=_95OiacnaU;h1
+!i10b 1
+Afind_peak
+R1
+R4
+R3
+R2
+Z89 DEx4 work 6 pd_asp 0 22 <6SOA1bif4NF<6F:W5A<Z2
+l47
+L32
+V1J^Lnhefn:NVZ^^?zCG4Y0
+R8
+32
+R86
+R87
+R88
+R12
+R13
+!s100 Eo1Ni61I24E>`Fi8W<GMA1
+!i10b 1
+Etdmamin
+Z90 w1716446951
+R1
+R2
+R3
+R4
+R5
+Z91 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+Z92 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+l0
+L8
+VY>e9d85`3J6Jca]i1>T6L2
+R8
+32
+Z93 !s108 1716726105.810000
+Z94 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+Z95 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+R12
+R13
+!s100 j_68DVMD4VQ^CPDH;zQK]0
+!i10b 1
+Artl
+Z96 DEx4 work 16 tdmamininterface 0 22 FSZ?0z64Y^n7UKZB=0@171
+Z97 DEx4 work 13 tdmaminfabric 0 22 m>QieaCaNTcSoz=9kWdC83
+Z98 DEx4 work 12 tdmaminslots 0 22 hj6UMhCDbh^@l@C=Y7nK52
+R1
+R2
+R3
+R4
+Z99 DEx4 work 7 tdmamin 0 22 Y>e9d85`3J6Jca]i1>T6L2
+l27
+L19
+V_nd[;8A4jSDW>kWOOedoC3
+R8
+32
+R93
+R94
+R95
+R12
+R13
+!s100 m2?E]WJ;gcN5:WUF2VV0:3
+!i10b 1
+Etdmaminfabric
+R90
+R1
+R2
+R3
+R4
+R5
+Z100 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+Z101 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+l0
+L8
+Vm>QieaCaNTcSoz=9kWdC83
+R8
+32
+Z102 !s108 1716726106.151000
+Z103 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+Z104 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+R12
+R13
+!s100 C`SP3AIdH_;VB@>c;XFc12
+!i10b 1
+Artl
+Z105 DEx4 work 12 tdmaminstage 0 22 <Z98D?LAUXS1YjLR0Q>MU0
+R1
+R2
+R3
+R4
+R97
+l27
+L20
+VZ<h]nf>`bI_I_ciKKU@?81
+R8
+32
+R102
+R103
+R104
+R12
+R13
+!s100 E?oZVCa00hcU81JJf8aba3
+!i10b 1
+Etdmamininterface
+R90
+R1
+R2
+R3
+R4
+R5
+Z106 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd
+Z107 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd
+l0
+L10
+VFSZ?0z64Y^n7UKZB=0@171
+R8
+32
+Z108 !s108 1716726106.409000
+Z109 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd|
+Z110 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd|
+R12
+R13
+!s100 Ve9o_OgegO5BdonEijA:03
+!i10b 1
+Artl
+DEx2 ip 11 tdmaminfifo 0 22 >f6MVFi81<`AQ[FA50]1L3
+R1
+R2
+R3
+R4
+R96
+l40
+L26
+V]z<^Ti3ST5Q:L:b[6kFhR3
+R8
+32
+R108
+R109
+R110
+R12
+R13
+!s100 b85V0HTR^[3Tj<Jo3O0oa1
+!i10b 1
+Etdmaminslots
+R90
+R2
+R3
+R4
+R5
+Z111 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+Z112 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+l0
+L5
+Vhj6UMhCDbh^@l@C=Y7nK52
+R8
+32
+Z113 !s108 1716726106.668000
+Z114 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+Z115 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+R12
+R13
+!s100 __o8HSi_gaSII0bO=@a?j3
+!i10b 1
+Artl
+R2
+R3
+R4
+R98
+l19
+L15
+Vmj95K4gNH<?4XoaoPBFzI3
+R8
+32
+R113
+R114
+R115
+R12
+R13
+!s100 hme=dXVXJGX^cVM0ZE_B_2
+!i10b 1
+Etdmaminstage
+R90
+R1
+R2
+R3
+R4
+R5
+Z116 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+Z117 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+l0
+L8
+V<Z98D?LAUXS1YjLR0Q>MU0
+R8
+32
+Z118 !s108 1716726106.904000
+Z119 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+Z120 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+R12
+R13
+!s100 VWk?iXHi5[;:Y2mdA_gQC0
+!i10b 1
+Artl
+Z121 DEx4 work 13 tdmaminswitch 0 22 najWXOeJVnXRES0>IBiAG3
+R1
+R2
+R3
+R4
+R105
+l20
+L19
+VH:4d2Nb9WF_c]2YnjScI`3
+R8
+32
+R118
+R119
+R120
+R12
+R13
+!s100 9oS4U3bQ5gJ5d=Rh@G3iH2
+!i10b 1
+Etdmaminswitch
+R90
+R1
+R2
+R3
+R4
+R5
+Z122 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+Z123 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+l0
+L8
+VnajWXOeJVnXRES0>IBiAG3
+R8
+32
+Z124 !s108 1716726107.181000
+Z125 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+Z126 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+R12
+R13
+!s100 oMz@X83QG6:_3]>h5aO2V1
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+R121
+l19
+L18
+Vi439=5CQi9VWmgD1S<]103
+R8
+32
+R124
+R125
+R126
+R12
+R13
+!s100 HMHUE;hKWI5@W]`7L@BQ51
+!i10b 1
+Ptdmamintypes
+R2
+R3
+R4
+Z127 w1716446952
+R5
+Z128 8C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+Z129 FC:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+l0
+L5
+VV@oKhRG0DScNUkH3^aUSf3
+R8
+32
+b1
+Z130 !s108 1716726107.419000
+Z131 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+Z132 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+R12
+R13
+!s100 2Zm`MZo]LBFH7`SNm^XDI3
+!i10b 1
+Bbody
+R1
+R2
+R3
+R4
+l0
+L23
+VzflM>zL61HSXKF4dm@92Z1
+R8
+32
+R130
+R131
+R132
+R12
+R13
+nbody
+!s100 CWM=:jUlSL;[_m1bWncLn2
+!i10b 1
+Etestadc
+Z133 w1716455524
+R1
+R2
+R3
+R4
+R5
+Z134 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestAdc.vhd
+Z135 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestAdc.vhd
+l0
+L8
+VahjP7c8>>d@ZikdRhmLik0
+R8
+32
+Z136 !s108 1716726107.687000
+Z137 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestAdc.vhd|
+Z138 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestAdc.vhd|
+R12
+R13
+!s100 [BDH=FV2Hh<B_eohj=ZLS1
+!i10b 1
+Asim
+R1
+R2
+R3
+R4
+Z139 DEx4 work 7 testadc 0 22 ahjP7c8>>d@ZikdRhmLik0
+l24
+L19
+Vz:5JW0NOeJo7bQbaXdW3_1
+R8
+32
+R136
+R137
+R138
+R12
+R13
+!s100 MIU9Bo;i73>NN>n^jF4C:3
+!i10b 1
+Etestaudiocontrol
+Z140 w1716446953
+R2
+R3
+R4
+R5
+Z141 8C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd
+Z142 FC:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd
+l0
+L5
+VGV3^Nak3f:?NYmg4n>YLG0
+R8
+32
+Z143 !s108 1716726107.952000
+Z144 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd|
+Z145 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd|
+R12
+R13
+!s100 PR[iNKYUf]K9YAE]CJJ_;3
+!i10b 1
+Asim
+R46
+R2
+R3
+R4
+DEx4 work 16 testaudiocontrol 0 22 GV3^Nak3f:?NYmg4n>YLG0
+l15
+L8
+VHj>[IBi@AHZ0enB8WYFcn1
+R8
+32
+R143
+R144
+R145
+R12
+R13
+!s100 F[eWKJ6j0FZFDa_7RWUcB0
+!i10b 1
+Etestaudiofifo
+R140
+R2
+R3
+R4
+R5
+Z146 8C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd
+Z147 FC:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd
+l0
+L7
+VW3BCiIJ^GA4CoG:c549?f0
+R8
+32
+Z148 !s108 1716726108.235000
+Z149 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd|
+Z150 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd|
+R12
+R13
+!s100 o5V=LeMNN@1R=Nc1>KYRR2
+!i10b 1
+Asim
+R58
+R2
+R3
+R4
+DEx4 work 13 testaudiofifo 0 22 W3BCiIJ^GA4CoG:c549?f0
+l24
+L10
+VS5A<SY13Mb`Df4n0L[dN73
+R8
+32
+R148
+R149
+R150
+R12
+R13
+!s100 ?z3_<hKZ;9mMK6bI47Og;3
+!i10b 1
+Etestaudioout
+R140
+R2
+R3
+R4
+R5
+Z151 8C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd
+Z152 FC:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd
+l0
+L7
+VUVF5UZ@IMC4>lEEIXF0AX0
+R8
+32
+Z153 !s108 1716726108.520000
+Z154 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd|
+Z155 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd|
+R12
+R13
+!s100 ^18hBHRZ8IaUnc^@VQGSY1
+!i10b 1
+Asim
+R43
+R2
+R3
+R4
+DEx4 work 12 testaudioout 0 22 UVF5UZ@IMC4>lEEIXF0AX0
+l21
+L10
+VooTQ5@TdR[9d:PMX2mM1T2
+R8
+32
+R153
+R154
+R155
+R12
+R13
+!s100 @2DO;4iWEKV69f37zhXKj2
+!i10b 1
+Etestaudiorom
+R140
+R2
+R3
+R4
+R5
+Z156 8C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd
+Z157 FC:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd
+l0
+L7
+VE2eMY2<^P>>ijNm`jeD6M1
+R8
+32
+Z158 !s108 1716726108.764000
+Z159 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd|
+Z160 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd|
+R12
+R13
+!s100 S6UnA3F:e;7f1WbM5Ngh:3
+!i10b 1
+Asim
+R70
+R71
+R2
+R3
+R4
+DEx4 work 12 testaudiorom 0 22 E2eMY2<^P>>ijNm`jeD6M1
+l22
+L10
+V9DoH5<N;9Zzj[4J4=dc[j1
+R8
+32
+R158
+R159
+R160
+R12
+R13
+!s100 TLMKYi6_`]Xo;`dzWW6JE1
+!i10b 1
+Etestcorgen
+Z161 w1716728825
+R1
+R2
+R3
+R4
+R5
+Z162 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestCorGen.vhd
+Z163 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestCorGen.vhd
+l0
+L8
+Vo[jOY5X^WV?=iM>>@E3YV2
+R8
+32
+Z164 !s108 1716728831.886000
+Z165 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestCorGen.vhd|
+Z166 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestCorGen.vhd|
+R12
+R13
+!s100 3X90J@=H4GYD1[BL]I[SZ2
+!i10b 1
+Ageneratecorrelations
+R1
+R2
+R3
+R4
+Z167 DEx4 work 10 testcorgen 0 22 o[jOY5X^WV?=iM>>@E3YV2
+l20
+L18
+VFB7nU`I<cRkI@zCCGQAzO3
+R8
+32
+R164
+R165
+R166
+R12
+R13
+!s100 JPddXlC3nBT4?Qig_@=o=1
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 10 testcorgen 0 22 cKS<V@ZoAJH86_DRSK0fc0
+l20
+L18
+V8JO4lYIK2Q3:GICiI1Z4K0
+R8
+32
+R165
+R12
+R13
+w1716727937
+R166
+!s108 1716727949.212000
+!s100 L3OW7H>cgIRNL13]g]Mec3
+!i10b 1
+Etestdac
+Z168 w1640991600
+R1
+R2
+R3
+R4
+R5
+Z169 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestDac.vhd
+Z170 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestDac.vhd
+l0
+L8
+V<O4fAggK7k6HIMjI6`?RI1
+R8
+32
+Z171 !s108 1716726109.296000
+Z172 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestDac.vhd|
+Z173 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestDac.vhd|
+R12
+R13
+!s100 F2]K=Kb?X?oQZ@LQGHLAa1
+!i10b 1
+Asim
+R1
+R2
+R3
+R4
+Z174 DEx4 work 7 testdac 0 22 <O4fAggK7k6HIMjI6`?RI1
+l21
+L16
+V4XISWWJkdf6G9Ei11Yn2c2
+R8
+32
+R171
+R172
+R173
+R12
+R13
+!s100 H06GSVA82W5bX>9G8ak682
+!i10b 1
+Etestpdtoplevel
+Z175 w1716728780
+R1
+R2
+R3
+R4
+R5
+Z176 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevel.vhd
+Z177 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevel.vhd
+l0
+L8
+V3W1STO]1Dfma__miI^BkA3
+R8
+32
+Z178 !s108 1716728837.662000
+Z179 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevel.vhd|
+Z180 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevel.vhd|
+R12
+R13
+!s100 ]2lWRTMd^LB?ml>g5U2`O2
+!i10b 1
+Asim
+R89
+R167
+R99
+R1
+R2
+R3
+R4
+Z181 DEx4 work 14 testpdtoplevel 0 22 3W1STO]1Dfma__miI^BkA3
+l27
+L22
+V91OZ8lS0;aLHoUa;ViLKf2
+R8
+32
+R178
+R179
+R180
+R12
+R13
+!s100 bIWmZGjZG<Maln8<=V7;@0
+!i10b 1
+Etestpdtopleveltb
+Z182 w1716728585
+R2
+R3
+R4
+R5
+Z183 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevelTB.vhd
+Z184 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevelTB.vhd
+l0
+L5
+V<NMG]ikehQI;iIY46FCXA0
+!s100 YG0h:>N3Y:O:_;H=kEAEU1
+R8
+32
+!i10b 1
+Z185 !s108 1716728841.987000
+Z186 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevelTB.vhd|
+Z187 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestPDTopLevelTB.vhd|
+R12
+R13
+Atestbench
+R1
+R181
+R2
+R3
+R4
+Z188 DEx4 work 16 testpdtopleveltb 0 22 <NMG]ikehQI;iIY46FCXA0
+l18
+L8
+VE7;=V=2A9[lb[AdBa]23]0
+!s100 g^D[V[3PaD_CS?Y<`zKFo0
+R8
+32
+!i10b 1
+R185
+R186
+R187
+R12
+R13
+Etesttdmamin
+R140
+R1
+R2
+R3
+R4
+R5
+Z189 8C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMin.vhd
+Z190 FC:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMin.vhd
+l0
+L8
+V]IC]<MQ?hh^f2YH_5PddU3
+R8
+32
+Z191 !s108 1716726110.104000
+Z192 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMin.vhd|
+Z193 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMin.vhd|
+R12
+R13
+!s100 ZjjRAYD^=Bz^m4hkj>kE[0
+!i10b 1
+Asim
+R99
+R1
+R2
+R3
+R4
+DEx4 work 11 testtdmamin 0 22 ]IC]<MQ?hh^f2YH_5PddU3
+l21
+L14
+VUZ=HkB]VM6;:`A=a@VfDm3
+R8
+32
+R191
+R192
+R193
+R12
+R13
+!s100 z@8DOMfWN?:UD9_KdM5d_3
+!i10b 1
+Etesttdmamininterface
+Z194 w1716446954
+R1
+R2
+R3
+R4
+R5
+Z195 8C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMinInterface.vhd
+Z196 FC:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMinInterface.vhd
+l0
+L8
+VAB1EFIlWHJH0U84Ai1o^m2
+R8
+32
+Z197 !s108 1716726110.352000
+Z198 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMinInterface.vhd|
+Z199 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TdmaMin/TestTdmaMinInterface.vhd|
+R12
+R13
+!s100 UDCjadBLJ?WCI1i;k3@P40
+!i10b 1
+Asim
+R96
+R1
+R2
+R3
+R4
+DEx4 work 20 testtdmamininterface 0 22 AB1EFIlWHJH0U84Ai1o^m2
+l24
+L14
+V?zzhff91Tm=zWR4ak@?IB3
+R8
+32
+R197
+R198
+R199
+R12
+R13
+!s100 W:GcOf_1SCL3CiaIOjebL0
+!i10b 1
+Etesttoplevel
+Z200 w1716456040
+R1
+R2
+R3
+R4
+R5
+Z201 8C:/repos/Lab2 Reference Design 2024/CS701/test/TestTopLevel.vhd
+Z202 FC:/repos/Lab2 Reference Design 2024/CS701/test/TestTopLevel.vhd
+l0
+L8
+VNng]JfgVOh?:S;1@n[P2H0
+R8
+32
+Z203 !s108 1716726110.630000
+Z204 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/test/TestTopLevel.vhd|
+Z205 !s107 C:/repos/Lab2 Reference Design 2024/CS701/test/TestTopLevel.vhd|
+R12
+R13
+!s100 ;h@9cFZ4I33KLJWdTKMWT0
+!i10b 1
+Asim
+R21
+R174
+R139
+R99
+R1
+R2
+R3
+R4
+DEx4 work 12 testtoplevel 0 22 Nng]JfgVOh?:S;1@n[P2H0
+l21
+L14
+V=W=1@l1]K8G1lcl;ONd@22
+R8
+32
+R203
+R204
+R205
+R12
+R13
+!s100 8zW?bPI=nVj7V>lY5?<cm3
+!i10b 1
+Etoplevel
+Z206 w1716448871
+R1
+R2
+R3
+R4
+R5
+Z207 8C:/repos/Lab2 Reference Design 2024/CS701/src/TopLevel.vhd
+Z208 FC:/repos/Lab2 Reference Design 2024/CS701/src/TopLevel.vhd
+l0
+L8
+VfPWga6U5MoIRaaE;Yjf_h3
+R8
+32
+Z209 !s108 1716726110.953000
+Z210 !s90 -reportprogress|300|-work|work|-O0|C:/repos/Lab2 Reference Design 2024/CS701/src/TopLevel.vhd|
+Z211 !s107 C:/repos/Lab2 Reference Design 2024/CS701/src/TopLevel.vhd|
+R12
+R13
+!s100 PZdVo7SS]n80d_CQDzYe23
+!i10b 1
+Artl
+R21
+R36
+R28
+R14
+R99
+R47
+R1
+R2
+R3
+R4
+DEx4 work 8 toplevel 0 22 fPWga6U5MoIRaaE;Yjf_h3
+l65
+L38
+VMAmiLBB_WkCa4oLz9Mf?73
+R8
+32
+R209
+R210
+R211
+R12
+R13
+!s100 G0:LZ]B38KjJWeGlGB7bV3
+!i10b 1

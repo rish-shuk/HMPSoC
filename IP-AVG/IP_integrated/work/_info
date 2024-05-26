@@ -1,0 +1,621 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701
+Easpavg
+Z1 w1716535267
+Z2 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z6 dC:/Users/ianku/Downloads/CS701 IP/IP_integrated
+Z7 8C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestavgAsp.vhd
+Z8 FC:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestavgAsp.vhd
+l0
+L8
+VoIBfFZdn0RL`Smb9Fm4433
+!s100 GIHH^FY1f?<mnH@ijQXeE3
+Z9 OV;C;10.5b;63
+32
+Z10 !s110 1716535301
+!i10b 1
+Z11 !s108 1716535301.000000
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestavgAsp.vhd|
+Z13 !s107 C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestavgAsp.vhd|
+!i113 1
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Asim
+R2
+R3
+R4
+R5
+Z16 DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
+l27
+L16
+V_eDLV7DX72hghjH6Mo=KB0
+!s100 Fd_FVd=IO6=zkGX<Wh]Sn2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Etdmamin
+Z17 w1716273705
+R2
+R3
+R4
+R5
+R0
+Z18 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+Z19 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+l0
+L8
+V=S6e89o6o0;L?4kiAPgXo0
+!s100 6;L8z`bBSW^j[_>G_J?Gd2
+R9
+32
+Z20 !s110 1716338940
+!i10b 1
+Z21 !s108 1716338940.000000
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+Z23 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+!i113 1
+R14
+R15
+Artl
+Z24 DEx4 work 16 tdmamininterface 0 22 R^V;3h>MbGHZ5>kDZ5QdP0
+Z25 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
+Z26 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
+R2
+R3
+R4
+R5
+Z27 DEx4 work 7 tdmamin 0 22 =S6e89o6o0;L?4kiAPgXo0
+l27
+L19
+VU@GY`FPJ`_6gPEQJ@9KE>0
+!s100 <5<>>iFjPXUU82XzWAI403
+R9
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R14
+R15
+Etdmaminfabric
+R17
+R2
+R3
+R4
+R5
+R0
+Z28 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+Z29 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+l0
+L8
+V=XdmE:2YnL8N6`N_i3QlI2
+!s100 gPIDA1YCE:[;DEnj@Y>0i3
+R9
+32
+Z30 !s110 1716338827
+!i10b 1
+Z31 !s108 1716338827.000000
+Z32 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+Z33 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+!i113 1
+R14
+R15
+Artl
+Z34 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
+R2
+R3
+R4
+R5
+R25
+l27
+L20
+VOK^jicn78;lPom<<2X`?I2
+!s100 JSmh>bieLZoMlenZQ0T<:1
+R9
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R14
+R15
+Etdmamininterface
+R17
+R2
+R3
+R4
+R5
+R0
+Z35 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd
+Z36 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd
+l0
+L10
+VR^V;3h>MbGHZ5>kDZ5QdP0
+!s100 0G4AkKgOe4CjO1]3Jm9A`2
+R9
+32
+Z37 !s110 1716338938
+!i10b 1
+Z38 !s108 1716338938.000000
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd|
+Z40 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinInterface.vhd|
+!i113 1
+R14
+R15
+Artl
+DEx2 ip 11 tdmaminfifo 0 22 3RgC52PX=;I71WkR@A_7C2
+R2
+R3
+R4
+R5
+R24
+l40
+L26
+VATF=3T=2_U]2dJ@R;;5fR0
+!s100 ]KF`FTm9V>KHP;NU1g7G_3
+R9
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R14
+R15
+Etdmaminslots
+R17
+R3
+R4
+R5
+R0
+Z41 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+Z42 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+l0
+L5
+Vmk_HdOSQUCX0X[0_`0G111
+!s100 bY70hkiSWIonW84Wkb5=Y2
+R9
+32
+Z43 !s110 1716338823
+!i10b 1
+Z44 !s108 1716338823.000000
+Z45 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+Z46 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+!i113 1
+R14
+R15
+Artl
+R3
+R4
+R5
+R26
+l19
+L15
+VNi03TlYW8E7nkCedUWQNj3
+!s100 8ZE?LJj4zV?JVY`ITHFDQ1
+R9
+32
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R14
+R15
+Etdmaminstage
+R17
+R2
+R3
+R4
+R5
+R0
+Z47 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+Z48 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+l0
+L8
+Vl@eJX5;XGK`nhfZQ7j:[F2
+!s100 FF_3G3M34h_O0k2e3RoCo2
+R9
+32
+Z49 !s110 1716338821
+!i10b 1
+Z50 !s108 1716338821.000000
+Z51 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+Z52 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+!i113 1
+R14
+R15
+Artl
+Z53 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
+R2
+R3
+R4
+R5
+R34
+l20
+L19
+V^i[Se9TNAQW]l[XH=z?zU3
+!s100 S;h7UbjJAC@j?j@O3^C@D1
+R9
+32
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R14
+R15
+Etdmaminswitch
+R17
+R2
+R3
+R4
+R5
+R0
+Z54 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+Z55 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+l0
+L8
+Vha<ZO:0=<6zJT>@X_3kc92
+!s100 h[e;lEbjCXFWZ]MK6d]=d1
+R9
+32
+Z56 !s110 1716338819
+!i10b 1
+Z57 !s108 1716338819.000000
+Z58 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+Z59 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+!i113 1
+R14
+R15
+Artl
+R2
+R3
+R4
+R5
+R53
+l19
+L18
+V`KlX9@nTfmU@A?GQQK4>23
+!s100 1a`QCVX^=HfRSbXEgSbnN1
+R9
+32
+R56
+!i10b 1
+R57
+R58
+R59
+!i113 1
+R14
+R15
+Ptdmamintypes
+R3
+R4
+R5
+R17
+R0
+Z60 8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+Z61 FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+l0
+L5
+VzUbdIXj5XgoVHmag:X:zR3
+!s100 RO]^LXRIn]Gj8NO>kodKH0
+R9
+32
+b1
+Z62 !s110 1716338814
+!i10b 1
+Z63 !s108 1716338814.000000
+Z64 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+Z65 !s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+!i113 1
+R14
+R15
+Bbody
+R2
+R3
+R4
+R5
+l0
+L23
+V<A1G_[MEAzN9V>]FnD[HW1
+!s100 0>WOSehlFYi]icGfEjD0:1
+R9
+32
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R14
+R15
+Etestadc
+Z66 w1716339178
+R2
+R3
+R4
+R5
+R6
+Z67 8C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAdc.vhd
+Z68 FC:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAdc.vhd
+l0
+L8
+V=@i3GDc9PZ767>4mh07a11
+!s100 ?eXjeo0mQ[S9Q=[R?0Mj40
+R9
+32
+Z69 !s110 1716533870
+!i10b 1
+Z70 !s108 1716533870.000000
+Z71 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAdc.vhd|
+Z72 !s107 C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAdc.vhd|
+!i113 1
+R14
+R15
+Asim
+R2
+R3
+R4
+R5
+Z73 DEx4 work 7 testadc 0 22 =@i3GDc9PZ767>4mh07a11
+l24
+L19
+VK^Kcme:?KQ]4QofH^I0[n3
+!s100 ojN2H4h5_QzXQ7NBzS60e2
+R9
+32
+R69
+!i10b 1
+R70
+R71
+R72
+!i113 1
+R14
+R15
+Etestamp
+Z74 w1716337434
+R2
+R3
+R4
+R5
+R6
+Z75 8C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAmp.vhd
+Z76 FC:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAmp.vhd
+l0
+L8
+Vimh6_5:cB4H<6MCZD4Dh[3
+!s100 Z]8Xz:O5@CQbT0YLkkWC11
+R9
+32
+R69
+!i10b 1
+R70
+Z77 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAmp.vhd|
+Z78 !s107 C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestAmp.vhd|
+!i113 1
+R14
+R15
+Asim
+R2
+R3
+R4
+R5
+DEx4 work 7 testamp 0 22 imh6_5:cB4H<6MCZD4Dh[3
+l21
+L16
+V[OAB5m5XK53he7TV;KzkG2
+!s100 FbV@jcODNe[@];IP4_R]L1
+R9
+32
+R69
+!i10b 1
+R70
+R77
+R78
+!i113 1
+R14
+R15
+Etestaudiocontrol
+R17
+R3
+R4
+R5
+R0
+8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd
+FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd
+l0
+L5
+VXMM6aC4l^W:KfzBHihFko2
+!s100 nA[4a?CT=8Kj<O0RTzeE:3
+R9
+32
+Z79 !s110 1716339031
+!i10b 1
+Z80 !s108 1716339031.000000
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd|
+!s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioControl.vhd|
+!i113 1
+R14
+R15
+Etestaudiofifo
+R17
+R3
+R4
+R5
+R0
+8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd
+FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd
+l0
+L7
+V>lc?d=LGIld6Bce2O5:EL2
+!s100 D5W3P0JB0MEc=N`0b^^T12
+R9
+32
+R79
+!i10b 1
+R80
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd|
+!s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioFifo.vhd|
+!i113 1
+R14
+R15
+Etestaudioout
+R17
+R3
+R4
+R5
+R0
+8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd
+FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd
+l0
+L7
+VR7VgcHSa9K7l`FhmLn3h`0
+!s100 9GzFLALJUEfU2__==5KMi3
+R9
+32
+R79
+!i10b 1
+R80
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd|
+!s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioOut.vhd|
+!i113 1
+R14
+R15
+Etestaudiorom
+R17
+R3
+R4
+R5
+R0
+8C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd
+FC:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd
+l0
+L7
+VecjCgUll11P;mZO:gfU3C0
+!s100 Gj=ZW4BmCg]M=D5188Z2D0
+R9
+32
+R79
+!i10b 1
+R80
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd|
+!s107 C:/Users/ianku/Downloads/Lab2 Reference Design 2024/CS701/test/Audio/TestAudioRom.vhd|
+!i113 1
+R14
+R15
+Etestdac
+R17
+R2
+R3
+R4
+R5
+R6
+Z81 8C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestDac.vhd
+Z82 FC:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestDac.vhd
+l0
+L8
+V32W4h7OJ1lLLF@[z5kiI41
+!s100 fnK0EYa=bac?^9KO>SD>b3
+R9
+32
+R69
+!i10b 1
+R70
+Z83 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestDac.vhd|
+Z84 !s107 C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestDac.vhd|
+!i113 1
+R14
+R15
+Asim
+R2
+R3
+R4
+R5
+Z85 DEx4 work 7 testdac 0 22 32W4h7OJ1lLLF@[z5kiI41
+l21
+L16
+VRhM5A3cA^QF>Am2LH7Y1V2
+!s100 GzoUA7l9RB;K741TfQN`j3
+R9
+32
+R69
+!i10b 1
+R70
+R83
+R84
+!i113 1
+R14
+R15
+Etesttoplevel
+Z86 w1716535186
+R2
+R3
+R4
+R5
+R6
+Z87 8C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestTopLevel.vhd
+Z88 FC:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestTopLevel.vhd
+l0
+L8
+V[`SmbDDMZ?`z9n;I3RI`@1
+!s100 iXQlXW8=7hEd42XCAOFI]3
+R9
+32
+Z89 !s110 1716535323
+!i10b 1
+Z90 !s108 1716535323.000000
+Z91 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestTopLevel.vhd|
+Z92 !s107 C:/Users/ianku/Downloads/CS701 IP/IP_integrated/test/TestTopLevel.vhd|
+!i113 1
+R14
+R15
+Asim
+R85
+R73
+R16
+R27
+R2
+R3
+R4
+R5
+Z93 DEx4 work 12 testtoplevel 0 22 [`SmbDDMZ?`z9n;I3RI`@1
+l21
+L14
+Z94 VSUe16ZdSlC<Sjf?_X9jD42
+Z95 !s100 6>ZKKz?[i=^:3CbAL6PfW1
+R9
+32
+R89
+!i10b 1
+R90
+R91
+R92
+!i113 1
+R14
+R15
