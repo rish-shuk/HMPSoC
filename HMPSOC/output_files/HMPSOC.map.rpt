@@ -1,0 +1,1137 @@
+Analysis & Synthesis report for HMPSOC
+Mon May 27 09:12:19 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram
+ 12. Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram
+ 13. Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram
+ 14. Source assignments for AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |toplevel
+ 16. Parameter Settings for User Entity Instance: TdmaMin:tdma_min
+ 17. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinSlots:slots
+ 18. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric
+ 19. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage
+ 20. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:0:stage
+ 21. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface
+ 22. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component
+ 23. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface
+ 24. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component
+ 25. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface
+ 26. Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component
+ 27. Parameter Settings for User Entity Instance: AspAdc:asp_adc|altsyncram:altsyncram_component
+ 28. scfifo Parameter Settings by Entity Instance
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "AspAdc:asp_adc"
+ 31. Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo"
+ 32. Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo"
+ 33. Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo"
+ 34. Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:0:stage"
+ 35. Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage"
+ 36. Port Connectivity Checks: "TdmaMin:tdma_min"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 27 09:12:19 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; HMPSOC                                      ;
+; Top-level Entity Name           ; TopLevel                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 69                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; toplevel           ; HMPSOC             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; TdmaMin/TdmaMinFifo.vhd          ; yes             ; User Wizard-Generated File             ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd          ;         ;
+; TdmaMin/TdmaMinTypes.vhd         ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinTypes.vhd         ;         ;
+; TdmaMin/TdmaMinSwitch.vhd        ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSwitch.vhd        ;         ;
+; TdmaMin/TdmaMinStage.vhd         ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinStage.vhd         ;         ;
+; TdmaMin/TdmaMinSlots.vhd         ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSlots.vhd         ;         ;
+; TdmaMin/TdmaMinInterface.vhd     ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinInterface.vhd     ;         ;
+; TdmaMin/TdmaMinFabric.vhd        ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFabric.vhd        ;         ;
+; TdmaMin/TdmaMin.vhd              ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd              ;         ;
+; toplevel.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd                     ;         ;
+; aspAvg.vhd                       ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspAvg.vhd                       ;         ;
+; aspadc_tdma.vhd                  ; yes             ; User VHDL File                         ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd                  ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf                       ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_regfifo.inc                    ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                     ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                     ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                     ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                     ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                   ;         ;
+; db/scfifo_l191.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/scfifo_l191.tdf               ;         ;
+; db/a_dpfifo_s791.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf             ;         ;
+; db/altsyncram_r3i1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf           ;         ;
+; db/cmpr_7l8.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cmpr_7l8.tdf                  ;         ;
+; db/cntr_i2b.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_i2b.tdf                  ;         ;
+; db/cntr_v27.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_v27.tdf                  ;         ;
+; db/cntr_j2b.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_j2b.tdf                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_l0i1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf           ;         ;
+; input-generator/signal_12bit.mif ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/input-generator/signal_12bit.mif ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 0        ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 0        ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 0        ;
+;     -- 5 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- <=3 input functions                  ; 0        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 69       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 69       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 69   ; 0            ; |TopLevel           ; TopLevel    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                                                                                                                   ; Reason for Removal                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; aspAvg:asp_avg|WINDOWSIZE[6..31]                                                                                                                                                                ; Stuck at GND due to stuck port data_in      ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_j2b:wr_ptr|counter_reg_bit[0..7]        ; Stuck at GND due to stuck port clock_enable ;
+; aspAvg:asp_avg|newData                                                                                                                                                                          ; Lost fanout                                 ;
+; aspAvg:asp_avg|WINDOWSIZE[0..5]                                                                                                                                                                 ; Lost fanout                                 ;
+; aspAvg:asp_avg|avg[0..15]                                                                                                                                                                       ; Lost fanout                                 ;
+; aspAvg:asp_avg|count[0..6]                                                                                                                                                                      ; Lost fanout                                 ;
+; aspAvg:asp_avg|sum[0..31]                                                                                                                                                                       ; Lost fanout                                 ;
+; AspAdc:asp_adc|data_request                                                                                                                                                                     ; Lost fanout                                 ;
+; AspAdc:asp_adc|data_to_send[0..15]                                                                                                                                                              ; Lost fanout                                 ;
+; AspAdc:asp_adc|sampling_counter[0..31]                                                                                                                                                          ; Lost fanout                                 ;
+; AspAdc:asp_adc|rom_address[0..11]                                                                                                                                                               ; Lost fanout                                 ;
+; AspAdc:asp_adc|send.addr[0..7]                                                                                                                                                                  ; Lost fanout                                 ;
+; AspAdc:asp_adc|send.data[0..31]                                                                                                                                                                 ; Lost fanout                                 ;
+; AspAdc:asp_adc|data_bit[0..2]                                                                                                                                                                   ; Lost fanout                                 ;
+; AspAdc:asp_adc|addr[0..3]                                                                                                                                                                       ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff                                    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|full_dff                                     ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|low_addressa[0..7]                           ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|rd_ptr_lsb                                   ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_0_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_1_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_2_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_v27:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_i2b:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[0..15,28..31]                                                                                                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff                                    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|full_dff                                     ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|low_addressa[0..7]                           ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|rd_ptr_lsb                                   ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_0_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_1_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_2_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_j2b:wr_ptr|counter_reg_bit[0..7]        ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_v27:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_i2b:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[0..3,20..23,28..31]                                                                                                         ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff                                    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|full_dff                                     ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|low_addressa[0..7]                           ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|rd_ptr_lsb                                   ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_0_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_1_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|usedw_is_2_dff                               ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_j2b:wr_ptr|counter_reg_bit[0..7]        ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_v27:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_i2b:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                                 ;
+; TdmaMin:tdma_min|TdmaMinSlots:slots|count[0,1]                                                                                                                                                  ; Lost fanout                                 ;
+; Total Number of Removed Registers = 341                                                                                                                                                         ;                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                                         ; Reason for Removal             ; Registers Removed due to This Register                                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_j2b:wr_ptr|counter_reg_bit[7] ; Stuck at GND                   ; AspAdc:asp_adc|send.data[31],                                                                                                                                 ;
+;                                                                                                                                                                                       ; due to stuck port clock_enable ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff, ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff, ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinSlots:slots|count[0],                                                                                                                 ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinSlots:slots|count[1]                                                                                                                  ;
+; aspAvg:asp_avg|WINDOWSIZE[31]                                                                                                                                                         ; Stuck at GND                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[28],                                                                                      ;
+;                                                                                                                                                                                       ; due to stuck port data_in      ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[29],                                                                                      ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[30],                                                                                      ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[31]                                                                                       ;
+; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[7]                                                                                                                ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|empty_dff, ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|full_dff,  ;
+;                                                                                                                                                                                       ;                                ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|full_dff   ;
+; aspAvg:asp_avg|WINDOWSIZE[0]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[0]                                                                                        ;
+; aspAvg:asp_avg|WINDOWSIZE[5]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[5]                                                                                        ;
+; aspAvg:asp_avg|WINDOWSIZE[4]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[4]                                                                                        ;
+; aspAvg:asp_avg|WINDOWSIZE[3]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[3]                                                                                        ;
+; aspAvg:asp_avg|WINDOWSIZE[2]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[2]                                                                                        ;
+; aspAvg:asp_avg|WINDOWSIZE[1]                                                                                                                                                          ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|recv.data[1]                                                                                        ;
+; AspAdc:asp_adc|data_request                                                                                                                                                           ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[3]                                                                                        ;
+; AspAdc:asp_adc|data_bit[0]                                                                                                                                                            ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[0]                                                                                        ;
+; AspAdc:asp_adc|data_bit[1]                                                                                                                                                            ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[1]                                                                                        ;
+; AspAdc:asp_adc|data_bit[2]                                                                                                                                                            ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[2]                                                                                        ;
+; AspAdc:asp_adc|addr[0]                                                                                                                                                                ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[20]                                                                                       ;
+; AspAdc:asp_adc|addr[1]                                                                                                                                                                ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[21]                                                                                       ;
+; AspAdc:asp_adc|addr[2]                                                                                                                                                                ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[22]                                                                                       ;
+; AspAdc:asp_adc|addr[3]                                                                                                                                                                ; Lost Fanouts                   ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|recv.data[23]                                                                                       ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                  ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                   ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                  ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                   ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                  ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                   ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |toplevel ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; ports          ; 3     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ports          ; 3     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinSlots:slots ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; stages         ; 2     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; stages         ; 2     ; Signed Integer                                            ;
+; ports          ; 3     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; terminals      ; 4     ; Signed Integer                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:0:stage ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; terminals      ; 4     ; Signed Integer                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; stages         ; 2     ; Signed Integer                                                                ;
+; identity       ; 0     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                    ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                          ;
+; lpm_width               ; 40          ; Signed Integer                                                                                          ;
+; LPM_NUMWORDS            ; 256         ; Signed Integer                                                                                          ;
+; LPM_WIDTHU              ; 8           ; Signed Integer                                                                                          ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                                                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                                                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                 ;
+; ENABLE_ECC              ; FALSE       ; Untyped                                                                                                 ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                 ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                                                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                 ;
+; CBXI_PARAMETER          ; scfifo_l191 ; Untyped                                                                                                 ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; stages         ; 2     ; Signed Integer                                                                ;
+; identity       ; 1     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                    ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                          ;
+; lpm_width               ; 40          ; Signed Integer                                                                                          ;
+; LPM_NUMWORDS            ; 256         ; Signed Integer                                                                                          ;
+; LPM_WIDTHU              ; 8           ; Signed Integer                                                                                          ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                                                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                                                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                 ;
+; ENABLE_ECC              ; FALSE       ; Untyped                                                                                                 ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                 ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                                                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                 ;
+; CBXI_PARAMETER          ; scfifo_l191 ; Untyped                                                                                                 ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; stages         ; 2     ; Signed Integer                                                                ;
+; identity       ; 2     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                    ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                          ;
+; lpm_width               ; 40          ; Signed Integer                                                                                          ;
+; LPM_NUMWORDS            ; 256         ; Signed Integer                                                                                          ;
+; LPM_WIDTHU              ; 8           ; Signed Integer                                                                                          ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                                                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                                                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                 ;
+; ENABLE_ECC              ; FALSE       ; Untyped                                                                                                 ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                 ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                                                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                 ;
+; CBXI_PARAMETER          ; scfifo_l191 ; Untyped                                                                                                 ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AspAdc:asp_adc|altsyncram:altsyncram_component ;
++------------------------------------+----------------------------------+---------------------+
+; Parameter Name                     ; Value                            ; Type                ;
++------------------------------------+----------------------------------+---------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped             ;
+; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE      ;
+; WIDTH_BYTEENA                      ; 1                                ; Untyped             ;
+; OPERATION_MODE                     ; ROM                              ; Untyped             ;
+; WIDTH_A                            ; 12                               ; Signed Integer      ;
+; WIDTHAD_A                          ; 12                               ; Signed Integer      ;
+; NUMWORDS_A                         ; 1600                             ; Signed Integer      ;
+; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped             ;
+; ADDRESS_ACLR_A                     ; NONE                             ; Untyped             ;
+; OUTDATA_ACLR_A                     ; NONE                             ; Untyped             ;
+; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped             ;
+; INDATA_ACLR_A                      ; NONE                             ; Untyped             ;
+; BYTEENA_ACLR_A                     ; NONE                             ; Untyped             ;
+; WIDTH_B                            ; 1                                ; Untyped             ;
+; WIDTHAD_B                          ; 1                                ; Untyped             ;
+; NUMWORDS_B                         ; 1                                ; Untyped             ;
+; INDATA_REG_B                       ; CLOCK1                           ; Untyped             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped             ;
+; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped             ;
+; ADDRESS_REG_B                      ; CLOCK1                           ; Untyped             ;
+; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped             ;
+; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped             ;
+; INDATA_ACLR_B                      ; NONE                             ; Untyped             ;
+; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped             ;
+; ADDRESS_ACLR_B                     ; NONE                             ; Untyped             ;
+; OUTDATA_ACLR_B                     ; NONE                             ; Untyped             ;
+; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped             ;
+; BYTEENA_ACLR_B                     ; NONE                             ; Untyped             ;
+; WIDTH_BYTEENA_A                    ; 1                                ; Signed Integer      ;
+; WIDTH_BYTEENA_B                    ; 1                                ; Untyped             ;
+; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped             ;
+; BYTE_SIZE                          ; 8                                ; Untyped             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped             ;
+; INIT_FILE                          ; input-generator/signal_12bit.mif ; Untyped             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped             ;
+; MAXIMUM_DEPTH                      ; 1600                             ; Signed Integer      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                           ; Untyped             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                           ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped             ;
+; ENABLE_ECC                         ; FALSE                            ; Untyped             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                            ; Untyped             ;
+; WIDTH_ECCSTATUS                    ; 3                                ; Untyped             ;
+; DEVICE_FAMILY                      ; Cyclone V                        ; Untyped             ;
+; CBXI_PARAMETER                     ; altsyncram_l0i1                  ; Untyped             ;
++------------------------------------+----------------------------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                                                                                    ;
++----------------------------+----------------------------------------------------------------------------------------------------+
+; Name                       ; Value                                                                                              ;
++----------------------------+----------------------------------------------------------------------------------------------------+
+; Number of entity instances ; 3                                                                                                  ;
+; Entity Instance            ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                                                                       ;
+;     -- lpm_width           ; 40                                                                                                 ;
+;     -- LPM_NUMWORDS        ; 256                                                                                                ;
+;     -- LPM_SHOWAHEAD       ; ON                                                                                                 ;
+;     -- USE_EAB             ; ON                                                                                                 ;
+; Entity Instance            ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                                                                       ;
+;     -- lpm_width           ; 40                                                                                                 ;
+;     -- LPM_NUMWORDS        ; 256                                                                                                ;
+;     -- LPM_SHOWAHEAD       ; ON                                                                                                 ;
+;     -- USE_EAB             ; ON                                                                                                 ;
+; Entity Instance            ; TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                                                                       ;
+;     -- lpm_width           ; 40                                                                                                 ;
+;     -- LPM_NUMWORDS        ; 256                                                                                                ;
+;     -- LPM_SHOWAHEAD       ; ON                                                                                                 ;
+;     -- USE_EAB             ; ON                                                                                                 ;
++----------------------------+----------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 1                                              ;
+; Entity Instance                           ; AspAdc:asp_adc|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                            ;
+;     -- WIDTH_A                            ; 12                                             ;
+;     -- NUMWORDS_A                         ; 1600                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
++-------------------------------------------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AspAdc:asp_adc"                                                                               ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; adc_data_ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:0:stage"                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; o[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; i[3] ; Input ; Info     ; Stuck at GND                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TdmaMin:tdma_min"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; sends[2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; recvs[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 69                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 27 09:12:06 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HMPSOC -c HMPSOC
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmaminfifo.vhd
+    Info (12022): Found design unit 1: tdmaminfifo-SYN File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd Line: 57
+    Info (12023): Found entity 1: TdmaMinFifo File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd Line: 43
+Info (12021): Found 2 design units, including 0 entities, in source file tdmamin/tdmamintypes.vhd
+    Info (12022): Found design unit 1: TdmaMinTypes File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinTypes.vhd Line: 5
+    Info (12022): Found design unit 2: TdmaMinTypes-body File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinTypes.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmaminswitch.vhd
+    Info (12022): Found design unit 1: TdmaMinSwitch-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSwitch.vhd Line: 18
+    Info (12023): Found entity 1: TdmaMinSwitch File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSwitch.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmaminstage.vhd
+    Info (12022): Found design unit 1: TdmaMinStage-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinStage.vhd Line: 19
+    Info (12023): Found entity 1: TdmaMinStage File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinStage.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmaminslots.vhd
+    Info (12022): Found design unit 1: TdmaMinSlots-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSlots.vhd Line: 15
+    Info (12023): Found entity 1: TdmaMinSlots File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinSlots.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmamininterface.vhd
+    Info (12022): Found design unit 1: TdmaMinInterface-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinInterface.vhd Line: 26
+    Info (12023): Found entity 1: TdmaMinInterface File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinInterface.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmaminfabric.vhd
+    Info (12022): Found design unit 1: TdmaMinFabric-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFabric.vhd Line: 20
+    Info (12023): Found entity 1: TdmaMinFabric File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFabric.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file tdmamin/tdmamin.vhd
+    Info (12022): Found design unit 1: TdmaMin-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 19
+    Info (12023): Found entity 1: TdmaMin File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
+    Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 38
+    Info (12023): Found entity 1: TopLevel File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 8
+Info (12021): Found 1 design units, including 0 entities, in source file macros.vhd
+    Info (12022): Found design unit 1: macros File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/macros.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file aspavg.vhd
+    Info (12022): Found design unit 1: aspAvg-sim File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspAvg.vhd Line: 16
+    Info (12023): Found entity 1: aspAvg File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspAvg.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file aspadc_tdma.vhd
+    Info (12022): Found design unit 1: AspAdc-behaviour File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd Line: 25
+    Info (12023): Found entity 1: AspAdc File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd Line: 14
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(28): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(29): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(30): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(31): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(32): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(33): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(34): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+Warning (10873): Using initial value X (don't care) for net "send_port[2]" at toplevel.vhd(49) File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 49
+Info (12128): Elaborating entity "TdmaMin" for hierarchy "TdmaMin:tdma_min" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 56
+Info (12128): Elaborating entity "TdmaMinSlots" for hierarchy "TdmaMin:tdma_min|TdmaMinSlots:slots" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 29
+Info (12128): Elaborating entity "TdmaMinFabric" for hierarchy "TdmaMin:tdma_min|TdmaMinFabric:fabric" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 38
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "links" into its bus
+Info (12128): Elaborating entity "TdmaMinStage" for hierarchy "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFabric.vhd Line: 34
+Info (12128): Elaborating entity "TdmaMinSwitch" for hierarchy "TdmaMin:tdma_min|TdmaMinFabric:fabric|TdmaMinStage:\staging:1:stage|TdmaMinSwitch:\switches:0:switch" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinStage.vhd Line: 23
+Info (12128): Elaborating entity "TdmaMinInterface" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 50
+Info (12128): Elaborating entity "TdmaMinFifo" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinInterface.vhd Line: 44
+Info (12128): Elaborating entity "scfifo" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd Line: 94
+Info (12130): Elaborated megafunction instantiation "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd Line: 94
+Info (12133): Instantiated megafunction "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component" with the following parameter: File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMinFifo.vhd Line: 94
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_numwords" = "256"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "40"
+    Info (12134): Parameter "lpm_widthu" = "8"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_l191.tdf
+    Info (12023): Found entity 1: scfifo_l191 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/scfifo_l191.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_l191" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_s791.tdf
+    Info (12023): Found entity 1: a_dpfifo_s791 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 32
+Info (12128): Elaborating entity "a_dpfifo_s791" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/scfifo_l191.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r3i1.tdf
+    Info (12023): Found entity 1: altsyncram_r3i1 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_r3i1" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_7l8.tdf
+    Info (12023): Found entity 1: cmpr_7l8 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cmpr_7l8.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_7l8" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cmpr_7l8:almost_full_comparer" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 53
+Info (12128): Elaborating entity "cmpr_7l8" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cmpr_7l8:three_comparison" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i2b.tdf
+    Info (12023): Found entity 1: cntr_i2b File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_i2b.tdf Line: 25
+Info (12128): Elaborating entity "cntr_i2b" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_i2b:rd_ptr_msb" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_v27.tdf
+    Info (12023): Found entity 1: cntr_v27 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_v27.tdf Line: 25
+Info (12128): Elaborating entity "cntr_v27" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_v27:usedw_counter" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_j2b.tdf
+    Info (12023): Found entity 1: cntr_j2b File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/cntr_j2b.tdf Line: 25
+Info (12128): Elaborating entity "cntr_j2b" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|cntr_j2b:wr_ptr" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/a_dpfifo_s791.tdf Line: 57
+Info (12128): Elaborating entity "TdmaMinInterface" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 50
+Info (12128): Elaborating entity "TdmaMinInterface" for hierarchy "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/TdmaMin/TdmaMin.vhd Line: 50
+Info (12128): Elaborating entity "AspAdc" for hierarchy "AspAdc:asp_adc" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 66
+Info (12128): Elaborating entity "altsyncram" for hierarchy "AspAdc:asp_adc|altsyncram:altsyncram_component" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd Line: 63
+Info (12130): Elaborated megafunction instantiation "AspAdc:asp_adc|altsyncram:altsyncram_component" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd Line: 63
+Info (12133): Instantiated megafunction "AspAdc:asp_adc|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspadc_tdma.vhd Line: 63
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "input-generator/signal_12bit.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "maximum_depth" = "1600"
+    Info (12134): Parameter "numwords_a" = "1600"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Warning (287001): Assertion warning: Not using extra address lines in altsyncram megafunction design -- 1600 memory words in side A specified but total number of address lines is 12 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 282
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l0i1.tdf
+    Info (12023): Found entity 1: altsyncram_l0i1 File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_l0i1" for hierarchy "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "aspAvg" for hierarchy "aspAvg:asp_avg" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 75
+Warning (10036): Verilog HDL or VHDL warning at aspAvg.vhd(25): object "data" assigned a value but never read File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/aspAvg.vhd Line: 25
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[16]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 517
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[17]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 547
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[18]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 577
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[19]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 607
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[24]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 757
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[25]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 787
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[26]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 817
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[27]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 847
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[16]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 517
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[17]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 547
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[18]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 577
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[19]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 607
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[24]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 757
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[25]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 787
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[26]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 817
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[27]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 847
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[16]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 517
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[17]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 547
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[18]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 577
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[19]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 607
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[24]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 757
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[25]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 787
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[26]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 817
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[27]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 847
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 34
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 54
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 74
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 94
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[4]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 114
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[5]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 134
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[6]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 154
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[7]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 174
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[8]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 194
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[9]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 214
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[10]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 234
+        Warning (14320): Synthesized away node "AspAdc:asp_adc|altsyncram:altsyncram_component|altsyncram_l0i1:auto_generated|q_a[11]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_l0i1.tdf Line: 254
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 37
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 67
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 97
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 127
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[4]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 157
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[5]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 187
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[6]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 217
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[7]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 247
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[8]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 277
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[9]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 307
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[10]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 337
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[11]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 367
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[12]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 397
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[13]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 427
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[14]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 457
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[15]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 487
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[20]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 637
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[21]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 667
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[22]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 697
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[23]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 727
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[28]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 877
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[29]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 907
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[30]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 937
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[31]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 967
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[32]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 997
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[33]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1027
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[34]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1057
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[35]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1087
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[36]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1117
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[37]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1147
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[38]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1177
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:2:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[39]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1207
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 37
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 67
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 97
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 127
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[4]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 157
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[5]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 187
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[6]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 217
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[7]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 247
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[8]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 277
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[9]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 307
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[10]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 337
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[11]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 367
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[12]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 397
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[13]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 427
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[14]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 457
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[15]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 487
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[20]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 637
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[21]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 667
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[22]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 697
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[23]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 727
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[28]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 877
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[29]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 907
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[30]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 937
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[31]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 967
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[32]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 997
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[33]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1027
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[34]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1057
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[35]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1087
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[36]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1117
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[37]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1147
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[38]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1177
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:1:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[39]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1207
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 37
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 67
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 97
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 127
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[4]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 157
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[5]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 187
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[6]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 217
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[7]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 247
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[8]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 277
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[9]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 307
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[10]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 337
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[11]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 367
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[12]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 397
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[13]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 427
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[14]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 457
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[15]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 487
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[20]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 637
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[21]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 667
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[22]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 697
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[23]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 727
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[28]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 877
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[29]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 907
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[30]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 937
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[31]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 967
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[32]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 997
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[33]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1027
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[34]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1057
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[35]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1087
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[36]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1117
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[37]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1147
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[38]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1177
+        Warning (14320): Synthesized away node "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:0:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|q_b[39]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/db/altsyncram_r3i1.tdf Line: 1207
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 28
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 29
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 30
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 31
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 32
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 33
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 34
+Info (17049): 307 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 13
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 14
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 26
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 26
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 26
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 26
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC/toplevel.vhd Line: 27
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 52 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 218 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Mon May 27 09:12:19 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:09
+
+

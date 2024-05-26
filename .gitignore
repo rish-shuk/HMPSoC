@@ -1,0 +1,4 @@
+
+/HMPSOC/db
+/HMPSOC/incremental_db
+*.flock
