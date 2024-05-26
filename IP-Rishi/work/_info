@@ -56,26 +56,69 @@ R15
 !i113 1
 R16
 R17
-Easpavg
-Z18 w1716684106
+Easpamp
+Z18 w1716687809
 R2
 R5
 R6
 R7
 R8
-Z19 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd
-Z20 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd
+Z19 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAmp.vhd
+Z20 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAmp.vhd
+l0
+L8
+V`?TP[5K0JYk]n6;;E`a4n0
+!s100 5B[8:aL6DQzJ6;b=[EY[n2
+R11
+32
+Z21 !s110 1716687821
+!i10b 1
+Z22 !s108 1716687821.000000
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAmp.vhd|
+Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAmp.vhd|
+!i113 1
+R16
+R17
+Asim
+R2
+R5
+R6
+R7
+DEx4 work 6 aspamp 0 22 `?TP[5K0JYk]n6;;E`a4n0
+l21
+L16
+V>RPS7YJLTU_?0XzbDR`411
+!s100 ;O=S8co3cgbfiM:AGbMBb2
+R11
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R16
+R17
+Easpavg
+Z25 w1716684106
+R2
+R5
+R6
+R7
+R8
+Z26 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd
+Z27 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd
 l0
 L8
 VoIBfFZdn0RL`Smb9Fm4433
 !s100 GIHH^FY1f?<mnH@ijQXeE3
 R11
 32
-Z21 !s110 1716684224
+Z28 !s110 1716687651
 !i10b 1
-Z22 !s108 1716684224.000000
-Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
-Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
+Z29 !s108 1716687651.000000
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
+Z31 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 !i113 1
 R16
 R17
@@ -91,89 +134,48 @@ V_eDLV7DX72hghjH6Mo=KB0
 !s100 Fd_FVd=IO6=zkGX<Wh]Sn2
 R11
 32
-R21
+R28
 !i10b 1
-R22
-R23
-R24
+R29
+R30
+R31
 !i113 1
 R16
 R17
 Eaudioclock
-Z25 w1716464524
-Z26 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z32 w1716464524
+Z33 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R6
-Z27 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z34 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 29
 R0
-Z28 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
-Z29 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z35 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z36 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
 l0
 L9 1
 VmI069NaX1L3M<GlBV[mC?2
 !s100 ?]V=nD1YN]MfnMQ9ZF@XP2
-Z30 OV;C;2020.1;71
+Z37 OV;C;2020.1;71
 32
-Z31 !s110 1716464709
+Z38 !s110 1716464709
 !i10b 1
-Z32 !s108 1716464708.000000
-Z33 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
-Z34 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z39 !s108 1716464708.000000
+Z40 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z41 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
 !i113 1
 R16
 R17
 Artl
-R26
+R33
 R6
-R27
+R34
 DEx4 work 10 audioclock 0 22 mI069NaX1L3M<GlBV[mC?2
 !i122 29
 l28
 L18 21
 V3XJ9QR0TYa`cglNeOFaE62
 !s100 gEa:]G7l6k;X7AW=Y70TR0
-R30
-32
-R31
-!i10b 1
-R32
-R33
-R34
-!i113 1
-R16
-R17
-Eaudiofifo
-R25
-R6
-R27
-!i122 25
-R0
-Z35 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
-Z36 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
-l0
-Z37 L43 1
-VXfF;I>z]3;GUdLHjJ=IZf3
-!s100 hzfBADS2jz8efhYoW2WSO2
-R30
-32
-Z38 !s110 1716464693
-!i10b 1
-Z39 !s108 1716464693.000000
-Z40 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
-Z41 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
-!i113 1
-R16
-R17
-Asyn
-R6
-R27
-DEx4 work 9 audiofifo 0 22 XfF;I>z]3;GUdLHjJ=IZf3
-!i122 25
-l92
-L58 67
-VHgI^R8H8_:gao]:X4JGYR0
-!s100 DFEC5]6nd;^@Gjg`?;L]o3
-R30
+R37
 32
 R38
 !i10b 1
@@ -183,40 +185,38 @@ R41
 !i113 1
 R16
 R17
-Eaudiorom
-R25
-Z42 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Eaudiofifo
+R32
 R6
-R27
-!i122 22
+R34
+!i122 25
 R0
-Z43 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
-Z44 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z42 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
+Z43 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
 l0
+Z44 L43 1
+VXfF;I>z]3;GUdLHjJ=IZf3
+!s100 hzfBADS2jz8efhYoW2WSO2
 R37
-V<hPgN;endSF@_Y85X;^nD3
-!s100 `zhij<A8?O;TTj8[PRKke3
-R30
 32
-Z45 !s110 1716464666
+Z45 !s110 1716464693
 !i10b 1
-Z46 !s108 1716464665.000000
-Z47 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
-Z48 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z46 !s108 1716464693.000000
+Z47 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
+Z48 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
 !i113 1
 R16
 R17
 Asyn
-R42
 R6
-R27
-DEx4 work 8 audiorom 0 22 <hPgN;endSF@_Y85X;^nD3
-!i122 22
-l57
-L53 33
-VYOkS7@8Q1_^`7BU@Z3Xci3
-!s100 >haM?bMIA8m3IF:F1EmdN1
-R30
+R34
+DEx4 work 9 audiofifo 0 22 XfF;I>z]3;GUdLHjJ=IZf3
+!i122 25
+l92
+L58 67
+VHgI^R8H8_:gao]:X4JGYR0
+!s100 DFEC5]6nd;^@Gjg`?;L]o3
+R37
 32
 R45
 !i10b 1
@@ -226,8 +226,51 @@ R48
 !i113 1
 R16
 R17
+Eaudiorom
+R32
+Z49 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R6
+R34
+!i122 22
+R0
+Z50 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z51 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
+l0
+R44
+V<hPgN;endSF@_Y85X;^nD3
+!s100 `zhij<A8?O;TTj8[PRKke3
+R37
+32
+Z52 !s110 1716464666
+!i10b 1
+Z53 !s108 1716464665.000000
+Z54 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z55 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+!i113 1
+R16
+R17
+Asyn
+R49
+R6
+R34
+DEx4 work 8 audiorom 0 22 <hPgN;endSF@_Y85X;^nD3
+!i122 22
+l57
+L53 33
+VYOkS7@8Q1_^`7BU@Z3Xci3
+!s100 >haM?bMIA8m3IF:F1EmdN1
+R37
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R16
+R17
 Pmacros
-Z49 w1716595394
+Z56 w1716595394
 R8
 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/macros.vhd
 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/macros.vhd
@@ -246,32 +289,32 @@ R11
 R16
 R17
 Etdmamin
-R49
+R56
 R2
 R5
 R6
 R7
 R8
-Z50 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd
-Z51 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd
+Z57 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd
+Z58 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd
 l0
 L8
 V=S6e89o6o0;L?4kiAPgXo0
 !s100 6;L8z`bBSW^j[_>G_J?Gd2
 R11
 32
-Z52 !s110 1716684216
+Z59 !s110 1716684216
 !i10b 1
-Z53 !s108 1716684216.000000
-Z54 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
-Z55 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
+Z60 !s108 1716684216.000000
+Z61 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
+Z62 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMin.vhd|
 !i113 1
 R16
 R17
 Artl
-Z56 DEx4 work 16 tdmamininterface 0 22 gT^kX:2W=4RT7PNm7H11F2
-Z57 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
-Z58 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
+Z63 DEx4 work 16 tdmamininterface 0 22 gT^kX:2W=4RT7PNm7H11F2
+Z64 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
+Z65 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
 R2
 R5
 R6
@@ -283,87 +326,48 @@ VU@GY`FPJ`_6gPEQJ@9KE>0
 !s100 <5<>>iFjPXUU82XzWAI403
 R11
 32
-R52
+R59
 !i10b 1
-R53
-R54
-R55
+R60
+R61
+R62
 !i113 1
 R16
 R17
 Etdmaminfabric
-R49
+R56
 R2
 R5
 R6
 R7
 R8
-Z59 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
-Z60 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
+Z66 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
+Z67 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd
 l0
 L8
 V=XdmE:2YnL8N6`N_i3QlI2
 !s100 gPIDA1YCE:[;DEnj@Y>0i3
 R11
 32
-Z61 !s110 1716684206
+Z68 !s110 1716684206
 !i10b 1
-Z62 !s108 1716684206.000000
-Z63 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
-Z64 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
+Z69 !s108 1716684206.000000
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
+Z71 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinFabric.vhd|
 !i113 1
 R16
 R17
 Artl
-Z65 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
+Z72 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
 R2
 R5
 R6
 R7
-R57
+R64
 l27
 L20
 VOK^jicn78;lPom<<2X`?I2
 !s100 JSmh>bieLZoMlenZQ0T<:1
-R11
-32
-R61
-!i10b 1
-R62
-R63
-R64
-!i113 1
-R16
-R17
-Etdmaminfifo
-R49
-R6
-R5
-R8
-Z66 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
-Z67 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
-l0
-L43
-VOz?]G`AV^1>^4iQa[;O>Q3
-!s100 8FemG`GCM5dSE;ZO1MWzf2
-R11
-32
-Z68 !s110 1716684211
-!i10b 1
-Z69 !s108 1716684211.000000
-Z70 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
-Z71 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
-!i113 1
-R16
-R17
-Asyn
-R6
-R5
-Z72 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
-l89
-L57
-VnVRAKhDUaT;OPaUVX48@d3
-!s100 nV:U_b?O:ZbYEG97<H`3G1
 R11
 32
 R68
@@ -374,69 +378,108 @@ R71
 !i113 1
 R16
 R17
+Etdmaminfifo
+R56
+R6
+R5
+R8
+Z73 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
+Z74 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd
+l0
+L43
+VOz?]G`AV^1>^4iQa[;O>Q3
+!s100 8FemG`GCM5dSE;ZO1MWzf2
+R11
+32
+Z75 !s110 1716684211
+!i10b 1
+Z76 !s108 1716684211.000000
+Z77 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+Z78 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/ip/TdmaMinFifo/TdmaMinFifo.vhd|
+!i113 1
+R16
+R17
+Asyn
+R6
+R5
+Z79 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
+l89
+L57
+VnVRAKhDUaT;OPaUVX48@d3
+!s100 nV:U_b?O:ZbYEG97<H`3G1
+R11
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R16
+R17
 Etdmamininterface
-Z73 w1716683474
+Z80 w1716683474
 R2
 R5
 R6
 R7
 R8
-Z74 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
-Z75 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
+Z81 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
+Z82 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd
 l0
 L10
 VgT^kX:2W=4RT7PNm7H11F2
 !s100 ;1PD82_<6I>fjQK=G=U0B2
 R11
 32
-Z76 !s110 1716684215
+Z83 !s110 1716684215
 !i10b 1
-Z77 !s108 1716684215.000000
-Z78 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
-Z79 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
+Z84 !s108 1716684215.000000
+Z85 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
+Z86 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinInterface.vhd|
 !i113 1
 R16
 R17
 Artl
-R72
+R79
 R2
 R5
 R6
 R7
-R56
+R63
 l40
 L26
 Vl@^iSDgmIz_n^ARnEXD8<3
 !s100 7CB8agV:j<NBePY8lM1^^1
 R11
 32
-R76
+R83
 !i10b 1
-R77
-R78
-R79
+R84
+R85
+R86
 !i113 1
 R16
 R17
 Etdmaminslots
-R49
+R56
 R5
 R6
 R7
 R8
-Z80 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
-Z81 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
+Z87 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
+Z88 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd
 l0
 L5
 Vmk_HdOSQUCX0X[0_`0G111
 !s100 bY70hkiSWIonW84Wkb5=Y2
 R11
 32
-Z82 !s110 1716684205
+Z89 !s110 1716684205
 !i10b 1
-Z83 !s108 1716684205.000000
-Z84 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
-Z85 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
+Z90 !s108 1716684205.000000
+Z91 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
+Z92 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSlots.vhd|
 !i113 1
 R16
 R17
@@ -444,98 +487,55 @@ Artl
 R5
 R6
 R7
-R58
+R65
 l19
 L15
 VNi03TlYW8E7nkCedUWQNj3
 !s100 8ZE?LJj4zV?JVY`ITHFDQ1
 R11
 32
-R82
+R89
 !i10b 1
-R83
-R84
-R85
+R90
+R91
+R92
 !i113 1
 R16
 R17
 Etdmaminstage
-R49
+R56
 R2
 R5
 R6
 R7
 R8
-Z86 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
-Z87 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
+Z93 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
+Z94 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd
 l0
 L8
 Vl@eJX5;XGK`nhfZQ7j:[F2
 !s100 FF_3G3M34h_O0k2e3RoCo2
 R11
 32
-Z88 !s110 1716684204
+Z95 !s110 1716684204
 !i10b 1
-Z89 !s108 1716684204.000000
-Z90 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
-Z91 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
+Z96 !s108 1716684204.000000
+Z97 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
+Z98 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinStage.vhd|
 !i113 1
 R16
 R17
 Artl
-Z92 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
+Z99 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
 R2
 R5
 R6
 R7
-R65
+R72
 l20
 L19
 V^i[Se9TNAQW]l[XH=z?zU3
 !s100 S;h7UbjJAC@j?j@O3^C@D1
-R11
-32
-R88
-!i10b 1
-R89
-R90
-R91
-!i113 1
-R16
-R17
-Etdmaminswitch
-R49
-R2
-R5
-R6
-R7
-R8
-Z93 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
-Z94 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
-l0
-L8
-Vha<ZO:0=<6zJT>@X_3kc92
-!s100 h[e;lEbjCXFWZ]MK6d]=d1
-R11
-32
-Z95 !s110 1716684203
-!i10b 1
-Z96 !s108 1716684203.000000
-Z97 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
-Z98 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
-!i113 1
-R16
-R17
-Artl
-R2
-R5
-R6
-R7
-R92
-l19
-L18
-V`KlX9@nTfmU@A?GQQK4>23
-!s100 1a`QCVX^=HfRSbXEgSbnN1
 R11
 32
 R95
@@ -546,14 +546,57 @@ R98
 !i113 1
 R16
 R17
+Etdmaminswitch
+R56
+R2
+R5
+R6
+R7
+R8
+Z100 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
+Z101 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd
+l0
+L8
+Vha<ZO:0=<6zJT>@X_3kc92
+!s100 h[e;lEbjCXFWZ]MK6d]=d1
+R11
+32
+Z102 !s110 1716684203
+!i10b 1
+Z103 !s108 1716684203.000000
+Z104 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
+Z105 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinSwitch.vhd|
+!i113 1
+R16
+R17
+Artl
+R2
+R5
+R6
+R7
+R99
+l19
+L18
+V`KlX9@nTfmU@A?GQQK4>23
+!s100 1a`QCVX^=HfRSbXEgSbnN1
+R11
+32
+R102
+!i10b 1
+R103
+R104
+R105
+!i113 1
+R16
+R17
 Ptdmamintypes
 R5
 R6
 R7
-R49
+R56
 R8
-Z99 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
-Z100 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
+Z106 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
+Z107 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd
 l0
 L5
 VzUbdIXj5XgoVHmag:X:zR3
@@ -561,11 +604,11 @@ VzUbdIXj5XgoVHmag:X:zR3
 R11
 32
 b1
-R95
+R102
 !i10b 1
-R96
-Z101 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
-Z102 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
+R103
+Z108 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
+Z109 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/TdmaMin/TdmaMinTypes.vhd|
 !i113 1
 R16
 R17
@@ -580,39 +623,39 @@ V<A1G_[MEAzN9V>]FnD[HW1
 !s100 0>WOSehlFYi]icGfEjD0:1
 R11
 32
-R95
-!i10b 1
-R96
-R101
 R102
+!i10b 1
+R103
+R108
+R109
 !i113 1
 R16
 R17
 Etest_adc
-R73
-Z103 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
+R80
+Z110 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
 R5
 R6
 R7
 R8
-Z104 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd
-Z105 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd
+Z111 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd
+Z112 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd
 l0
 L8
 V1bHo_>_f`NjJ2ghB=Jd?[0
 !s100 0QoYS@L>CVCf^aGQGH]S]1
 R11
 32
-Z106 !s110 1716684239
+Z113 !s110 1716684239
 !i10b 1
-Z107 !s108 1716684239.000000
-Z108 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd|
-Z109 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd|
+Z114 !s108 1716684239.000000
+Z115 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd|
+Z116 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc.vhd|
 !i113 1
 R16
 R17
 Asim
-R103
+R110
 R5
 R6
 R7
@@ -623,51 +666,6 @@ V@InlMcKcDoR:k3]Kk[k[g3
 !s100 kM3cgYZ6e2MnS?OazhUXf0
 R11
 32
-R106
-!i10b 1
-R107
-R108
-R109
-!i113 1
-R16
-R17
-Etest_adc_tdma
-Z110 w1716685463
-R2
-R103
-R5
-R6
-R7
-R8
-Z111 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd
-Z112 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd
-l0
-L9
-VF6_nPd5:R2kK01Df2W1311
-!s100 XFMICM`@Ch5RWe147@CPg3
-R11
-32
-Z113 !s110 1716685488
-!i10b 1
-Z114 !s108 1716685488.000000
-Z115 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
-Z116 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
-!i113 1
-R16
-R17
-Asim
-R2
-R103
-R5
-R6
-R7
-Z117 DEx4 work 13 test_adc_tdma 0 22 F6_nPd5:R2kK01Df2W1311
-l42
-L12
-Vb`0YmFeeV_cEl`^G4o2YZ2
-!s100 F4AR>LZ5a[B^O`m0<;BcF3
-R11
-32
 R113
 !i10b 1
 R114
@@ -676,26 +674,71 @@ R116
 !i113 1
 R16
 R17
-Etestadc
-Z118 w1716473403
-R26
+Etest_adc_tdma
+Z117 w1716687956
+R2
+R110
+R5
 R6
-R27
+R7
+R8
+Z118 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd
+Z119 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd
+l0
+L9
+VF6_nPd5:R2kK01Df2W1311
+!s100 XFMICM`@Ch5RWe147@CPg3
+R11
+32
+Z120 !s110 1716687970
+!i10b 1
+Z121 !s108 1716687970.000000
+Z122 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
+Z123 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
+!i113 1
+R16
+R17
+Asim
+R2
+R110
+R5
+R6
+R7
+Z124 DEx4 work 13 test_adc_tdma 0 22 F6_nPd5:R2kK01Df2W1311
+l50
+L12
+V:6SB=?mD3jI<:Pdl47iUM2
+!s100 PlmnV<MK1Toek]<XIm>W>1
+R11
+32
+R120
+!i10b 1
+R121
+R122
+R123
+!i113 1
+R16
+R17
+Etestadc
+Z125 w1716473403
+R33
+R6
+R34
 !i122 57
 R0
-Z119 8Z:/projects/IP/testadc.vhd
-Z120 FZ:/projects/IP/testadc.vhd
+Z126 8Z:/projects/IP/testadc.vhd
+Z127 FZ:/projects/IP/testadc.vhd
 l0
 L5 1
 V1MoIbe5CeK>2kV1_LBh@30
 !s100 mlimDVim5V>`P6QUPWJ:<1
-R30
+R37
 32
-Z121 !s110 1716473799
+Z128 !s110 1716473799
 !i10b 1
-Z122 !s108 1716473799.000000
-Z123 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
-Z124 !s107 Z:/projects/IP/testadc.vhd|
+Z129 !s108 1716473799.000000
+Z130 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
+Z131 !s107 Z:/projects/IP/testadc.vhd|
 !i113 1
 R16
 R17
@@ -704,63 +747,63 @@ DPx4 work 6 macros 0 22 C7j3jB?3W0;ia9j><S41b1
 R3
 R4
 DEx4 work 6 aspadc 0 22 3<HTn;mOh02VD3GKS1_Bl2
-R26
+R33
 R6
-R27
+R34
 DEx4 work 7 testadc 0 22 1MoIbe5CeK>2kV1_LBh@30
 !i122 57
 l21
 L8 59
 VNEJZ:KTEJKTIKlc^8HoXZ1
 !s100 Dab5SV@V@RjFV9X=[^:i62
-R30
-32
-R121
-!i10b 1
-R122
-R123
-R124
-!i113 1
-R16
-R17
-Etoplevel_vhd_vec_tst
-Z125 w1716476323
-R6
-R27
-!i122 59
-R0
-Z126 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
-Z127 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
-l0
-L31 1
-VZFX7iJ9`9Pe`gDWF>U67Y2
-!s100 ]gV]>YLEnW<G7=30zdUPO1
-R30
-32
-Z128 !s110 1716476489
-!i10b 1
-Z129 !s108 1716476489.000000
-Z130 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
-Z131 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
-!i113 1
-R16
-R17
-Atoplevel_arch
-R6
-R27
-DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZFX7iJ9`9Pe`gDWF>U67Y2
-!i122 59
-l50
-L33 54
-VY]cY>m6@?Gz0LF7Y>3KzS3
-!s100 J11fzh4RMHDJO=]UJ[MXd1
-R30
+R37
 32
 R128
 !i10b 1
 R129
 R130
 R131
+!i113 1
+R16
+R17
+Etoplevel_vhd_vec_tst
+Z132 w1716476323
+R6
+R34
+!i122 59
+R0
+Z133 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z134 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+l0
+L31 1
+VZFX7iJ9`9Pe`gDWF>U67Y2
+!s100 ]gV]>YLEnW<G7=30zdUPO1
+R37
+32
+Z135 !s110 1716476489
+!i10b 1
+Z136 !s108 1716476489.000000
+Z137 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z138 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+!i113 1
+R16
+R17
+Atoplevel_arch
+R6
+R34
+DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZFX7iJ9`9Pe`gDWF>U67Y2
+!i122 59
+l50
+L33 54
+VY]cY>m6@?Gz0LF7Y>3KzS3
+!s100 J11fzh4RMHDJO=]UJ[MXd1
+R37
+32
+R135
+!i10b 1
+R136
+R137
+R138
 !i113 1
 R16
 R17
