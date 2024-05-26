@@ -53,7 +53,7 @@ architecture behaviour of AspAdc is
     signal sampling_counter     : std_logic_vector(13 downto 0) := (others => '0');
     signal clock_a              : std_logic := '1';
 	signal addr 				: std_logic_vector(3 downto 0) := "0001";
-	signal data_bit 			: std_logic_vector(2 downto 0) := "001";-- (others => '0');
+	signal data_bit 			: std_logic_vector(2 downto 0) := "011";-- (others => '0'); -- 001 = 8bit, 010 = 10bit, 011 = 12bit
 	signal data_request 		: std_logic := '1';
 
 
@@ -64,7 +64,7 @@ begin
 	GENERIC MAP (
 		clock_enable_input_a    => "BYPASS",
 		clock_enable_output_a   => "BYPASS",
-		init_file               => "input-generator/signal_8bit.mif",
+		init_file               => "input-generator/signal_12bit.mif",
 		intended_device_family  => "Cyclone V",
 		lpm_hint                => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type                => "altsyncram",

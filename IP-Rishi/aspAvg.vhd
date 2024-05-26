@@ -19,7 +19,7 @@ architecture sim of aspAvg is
     type memory_type is array (0 to MAX_DEPTH-1) of std_logic_vector(15 downto 0);
     signal mem     : memory_type;
     signal count   : integer range 0 to MAX_DEPTH := 0;
-    signal sum     : unsigned(15 downto 0) := x"0000";  -- Sum for averaging
+    signal sum     : unsigned(31 downto 0) := x"00000000";  -- Sum for averaging
     signal avg     : unsigned(15 downto 0) := x"0000";
     signal newData     : std_logic := '0';
     signal data     : std_logic_vector(15 downto 0);
@@ -43,9 +43,9 @@ begin
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE then
-                    avg <= resize(sum / to_unsigned(WINDOWSIZE, 16),16); -- calculate average
+                    avg <= resize(sum / to_unsigned(WINDOWSIZE, 32),16); -- calculate average
                     count <= 0; -- reset count
-                    sum <= x"0000"; -- reset sum
+                    sum <= x"00000000"; -- reset sum
                     newData <= '1'; -- enable write for autocorrelator
                 else
                     for i in 0 to MAX_DEPTH - 2 loop
@@ -61,16 +61,6 @@ begin
                     count <= count + 1; -- increment count
                     newData <= '0';
                 end if;
-
-                -- if count = WINDOWSIZE - 1 then -- once the window is full of new values
-                --     avg <= resize(sum /  to_unsigned(WINDOWSIZE, 16), 16); -- calculate average
-
-                --     count <= 0; -- reset count
-                --     sum <= x"0000";
-                --     newData <= '1'; -- write enable bit for autocorrelator
-                -- else
-                --     newData <= '0';
-                -- end if;
             else
                 data <= x"0000";
             end if;
