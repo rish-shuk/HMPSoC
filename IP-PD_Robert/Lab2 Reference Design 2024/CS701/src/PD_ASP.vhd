@@ -15,22 +15,21 @@ use work.TdmaMinTypes.all;
 -- SEND TO NIOS - DEST = 3
 -- 01111 DEST(26 downto 23) 22 21 20 19 18 17 16 15 Data(14 downto 0)
 
-entity PD_ASP2 is
+entity PD_ASP is
     port(
         clk : in std_logic;
-
 
         recv : in tdma_min_port;  
         send : out tdma_min_port;
 
         correlation_count : out std_logic_vector(20 downto 0);
 
-        current_correlation_out : out std_logic_vector(29 downto 0);
+        current_correlation_out : out std_logic_vector(29 downto 0) := (others => '0');
         last_correlation_out : out std_logic_vector(29 downto 0)
     );
-end PD_ASP2;
+end PD_ASP;
 
-architecture find_peak of PD_ASP2 is
+architecture find_peak of PD_ASP is
     type state_type is (IDLE, PEAK_OR_TROUGH, POSITIVE_SLOPE, NEGATIVE_SLOPE);
 
     signal current_state : state_type := IDLE;
@@ -42,6 +41,8 @@ architecture find_peak of PD_ASP2 is
     signal peak_detected : std_logic := '0';
     signal last_correlation : std_logic_vector(29 downto 0);
 
+    signal wanted_data : std_logic_vector(31 downto 0);
+
 
 begin
     process(clk)
@@ -50,26 +51,26 @@ begin
             if rising_edge(clk) then
 
                 -- Change later to use configuation address
-                send.addr <= x"05";
+                send.addr <= x"00";
 
 
                 -- Check if we must detect toughs
-                if (unsigned(recv.addr) = 4 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0000") then
+                if (unsigned(recv.addr) = 1 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0000") then
                     detect_troughs <= '0';
                     current_state <= IDLE;
                     last_correlation <= x"0000000"&"00";
                     counter <= x"00000"&'0';
                     system_on <= '0';
-                elsif (unsigned(recv.addr) = 4 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0001") then
+                elsif (unsigned(recv.addr) = 1 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0001") then
                     system_on <= '1';
-                elsif (unsigned(recv.addr) = 4 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0010") then
+                elsif (unsigned(recv.addr) = 1 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0010") then
                         detect_troughs <= '1';
-                elsif (unsigned(recv.addr) = 4 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0011") then
+                elsif (unsigned(recv.addr) = 1 and recv.data(30 downto 27) = "0111" and recv.data(22 downto 19) = "0011") then
                     detect_troughs <= '0';
                 end if;
                 
                 -- recvdata from coorlaton-ASP is = (1 (31) Valid TDMN bit) (1 (30) corrolation ready flag) (29 (29 downto 0) Coorlation value)
-                if unsigned(recv.addr) = 6 and recv.data(30) = '1' and system_on = '1' then
+                if unsigned(recv.addr) = 1 and recv.data(30) = '1' and system_on = '1' then
                     if (current_state = POSITIVE_SLOPE) or (current_state = IDLE) then
                         if (recv.data(29 downto 0) < last_correlation) then
                             peak_detected <= '1';
@@ -101,13 +102,19 @@ begin
                     -- Clear the data sent to nios
                     send.data <= x"80000000";
                 end if;
-
+                
+                case (recv.addr) is
+                    when x"01" =>
+                        wanted_data <= recv.data;
+                    when others => 
+                end case;
                 
             end if;
     end process;
 
-    current_correlation_out <= recv.data(29 downto 0) when unsigned(recv.addr) = 6 and system_on = '1';
+    current_correlation_out <= recv.data(29 downto 0) when unsigned(recv.addr) = 1 and system_on = '1';
     correlation_count <= std_logic_vector(counter);
+
 
 
     state <= "000" when current_state = IDLE else

@@ -1,0 +1,202 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\skend\OneDrive - The University of Auckland\701\Lab2 Reference Design 2024\CS701
+Etdmamin
+Z1 w1716446951
+Z2 DPx4 work 12 tdmamintypes 0 22 V@oKhRG0DScNUkH3^aUSf3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z6 dC:\Users\skend\OneDrive - The University of Auckland\701\Lab2 Reference Design 2024\CS701
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd
+l0
+L8
+VY>e9d85`3J6Jca]i1>T6L2
+Z7 OV;C;10.1d;51
+32
+Z8 o-work work -O0
+Z9 tExplicit 1
+!s100 j_68DVMD4VQ^CPDH;zQK]0
+!i10b 1
+!s108 1716450466.358000
+!s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMin.vhd|
+Etdmaminfabric
+R1
+R2
+R3
+R4
+R5
+R6
+8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd
+l0
+L8
+Vm>QieaCaNTcSoz=9kWdC83
+R7
+32
+R8
+R9
+!s100 C`SP3AIdH_;VB@>c;XFc12
+!i10b 1
+!s108 1716450467.450000
+!s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+!s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinFabric.vhd|
+Etdmaminslots
+R1
+R3
+R4
+R5
+R6
+Z10 8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+Z11 FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd
+l0
+L5
+Vhj6UMhCDbh^@l@C=Y7nK52
+!s100 __o8HSi_gaSII0bO=@a?j3
+R7
+32
+!i10b 1
+Z12 !s108 1716450547.924000
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+Z14 !s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSlots.vhd|
+R8
+R9
+Artl
+R3
+R4
+R5
+Z15 DEx4 work 12 tdmaminslots 0 22 hj6UMhCDbh^@l@C=Y7nK52
+l19
+L15
+Z16 Vmj95K4gNH<?4XoaoPBFzI3
+Z17 !s100 hme=dXVXJGX^cVM0ZE_B_2
+R7
+32
+!i10b 1
+R12
+R13
+R14
+R8
+R9
+Etdmaminstage
+R1
+R2
+R3
+R4
+R5
+R6
+Z18 8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+Z19 FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd
+l0
+L8
+V<Z98D?LAUXS1YjLR0Q>MU0
+R7
+32
+Z20 !s108 1716450495.266000
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+Z22 !s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinStage.vhd|
+R8
+R9
+!s100 VWk?iXHi5[;:Y2mdA_gQC0
+!i10b 1
+Artl
+Z23 DEx4 work 13 tdmaminswitch 0 22 najWXOeJVnXRES0>IBiAG3
+R2
+R3
+R4
+R5
+DEx4 work 12 tdmaminstage 0 22 <Z98D?LAUXS1YjLR0Q>MU0
+l20
+L19
+VH:4d2Nb9WF_c]2YnjScI`3
+R7
+32
+R20
+R21
+R22
+R8
+R9
+!s100 9oS4U3bQ5gJ5d=Rh@G3iH2
+!i10b 1
+Etdmaminswitch
+R1
+R2
+R3
+R4
+R5
+R6
+Z24 8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+Z25 FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd
+l0
+L8
+VnajWXOeJVnXRES0>IBiAG3
+R7
+32
+Z26 !s108 1716450486.598000
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+Z28 !s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinSwitch.vhd|
+R8
+R9
+!s100 oMz@X83QG6:_3]>h5aO2V1
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+R23
+l19
+L18
+Vi439=5CQi9VWmgD1S<]103
+R7
+32
+R26
+R27
+R28
+R8
+R9
+!s100 HMHUE;hKWI5@W]`7L@BQ51
+!i10b 1
+Ptdmamintypes
+R3
+R4
+R5
+Z29 w1716446952
+R6
+Z30 8C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+Z31 FC:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd
+l0
+L5
+VV@oKhRG0DScNUkH3^aUSf3
+R7
+32
+b1
+Z32 !s108 1716450478.615000
+Z33 !s90 -reportprogress|300|-work|work|C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+Z34 !s107 C:/Users/skend/OneDrive - The University of Auckland/701/Lab2 Reference Design 2024/CS701/src/TdmaMin/TdmaMinTypes.vhd|
+R8
+R9
+!s100 2Zm`MZo]LBFH7`SNm^XDI3
+!i10b 1
+Bbody
+R2
+R3
+R4
+R5
+l0
+L23
+VzflM>zL61HSXKF4dm@92Z1
+R7
+32
+R32
+R33
+R34
+R8
+R9
+nbody
+!s100 CWM=:jUlSL;[_m1bWncLn2
+!i10b 1
