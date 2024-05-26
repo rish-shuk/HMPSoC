@@ -15,12 +15,12 @@ end entity;
 
 architecture sim of aspAvg is
     constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
-    signal WINDOWSIZE : integer := 32;  -- window size 
+    signal WINDOWSIZE : integer := 8;  -- window size 
     type memory_type is array (0 to MAX_DEPTH-1) of std_logic_vector(15 downto 0);
     signal mem     : memory_type;
     signal count   : integer range 0 to MAX_DEPTH := 0;
-    signal sum     : signed(31 downto 0) := (others => '0');  -- Sum for averaging
-    signal avg     : signed(15 downto 0);
+    signal sum     : unsigned(31 downto 0) := (others => '0');  -- Sum for averaging
+    signal avg     : unsigned(15 downto 0);
     signal canSend     : std_logic := '0';
     signal data     : std_logic_vector(15 downto 0);
 
@@ -39,7 +39,7 @@ begin
     process(clock)
     begin
         if rising_edge(clock) then
-            if recv.data(31 downto 28) = "1000" and recv.data(16) = '0' then
+            if recv.data(31 downto 28) = "1000" then
                 data <= recv.data(15 downto 0);
                 for i in 0 to MAX_DEPTH - 2 loop
                     if i < WINDOWSIZE - 1 then
@@ -51,7 +51,7 @@ begin
                 if count = WINDOWSIZE - 1 then
                     for i in 0 to MAX_DEPTH - 1 loop
                         if i < WINDOWSIZE - 1 then
-                            sum <= sum + signed(mem(i));
+                            sum <= sum + unsigned(mem(i));
                         end if;
                     end loop;
                     count <= 0;
@@ -64,7 +64,7 @@ begin
     end process;
 
     -- Calculate average
-    avg <= resize(sum /  to_signed(WINDOWSIZE, 32), 16);
+    avg <= resize(sum /  to_unsigned(WINDOWSIZE, 32), 16);
     send.data <= "1000000000000000" & std_logic_vector(avg);
     send.addr <= x"02"; -- send to autocorrelator in port 2
 

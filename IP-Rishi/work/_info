@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dZ:/projects/IP
 Easpadc
-Z1 w1716688380
+Z1 w1716691720
 Z2 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
@@ -26,9 +26,9 @@ VXk1GMP]J_:MlhM>cb0dJn2
 !s100 H9Ld6_F?<kj1>W;YI6>@c3
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1716688399
+Z12 !s110 1716691729
 !i10b 1
-Z13 !s108 1716688399.000000
+Z13 !s108 1716691729.000000
 Z14 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
 Z15 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspadc_tdma.vhd|
 !i113 1
@@ -44,8 +44,8 @@ R7
 DEx4 work 6 aspadc 0 22 Xk1GMP]J_:MlhM>cb0dJn2
 l60
 L25
-V_dTHDHHXnIKG[_1RPF[JX0
-!s100 7To6CEb:jK;ec<ORKJjjF2
+VfZLbDP=[Q:80`daf=R:Pz3
+!s100 DheMT^5FNjgYh3KYA2_iC3
 R11
 32
 R12
@@ -57,7 +57,7 @@ R15
 R16
 R17
 Easpavg
-Z18 w1716688359
+Z18 w1716692706
 R2
 R5
 R6
@@ -71,9 +71,9 @@ VoIBfFZdn0RL`Smb9Fm4433
 !s100 GIHH^FY1f?<mnH@ijQXeE3
 R11
 32
-Z21 !s110 1716688392
+Z21 !s110 1716692714
 !i10b 1
-Z22 !s108 1716688392.000000
+Z22 !s108 1716692714.000000
 Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/aspAvg.vhd|
 !i113 1
@@ -87,8 +87,8 @@ R7
 DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
 l27
 L16
-VRIF9GiFTgCTXPAoCDadY?3
-!s100 1UVmKT;ZXhEDRz^[n5kP20
+VTkI:^ni0DHbkmm0UE;Eo02
+!s100 R1L1f_1iM]eH;ECbIXa7T1
 R11
 32
 R21
@@ -632,7 +632,7 @@ R110
 R16
 R17
 Etest_adc_tdma
-Z111 w1716690332
+Z111 w1716691581
 R2
 R104
 R5
@@ -647,9 +647,9 @@ V9`95J;:4n6FGF4@[OJ0O;1
 !s100 1AGj>Rh`XOhZbgf6lf3:c2
 R11
 32
-Z114 !s110 1716690335
+Z114 !s110 1716692717
 !i10b 1
-Z115 !s108 1716690335.000000
+Z115 !s108 1716692717.000000
 Z116 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
 Z117 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/IP-Rishi/test_adc_tdma.vhd|
 !i113 1
@@ -662,11 +662,11 @@ R104
 R5
 R6
 R7
-DEx4 work 13 test_adc_tdma 0 22 9`95J;:4n6FGF4@[OJ0O;1
+Z118 DEx4 work 13 test_adc_tdma 0 22 9`95J;:4n6FGF4@[OJ0O;1
 l45
 L15
-Z118 V=RTPPdZYS5^@VOiD[n>C=1
-Z119 !s100 HP8Q^R4RA9di^HCUYEIW_0
+Z119 VI?>m;RO[3ZC;8nBNR[inS1
+Z120 !s100 Wcd>`Ak4GLJG>HcP@0MkF2
 R11
 32
 R114
@@ -678,25 +678,25 @@ R117
 R16
 R17
 Etestadc
-Z120 w1716473403
+Z121 w1716473403
 R26
 R6
 R27
 !i122 57
 R0
-Z121 8Z:/projects/IP/testadc.vhd
-Z122 FZ:/projects/IP/testadc.vhd
+Z122 8Z:/projects/IP/testadc.vhd
+Z123 FZ:/projects/IP/testadc.vhd
 l0
 L5 1
 V1MoIbe5CeK>2kV1_LBh@30
 !s100 mlimDVim5V>`P6QUPWJ:<1
 R30
 32
-Z123 !s110 1716473799
+Z124 !s110 1716473799
 !i10b 1
-Z124 !s108 1716473799.000000
-Z125 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
-Z126 !s107 Z:/projects/IP/testadc.vhd|
+Z125 !s108 1716473799.000000
+Z126 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
+Z127 !s107 Z:/projects/IP/testadc.vhd|
 !i113 1
 R16
 R17
@@ -716,33 +716,33 @@ VNEJZ:KTEJKTIKlc^8HoXZ1
 !s100 Dab5SV@V@RjFV9X=[^:i62
 R30
 32
-R123
-!i10b 1
 R124
+!i10b 1
 R125
 R126
+R127
 !i113 1
 R16
 R17
 Etoplevel_vhd_vec_tst
-Z127 w1716476323
+Z128 w1716476323
 R6
 R27
 !i122 59
 R0
-Z128 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
-Z129 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z129 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z130 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
 l0
 L31 1
 VZFX7iJ9`9Pe`gDWF>U67Y2
 !s100 ]gV]>YLEnW<G7=30zdUPO1
 R30
 32
-Z130 !s110 1716476489
+Z131 !s110 1716476489
 !i10b 1
-Z131 !s108 1716476489.000000
-Z132 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
-Z133 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z132 !s108 1716476489.000000
+Z133 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z134 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
 !i113 1
 R16
 R17
@@ -757,11 +757,11 @@ VY]cY>m6@?Gz0LF7Y>3KzS3
 !s100 J11fzh4RMHDJO=]UJ[MXd1
 R30
 32
-R130
-!i10b 1
 R131
+!i10b 1
 R132
 R133
+R134
 !i113 1
 R16
 R17

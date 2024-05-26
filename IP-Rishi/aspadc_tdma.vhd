@@ -53,8 +53,8 @@ architecture behaviour of AspAdc is
     signal sampling_counter     : std_logic_vector(13 downto 0) := (others => '0');
     signal clock_a              : std_logic := '1';
 	signal addr 				: std_logic_vector(3 downto 0) := "0001";
-	signal data_bit 			: std_logic_vector(2 downto 0) := (others => '0');
-	signal data_request 		: std_logic := '0';
+	signal data_bit 			: std_logic_vector(2 downto 0) := "001";-- (others => '0');
+	signal data_request 		: std_logic := '1';
 
 
 begin
