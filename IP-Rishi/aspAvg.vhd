@@ -39,6 +39,7 @@ begin
     process(clock)
     begin
         if rising_edge(clock) then
+            newData <= '0';
             if recv.data(31 downto 28) = "1000" then
                 data <= recv.data(15 downto 0); -- read new data
 
@@ -59,7 +60,7 @@ begin
                     sum <= sum + unsigned(recv.data(15 downto 0)); -- increment sum
 
                     count <= count + 1; -- increment count
-                    newData <= '0';
+                    -- newData <= '0';
                 end if;
             else
                 -- data <= x"0000";
