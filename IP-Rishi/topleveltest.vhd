@@ -6,13 +6,13 @@ library work;
 use work.macros.all;
 use work.TdmaMinTypes.all;
 
-entity test_adc_tdma is
+entity topleveltest is
     generic (
 		ports : positive := 3
 	);
 end entity;
 
-architecture sim of test_adc_tdma is
+architecture sim of topleveltest is
     	signal clock   : std_logic := '0';
     	signal reset : std_logic := '0';
 
