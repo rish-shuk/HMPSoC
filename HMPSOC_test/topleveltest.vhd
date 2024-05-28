@@ -8,7 +8,7 @@ use work.TdmaMinTypes.all;
 
 entity topleveltest is
     generic (
-		ports : positive := 4
+		ports : positive := 2
 	);
 end entity;
 
@@ -18,8 +18,8 @@ architecture sim of topleveltest is
 
     	signal adc_data_ready : std_logic := '0';
 
-   	    signal send_port  : tdma_min_ports(0 to 3);
-	    signal recv_port  : tdma_min_ports(0 to 3);
+   	    signal send_port  : tdma_min_ports(0 to 1);
+	    signal recv_port  : tdma_min_ports(0 to 1);
 
 
 begin
@@ -51,17 +51,6 @@ begin
         recv => recv_port(1)
     );
 
-    asp_cor : entity work.aspcor port map(
-        clock => clock,
-        send => send_port(2),
-        recv => recv_port(2)
-    );
-
-    asp_pd : entity work.PD_ASP port map(
-        clk => clock,
-        send => send_port(3),
-        recv => recv_port(3)
-    );
 
     reset             <= '0' after 15 ns;
     clock             <= not  clock after 5 ns;

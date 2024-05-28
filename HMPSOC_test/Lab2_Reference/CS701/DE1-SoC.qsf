@@ -8,7 +8,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY AspAdc
+set_global_assignment -name TOP_LEVEL_ENTITY aspAvg
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:00:00  JANUARY 01, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -108,6 +108,7 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE src/aspAvg.vhd
 set_global_assignment -name MIF_FILE src/signal_8bit.mif
 set_global_assignment -name VERILOG_FILE NOC/synthesis/submodules/NOC_switches_pio.v
 set_global_assignment -name VERILOG_FILE NOC/synthesis/submodules/NOC_onchip_memory.v
@@ -171,7 +172,6 @@ set_global_assignment -name VHDL_FILE src/TdmaMin/TdmaMinSlots.vhd
 set_global_assignment -name VHDL_FILE src/TdmaMin/TdmaMinStage.vhd
 set_global_assignment -name VHDL_FILE src/TdmaMin/TdmaMinSwitch.vhd
 set_global_assignment -name VHDL_FILE src/TdmaMin/TdmaMinTypes.vhd
-set_global_assignment -name VHDL_FILE src/AspAdc.vhd
 set_global_assignment -name VHDL_FILE src/TopLevel.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
