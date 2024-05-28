@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dZ:/projects/IP
 Easpadc
-Z1 w1716860861
+Z1 w1716863076
 Z2 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
@@ -26,9 +26,9 @@ VXk1GMP]J_:MlhM>cb0dJn2
 !s100 H9Ld6_F?<kj1>W;YI6>@c3
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1716860973
+Z12 !s110 1716863176
 !i10b 1
-Z13 !s108 1716860973.000000
+Z13 !s108 1716863176.000000
 Z14 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspadc_tdma.vhd|
 Z15 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspadc_tdma.vhd|
 !i113 1
@@ -41,11 +41,11 @@ R4
 R5
 R6
 R7
-Z18 DEx4 work 6 aspadc 0 22 Xk1GMP]J_:MlhM>cb0dJn2
+DEx4 work 6 aspadc 0 22 Xk1GMP]J_:MlhM>cb0dJn2
 l60
 L25
-Z19 V_J>^IR`EBkm5>n_GdUoBI2
-Z20 !s100 54Ti;z6jf]VbGl<hEl:9D0
+VXKV[T4<K;fQ[cF;OC0?fV3
+!s100 N<73YG=iGhX14LRL>=;MW2
 R11
 32
 R12
@@ -57,25 +57,25 @@ R15
 R16
 R17
 Easpamp
-Z21 w1716758329
+Z18 w1716758329
 R2
 R5
 R6
 R7
 R8
-Z22 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd
-Z23 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd
+Z19 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd
+Z20 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd
 l0
 L8
 V`?TP[5K0JYk]n6;;E`a4n0
 !s100 5B[8:aL6DQzJ6;b=[EY[n2
 R11
 32
-Z24 !s110 1716860915
+Z21 !s110 1716860915
 !i10b 1
-Z25 !s108 1716860915.000000
-Z26 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd|
-Z27 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd|
+Z22 !s108 1716860915.000000
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd|
+Z24 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAmp.vhd|
 !i113 1
 R16
 R17
@@ -91,34 +91,34 @@ V>RPS7YJLTU_?0XzbDR`411
 !s100 ;O=S8co3cgbfiM:AGbMBb2
 R11
 32
-R24
+R21
 !i10b 1
-R25
-R26
-R27
+R22
+R23
+R24
 !i113 1
 R16
 R17
 Easpavg
-Z28 w1716860804
+Z25 w1716863234
 R2
 R5
 R6
 R7
 R8
-Z29 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd
-Z30 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd
+Z26 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd
+Z27 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd
 l0
 L8
 VoIBfFZdn0RL`Smb9Fm4433
 !s100 GIHH^FY1f?<mnH@ijQXeE3
 R11
 32
-Z31 !s110 1716860964
+Z28 !s110 1716863237
 !i10b 1
-Z32 !s108 1716860964.000000
-Z33 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd|
-Z34 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd|
+Z29 !s108 1716863237.000000
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd|
+Z31 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/aspAvg.vhd|
 !i113 1
 R16
 R17
@@ -127,150 +127,150 @@ R2
 R5
 R6
 R7
-DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
+Z32 DEx4 work 6 aspavg 0 22 oIBfFZdn0RL`Smb9Fm4433
 l27
 L16
-VALYc>6=NgUMTUzV<DFd2B0
-!s100 eSe9K=d@OWJdeegO:KMFi3
+Va3LYEY]P>5BTgL6?MYW;T2
+!s100 n8ea]f1[SaAzd`F5aZV>D2
 R11
 32
-R31
+R28
 !i10b 1
-R32
-R33
-R34
+R29
+R30
+R31
 !i113 1
 R16
 R17
 Eaudioclock
-Z35 w1716464524
-Z36 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z33 w1716464524
+Z34 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R6
-Z37 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z35 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 29
 R0
-Z38 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
-Z39 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z36 8Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd
+Z37 FZ:/projects/IP/ip/AudioClock_1/AudioClock.vhd
 l0
 L9 1
 VmI069NaX1L3M<GlBV[mC?2
 !s100 ?]V=nD1YN]MfnMQ9ZF@XP2
-Z40 OV;C;2020.1;71
+Z38 OV;C;2020.1;71
 32
-Z41 !s110 1716464709
+Z39 !s110 1716464709
 !i10b 1
-Z42 !s108 1716464708.000000
-Z43 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
-Z44 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z40 !s108 1716464708.000000
+Z41 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
+Z42 !s107 Z:/projects/IP/ip/AudioClock_1/AudioClock.vhd|
 !i113 1
 R16
 R17
 Artl
-R36
+R34
 R6
-R37
+R35
 DEx4 work 10 audioclock 0 22 mI069NaX1L3M<GlBV[mC?2
 !i122 29
 l28
 L18 21
 V3XJ9QR0TYa`cglNeOFaE62
 !s100 gEa:]G7l6k;X7AW=Y70TR0
-R40
+R38
 32
-R41
+R39
 !i10b 1
+R40
+R41
 R42
-R43
-R44
 !i113 1
 R16
 R17
 Eaudiofifo
-R35
+R33
 R6
-R37
+R35
 !i122 25
 R0
-Z45 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
-Z46 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
+Z43 8Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd
+Z44 FZ:/projects/IP/ip/AudioFifo/AudioFifo.vhd
 l0
-Z47 L43 1
+Z45 L43 1
 VXfF;I>z]3;GUdLHjJ=IZf3
 !s100 hzfBADS2jz8efhYoW2WSO2
-R40
+R38
 32
-Z48 !s110 1716464693
+Z46 !s110 1716464693
 !i10b 1
-Z49 !s108 1716464693.000000
-Z50 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
-Z51 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
+Z47 !s108 1716464693.000000
+Z48 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
+Z49 !s107 Z:/projects/IP/ip/AudioFifo/AudioFifo.vhd|
 !i113 1
 R16
 R17
 Asyn
 R6
-R37
+R35
 DEx4 work 9 audiofifo 0 22 XfF;I>z]3;GUdLHjJ=IZf3
 !i122 25
 l92
 L58 67
 VHgI^R8H8_:gao]:X4JGYR0
 !s100 DFEC5]6nd;^@Gjg`?;L]o3
-R40
+R38
 32
-R48
+R46
 !i10b 1
+R47
+R48
 R49
-R50
-R51
 !i113 1
 R16
 R17
 Eaudiorom
-R35
-Z52 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R33
+Z50 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
 R6
-R37
+R35
 !i122 22
 R0
-Z53 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
-Z54 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z51 8Z:/projects/IP/ip/AudioRom/AudioRom.vhd
+Z52 FZ:/projects/IP/ip/AudioRom/AudioRom.vhd
 l0
-R47
+R45
 V<hPgN;endSF@_Y85X;^nD3
 !s100 `zhij<A8?O;TTj8[PRKke3
-R40
+R38
 32
-Z55 !s110 1716464666
+Z53 !s110 1716464666
 !i10b 1
-Z56 !s108 1716464665.000000
-Z57 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
-Z58 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z54 !s108 1716464665.000000
+Z55 !s90 -reportprogress|300|-work|work|Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
+Z56 !s107 Z:/projects/IP/ip/AudioRom/AudioRom.vhd|
 !i113 1
 R16
 R17
 Asyn
-R52
+R50
 R6
-R37
+R35
 DEx4 work 8 audiorom 0 22 <hPgN;endSF@_Y85X;^nD3
 !i122 22
 l57
 L53 33
 VYOkS7@8Q1_^`7BU@Z3Xci3
 !s100 >haM?bMIA8m3IF:F1EmdN1
-R40
+R38
 32
-R55
+R53
 !i10b 1
+R54
+R55
 R56
-R57
-R58
 !i113 1
 R16
 R17
 Pmacros
-Z59 w1716595394
+Z57 w1716595394
 R8
 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/macros.vhd
 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/macros.vhd
@@ -289,197 +289,197 @@ R11
 R16
 R17
 Etdmamin
-R59
+R57
 R2
 R5
 R6
 R7
 R8
-Z60 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd
-Z61 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd
+Z58 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd
+Z59 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd
 l0
 L8
 V=S6e89o6o0;L?4kiAPgXo0
 !s100 6;L8z`bBSW^j[_>G_J?Gd2
 R11
 32
-Z62 !s110 1716805651
+Z60 !s110 1716805651
 !i10b 1
-Z63 !s108 1716805651.000000
-Z64 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd|
-Z65 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd|
+Z61 !s108 1716805651.000000
+Z62 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd|
+Z63 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMin.vhd|
 !i113 1
 R16
 R17
 Artl
-Z66 DEx4 work 16 tdmamininterface 0 22 gT^kX:2W=4RT7PNm7H11F2
-Z67 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
-Z68 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
+Z64 DEx4 work 16 tdmamininterface 0 22 gT^kX:2W=4RT7PNm7H11F2
+Z65 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
+Z66 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
 R2
 R5
 R6
 R7
-Z69 DEx4 work 7 tdmamin 0 22 =S6e89o6o0;L?4kiAPgXo0
+Z67 DEx4 work 7 tdmamin 0 22 =S6e89o6o0;L?4kiAPgXo0
 l27
 L19
 VU@GY`FPJ`_6gPEQJ@9KE>0
 !s100 <5<>>iFjPXUU82XzWAI403
 R11
 32
-R62
+R60
 !i10b 1
+R61
+R62
 R63
-R64
-R65
 !i113 1
 R16
 R17
 Etdmaminfabric
-R59
+R57
 R2
 R5
 R6
 R7
 R8
-Z70 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd
-Z71 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd
+Z68 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd
+Z69 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd
 l0
 L8
 V=XdmE:2YnL8N6`N_i3QlI2
 !s100 gPIDA1YCE:[;DEnj@Y>0i3
 R11
 32
-Z72 !s110 1716805649
+Z70 !s110 1716805649
 !i10b 1
-Z73 !s108 1716805649.000000
-Z74 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd|
-Z75 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd|
+Z71 !s108 1716805649.000000
+Z72 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd|
+Z73 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFabric.vhd|
 !i113 1
 R16
 R17
 Artl
-Z76 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
+Z74 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
 R2
 R5
 R6
 R7
-R67
+R65
 l27
 L20
 VOK^jicn78;lPom<<2X`?I2
 !s100 JSmh>bieLZoMlenZQ0T<:1
 R11
 32
-R72
+R70
 !i10b 1
+R71
+R72
 R73
-R74
-R75
 !i113 1
 R16
 R17
 Etdmaminfifo
-R59
+R57
 R6
 R5
 R8
-Z77 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd
-Z78 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd
+Z75 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd
+Z76 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd
 l0
 L43
 VOz?]G`AV^1>^4iQa[;O>Q3
 !s100 8FemG`GCM5dSE;ZO1MWzf2
 R11
 32
-Z79 !s110 1716805678
+Z77 !s110 1716805678
 !i10b 1
-Z80 !s108 1716805678.000000
-Z81 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd|
-Z82 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd|
+Z78 !s108 1716805678.000000
+Z79 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd|
+Z80 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinFifo.vhd|
 !i113 1
 R16
 R17
 Asyn
 R6
 R5
-Z83 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
+Z81 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
 l89
 L57
 VnVRAKhDUaT;OPaUVX48@d3
 !s100 nV:U_b?O:ZbYEG97<H`3G1
 R11
 32
-R79
+R77
 !i10b 1
+R78
+R79
 R80
-R81
-R82
 !i113 1
 R16
 R17
 Etdmamininterface
-R21
+R18
 R2
 R5
 R6
 R7
 R8
-Z84 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd
-Z85 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd
+Z82 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd
+Z83 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd
 l0
 L10
 VgT^kX:2W=4RT7PNm7H11F2
 !s100 ;1PD82_<6I>fjQK=G=U0B2
 R11
 32
-Z86 !s110 1716805648
+Z84 !s110 1716805648
 !i10b 1
-Z87 !s108 1716805648.000000
-Z88 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd|
-Z89 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd|
+Z85 !s108 1716805648.000000
+Z86 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd|
+Z87 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinInterface.vhd|
 !i113 1
 R16
 R17
 Artl
-R83
+R81
 R2
 R5
 R6
 R7
-R66
+R64
 l40
 L26
 Vl@^iSDgmIz_n^ARnEXD8<3
 !s100 7CB8agV:j<NBePY8lM1^^1
 R11
 32
-R86
+R84
 !i10b 1
+R85
+R86
 R87
-R88
-R89
 !i113 1
 R16
 R17
 Etdmaminslots
-R59
+R57
 R5
 R6
 R7
 R8
-Z90 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd
-Z91 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd
+Z88 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd
+Z89 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd
 l0
 L5
 Vmk_HdOSQUCX0X[0_`0G111
 !s100 bY70hkiSWIonW84Wkb5=Y2
 R11
 32
-Z92 !s110 1716805647
+Z90 !s110 1716805647
 !i10b 1
-Z93 !s108 1716805647.000000
-Z94 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd|
-Z95 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd|
+Z91 !s108 1716805647.000000
+Z92 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd|
+Z93 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSlots.vhd|
 !i113 1
 R16
 R17
@@ -487,85 +487,85 @@ Artl
 R5
 R6
 R7
-R68
+R66
 l19
 L15
 VNi03TlYW8E7nkCedUWQNj3
 !s100 8ZE?LJj4zV?JVY`ITHFDQ1
 R11
 32
-R92
+R90
 !i10b 1
+R91
+R92
 R93
-R94
-R95
 !i113 1
 R16
 R17
 Etdmaminstage
-R59
+R57
 R2
 R5
 R6
 R7
 R8
-Z96 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd
-Z97 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd
+Z94 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd
+Z95 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd
 l0
 L8
 Vl@eJX5;XGK`nhfZQ7j:[F2
 !s100 FF_3G3M34h_O0k2e3RoCo2
 R11
 32
-Z98 !s110 1716805645
+Z96 !s110 1716805645
 !i10b 1
-Z99 !s108 1716805645.000000
-Z100 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd|
-Z101 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd|
+Z97 !s108 1716805645.000000
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd|
+Z99 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinStage.vhd|
 !i113 1
 R16
 R17
 Artl
-Z102 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
+Z100 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
 R2
 R5
 R6
 R7
-R76
+R74
 l20
 L19
 V^i[Se9TNAQW]l[XH=z?zU3
 !s100 S;h7UbjJAC@j?j@O3^C@D1
 R11
 32
-R98
+R96
 !i10b 1
+R97
+R98
 R99
-R100
-R101
 !i113 1
 R16
 R17
 Etdmaminswitch
-R59
+R57
 R2
 R5
 R6
 R7
 R8
-Z103 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd
-Z104 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd
+Z101 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd
+Z102 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd
 l0
 L8
 Vha<ZO:0=<6zJT>@X_3kc92
 !s100 h[e;lEbjCXFWZ]MK6d]=d1
 R11
 32
-Z105 !s110 1716805644
+Z103 !s110 1716805644
 !i10b 1
-Z106 !s108 1716805644.000000
-Z107 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd|
-Z108 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd|
+Z104 !s108 1716805644.000000
+Z105 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd|
+Z106 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinSwitch.vhd|
 !i113 1
 R16
 R17
@@ -574,18 +574,18 @@ R2
 R5
 R6
 R7
-R102
+R100
 l19
 L18
 V`KlX9@nTfmU@A?GQQK4>23
 !s100 1a`QCVX^=HfRSbXEgSbnN1
 R11
 32
-R105
+R103
 !i10b 1
+R104
+R105
 R106
-R107
-R108
 !i113 1
 R16
 R17
@@ -593,10 +593,10 @@ Ptdmamintypes
 R5
 R6
 R7
-R59
+R57
 R8
-Z109 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd
-Z110 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd
+Z107 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd
+Z108 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd
 l0
 L5
 VzUbdIXj5XgoVHmag:X:zR3
@@ -604,11 +604,11 @@ VzUbdIXj5XgoVHmag:X:zR3
 R11
 32
 b1
-Z111 !s110 1716805643
+Z109 !s110 1716805643
 !i10b 1
-Z112 !s108 1716805642.000000
-Z113 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd|
-Z114 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd|
+Z110 !s108 1716805642.000000
+Z111 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd|
+Z112 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/TdmaMin/TdmaMinTypes.vhd|
 !i113 1
 R16
 R17
@@ -623,39 +623,39 @@ V<A1G_[MEAzN9V>]FnD[HW1
 !s100 0>WOSehlFYi]icGfEjD0:1
 R11
 32
-R111
+R109
 !i10b 1
+R110
+R111
 R112
-R113
-R114
 !i113 1
 R16
 R17
 Etest_adc
-R21
-Z115 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
+R18
+Z113 DPx4 work 6 macros 0 22 8QlPUF7I4d@0@Xg>ndO[<0
 R5
 R6
 R7
 R8
-Z116 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd
-Z117 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd
+Z114 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd
+Z115 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd
 l0
 L8
 V1bHo_>_f`NjJ2ghB=Jd?[0
 !s100 0QoYS@L>CVCf^aGQGH]S]1
 R11
 32
-Z118 !s110 1716805634
+Z116 !s110 1716805634
 !i10b 1
-Z119 !s108 1716805634.000000
-Z120 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd|
-Z121 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd|
+Z117 !s108 1716805634.000000
+Z118 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd|
+Z119 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/test_adc.vhd|
 !i113 1
 R16
 R17
 Asim
-R115
+R113
 R5
 R6
 R7
@@ -666,34 +666,34 @@ V@InlMcKcDoR:k3]Kk[k[g3
 !s100 kM3cgYZ6e2MnS?OazhUXf0
 R11
 32
-R118
+R116
 !i10b 1
+R117
+R118
 R119
-R120
-R121
 !i113 1
 R16
 R17
 Etestadc
-Z122 w1716473403
-R36
+Z120 w1716473403
+R34
 R6
-R37
+R35
 !i122 57
 R0
-Z123 8Z:/projects/IP/testadc.vhd
-Z124 FZ:/projects/IP/testadc.vhd
+Z121 8Z:/projects/IP/testadc.vhd
+Z122 FZ:/projects/IP/testadc.vhd
 l0
 L5 1
 V1MoIbe5CeK>2kV1_LBh@30
 !s100 mlimDVim5V>`P6QUPWJ:<1
-R40
+R38
 32
-Z125 !s110 1716473799
+Z123 !s110 1716473799
 !i10b 1
-Z126 !s108 1716473799.000000
-Z127 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
-Z128 !s107 Z:/projects/IP/testadc.vhd|
+Z124 !s108 1716473799.000000
+Z125 !s90 -reportprogress|300|-work|work|Z:/projects/IP/testadc.vhd|
+Z126 !s107 Z:/projects/IP/testadc.vhd|
 !i113 1
 R16
 R17
@@ -702,94 +702,94 @@ DPx4 work 6 macros 0 22 C7j3jB?3W0;ia9j><S41b1
 R3
 R4
 DEx4 work 6 aspadc 0 22 3<HTn;mOh02VD3GKS1_Bl2
-R36
+R34
 R6
-R37
+R35
 DEx4 work 7 testadc 0 22 1MoIbe5CeK>2kV1_LBh@30
 !i122 57
 l21
 L8 59
 VNEJZ:KTEJKTIKlc^8HoXZ1
 !s100 Dab5SV@V@RjFV9X=[^:i62
-R40
+R38
 32
-R125
+R123
 !i10b 1
+R124
+R125
 R126
-R127
-R128
 !i113 1
 R16
 R17
 Etoplevel_vhd_vec_tst
-Z129 w1716476323
+Z127 w1716476323
 R6
-R37
+R35
 !i122 59
 R0
-Z130 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
-Z131 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z128 8Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
+Z129 FZ:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht
 l0
 L31 1
 VZFX7iJ9`9Pe`gDWF>U67Y2
 !s100 ]gV]>YLEnW<G7=30zdUPO1
-R40
+R38
 32
-Z132 !s110 1716476489
+Z130 !s110 1716476489
 !i10b 1
-Z133 !s108 1716476489.000000
-Z134 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
-Z135 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z131 !s108 1716476489.000000
+Z132 !s90 -reportprogress|300|-work|work|Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
+Z133 !s107 Z:/projects/IP/simulation/modelsim/ADCWaveform.vwf.vht|
 !i113 1
 R16
 R17
 Atoplevel_arch
 R6
-R37
+R35
 DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZFX7iJ9`9Pe`gDWF>U67Y2
 !i122 59
 l50
 L33 54
 VY]cY>m6@?Gz0LF7Y>3KzS3
 !s100 J11fzh4RMHDJO=]UJ[MXd1
-R40
+R38
 32
-R132
+R130
 !i10b 1
+R131
+R132
 R133
-R134
-R135
 !i113 1
 R16
 R17
 Etopleveltest
-Z136 w1716805543
+Z134 w1716805543
 R2
-R115
+R113
 R5
 R6
 R7
 R8
-Z137 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd
-Z138 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd
+Z135 8C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd
+Z136 FC:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd
 l0
 L9
 V]`9NA26n>DzDZQW^EeX1X3
 !s100 [ODgJSFI=?PoC8ZXgV@KG0
 R11
 32
-Z139 !s110 1716805633
+Z137 !s110 1716805633
 !i10b 1
-Z140 !s108 1716805632.000000
-Z141 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd|
-Z142 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd|
+Z138 !s108 1716805632.000000
+Z139 !s90 -reportprogress|300|-work|work|C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd|
+Z140 !s107 C:/Users/ianku/OneDrive/Documents/Github/HMPSoC/HMPSOC_test/topleveltest.vhd|
 !i113 1
 R16
 R17
 Asim
-R69
+R67
 R2
-R115
+R113
 R5
 R6
 R7
@@ -800,11 +800,11 @@ V1]NRUjNXZF>JAfb@g92Sa2
 !s100 RONfc84FFF4R]^^B<aU^I2
 R11
 32
-R139
+R137
 !i10b 1
+R138
+R139
 R140
-R141
-R142
 !i113 1
 R16
 R17
