@@ -21,12 +21,12 @@ architecture sim of aspAvg is
     signal count   : integer range 0 to MAX_DEPTH := 0;
     signal sum     : unsigned(31 downto 0) := x"00000000";  -- Sum for averaging
     signal avg     : unsigned(15 downto 0) := x"0000";
-    signal newData     : std_logic := '0';
     signal data     : std_logic_vector(15 downto 0);
-
 begin
     -- config data to determine window size
     process(clock)
+
+
     begin 
         if rising_edge(clock) then
             if recv.data(31 downto 28) = "0010" then
@@ -37,9 +37,11 @@ begin
     
     -- process for the data
     process(clock)
+    variable newData     : std_logic := '0';
     begin
         if rising_edge(clock) then
-            newData <= '0';
+            send.data <= recv.data; -- passthrough 
+            newData := '0';
             if recv.data(31 downto 27) = "10100" then
                 data <= recv.data(15 downto 0); -- read new data
 
@@ -47,7 +49,9 @@ begin
                     avg <= resize(sum / to_unsigned(WINDOWSIZE, 32),16); -- calculate average
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
-                    newData <= '1'; -- enable write for autocorrelator
+                    newData := '1'; -- enable write for autocorrelator
+                    send.data <= "101010000000000" & '1' & std_logic_vector(avg);
+
                 else
                     for i in 0 to MAX_DEPTH - 2 loop
                         if i < WINDOWSIZE - 1 then
@@ -61,6 +65,7 @@ begin
 
                     count <= count + 1; -- increment count
                     -- newData <= '0';
+                    
                 end if;
             else
                 -- data <= x"0000";
@@ -68,7 +73,7 @@ begin
         end if;
     end process;
     
-    send.data <= "101010000000000" & newData & std_logic_vector(avg);
+    -- send.data <= "101010000000000" & newData & std_logic_vector(avg);
     send.addr <= x"02"; -- send to autocorrelator in port 2
 
 end sim;

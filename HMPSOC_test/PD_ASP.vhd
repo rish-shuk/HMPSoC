@@ -19,13 +19,9 @@ entity PD_ASP is
     port(
         clk : in std_logic;
 
-        recv : in tdma_min_port;  
-        send : out tdma_min_port;
-
-        correlation_count : out std_logic_vector(20 downto 0);
-
-        current_correlation_out : out std_logic_vector(29 downto 0) := (others => '0');
-        last_correlation_out : out std_logic_vector(29 downto 0)
+        send : out tdma_min_port;  
+        recv : in tdma_min_port
+        
     );
 end PD_ASP;
 
@@ -41,6 +37,11 @@ architecture find_peak of PD_ASP is
     signal peak_detected : std_logic := '0';
     signal last_correlation : std_logic_vector(29 downto 0);
     signal wanted_data : std_logic_vector(31 downto 0);
+
+    signal correlation_count : std_logic_vector(20 downto 0);
+
+    signal current_correlation_out : std_logic_vector(29 downto 0) := (others => '0');
+    signal last_correlation_out : std_logic_vector(29 downto 0);
 
 
 begin
@@ -77,7 +78,8 @@ begin
 
                 -- Initial loading and setting of the current and load registers
                 -- Can source reg to find where data came from
-                if (recv.addr = x"01" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
+                -- if (recv.addr = x"03" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
+                    if (recv.addr = x"02" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
                     if (load_initials = '0') then
                         last_corr := recv.data(29 downto 0);
                         load_initials := '1';
@@ -128,7 +130,7 @@ begin
                 end if;
                 
                 case (recv.addr) is
-                    when x"01" =>
+                    when x"03" =>
                         wanted_data <= recv.data;
                     when others => 
                 end case;
@@ -137,7 +139,7 @@ begin
             send.addr <= send_addr_v;
     end process;
 
-    current_correlation_out <= recv.data(29 downto 0) when unsigned(recv.addr) = 1 and system_on = '1';
+    current_correlation_out <= recv.data(29 downto 0) when unsigned(recv.addr) = 3 and system_on = '1';
     correlation_count <= std_logic_vector(counter);
 
 

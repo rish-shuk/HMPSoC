@@ -22,26 +22,6 @@ architecture sim of topleveltest is
 	    signal recv_port  : tdma_min_ports(0 to 3);
 
 
-    component aspadc is
-        port (
-            	clock               : in std_logic;
-            	reset               : in std_logic;
-
-            	adc_data_ready      : out std_logic;
-
-		        send : out tdma_min_port;
-		        recv : in tdma_min_port
-        );
-    end component;
-
-    component aspavg is
-        port (
-            clock   : in std_logic;
-            send : out tdma_min_port;
-            recv : in tdma_min_port
-        );
-    end component;
-
 begin
 
     tdma_min : entity work.TdmaMin
@@ -54,7 +34,7 @@ begin
 		recvs => recv_port
 	);
 
-    asp_adc : aspadc port map(
+    asp_adc : entity work.aspadc port map(
         clock   => clock,
         reset   => reset,
 
@@ -65,25 +45,25 @@ begin
 
     );
 
-    asp_avg : aspAvg port map(
+    asp_avg : entity work.aspAvg port map(
         clock => clock,
         send => send_port(1),
         recv => recv_port(1)
     );
 
-    asp_cor : aspCor port map(
+    asp_cor : entity work.aspcor port map(
         clock => clock,
         send => send_port(2),
         recv => recv_port(2)
     );
 
-    asp_pd : aspPd port map(
-        clock => clock,
+    asp_pd : entity work.PD_ASP port map(
+        clk => clock,
         send => send_port(3),
         recv => recv_port(3)
     );
 
     reset             <= '0' after 15 ns;
     clock             <= not  clock after 5 ns;
-    
+
 end architecture;
