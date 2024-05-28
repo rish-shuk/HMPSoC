@@ -121,7 +121,7 @@ begin
 					end case;
 					data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
 					send.addr <= "0000" & addr;	-- send to next component (port 1)
-					send.data <= "1000000000000000" & data_to_send(15 downto 0); -- send with data head
+					send.data <= "1000100000000000" & data_to_send(15 downto 0); -- send with data head
 					adc_data_ready <= '1';
 				end if;
 			else

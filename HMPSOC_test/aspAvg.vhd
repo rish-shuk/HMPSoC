@@ -40,7 +40,7 @@ begin
     begin
         if rising_edge(clock) then
             newData <= '0';
-            if recv.data(31 downto 28) = "1000" then
+            if recv.data(31 downto 27) = "10001" then
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE then
@@ -68,7 +68,7 @@ begin
         end if;
     end process;
     
-    send.data <= "100000000000000" & newData & std_logic_vector(avg);
+    send.data <= "100100000000000" & newData & std_logic_vector(avg);
     send.addr <= x"02"; -- send to autocorrelator in port 2
 
 end sim;
