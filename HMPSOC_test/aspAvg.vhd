@@ -29,7 +29,7 @@ begin
 
     begin 
         if rising_edge(clock) then
-            if recv.data(31 downto 28) = "0010" then
+            if recv.data(31 downto 27) = "10010" then
                 WINDOWSIZE <= to_integer(unsigned(recv.data(5 downto 0))); -- config packet from recop
             end if;
         end if;
