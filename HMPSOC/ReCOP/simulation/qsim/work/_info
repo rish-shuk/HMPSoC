@@ -1,0 +1,470 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/simulation/qsim
+Edatapath
+Z1 w1716041882
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z11 8TopLevel.vho
+Z12 FTopLevel.vho
+l0
+L38
+VUb]PkmNm0f46;AJ4fjR`70
+!s100 hUelEQ69aDB5OY4h;ZYKI1
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1716041883
+!i10b 1
+Z15 !s108 1716041883.000000
+Z16 !s90 -work|work|TopLevel.vho|
+Z17 !s107 TopLevel.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 8 datapath 0 22 Ub]PkmNm0f46;AJ4fjR`70
+l2828
+L79
+VSK5We]7DO9;XN8;5InRU92
+!s100 FR@D`A3Ym30WzZ4_<O9_T0
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Edatapath_vhd_vec_tst
+Z20 w1716041880
+R8
+R9
+R0
+Z21 8testbenches/TopLevel/TopLevel_DECODEEXEC_Waveform.vwf.vht
+Z22 Ftestbenches/TopLevel/TopLevel_DECODEEXEC_Waveform.vwf.vht
+l0
+L31
+VGbU]nLM<P]WQ6PFj;_^Mo2
+!s100 2ZTJW=mf;Mh4OH>a3jADS2
+R13
+32
+Z23 !s110 1716041884
+!i10b 1
+Z24 !s108 1716041884.000000
+Z25 !s90 -work|work|testbenches/TopLevel/TopLevel_DECODEEXEC_Waveform.vwf.vht|
+Z26 !s107 testbenches/TopLevel/TopLevel_DECODEEXEC_Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Adatapath_arch
+R8
+R9
+DEx4 work 20 datapath_vhd_vec_tst 0 22 GbU]nLM<P]WQ6PFj;_^Mo2
+l112
+L33
+VkRM1ch`K<YY?XGQZK_IYU0
+!s100 ]F9Wb6BfmBXDGIhRi_=Tj3
+R13
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R18
+R19
+Ememory_controlunit_testbench
+Z27 w1715565424
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L38
+V<68K9]KB9_lOO?P8mXZ<83
+!s100 oSh1YY:Rih>@?8^MN3fk62
+R13
+32
+Z28 !s110 1715565425
+!i10b 1
+Z29 !s108 1715565425.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 28 memory_controlunit_testbench 0 22 <68K9]KB9_lOO?P8mXZ<83
+l214
+L56
+Vn_VQ]i3fbMLA1f?d038JR1
+!s100 1PVL]47U9XV5zSTZW9fN41
+R13
+32
+R28
+!i10b 1
+R29
+R16
+R17
+!i113 1
+R18
+R19
+Ememory_controlunit_testbench_vhd_vec_tst
+Z30 w1715565423
+R8
+R9
+R0
+Z31 8testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf.vht
+Z32 Ftestbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf.vht
+l0
+L31
+Vai21dg:YJ[5BNZVio=WSO1
+!s100 an@_e1j2JO>HiUnVeK6C]2
+R13
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf.vht|
+Z34 !s107 testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Amemory_controlunit_testbench_arch
+R8
+R9
+DEx4 work 40 memory_controlunit_testbench_vhd_vec_tst 0 22 ai21dg:YJ[5BNZVio=WSO1
+l66
+L33
+V4d;51SjIW>b7D4he1SK8j2
+!s100 E:DeJDhYom6kAIik61]6?2
+R13
+32
+R28
+!i10b 1
+R29
+R33
+R34
+!i113 1
+R18
+R19
+Epc_memory_testbench
+Z35 w1715396056
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L38
+VmDS<QbjKYQGnF2JEcNJC02
+!s100 jCF8:J6ooR3S=f0KK[IjL1
+R13
+32
+Z36 !s110 1715396057
+!i10b 1
+Z37 !s108 1715396057.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 19 pc_memory_testbench 0 22 mDS<QbjKYQGnF2JEcNJC02
+l193
+L54
+VM:0bj^0JHHiRF1NHWUz<;1
+!s100 6m>oVGUV^f8hScdL3AR>b0
+R13
+32
+R36
+!i10b 1
+R37
+R16
+R17
+!i113 1
+R18
+R19
+Epc_memory_testbench_vhd_vec_tst
+Z38 w1715396055
+R8
+R9
+R0
+R31
+R32
+l0
+L31
+VDFghI?G;@>Daae4:Df^ON1
+!s100 AZnGz;2C:AkJcZ59@0Hn<3
+R13
+32
+R36
+!i10b 1
+R37
+R33
+R34
+!i113 1
+R18
+R19
+Apc_memory_testbench_arch
+R8
+R9
+DEx4 work 31 pc_memory_testbench_vhd_vec_tst 0 22 DFghI?G;@>Daae4:Df^ON1
+l62
+L33
+VnTATaG67loPURY3k63LfM1
+!s100 HT=D>NWKSab<PzWoA]goZ3
+R13
+32
+R36
+!i10b 1
+R37
+R33
+R34
+!i113 1
+R18
+R19
+Epc_testbench
+Z39 w1716119181
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L38
+VWIW[<8;ohMo^M1CKM7`9b1
+!s100 _F=@CC;2B=D9Hi^MVTRiO2
+R13
+32
+Z40 !s110 1716119182
+!i10b 1
+Z41 !s108 1716119182.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 12 pc_testbench 0 22 WIW[<8;ohMo^M1CKM7`9b1
+l101
+L48
+V4dbf9dABUYEDUgPbUFcKR1
+!s100 6:A33UJOYnbXE>dFENDSY3
+R13
+32
+R40
+!i10b 1
+R41
+R16
+R17
+!i113 1
+R18
+R19
+Epc_testbench_vhd_vec_tst
+Z42 w1716119180
+R8
+R9
+R0
+Z43 8testbenches/PC/PC_waveform.vwf.vht
+Z44 Ftestbenches/PC/PC_waveform.vwf.vht
+l0
+L31
+V6c?OUG;_Z45DM?SjePii]0
+!s100 m01]6o17m;MN?EYYRM``I1
+R13
+32
+R40
+!i10b 1
+R41
+Z45 !s90 -work|work|testbenches/PC/PC_waveform.vwf.vht|
+Z46 !s107 testbenches/PC/PC_waveform.vwf.vht|
+!i113 1
+R18
+R19
+Apc_testbench_arch
+R8
+R9
+Z47 DEx4 work 24 pc_testbench_vhd_vec_tst 0 22 6c?OUG;_Z45DM?SjePii]0
+l50
+L33
+VEn<cd1el3fc90<2]bEo5C3
+!s100 Le@:BH9eDn=`0f;296:1D1
+R13
+32
+R40
+!i10b 1
+R41
+R45
+R46
+!i113 1
+R18
+R19
+Etoplevel
+Z48 w1716116667
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L38
+VXNClo50fPdalK4JUhLDcG2
+!s100 PXPm3bS`=Q=dCc9TXe:G_1
+R13
+32
+Z49 !s110 1716116668
+!i10b 1
+Z50 !s108 1716116667.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 8 toplevel 0 22 XNClo50fPdalK4JUhLDcG2
+l3579
+L79
+V;0]WSdd=62fhN;MU@gb;n0
+!s100 J4Y@eTe:UYdeD3l@3OALz0
+R13
+32
+R49
+!i10b 1
+R50
+R16
+R17
+!i113 1
+R18
+R19
+Etoplevel_vhd_vec_tst
+Z51 w1716116665
+R8
+R9
+R0
+Z52 8testbenches/TopLevel/TopLevel_Waveform.vwf.vht
+Z53 Ftestbenches/TopLevel/TopLevel_Waveform.vwf.vht
+l0
+L31
+V_Q`jhaf9mz5d`N6`e8I1D2
+!s100 UI8JHDIkbNbAV2UzJD^D50
+R13
+32
+R49
+!i10b 1
+Z54 !s108 1716116668.000000
+Z55 !s90 -work|work|testbenches/TopLevel/TopLevel_Waveform.vwf.vht|
+Z56 !s107 testbenches/TopLevel/TopLevel_Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Atoplevel_arch
+R8
+R9
+DEx4 work 20 toplevel_vhd_vec_tst 0 22 _Q`jhaf9mz5d`N6`e8I1D2
+l112
+L33
+VUi;D?AG`QO6U]5SWoQ;3R0
+!s100 _1S1=V^1mIN6ZDXEj=Y`M0
+R13
+32
+R49
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R18
+R19
