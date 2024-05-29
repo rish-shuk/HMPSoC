@@ -56,7 +56,7 @@ begin
             if rising_edge(clk) then
                 --Congig
                 -- Handle config packet -NOTE: Set config proccesors port
-                if recv.addr = x"05" and recv.data(30 downto 27) = "0011" then
+                if recv.addr = x"05" and recv.data(31 downto 27) = "10011" then
                     send_addr_v := (7 downto 4 => '0') & recv.data(22 downto 19);
                     -- Check if we must detect toughs
                     if (recv.data(18 downto 15) = "0000") then
