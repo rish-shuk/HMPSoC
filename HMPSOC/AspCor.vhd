@@ -42,7 +42,7 @@ begin
             temp_correlation := (others => '0');
             -- CHECK IF DATA PACKET IS A AVERAGE PACKET
             -- if recv.data(31 downto 28) = "1000" then
-            if recv.data(31 downto 27) = "10101" then
+            if recv.data(31 downto 27) = "10110" then
                 data_flag := '1';
                 temp_correlation := x"0000" & signed(recv.data(15 downto 0));
                 -- +++++++++++++ HARDCODED FOR TESTING ++++++++++++++
@@ -76,7 +76,7 @@ begin
                         buffer_full := '0';
                     end if;
                 end if;
-            elsif recv.data(31 downto 28) = "1011" then
+            elsif recv.data(31 downto 27) = "10111" then
                 -- +++++++++ HARDCODED FOR TESTING ++++++++++
                 addr_v := x"0" & recv.data(23 downto 20);
                 -- ++++++++++++++++++++++++++++++++++++++++++

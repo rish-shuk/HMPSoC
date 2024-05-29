@@ -42,7 +42,7 @@ begin
         if rising_edge(clock) then
             send.data <= recv.data; -- passthrough 
             newData := '0';
-            if recv.data(31 downto 27) = "10100" then
+            if recv.data(31 downto 27) = "10101" then
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE then
@@ -50,7 +50,7 @@ begin
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
                     newData := '1'; -- enable write for autocorrelator
-                    send.data <= "101010000000000" & '1' & std_logic_vector(avg);
+                    send.data <= "101100000000000" & '1' & std_logic_vector(avg);
 
                 else
                     for i in 0 to MAX_DEPTH - 2 loop

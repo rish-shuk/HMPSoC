@@ -87,7 +87,7 @@ begin
 	process(clock)
 	begin
 		if rising_edge(clock) then
-			if (recv.data(31 downto 28) = "0001") then 	-- if config message is received
+			if (recv.data(31 downto 27) = "10001") then 	-- if config message is received
 				addr   <= recv.data(23 downto 20);		-- Address to where to port
 				data_bit <= recv.data(2 downto 0);		-- Data-bit configuration
 				data_request <= recv.data(3);
@@ -121,7 +121,7 @@ begin
 					end case;
 					data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
 					send.addr <= "0000" & addr;	-- send to next component (port 1)
-					send.data <= "1000000000000000" & data_to_send(15 downto 0); -- send with data head
+					send.data <= "1010000000000000" & data_to_send(15 downto 0); -- send with data head
 					adc_data_ready <= '1';
 				end if;
 			else

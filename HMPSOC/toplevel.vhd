@@ -89,7 +89,7 @@ begin
 	
 	asp_pd : entity work.PD_ASP
 	port map (
-		clock => clock,
+		clk => clock,
 		send => send_port(3),
 		recv => recv_port(3)
 	);

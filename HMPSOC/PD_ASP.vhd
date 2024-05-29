@@ -17,7 +17,7 @@ use work.TdmaMinTypes.all;
 
 entity PD_ASP is
     port(
-        clock : in std_logic;
+        clk : in std_logic;
 
         send : out tdma_min_port;  
         recv : in tdma_min_port
@@ -45,7 +45,7 @@ architecture find_peak of PD_ASP is
 
 
 begin
-    process(clock)
+    process(clk)
         variable send_addr_v : std_logic_vector(7 downto 0) := x"04";
 
         variable last_corr : std_logic_vector(29 downto 0) := (others => '0');
@@ -53,7 +53,7 @@ begin
         variable load_initials : std_logic:= '0';
         variable both_loaded : std_logic := '0';
     begin
-            if rising_edge(clock) then
+            if rising_edge(clk) then
                 --Congig
                 -- Handle config packet -NOTE: Set config proccesors port
                 if recv.addr = x"05" and recv.data(31 downto 27) = "10011" then
