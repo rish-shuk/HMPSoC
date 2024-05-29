@@ -87,7 +87,7 @@ begin
 	process(clock)
 	begin
 		if rising_edge(clock) then
-			if (recv.data(31 downto 28) = "0001") then 	-- if config message is received
+			if (recv.data(31 downto 27) = "10001") then 	-- if config message is received
 				addr   <= recv.data(23 downto 20);		-- Address to where to port
 				data_bit <= recv.data(2 downto 0);		-- Data-bit configuration
 				data_request <= recv.data(3);
