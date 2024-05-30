@@ -7,20 +7,18 @@ use work.TdmaMinTypes.all;
 
 
 -- Adresses
--- RECOP = 6 -- Fortesting, corTestaddr = 1 is sending corrolation and config data
+-- DP_ASP = 4
 -- NIOS = 5
--- CORRELATION ASP = 1
+-- CORRELATION ASP = 6
 
 --PACKETS
--- SEND TO NIOS - DEST = 5
--- 1 0111 Dest (26-23) ISR_FLAG (22) PEAK/TROUGH (21) COrrelation Count (20-0)
-
--- Configuration packets 
--- 1 0011 Source (26 - 23) Next (22 - 19) Mode (18 - 15) Unused (14 - 0)
+-- SEND TO NIOS - DEST = 3
+-- 01111 DEST(26 downto 23) 22 21 20 19 18 17 16 15 Data(14 downto 0)
 
 entity PD_ASP is
     port(
         clk : in std_logic;
+
         send : out tdma_min_port;  
         recv : in tdma_min_port
         
@@ -37,82 +35,84 @@ architecture find_peak of PD_ASP is
     
     signal state : std_logic_vector(2 downto 0) := "000";
     signal peak_detected : std_logic := '0';
-
-    signal wanted_recv_data : std_logic_vector(31 downto 0);
+    signal last_correlation : std_logic_vector(27 downto 0);
+    signal wanted_data : std_logic_vector(27 downto 0);
 
     signal correlation_count : std_logic_vector(20 downto 0);
+
     signal current_correlation_out : std_logic_vector(27 downto 0) := (others => '0');
     signal last_correlation_out : std_logic_vector(27 downto 0);
 
+
 begin
     process(clk)
-        variable send_addr_v : std_logic_vector(7 downto 0) := x"04"; -- Modifed by configuration packet
-        --Corrolation compare values
+        variable send_addr_v : std_logic_vector(7 downto 0) := x"04";
+
         variable last_corr : std_logic_vector(27 downto 0) := (others => '0');
         variable current_corr : std_logic_vector(27 downto 0) := (others => '0');
-        -- Load two compare values before making a compatison
         variable load_initials : std_logic:= '0';
         variable both_loaded : std_logic := '0';
     begin
             if rising_edge(clk) then
-                peak_detected <= '0';
-                
-                -- Handle config packets -NOTE: Set config proccesors port
-                if recv.data(30 downto 27) = "0100" then
+                --Congig
+                -- Handle config packet -NOTE: Set config proccesors port
+                if recv.data(31 downto 27) = "10100" then
                     send_addr_v := (7 downto 4 => '0') & recv.data(22 downto 19);
-                    -- Turn Peak Detector Off
+                    -- Check if we must detect toughs
                     if (recv.data(18 downto 15) = "0000") then
                         detect_troughs <= '0';
                         current_state <= IDLE;
-                        last_corr := x"0000000";
+                        last_correlation <= x"0000000";
                         counter <= x"00000"&'0';
                         system_on <= '0';
                         load_initials := '0';
                         both_loaded  := '0';
-                    --Turn Peak detector on
                     elsif (recv.data(18 downto 15) = "0001") then
                         system_on <= '1';
-                    -- Detect troughs mode on
                     elsif (recv.data(18 downto 15) = "0010") then
                          detect_troughs <= '1';
-                    -- Detect trough mode off
                     elsif (recv.data(18 downto 15) = "0011") then
                         detect_troughs <= '0';
                     end if;
                 end if;
 
-                -- Handle Initial comparison errors, load two values before compuation and corDATA IS ready
-                if (recv.data(31 downto 29) = "100" and recv.data(28) = '1' and both_loaded = '0' and system_on = '1') then
+                -- Initial loading and setting of the current and load registers
+                -- Can source reg to find where data came from
+                -- if (recv.addr = x"03" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
+                if (both_loaded = '0' and recv.data(31 downto 28) = "1001" and system_on = '1') then
                     if (load_initials = '0') then
                         last_corr := recv.data(27 downto 0);
                         load_initials := '1';
                         counter <= counter + 1;
                         both_loaded := '0';
-                    -- Load the current value every clock
                     else
                         current_corr := recv.data(27 downto 0);
                         both_loaded := '1';
                     end if;
                 end if;
-              
-                if both_loaded = '1' and system_on = '1' then
+
+                
+                
+                if both_loaded = '1'  and system_on = '1' then
+                    -- recvdata from coorlaton-ASP is = (1 (31) Valid TDMN bit) (1 (30) corrolation ready flag) (29 (29 downto 0) Coorlation value)
+                    --if unsigned(recv.addr) = 1 and recv.data(30) = '1' and system_on = '1' then
                         if (current_state = POSITIVE_SLOPE) or (current_state = IDLE) then
-                            -- Peak detector send value to nios and clear the counter
                             if (current_corr < last_corr) then
                                 peak_detected <= '1';
                                 current_state <= NEGATIVE_SLOPE;
-                                send.data <= "10111"&x"0"&"11"&std_logic_vector(counter);
+
+                                send.data <= "10111"&x"0"&"11"&std_logic_vector(counter); -- sets IRQ and PEAK detected
+                                -- Reset the counter to the next peak
                                 counter <= (others => '0');
                             else
                                 counter <= counter + 1;
                             end if;
                         elsif (current_state = NEGATIVE_SLOPE) then
-                            -- Trough detected, send if trough mode is on
                             if (current_corr > last_corr) then
                                 current_state <= POSITIVE_SLOPE;
-                                -- returns correlation count from the last peak
+                                -- returns correlatio ncount from the last peak
                                 if (detect_troughs = '1') then
-                                    send.data <= "11111"&x"3"&"10"&std_logic_vector(counter);
+                                    send.data <= "10111"&x"0"&"10"&std_logic_vector(counter);
                                 end if;
                                 counter <= counter + 1;
                             else
@@ -120,33 +120,31 @@ begin
                             end if;
                         end if;
 
-                        -- update the last correlation value
                         last_corr := current_corr;
+                        last_correlation <= last_corr;
                         last_correlation_out <= last_corr;
                         both_loaded := '0';
                 else
-                    -- Clear the data sent to nios if nothing to be sent
+                    -- Clear the data sent to nios
                     send.data <= x"80000000";
                 end if;
                 
-                -- To check when we recieve value from tdmn
-                case (recv.data(31 downto 29)) is
-                    when "100" =>
-                        wanted_recv_data <= recv.data;
-                    when others => 
-                end case;
+                -- case (recv.addr) is
+                --     when x"03" =>
+                --         wanted_data <= recv.data;
+                --     when others => 
+                -- end case;
                 
             end if;
-            -- update address to that sent by config packet
             send.addr <= send_addr_v;
     end process;
 
-
-    current_correlation_out <= recv.data(27 downto 0) when recv.data(31 downto 28) = "1001" and system_on = '1';
+    current_correlation_out <= recv.data(27 downto 0) when system_on = '1';
     correlation_count <= std_logic_vector(counter);
+
+
 
     state <= "000" when current_state = IDLE else
         "001" when current_state = POSITIVE_SLOPE else
         "010" when current_state = NEGATIVE_SLOPE;
-        
 end find_peak;
