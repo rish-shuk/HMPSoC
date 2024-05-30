@@ -131,38 +131,6 @@ set_location_assignment PIN_AB27 -to HEX5[3]
 set_location_assignment PIN_AB26 -to HEX5[4]
 set_location_assignment PIN_AA26 -to HEX5[5]
 set_location_assignment PIN_AA25 -to HEX5[6]
-set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/TopLevel/TopLevel_Waveform.vwf
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/prog_mem.vhd"
-set_global_assignment -name VHDL_FILE components/general/mux2to1.vhd
-set_global_assignment -name VHDL_FILE components/datapath/REG16B.vhd
-set_global_assignment -name VHDL_FILE components/datapath/PC.vhd
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/various_constants.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/registers.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/registerfile.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/regfile.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/recop_types.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/recop_pll.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/opcodes.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/memory_model.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/memory_arbiter.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/data_mem.vhd"
-set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/ALU.vhd"
-set_global_assignment -name VHDL_FILE components/datapath/IR.vhd
-set_global_assignment -name BDF_FILE TopLevel.bdf
-set_global_assignment -name BDF_FILE Datapath.bdf
-set_global_assignment -name BDF_FILE testbenches/PC/PC_testbench.bdf
-set_global_assignment -name VHDL_FILE components/general/adder16.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/PC/PC_waveform.vwf
-set_global_assignment -name BDF_FILE testbenches/PC_MEMORY/PC_MEMORY_testbench.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf
-set_global_assignment -name VHDL_FILE components/controlunit/ControlUnit.vhd
-set_global_assignment -name BDF_FILE testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_testbench.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf
-set_global_assignment -name VHDL_FILE components/datapath/OP1MUX.vhd
-set_global_assignment -name VHDL_FILE components/datapath/OP2MUX.vhd
-set_global_assignment -name QIP_FILE components/datapath/PM_ROM.qip
-set_global_assignment -name QIP_FILE components/datapath/DM_RAM.qip
-set_global_assignment -name BDF_FILE ReCOP.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -245,3 +213,49 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE ASPs/PD_ASP.vhd
+set_global_assignment -name VHDL_FILE ASPs/macros.vhd
+set_global_assignment -name VHDL_FILE ASPs/AspCor.vhd
+set_global_assignment -name VHDL_FILE ASPs/aspAvg.vhd
+set_global_assignment -name VHDL_FILE ASPs/aspadc_tdma.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/TopLevel/TopLevel_Waveform.vwf
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/prog_mem.vhd"
+set_global_assignment -name VHDL_FILE components/general/mux2to1.vhd
+set_global_assignment -name VHDL_FILE components/datapath/REG16B.vhd
+set_global_assignment -name VHDL_FILE components/datapath/PC.vhd
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/various_constants.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/registers.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/registerfile.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/regfile.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/recop_types.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/recop_pll.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/opcodes.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/memory_model.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/memory_arbiter.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/data_mem.vhd"
+set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/ALU.vhd"
+set_global_assignment -name VHDL_FILE components/datapath/IR.vhd
+set_global_assignment -name BDF_FILE TopLevel.bdf
+set_global_assignment -name BDF_FILE Datapath.bdf
+set_global_assignment -name BDF_FILE testbenches/PC/PC_testbench.bdf
+set_global_assignment -name VHDL_FILE components/general/adder16.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/PC/PC_waveform.vwf
+set_global_assignment -name BDF_FILE testbenches/PC_MEMORY/PC_MEMORY_testbench.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf
+set_global_assignment -name VHDL_FILE components/controlunit/ControlUnit.vhd
+set_global_assignment -name BDF_FILE testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_testbench.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE testbenches/MEMORY_CONTROLUNIT/MEMORY_CONTROLUNIT_Waveform.vwf
+set_global_assignment -name VHDL_FILE components/datapath/OP1MUX.vhd
+set_global_assignment -name VHDL_FILE components/datapath/OP2MUX.vhd
+set_global_assignment -name QIP_FILE components/datapath/PM_ROM.qip
+set_global_assignment -name QIP_FILE components/datapath/DM_RAM.qip
+set_global_assignment -name BDF_FILE ReCOP.bdf
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinTypes.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinSwitch.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinStage.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinSlots.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinInterface.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinFifo.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinFabric.vhd
+set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMin.vhd
+set_global_assignment -name VHDL_FILE hmpsoc_toplevel.vhd
