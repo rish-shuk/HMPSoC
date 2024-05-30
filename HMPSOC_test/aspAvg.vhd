@@ -64,7 +64,7 @@ begin
                         count <= 0; -- reset count
                         sum <= x"00000000"; -- reset sum
                         newData <= '1'; -- enable write for autocorrelator
-                        send.data <= "101100000000000" & newData & std_logic_vector(avg);
+                        send.data <= "101100000000000" & '1' & std_logic_vector(avg);
                     else
                         for i in 0 to MAX_DEPTH - 2 loop
                             if i < WINDOWSIZE - 1 then

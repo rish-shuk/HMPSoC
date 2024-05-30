@@ -21,8 +21,8 @@ use work.TdmaMinTypes.all;
 entity PD_ASP is
     port(
         clk : in std_logic;
-        recv : in tdma_min_port;  
-        send : out tdma_min_port;
+        send : out tdma_min_port;  
+        recv : in tdma_min_port;
         correlation_count : out std_logic_vector(20 downto 0);
         current_correlation_out : out std_logic_vector(27 downto 0) := (others => '0');
         last_correlation_out : out std_logic_vector(27 downto 0)
@@ -80,8 +80,8 @@ begin
                     end if;
                 end if;
 
-                -- Hanld Initial comparison errors, load two values before compuation
-                if (recv.data(31 downto 29) = "100" and both_loaded = '0' and recv.data(28) = '1' and system_on = '1') then
+                -- Handle Initial comparison errors, load two values before compuation and corDATA IS ready
+                if (recv.data(31 downto 28) = "1001" and both_loaded = '0' and system_on = '1') then
                     if (load_initials = '0') then
                         last_corr := recv.data(27 downto 0);
                         load_initials := '1';

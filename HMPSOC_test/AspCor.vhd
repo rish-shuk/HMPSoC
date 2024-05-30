@@ -68,6 +68,11 @@ begin
                                 temp_correlation := temp_correlation + (signed(avg_buffer(CorrN + i)) * signed(avg_buffer(CorrN - (i+1))));
                             end if;
                         end loop;
+
+                        if (temp_correlation > 268435455) then
+                            temp_correlation := (others => '1');
+                        end if;
+                        
                         -- SET VALID FLAG TO INDICATE TO CORASP, RESET COUNTERS
                         valid_flag := '1';
                         CorrVal <= std_logic_vector(temp_correlation);
@@ -119,6 +124,6 @@ begin
 		end if;
     -- PASS THROUGH DATA
     send.addr <= addr_v;
-    send.data <= data_flag & valid_flag & std_logic_vector(temp_correlation(29 downto 0));
+    send.data <= "100" & valid_flag & std_logic_vector(temp_correlation(27 downto 0));
 	end process;
 end architecture;
