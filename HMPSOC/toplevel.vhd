@@ -7,7 +7,7 @@ use work.TdmaMinTypes.all;
 
 entity TopLevel is
 	generic (
-		ports : positive := 3
+		ports : positive := 4
 	);
 	port (
 		CLOCK_50      : in    std_logic;
@@ -77,6 +77,21 @@ begin
 		clock => clock,
 		send => send_port(1),
 		recv => recv_port(1)
+	);
+	
+	asp_cor : entity work.AspCor
+	port map (
+		clock => clock,
+		send => send_port(2),
+		recv => recv_port(2),
+		corrVal => open
+	);
+	
+	asp_pd : entity work.PD_ASP
+	port map (
+		clk => clock,
+		send => send_port(3),
+		recv => recv_port(3)
 	);
 
 --	asp_example : entity work.AspExample
