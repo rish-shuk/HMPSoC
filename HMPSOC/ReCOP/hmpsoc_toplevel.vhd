@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 library work;
 use work.TdmaMinTypes.all;
 
-entity TopLevel is
+entity hmpsoc_TopLevel is
 	generic (
 		ports : positive := 5
 	);
@@ -35,7 +35,7 @@ entity TopLevel is
 	);
 end entity;
 
-architecture rtl of TopLevel is
+architecture rtl of hmpsoc_TopLevel is
 
 	signal clock : std_logic;
 
@@ -92,6 +92,14 @@ begin
 		clk => clock,
 		send => send_port(4),
 		recv => recv_port(4)
+	);
+	
+	recop : entity work.ReCOP
+	port map (
+		clock => clock,
+		send => send_port(5),
+		recv => recv_port(5)
+		
 	);
 
 --	asp_example : entity work.AspExample
