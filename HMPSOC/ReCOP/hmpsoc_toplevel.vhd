@@ -96,7 +96,7 @@ begin
 	
 	recop : entity work.ReCOP
 	port map (
-		clock => clock,
+		clk => clock,
 		send => send_port(5),
 		recv => recv_port(5)
 		

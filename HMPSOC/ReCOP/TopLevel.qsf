@@ -131,7 +131,6 @@ set_location_assignment PIN_AB27 -to HEX5[3]
 set_location_assignment PIN_AB26 -to HEX5[4]
 set_location_assignment PIN_AA26 -to HEX5[5]
 set_location_assignment PIN_AA25 -to HEX5[6]
-set_global_assignment -name VHDL_FILE ReCOP.vhd
 set_global_assignment -name VHDL_FILE ASPs/PD_ASP.vhd
 set_global_assignment -name VHDL_FILE ASPs/macros.vhd
 set_global_assignment -name VHDL_FILE ASPs/AspCor.vhd
@@ -168,7 +167,6 @@ set_global_assignment -name VHDL_FILE components/datapath/OP1MUX.vhd
 set_global_assignment -name VHDL_FILE components/datapath/OP2MUX.vhd
 set_global_assignment -name QIP_FILE components/datapath/PM_ROM.qip
 set_global_assignment -name QIP_FILE components/datapath/DM_RAM.qip
-set_global_assignment -name BDF_FILE ReCOP.bdf
 set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinTypes.vhd
 set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinSwitch.vhd
 set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinStage.vhd

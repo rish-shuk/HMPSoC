@@ -111,7 +111,7 @@ SIP(13) <= PIN_J8;
 SIP(12 DOWNTO 10) <= KEY(3 DOWNTO 1);
 SIP(9 DOWNTO 0) <= SW;
 
-send.data <= DPCR; -- send config packet
-send.addr <= X"0" & DPCR(22 downto 19); -- choose address/ component to send configuration packet too
+send.data <= config; -- send config packet
+send.addr <= X"0" & config(22 downto 19); -- choose address/ component to send configuration packet too
 
 END bdf_type;
