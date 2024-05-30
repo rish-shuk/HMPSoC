@@ -22,10 +22,8 @@ entity PD_ASP is
     port(
         clk : in std_logic;
         send : out tdma_min_port;  
-        recv : in tdma_min_port;
-        correlation_count : out std_logic_vector(20 downto 0);
-        current_correlation_out : out std_logic_vector(27 downto 0) := (others => '0');
-        last_correlation_out : out std_logic_vector(27 downto 0)
+        recv : in tdma_min_port
+        
     );
 end PD_ASP;
 
@@ -42,6 +40,9 @@ architecture find_peak of PD_ASP is
 
     signal wanted_recv_data : std_logic_vector(31 downto 0);
 
+    signal correlation_count : std_logic_vector(20 downto 0);
+    signal current_correlation_out : std_logic_vector(27 downto 0) := (others => '0');
+    signal last_correlation_out : std_logic_vector(27 downto 0);
 
 begin
     process(clk)
@@ -81,7 +82,7 @@ begin
                 end if;
 
                 -- Handle Initial comparison errors, load two values before compuation and corDATA IS ready
-                if (recv.data(31 downto 28) = "1001" and both_loaded = '0' and system_on = '1') then
+                if (recv.data(31 downto 29) = "100" and recv.data(28) = '1' and both_loaded = '0' and system_on = '1') then
                     if (load_initials = '0') then
                         last_corr := recv.data(27 downto 0);
                         load_initials := '1';
@@ -129,8 +130,8 @@ begin
                 end if;
                 
                 -- To check when we recieve value from tdmn
-                case (recv.addr) is
-                    when x"01" =>
+                case (recv.data(31 downto 29)) is
+                    when "100" =>
                         wanted_recv_data <= recv.data;
                     when others => 
                 end case;
