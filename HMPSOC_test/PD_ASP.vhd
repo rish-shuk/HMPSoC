@@ -35,34 +35,34 @@ architecture find_peak of PD_ASP is
     
     signal state : std_logic_vector(2 downto 0) := "000";
     signal peak_detected : std_logic := '0';
-    signal last_correlation : std_logic_vector(29 downto 0);
-    signal wanted_data : std_logic_vector(31 downto 0);
+    signal last_correlation : std_logic_vector(27 downto 0);
+    signal wanted_data : std_logic_vector(27 downto 0);
 
     signal correlation_count : std_logic_vector(20 downto 0);
 
-    signal current_correlation_out : std_logic_vector(29 downto 0) := (others => '0');
-    signal last_correlation_out : std_logic_vector(29 downto 0);
+    signal current_correlation_out : std_logic_vector(27 downto 0) := (others => '0');
+    signal last_correlation_out : std_logic_vector(27 downto 0);
 
 
 begin
     process(clk)
         variable send_addr_v : std_logic_vector(7 downto 0) := x"04";
 
-        variable last_corr : std_logic_vector(29 downto 0) := (others => '0');
-        variable current_corr : std_logic_vector(29 downto 0) := (others => '0');
+        variable last_corr : std_logic_vector(27 downto 0) := (others => '0');
+        variable current_corr : std_logic_vector(27 downto 0) := (others => '0');
         variable load_initials : std_logic:= '0';
         variable both_loaded : std_logic := '0';
     begin
             if rising_edge(clk) then
                 --Congig
                 -- Handle config packet -NOTE: Set config proccesors port
-                if recv.addr = x"05" and recv.data(31 downto 27) = "10011" then
+                if recv.data(31 downto 27) = "10100" then
                     send_addr_v := (7 downto 4 => '0') & recv.data(22 downto 19);
                     -- Check if we must detect toughs
                     if (recv.data(18 downto 15) = "0000") then
                         detect_troughs <= '0';
                         current_state <= IDLE;
-                        last_correlation <= x"0000000"&"00";
+                        last_correlation <= x"0000000";
                         counter <= x"00000"&'0';
                         system_on <= '0';
                         load_initials := '0';
@@ -79,14 +79,14 @@ begin
                 -- Initial loading and setting of the current and load registers
                 -- Can source reg to find where data came from
                 -- if (recv.addr = x"03" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
-                    if (recv.addr = x"02" and both_loaded = '0' and recv.data(30) = '1' and system_on = '1') then
+                if (both_loaded = '0' and recv.data(31 downto 28) = "1001" and system_on = '1') then
                     if (load_initials = '0') then
-                        last_corr := recv.data(29 downto 0);
+                        last_corr := recv.data(27 downto 0);
                         load_initials := '1';
                         counter <= counter + 1;
                         both_loaded := '0';
                     else
-                        current_corr := recv.data(29 downto 0);
+                        current_corr := recv.data(27 downto 0);
                         both_loaded := '1';
                     end if;
                 end if;
@@ -101,7 +101,7 @@ begin
                                 peak_detected <= '1';
                                 current_state <= NEGATIVE_SLOPE;
 
-                                send.data <= "11111"&x"3"&"11"&std_logic_vector(counter);
+                                send.data <= "10111"&x"0"&"11"&std_logic_vector(counter); -- sets IRQ and PEAK detected
                                 -- Reset the counter to the next peak
                                 counter <= (others => '0');
                             else
@@ -112,7 +112,7 @@ begin
                                 current_state <= POSITIVE_SLOPE;
                                 -- returns correlatio ncount from the last peak
                                 if (detect_troughs = '1') then
-                                    send.data <= "11111"&x"3"&"10"&std_logic_vector(counter);
+                                    send.data <= "10111"&x"0"&"10"&std_logic_vector(counter);
                                 end if;
                                 counter <= counter + 1;
                             else
@@ -129,17 +129,17 @@ begin
                     send.data <= x"80000000";
                 end if;
                 
-                case (recv.addr) is
-                    when x"03" =>
-                        wanted_data <= recv.data;
-                    when others => 
-                end case;
+                -- case (recv.addr) is
+                --     when x"03" =>
+                --         wanted_data <= recv.data;
+                --     when others => 
+                -- end case;
                 
             end if;
             send.addr <= send_addr_v;
     end process;
 
-    current_correlation_out <= recv.data(29 downto 0) when unsigned(recv.addr) = 3 and system_on = '1';
+    current_correlation_out <= recv.data(27 downto 0) when system_on = '1';
     correlation_count <= std_logic_vector(counter);
 
 
