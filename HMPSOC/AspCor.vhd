@@ -34,12 +34,13 @@ begin
     variable temp_corr_win : unsigned(6 downto 0) := to_unsigned(4, 7); -- correlation window
     variable valid_flag : std_logic := '0';
     variable data_flag : std_logic := '0';
-    variable addr_v : std_logic_vector(7 downto 0) := x"03";
+    variable addr_v : std_logic_vector(7 downto 0) := x"04";
 	begin
 		if rising_edge(clock) then
             data_flag := '0';
             valid_flag := '0';
             temp_correlation := (others => '0');
+            send.data <= recv.data;
             -- CHECK IF DATA PACKET IS A AVERAGE PACKET
             -- if recv.data(31 downto 28) = "1000" then
             if recv.data(31 downto 27) = "10110" then
@@ -68,6 +69,12 @@ begin
                                 temp_correlation := temp_correlation + (signed(avg_buffer(CorrN + i)) * signed(avg_buffer(CorrN - (i+1))));
                             end if;
                         end loop;
+                        
+                        if (temp_correlation > 268435455) then
+                            temp_correlation := (others => '1');
+                        end if;
+                        send.data <= "1001" & std_logic_vector(temp_correlation(27 downto 0));
+
                         -- SET VALID FLAG TO INDICATE TO CORASP, RESET COUNTERS
                         valid_flag := '1';
                         CorrVal <= std_logic_vector(temp_correlation);
@@ -78,10 +85,24 @@ begin
                 end if;
             elsif recv.data(31 downto 27) = "10111" then
                 -- +++++++++ HARDCODED FOR TESTING ++++++++++
-                addr_v := x"0" & recv.data(23 downto 20);
+                addr_v := x"0" & recv.data(22 downto 19);
                 -- ++++++++++++++++++++++++++++++++++++++++++
 
-                temp_corr_win := unsigned(recv.data(6 downto 0));
+                -- temp_corr_win := unsigned(recv.data(6 downto 0));
+                case recv.data(4 downto 0) is
+                    when "00001" =>
+                        temp_corr_win := "0000100"; -- 4
+                    when "00010" =>
+                        temp_corr_win := "0001000"; -- 8
+                    when "00100" =>
+                        temp_corr_win := "0010000"; -- 16
+                    when "01000" =>
+                        temp_corr_win := "0100000"; -- 32
+                    when "10000" =>
+                        temp_corr_win := "1000000"; -- 64
+                    when others =>
+                end case;
+
 
                 -- IF THE PROVIDED CORRELATION WINDOW IS GREATER THAN 64, SET THE WINDOW TO 64
                 if (temp_corr_win > 64) then
@@ -105,6 +126,6 @@ begin
 		end if;
     -- PASS THROUGH DATA
     send.addr <= addr_v;
-    send.data <= data_flag & valid_flag & std_logic_vector(temp_correlation(29 downto 0));
+    -- send.data <= "100" & valid_flag & std_logic_vector(temp_correlation(27 downto 0));
 	end process;
 end architecture;
