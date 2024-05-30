@@ -78,10 +78,24 @@ begin
                 end if;
             elsif recv.data(31 downto 27) = "10111" then
                 -- +++++++++ HARDCODED FOR TESTING ++++++++++
-                addr_v := x"0" & recv.data(23 downto 20);
+                addr_v := x"0" & recv.data(22 downto 19);
                 -- ++++++++++++++++++++++++++++++++++++++++++
 
-                temp_corr_win := unsigned(recv.data(6 downto 0));
+                -- temp_corr_win := unsigned(recv.data(6 downto 0));
+                case recv.data(4 downto 0) is
+                    when "00001" =>
+                        temp_corr_win := "0000100"; -- 4
+                    when "00010" =>
+                        temp_corr_win := "0001000"; -- 8
+                    when "00100" =>
+                        temp_corr_win := "0010000"; -- 16
+                    when "01000" =>
+                        temp_corr_win := "0100000"; -- 32
+                    when "10000" =>
+                        temp_corr_win := "1000000"; -- 64
+                    when others =>
+                end case;
+
 
                 -- IF THE PROVIDED CORRELATION WINDOW IS GREATER THAN 64, SET THE WINDOW TO 64
                 if (temp_corr_win > 64) then
