@@ -20,8 +20,9 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
 
 LIBRARY work;
+use work.TdmaMinTypes.all;
 
-ENTITY TopLevel IS 
+ENTITY recop IS 
 	PORT
 	(
 		reset :  IN  STD_LOGIC;
@@ -60,10 +61,13 @@ ENTITY TopLevel IS
 		RFInputSel :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0);
 		SIP_R :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SOP :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0)
+		
+--		send : OUT TDMA_MIN_PORT
+		
 	);
-END TopLevel;
+END recop;
 
-ARCHITECTURE bdf_type OF TopLevel IS 
+ARCHITECTURE bdf_type OF recop IS 
 
 COMPONENT controlunit
 	PORT(clk : IN STD_LOGIC;

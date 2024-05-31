@@ -7,7 +7,7 @@ use work.TdmaMinTypes.all;
 
 entity hmpsoc_TopLevel is
 	generic (
-		ports : positive := 5
+		ports : positive := 6
 	);
 	port (
 		CLOCK_50      : in    std_logic;
@@ -32,12 +32,14 @@ entity hmpsoc_TopLevel is
 		HEX3          : out   std_logic_vector(6 downto 0);
 		HEX4          : out   std_logic_vector(6 downto 0);
 		HEX5          : out   std_logic_vector(6 downto 0)
+		
 	);
 end entity;
 
 architecture rtl of hmpsoc_TopLevel is
 
 	signal clock : std_logic;
+	signal dpcr_v : std_logic_vector(31 downto 0);
 
 --	signal adc_empty : std_logic;
 --	signal adc_get   : std_logic;
@@ -97,8 +99,9 @@ begin
 	recop : entity work.ReCOP
 	port map (
 		clk => clock,
-		send => send_port(5),
-		recv => recv_port(5)
+		reset => '0',
+		SIP => "11111" & KEY(1) & SW, -- switches and buttons input
+		DPCR => send_port(5).data -- config
 		
 	);
 
