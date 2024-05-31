@@ -96,7 +96,7 @@ begin
 		recv => recv_port(4)
 	);
 	
-	recop : entity work.TopLevel
+	recop : entity work.recop
 	port map (
 		clk => clock,
 		reset => '0',
@@ -104,7 +104,7 @@ begin
 		DPCR => send_port(5).data, -- config
 		CONF_ADDR => send_port(5).addr(3 downto 0),
 		LED_ADDR => LEDR(3 downto 0),
-		LED_ID => LEDR(9 downto 5),
+		LED_ID => LEDR(9 downto 5)
 	);
 
 --	asp_example : entity work.AspExample

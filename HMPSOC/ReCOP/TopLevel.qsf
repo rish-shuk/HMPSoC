@@ -294,7 +294,8 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TopLevel -sect
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TopLevel -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity TopLevel -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TopLevel -section_id Top
-set_global_assignment -name VHDL_FILE TopLevel.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE recopTopLevel.vhd
 set_global_assignment -name VHDL_FILE ASPs/PD_ASP.vhd
 set_global_assignment -name VHDL_FILE ASPs/macros.vhd
 set_global_assignment -name VHDL_FILE ASPs/AspCor.vhd
@@ -339,4 +340,3 @@ set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinFifo.vhd
 set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMinFabric.vhd
 set_global_assignment -name VHDL_FILE ASPs/TdmaMin/TdmaMin.vhd
 set_global_assignment -name VHDL_FILE hmpsoc_toplevel.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

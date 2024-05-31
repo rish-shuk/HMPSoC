@@ -21,7 +21,7 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY TopLevel IS 
+ENTITY Recop IS 
 	PORT
 	(
 		reset :  IN  STD_LOGIC;
@@ -64,9 +64,9 @@ ENTITY TopLevel IS
 		SIP_R :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SOP :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
-END TopLevel;
+END recop;
 
-ARCHITECTURE bdf_type OF TopLevel IS 
+ARCHITECTURE bdf_type OF recop IS 
 
 COMPONENT controlunit
 	PORT(clk : IN STD_LOGIC;
