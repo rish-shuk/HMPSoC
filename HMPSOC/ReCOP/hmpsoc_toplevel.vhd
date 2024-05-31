@@ -96,14 +96,15 @@ begin
 		recv => recv_port(4)
 	);
 	
-	recop : entity work.ReCOP
+	recop : entity work.TopLevel
 	port map (
 		clk => clock,
 		reset => '0',
 		SIP => "11111" & KEY(1) & SW, -- switches and buttons input
 		DPCR => send_port(5).data, -- config
-		CONF_ADDR => send_port(5).addr
-		
+		CONF_ADDR => send_port(5).addr(3 downto 0),
+		LED_ADDR => LEDR(3 downto 0),
+		LED_ID => LEDR(9 downto 5),
 	);
 
 --	asp_example : entity work.AspExample

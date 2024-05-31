@@ -131,9 +131,6 @@ set_location_assignment PIN_AB27 -to HEX5[3]
 set_location_assignment PIN_AB26 -to HEX5[4]
 set_location_assignment PIN_AA26 -to HEX5[5]
 set_location_assignment PIN_AA25 -to HEX5[6]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50
@@ -212,7 +209,92 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
-set_global_assignment -name VHDL_FILE ReCOP.vhd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50 -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK4_50 -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SCLK -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SDAT -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACDAT -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACLRCK -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_XCK -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity TopLevel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity TopLevel
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TopLevel -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TopLevel -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity TopLevel -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TopLevel -section_id Top
+set_global_assignment -name VHDL_FILE TopLevel.vhd
 set_global_assignment -name VHDL_FILE ASPs/PD_ASP.vhd
 set_global_assignment -name VHDL_FILE ASPs/macros.vhd
 set_global_assignment -name VHDL_FILE ASPs/AspCor.vhd
@@ -235,7 +317,6 @@ set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source des
 set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/data_mem.vhd"
 set_global_assignment -name VHDL_FILE "reCopCanvasFiles/Selected VHDL source design files/ALU.vhd"
 set_global_assignment -name VHDL_FILE components/datapath/IR.vhd
-set_global_assignment -name BDF_FILE TopLevel.bdf
 set_global_assignment -name BDF_FILE Datapath.bdf
 set_global_assignment -name BDF_FILE testbenches/PC/PC_testbench.bdf
 set_global_assignment -name VHDL_FILE components/general/adder16.vhd
