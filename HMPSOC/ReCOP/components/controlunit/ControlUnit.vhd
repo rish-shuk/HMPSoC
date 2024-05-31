@@ -204,8 +204,17 @@ begin
 							Op1Sel <= alu_func;
 							Op2Sel <= alu_rx;
 					when subr =>
-							Op1Sel <= alu_func;
-							Op2Sel <= alu_rz;
+						case(AM) is
+							when (am_immediate) =>
+								Op1Sel <= alu_func;
+								Op2Sel <= alu_rz;
+							when (am_register) =>
+								Op1Sel <= alu_rx;
+								Op2Sel <= alu_rz;
+							when others =>
+								Op1Sel <= alu_func;
+								Op2Sel <= alu_rz;
+						end case;
 					when ldr =>
 					-- Sort out ldr and sw in ALU, i.e no operation should be performed, vlaue should jsut go through alu
 						case(AM) is
