@@ -101,7 +101,8 @@ begin
 		clk => clock,
 		reset => '0',
 		SIP => "11111" & KEY(1) & SW, -- switches and buttons input
-		DPCR => send_port(5).data -- config
+		DPCR => send_port(5).data, -- config
+		CONF_ADDR => send_port(5).addr
 		
 	);
 
