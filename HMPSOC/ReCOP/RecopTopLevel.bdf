@@ -1423,13 +1423,13 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "SIP[3..0]" (rect 1431 648 1469 665)(font "Intel Clear" ))
+	(text "SOP[3..0]" (rect 1431 648 1475 665)(font "Intel Clear" ))
 	(pt 1480 664)
 	(pt 1416 664)
 	(bus)
 )
 (connector
-	(text "SIP[9..5]" (rect 1413 680 1451 697)(font "Intel Clear" ))
+	(text "SOP[9..5]" (rect 1413 680 1457 697)(font "Intel Clear" ))
 	(pt 1480 704)
 	(pt 1416 704)
 	(bus)
