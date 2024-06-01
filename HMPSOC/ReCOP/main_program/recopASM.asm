@@ -18,7 +18,7 @@ load_sw                 LSIP R2
                         SUB R1 #69 ; restart the process if we have covered all switch cases
                         SZ initialise_dc ; 
                         JMP load_sw  ; load the next switchc case using incremented dc
-load_config_packet      ADD R4 R1 #1 ; get addrss od top and bottom half of config
+load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of config
                         ADD R5 R1 #2
                         LDR R4 R4 ; load top & bottom half of config from DM
                         LDR R5 R5
