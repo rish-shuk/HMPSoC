@@ -9,8 +9,8 @@
 
 
 start NOOP ;starting the program
-initialise_dc           LDR R1 #0 ;data memory counter
-load_sw                 LSIP R2 
+initialise_dc           LDR R1 #0 ;data memory counter 
+load_sw                 LSIP R2
                         LDR R3 R1 ; load data memory at dc
                         SUB R2 R3 ; compare physical switches to data memory switch case
                         SZ $10 ; jump to load_config_packet  

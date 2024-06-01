@@ -165,7 +165,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1240 376 1416 392)
+	(rect 1480 376 1656 392)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "IR_RZ[3..0]" (rect 90 0 141 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -181,7 +181,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1240 392 1416 408)
+	(rect 1488 392 1664 408)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "IR_RX[3..0]" (rect 90 0 143 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -197,7 +197,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1240 472 1416 488)
+	(rect 1568 472 1744 488)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "ALUZFlag" (rect 90 0 137 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -1155,11 +1155,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1152 384)
-	(pt 1240 384)
-	(bus)
-)
-(connector
 	(pt 1152 448)
 	(pt 1240 448)
 	(bus)
@@ -1167,16 +1162,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1152 432)
 	(pt 1240 432)
-	(bus)
-)
-(connector
-	(text "ALUZFlag" (rect 1171 464 1218 481)(font "Intel Clear" ))
-	(pt 1152 480)
-	(pt 1240 480)
-)
-(connector
-	(pt 1152 400)
-	(pt 1240 400)
 	(bus)
 )
 (connector
@@ -1445,7 +1430,54 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "reg_rz[3..0]" (rect 1431 648 1484 665)(font "Intel Clear" ))
+	(text "ALUZFlag" (rect 1499 464 1546 481)(font "Intel Clear" ))
+	(pt 1152 480)
+	(pt 1568 480)
+)
+(connector
+	(pt 1448 344)
+	(pt 1512 344)
+	(bus)
+)
+(connector
+	(pt 1152 384)
+	(pt 1448 384)
+	(bus)
+)
+(connector
+	(pt 1448 384)
+	(pt 1480 384)
+	(bus)
+)
+(connector
+	(text "rz[3..0]" (rect 1424 331 1441 362)(font "Intel Clear" )(vertical))
+	(pt 1448 384)
+	(pt 1448 344)
+	(bus)
+)
+(connector
+	(pt 1464 400)
+	(pt 1464 432)
+	(bus)
+)
+(connector
+	(pt 1152 400)
+	(pt 1464 400)
+	(bus)
+)
+(connector
+	(pt 1464 400)
+	(pt 1488 400)
+	(bus)
+)
+(connector
+	(text "rx[3..0]" (rect 1478 416 1509 433)(font "Intel Clear" ))
+	(pt 1464 432)
+	(pt 1488 432)
+	(bus)
+)
+(connector
+	(text "rx[3..0]" (rect 1431 648 1462 665)(font "Intel Clear" ))
 	(pt 1480 664)
 	(pt 1416 664)
 	(bus)
@@ -1454,3 +1486,5 @@ refer to the applicable agreement for further details.
 (junction (pt 1192 576))
 (junction (pt 768 592))
 (junction (pt 1456 512))
+(junction (pt 1448 384))
+(junction (pt 1464 400))
