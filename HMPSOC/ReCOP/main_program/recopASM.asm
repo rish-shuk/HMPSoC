@@ -13,9 +13,9 @@ initialise_dc           LDR R1 #0 ;data memory counter
 load_sw                 LSIP R2
                         LDR R3 R1 ; load data memory at dc
                         SUB R2 R3 ; compare physical switches to data memory switch case
-                        SZ $10 ; jump to load_config_packet  
+                        SZ $10 ; jump to load_config_packet if match found
                         ADD R1 R1 #3 ; increment dc
-                        SUB R1 #69 ; restart the proccces if we have covered all switch cases
+                        SUB R1 #69 ; restart the process if we have covered all switch cases
                         SZ initialise_dc ; 
                         JMP load_sw  ; load the next switchc case using incremented dc
 load_config_packet      ADD R4 R1 #1 ; get addrss od top and bottom half of config

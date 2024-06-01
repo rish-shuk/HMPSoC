@@ -1424,12 +1424,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "reg_rz[9..5]" (rect 1413 680 1466 697)(font "Intel Clear" ))
-	(pt 1480 704)
-	(pt 1416 704)
-	(bus)
-)
-(connector
 	(text "ALUZFlag" (rect 1499 464 1546 481)(font "Intel Clear" ))
 	(pt 1152 480)
 	(pt 1568 480)
@@ -1477,7 +1471,13 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "rx[3..0]" (rect 1431 648 1462 665)(font "Intel Clear" ))
+	(text "dpcr[31..27]" (rect 1413 680 1468 697)(font "Intel Clear" ))
+	(pt 1480 704)
+	(pt 1416 704)
+	(bus)
+)
+(connector
+	(text "dpcr[3..0]" (rect 1431 648 1474 665)(font "Intel Clear" ))
 	(pt 1480 664)
 	(pt 1416 664)
 	(bus)
@@ -1488,3 +1488,4 @@ refer to the applicable agreement for further details.
 (junction (pt 1456 512))
 (junction (pt 1448 384))
 (junction (pt 1464 400))
+(text "This should map to relevant parameter" (rect 1680 656 1911 675)(font "Intel Clear" (font_size 8)))
