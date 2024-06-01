@@ -86,9 +86,9 @@ begin
 		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
 		DPCR => send_port(5).data, -- config packet
 		CONF_ADDR => send_port(5).addr(3 downto 0),
---		LED_ADDR => LEDR(3 downto 0), -- output packet id
---		LED_ID => LEDR(9 downto 5) -- output packet address
-		LED_ALL => LEDR
+		LED_PARAM => LEDR(3 downto 0), -- output packet param
+		LED_ID => LEDR(9 downto 5) -- output packet id
+--		LED_ALL => LEDR
 	);
 
 --	asp_example : entity work.AspExample

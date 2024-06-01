@@ -613,9 +613,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1480 696 1656 712)
+	(rect 1480 680 1656 696)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LED_ALL[9..0]" (rect 90 0 157 17)(font "Intel Clear" ))
+	(text "LED_ID[4..0]" (rect 90 0 154 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -626,7 +626,22 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1680 696 1744 816))
+)
+(pin
+	(output)
+	(rect 1480 656 1659 672)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "LED_param[3..0]" (rect 90 0 173 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
 )
 (symbol
 	(rect 72 336 336 640)
@@ -1449,12 +1464,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dpcr[3..1]" (rect 1431 648 1474 665)(font "Intel Clear" ))
-	(pt 1480 664)
-	(pt 1416 664)
-	(bus)
-)
-(connector
 	(pt 1520 448)
 	(pt 1520 424)
 	(bus)
@@ -1476,9 +1485,15 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dm[9..0]" (rect 1413 680 1451 697)(font "Intel Clear" ))
-	(pt 1480 704)
-	(pt 1416 704)
+	(text "dpcr[3..0]" (rect 1431 648 1474 665)(font "Intel Clear" ))
+	(pt 1480 664)
+	(pt 1416 664)
+	(bus)
+)
+(connector
+	(text "dpcr[31..27]" (rect 1423 672 1478 689)(font "Intel Clear" ))
+	(pt 1480 688)
+	(pt 1400 688)
 	(bus)
 )
 (junction (pt 1424 544))
