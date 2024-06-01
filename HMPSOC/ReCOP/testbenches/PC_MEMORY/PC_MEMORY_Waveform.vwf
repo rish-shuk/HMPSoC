@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf" --testbench_file="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/simulation/qsim/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf" --testbench_file="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/simulation/qsim/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/simulation/qsim/" TopLevel -c TopLevel</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/simulation/qsim/" TopLevel -c TopLevel</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf" --testbench_file="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf" --testbench_file="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/" TopLevel -c TopLevel</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/" TopLevel -c TopLevel</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work TopLevel.vho
 vcom -work work testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht
-vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PC_MEMORY_testbench_vhd_vec_tst
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.hmpsoc_toplevel_vhd_vec_tst
 vcd file -direction TopLevel.msim.vcd
-vcd add -internal PC_MEMORY_testbench_vhd_vec_tst/*
-vcd add -internal PC_MEMORY_testbench_vhd_vec_tst/i1/*
+vcd add -internal hmpsoc_toplevel_vhd_vec_tst/*
+vcd add -internal hmpsoc_toplevel_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -26,10 +26,10 @@ quit -f
 vlib work
 vcom -work work TopLevel.vho
 vcom -work work testbenches/PC_MEMORY/PC_MEMORY_Waveform.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax PC_MEMORY_testbench_vhd_vec_tst/i1=TopLevel_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PC_MEMORY_testbench_vhd_vec_tst
+vsim -novopt -c -t 1ps -sdfmax hmpsoc_toplevel_vhd_vec_tst/i1=TopLevel_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.hmpsoc_toplevel_vhd_vec_tst
 vcd file -direction TopLevel.msim.vcd
-vcd add -internal PC_MEMORY_testbench_vhd_vec_tst/*
-vcd add -internal PC_MEMORY_testbench_vhd_vec_tst/i1/*
+vcd add -internal hmpsoc_toplevel_vhd_vec_tst/*
+vcd add -internal hmpsoc_toplevel_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -954,9 +954,7 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 480.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 480.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 

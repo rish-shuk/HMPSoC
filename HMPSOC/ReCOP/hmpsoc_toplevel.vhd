@@ -14,15 +14,6 @@ entity hmpsoc_TopLevel is
 		CLOCK2_50     : in    std_logic;
 		CLOCK3_50     : in    std_logic;
 
---		FPGA_I2C_SCLK : out   std_logic;
---		FPGA_I2C_SDAT : inout std_logic;
---		AUD_ADCDAT    : in    std_logic;
---		AUD_ADCLRCK   : inout std_logic;
---		AUD_BCLK      : inout std_logic;
---		AUD_DACDAT    : out   std_logic;
---		AUD_DACLRCK   : inout std_logic;
---		AUD_XCK       : out   std_logic;
-
 		KEY           : in    std_logic_vector(3 downto 0);
 		SW            : in    std_logic_vector(9 downto 0);
 		LEDR          : out   std_logic_vector(9 downto 0);
@@ -39,14 +30,6 @@ end entity;
 architecture rtl of hmpsoc_TopLevel is
 
 	signal clock : std_logic;
-	signal dpcr_v : std_logic_vector(31 downto 0);
-
---	signal adc_empty : std_logic;
---	signal adc_get   : std_logic;
---	signal adc_data  : std_logic_vector(16 downto 0);
---	signal dac_full  : std_logic;
---	signal dac_put   : std_logic;
---	signal dac_data  : std_logic_vector(16 downto 0);
 
 	signal send_port : tdma_min_ports(0 to ports-1);
 	signal recv_port : tdma_min_ports(0 to ports-1);
@@ -96,15 +79,15 @@ begin
 		recv => recv_port(4)
 	);
 	
-	recop : entity work.recop
+	recop : entity work.recopTopLevel
 	port map (
 		clk => clock,
 		reset => '0',
-		SIP => "11111" & KEY(1) & SW, -- switches and buttons input
-		DPCR => send_port(5).data, -- config
+		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
+		DPCR => send_port(5).data, -- config packet
 		CONF_ADDR => send_port(5).addr(3 downto 0),
-		LED_ADDR => LEDR(3 downto 0),
-		LED_ID => LEDR(9 downto 5)
+		LED_ADDR => LEDR(3 downto 0), -- output packet id
+		LED_ID => LEDR(9 downto 5) -- output packet address
 	);
 
 --	asp_example : entity work.AspExample
