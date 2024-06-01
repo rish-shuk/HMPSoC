@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/19/2024 23:04:25"
+-- Generated on "06/01/2024 20:07:25"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          TopLevel
+-- Vhdl Test Bench(with test vectors) for design  :          RecopTopLevel
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,9 +28,9 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY TopLevel_vhd_vec_tst IS
-END TopLevel_vhd_vec_tst;
-ARCHITECTURE TopLevel_arch OF TopLevel_vhd_vec_tst IS
+ENTITY RecopTopLevel_vhd_vec_tst IS
+END RecopTopLevel_vhd_vec_tst;
+ARCHITECTURE RecopTopLevel_arch OF RecopTopLevel_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL ALU_Result : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -39,6 +39,7 @@ SIGNAL ALUOP : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL ALUZFlag : STD_LOGIC;
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
+SIGNAL conf_addr : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL DMLoad : STD_LOGIC;
 SIGNAL DMOut : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL DPCR : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -49,6 +50,7 @@ SIGNAL IR_RX : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL IR_RZ : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL IRHalfSel : STD_LOGIC;
 SIGNAL IRLoad : STD_LOGIC;
+SIGNAL LED_ALL : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL OP : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Op1Load : STD_LOGIC;
 SIGNAL Op1Sel : STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -69,7 +71,7 @@ SIGNAL SIP : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL SIP_R : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL SOP : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL SOPLoad : STD_LOGIC;
-COMPONENT TopLevel
+COMPONENT RecopTopLevel
 	PORT (
 	ALU_Result : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	ALUClrZFlag : OUT STD_LOGIC;
@@ -77,6 +79,7 @@ COMPONENT TopLevel
 	ALUZFlag : OUT STD_LOGIC;
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
+	conf_addr : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	DMLoad : OUT STD_LOGIC;
 	DMOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	DPCR : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -87,6 +90,7 @@ COMPONENT TopLevel
 	IR_RZ : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	IRHalfSel : OUT STD_LOGIC;
 	IRLoad : OUT STD_LOGIC;
+	LED_ALL : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	OP : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Op1Load : OUT STD_LOGIC;
 	Op1Sel : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -110,7 +114,7 @@ COMPONENT TopLevel
 	);
 END COMPONENT;
 BEGIN
-	i1 : TopLevel
+	i1 : RecopTopLevel
 	PORT MAP (
 -- list connections between master ports and signals
 	ALU_Result => ALU_Result,
@@ -119,6 +123,7 @@ BEGIN
 	ALUZFlag => ALUZFlag,
 	AM => AM,
 	clk => clk,
+	conf_addr => conf_addr,
 	DMLoad => DMLoad,
 	DMOut => DMOut,
 	DPCR => DPCR,
@@ -129,6 +134,7 @@ BEGIN
 	IR_RZ => IR_RZ,
 	IRHalfSel => IRHalfSel,
 	IRLoad => IRLoad,
+	LED_ALL => LED_ALL,
 	OP => OP,
 	Op1Load => Op1Load,
 	Op1Sel => Op1Sel,
@@ -153,43 +159,43 @@ BEGIN
 -- SIP[15]
 t_prcs_SIP_15: PROCESS
 BEGIN
-	SIP(15) <= '1';
+	SIP(15) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_15;
 -- SIP[14]
 t_prcs_SIP_14: PROCESS
 BEGIN
-	SIP(14) <= '1';
+	SIP(14) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_14;
 -- SIP[13]
 t_prcs_SIP_13: PROCESS
 BEGIN
-	SIP(13) <= '1';
+	SIP(13) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_13;
 -- SIP[12]
 t_prcs_SIP_12: PROCESS
 BEGIN
-	SIP(12) <= '1';
+	SIP(12) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_12;
 -- SIP[11]
 t_prcs_SIP_11: PROCESS
 BEGIN
-	SIP(11) <= '1';
+	SIP(11) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_11;
 -- SIP[10]
 t_prcs_SIP_10: PROCESS
 BEGIN
-	SIP(10) <= '1';
+	SIP(10) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_10;
 -- SIP[9]
 t_prcs_SIP_9: PROCESS
 BEGIN
-	SIP(9) <= '1';
+	SIP(9) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_9;
 -- SIP[8]
@@ -201,7 +207,7 @@ END PROCESS t_prcs_SIP_8;
 -- SIP[7]
 t_prcs_SIP_7: PROCESS
 BEGIN
-	SIP(7) <= '1';
+	SIP(7) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_7;
 -- SIP[6]
@@ -214,6 +220,8 @@ END PROCESS t_prcs_SIP_6;
 t_prcs_SIP_5: PROCESS
 BEGIN
 	SIP(5) <= '1';
+	WAIT FOR 749000 ps;
+	SIP(5) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_5;
 -- SIP[4]
@@ -225,13 +233,13 @@ END PROCESS t_prcs_SIP_4;
 -- SIP[3]
 t_prcs_SIP_3: PROCESS
 BEGIN
-	SIP(3) <= '1';
+	SIP(3) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_3;
 -- SIP[2]
 t_prcs_SIP_2: PROCESS
 BEGIN
-	SIP(2) <= '1';
+	SIP(2) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_2;
 -- SIP[1]
@@ -243,6 +251,8 @@ END PROCESS t_prcs_SIP_1;
 -- SIP[0]
 t_prcs_SIP_0: PROCESS
 BEGIN
+	SIP(0) <= '1';
+	WAIT FOR 749000 ps;
 	SIP(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_0;
@@ -257,14 +267,12 @@ END PROCESS t_prcs_reset;
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 26
-	LOOP
-		clk <= '0';
-		WAIT FOR 10000 ps;
-		clk <= '1';
-		WAIT FOR 10000 ps;
-	END LOOP;
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 10000 ps;
+	clk <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 1500000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
-END TopLevel_arch;
+END RecopTopLevel_arch;

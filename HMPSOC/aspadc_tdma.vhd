@@ -88,9 +88,8 @@ begin
 	begin
 		if rising_edge(clock) then
 			if (recv.data(31 downto 27) = "10001") then 	-- if config message is received
-				addr   <= recv.data(23 downto 20);		-- Address to where to port
+				addr   <= recv.data(22 downto 19);		-- Address to where to port NEXT
 				data_bit <= recv.data(2 downto 0);		-- Data-bit configuration
-				data_request <= recv.data(3);
 			end if;	
 		end if;
 	end process;
@@ -112,18 +111,16 @@ begin
                 end if;
 				-- once sampling counter has been reached, then send new sample
 				-- check bit width
-				if data_request = '1' then -- note data_request can be disabled via RECOP config package
-					case data_bit is
-						when "001" => data_width := 8;
-						when "010" => data_width := 10;
-						when "011" => data_width := 12;
-						when others =>data_width := 12;
-					end case;
-					data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
-					send.addr <= "0000" & addr;	-- send to next component (port 1)
-					send.data <= "1010000000000000" & data_to_send(15 downto 0); -- send with data head
-					adc_data_ready <= '1';
-				end if;
+				case data_bit is
+					when "001" => data_width := 8;
+					when "010" => data_width := 10;
+					when "100" => data_width := 12;
+					when others =>data_width := 12;
+				end case;
+				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
+				send.addr <= "0000" & addr;	-- send to next component (port 1)
+				send.data <= "1010100000000000" & data_to_send(15 downto 0); -- send with data head
+				adc_data_ready <= '1';
 			else
 				send.addr <= "0000" & addr;
 					send.data <= (others => '0');
