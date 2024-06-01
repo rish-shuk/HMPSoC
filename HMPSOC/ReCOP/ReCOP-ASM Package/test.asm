@@ -1,0 +1,4 @@
+start		LSIP R3
+			SSOP R3
+ENDPROG
+END
