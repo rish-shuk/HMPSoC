@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "06/01/2024 12:15:26"
+-- DATE "06/01/2024 12:28:36"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -109,17 +109,17 @@ END hmpsoc_TopLevel;
 -- HEX5[5]	=>  Location: PIN_AA26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 -- HEX5[6]	=>  Location: PIN_AA25,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 -- CLOCK_50	=>  Location: PIN_AF14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- KEY[1]	=>  Location: PIN_AA15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[5]	=>  Location: PIN_AD12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[4]	=>  Location: PIN_AD11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[0]	=>  Location: PIN_AB12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[1]	=>  Location: PIN_AC12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[2]	=>  Location: PIN_AF9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[3]	=>  Location: PIN_AF10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[5]	=>  Location: PIN_AD12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[6]	=>  Location: PIN_AE11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[7]	=>  Location: PIN_AC9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[8]	=>  Location: PIN_AD10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[9]	=>  Location: PIN_AE12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- KEY[1]	=>  Location: PIN_AA15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF hmpsoc_TopLevel IS
@@ -150,18 +150,18 @@ SIGNAL \KEY[0]~input_o\ : std_logic;
 SIGNAL \KEY[2]~input_o\ : std_logic;
 SIGNAL \KEY[3]~input_o\ : std_logic;
 SIGNAL \CLOCK_50~input_o\ : std_logic;
-SIGNAL \KEY[1]~input_o\ : std_logic;
+SIGNAL \SW[5]~input_o\ : std_logic;
 SIGNAL \SW[4]~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \SW[0]~input_o\ : std_logic;
 SIGNAL \SW[1]~input_o\ : std_logic;
 SIGNAL \SW[2]~input_o\ : std_logic;
 SIGNAL \SW[3]~input_o\ : std_logic;
-SIGNAL \SW[5]~input_o\ : std_logic;
 SIGNAL \SW[6]~input_o\ : std_logic;
 SIGNAL \SW[7]~input_o\ : std_logic;
 SIGNAL \SW[8]~input_o\ : std_logic;
 SIGNAL \SW[9]~input_o\ : std_logic;
+SIGNAL \KEY[1]~input_o\ : std_logic;
 
 BEGIN
 
@@ -255,7 +255,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SW[5]~input_o\,
+	i => \SW[6]~input_o\,
 	devoe => ww_devoe,
 	o => ww_LEDR(5));
 
@@ -268,7 +268,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SW[6]~input_o\,
+	i => \SW[7]~input_o\,
 	devoe => ww_devoe,
 	o => ww_LEDR(6));
 
@@ -281,7 +281,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SW[7]~input_o\,
+	i => \SW[8]~input_o\,
 	devoe => ww_devoe,
 	o => ww_LEDR(7));
 
@@ -294,7 +294,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SW[8]~input_o\,
+	i => \SW[9]~input_o\,
 	devoe => ww_devoe,
 	o => ww_LEDR(8));
 
@@ -307,7 +307,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SW[9]~input_o\,
+	i => \KEY[1]~input_o\,
 	devoe => ww_devoe,
 	o => ww_LEDR(9));
 
@@ -901,17 +901,6 @@ PORT MAP (
 	i => ww_SW(3),
 	o => \SW[3]~input_o\);
 
--- Location: IOIBUF_X16_Y0_N18
-\SW[5]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_SW(5),
-	o => \SW[5]~input_o\);
-
 -- Location: IOIBUF_X4_Y0_N35
 \SW[6]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -955,6 +944,17 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_SW(9),
 	o => \SW[9]~input_o\);
+
+-- Location: IOIBUF_X36_Y0_N18
+\KEY[1]~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_KEY(1),
+	o => \KEY[1]~input_o\);
 
 -- Location: IOIBUF_X56_Y0_N1
 \CLOCK2_50~input\ : cyclonev_io_ibuf
@@ -1022,16 +1022,16 @@ PORT MAP (
 	i => ww_CLOCK_50,
 	o => \CLOCK_50~input_o\);
 
--- Location: IOIBUF_X36_Y0_N18
-\KEY[1]~input\ : cyclonev_io_ibuf
+-- Location: IOIBUF_X16_Y0_N18
+\SW[5]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_KEY(1),
-	o => \KEY[1]~input_o\);
+	i => ww_SW(5),
+	o => \SW[5]~input_o\);
 
 -- Location: IOIBUF_X2_Y0_N41
 \SW[4]~input\ : cyclonev_io_ibuf
