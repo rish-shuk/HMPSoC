@@ -94,7 +94,6 @@ begin
 		CONF_ADDR => send_port(5).addr(3 downto 0),
 		LED_PARAM => LEDR(4 downto 0), -- output packet param
 		LED_ID => LEDR(9 downto 5) -- output packet id
---		LED_ALL => LEDR 
 	);
 
 

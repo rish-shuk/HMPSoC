@@ -15,7 +15,7 @@ load_sw                 LSIP R2   ;                                             
                         SUB R2 R3 ; compare physical switches to data memory switch case                5
                         SZ $10 ; jump to load_config_packet if match found (hex 17)                     6,7
                         ADD R1 R1 #3 ; increment dc                                                     8,9
-                        SUB R1 #10 ; restart the process if we have covered all switch cases			    10,11
+                        SUB R1 #205 ; restart the process if we have covered all switch cases			    10,11
                         SZ initialise_dc ; 																12,13
                         JMP load_sw  ; load the next switch case using incremented dc					14,15
 load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of config						16,17
