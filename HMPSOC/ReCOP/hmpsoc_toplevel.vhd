@@ -76,8 +76,14 @@ begin
 	port map (
 		clk => clock,
 		send => send_port(4),
-		recv => recv_port(4)
+		recv => recv_port(4) -- should be 3
 	);
+	
+	-- nios : entity work.nios
+--    port map (
+--		clk => clock,
+--		recv => recv_port(4)
+--	);
 	
 	recop : entity work.recopTopLevel
 	port map (
@@ -86,10 +92,12 @@ begin
 		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
 		DPCR => send_port(5).data, -- config packet
 		CONF_ADDR => send_port(5).addr(3 downto 0),
-		LED_PARAM => LEDR(3 downto 0), -- output packet param
+		LED_PARAM => LEDR(4 downto 0), -- output packet param
 		LED_ID => LEDR(9 downto 5) -- output packet id
---		LED_ALL => LEDR
+--		LED_ALL => LEDR 
 	);
+
+
 
 --	asp_example : entity work.AspExample
 --	port map (
