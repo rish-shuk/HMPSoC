@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
--- CREATED		"Sun Jun 02 12:38:23 2024"
+-- CREATED		"Sun Jun 02 20:57:08 2024"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
