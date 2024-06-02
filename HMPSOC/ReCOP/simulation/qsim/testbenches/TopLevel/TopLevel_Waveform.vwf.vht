@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/02/2024 13:27:39"
+-- Generated on "06/02/2024 20:50:05"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          RecopTopLevel
 -- 
@@ -222,7 +222,7 @@ END PROCESS t_prcs_SIP_6;
 -- SIP[5]
 t_prcs_SIP_5: PROCESS
 BEGIN
-	SIP(5) <= '0';
+	SIP(5) <= '1';
 WAIT;
 END PROCESS t_prcs_SIP_5;
 -- SIP[4]
@@ -246,7 +246,7 @@ END PROCESS t_prcs_SIP_2;
 -- SIP[1]
 t_prcs_SIP_1: PROCESS
 BEGIN
-	SIP(1) <= '0';
+	SIP(1) <= '1';
 WAIT;
 END PROCESS t_prcs_SIP_1;
 -- SIP[0]
@@ -271,7 +271,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	clk <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1500000 ps) THEN WAIT; END IF;
+	IF (NOW >= 3000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 END RecopTopLevel_arch;

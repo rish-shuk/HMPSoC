@@ -18,9 +18,6 @@ def write_mif_file(config_buttons, binary_identifiers, output_file):
             file.write("{} : {};\n".format(6*i + 1, config_button))
             file.write("{} : {};\n".format(6*i + 2, first_16_bits))
             file.write("{} : {};\n".format(6*i + 3, last_16_bits))
-            file.write("{} : {};\n".format(6*i + 4, "1111111111111111"))
-            file.write("{} : {};\n".format(6*i + 5, "0000000000000000"))
-            file.write("{} : {};\n".format(6*i + 6, "0000000000000000"))
         file.write("END;\n")
 
 def main():
