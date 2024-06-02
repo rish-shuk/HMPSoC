@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/01/2024 20:07:25"
+-- Generated on "06/02/2024 20:50:05"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          RecopTopLevel
 -- 
@@ -50,7 +50,8 @@ SIGNAL IR_RX : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL IR_RZ : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL IRHalfSel : STD_LOGIC;
 SIGNAL IRLoad : STD_LOGIC;
-SIGNAL LED_ALL : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL LED_ID : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL LED_param : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL OP : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Op1Load : STD_LOGIC;
 SIGNAL Op1Sel : STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -90,7 +91,8 @@ COMPONENT RecopTopLevel
 	IR_RZ : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	IRHalfSel : OUT STD_LOGIC;
 	IRLoad : OUT STD_LOGIC;
-	LED_ALL : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	LED_ID : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	LED_param : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
 	OP : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Op1Load : OUT STD_LOGIC;
 	Op1Sel : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -134,7 +136,8 @@ BEGIN
 	IR_RZ => IR_RZ,
 	IRHalfSel => IRHalfSel,
 	IRLoad => IRLoad,
-	LED_ALL => LED_ALL,
+	LED_ID => LED_ID,
+	LED_param => LED_param,
 	OP => OP,
 	Op1Load => Op1Load,
 	Op1Sel => Op1Sel,
@@ -220,8 +223,6 @@ END PROCESS t_prcs_SIP_6;
 t_prcs_SIP_5: PROCESS
 BEGIN
 	SIP(5) <= '1';
-	WAIT FOR 749000 ps;
-	SIP(5) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_5;
 -- SIP[4]
@@ -245,14 +246,12 @@ END PROCESS t_prcs_SIP_2;
 -- SIP[1]
 t_prcs_SIP_1: PROCESS
 BEGIN
-	SIP(1) <= '0';
+	SIP(1) <= '1';
 WAIT;
 END PROCESS t_prcs_SIP_1;
 -- SIP[0]
 t_prcs_SIP_0: PROCESS
 BEGIN
-	SIP(0) <= '1';
-	WAIT FOR 749000 ps;
 	SIP(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SIP_0;
@@ -272,7 +271,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	clk <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1500000 ps) THEN WAIT; END IF;
+	IF (NOW >= 3000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 END RecopTopLevel_arch;

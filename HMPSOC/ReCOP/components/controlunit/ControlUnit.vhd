@@ -400,7 +400,7 @@ begin
 						RFLoad <= '1';
 					when subr =>
 						RFInputSel <= rf_alu_out;
-						RFLoad <= '1';
+--						RFLoad <= '1';
 					when ldr =>
 						RFLoad <= '1';
 						case(AM) is

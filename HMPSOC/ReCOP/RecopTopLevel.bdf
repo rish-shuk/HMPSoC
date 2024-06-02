@@ -631,7 +631,7 @@ refer to the applicable agreement for further details.
 	(output)
 	(rect 1480 656 1659 672)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LED_param[3..0]" (rect 90 0 173 12)(font "Arial" ))
+	(text "LED_param[4..0]" (rect 90 0 173 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -1485,15 +1485,15 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dpcr[3..0]" (rect 1431 648 1474 665)(font "Intel Clear" ))
-	(pt 1480 664)
-	(pt 1416 664)
-	(bus)
-)
-(connector
 	(text "dpcr[31..27]" (rect 1423 672 1478 689)(font "Intel Clear" ))
 	(pt 1480 688)
 	(pt 1400 688)
+	(bus)
+)
+(connector
+	(text "dpcr[4..0]" (rect 1431 648 1474 665)(font "Intel Clear" ))
+	(pt 1480 664)
+	(pt 1416 664)
 	(bus)
 )
 (junction (pt 1424 544))
