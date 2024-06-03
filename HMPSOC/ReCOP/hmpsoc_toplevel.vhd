@@ -33,7 +33,9 @@ architecture rtl of hmpsoc_TopLevel is
 
 	signal send_port : tdma_min_ports(0 to ports-1);
 	signal recv_port : tdma_min_ports(0 to ports-1);
-
+	
+	signal corWinSize : integer range 0 to 64;
+	signal avgWinSize : integer range 0 to 64;
 begin
 
 	clock <= CLOCK_50;
@@ -61,7 +63,8 @@ begin
 	port map (
 		clock => clock,
 		send => send_port(1),
-		recv => recv_port(1)
+		recv => recv_port(1),
+		segOut => HEX5 -- FOR TESTING
 	);
 	
 	asp_cor : entity work.AspCor
@@ -69,7 +72,8 @@ begin
 		clock => clock,
 		send => send_port(2),
 		recv => recv_port(2),
-		corrVal => open
+		corrVal => open,
+		segOut => HEX4 -- FOR TESTING
 	);
 	
 	asp_pd : entity work.PD_ASP
@@ -95,7 +99,10 @@ begin
 		LED_PARAM => LEDR(4 downto 0), -- output packet param
 		LED_ID => LEDR(9 downto 5) -- output packet id
 	);
-
+	
+	HEX0 <= SW(6 downto 0);
+	
+	
 
 
 --	asp_example : entity work.AspExample

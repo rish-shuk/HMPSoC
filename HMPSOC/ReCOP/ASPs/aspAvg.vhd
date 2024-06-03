@@ -9,7 +9,8 @@ entity aspAvg is
     port (
         clock : in  std_logic;
         send  : out tdma_min_port;
-        recv  : in  tdma_min_port
+        recv  : in  tdma_min_port;
+		  segOut	: out std_logic_vector(6 downto 0)
     );
 end entity;
 
@@ -83,7 +84,15 @@ begin
             end if;
         end if;
     end process;
-    
+	 
+	 with WINDOWSIZE select segOut <=
+		"1111001" when 4, --1
+		"0100100" when 8, --2
+		"0010000" when 16, --3
+		"0011001" when 32, --4
+		"0010010" when 64, --5
+		"1111111" when others;
+		
     send.addr <= addr; -- send to autocorrelator in port 2
 
 end sim;

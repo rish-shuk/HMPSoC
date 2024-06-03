@@ -10,7 +10,8 @@ entity AspCor is
 		clock : in  std_logic;
 		send  : out tdma_min_port;
 		recv  : in  tdma_min_port;
-        CorrVal : out std_logic_vector(31 downto 0)
+      CorrVal : out std_logic_vector(31 downto 0);
+		segOut	: out std_logic_vector(6 downto 0)
 	);
 end entity;
 
@@ -103,7 +104,6 @@ begin
                     when others =>
                 end case;
 
-
                 -- IF THE PROVIDED CORRELATION WINDOW IS GREATER THAN 64, SET THE WINDOW TO 64
                 if (temp_corr_win > 64) then
                     temp_corr_win := to_unsigned(64, 7);
@@ -128,4 +128,13 @@ begin
     send.addr <= addr_v;
     -- send.data <= "100" & valid_flag & std_logic_vector(temp_correlation(27 downto 0));
 	end process;
+	
+	with correlation_window select segOut <=
+		"1111001" when to_unsigned(4, 7), --1
+		"0100100" when to_unsigned(8, 7), --2
+		"0010000" when to_unsigned(16, 7), --3
+		"0011001" when to_unsigned(32, 7), --4
+		"0010010" when to_unsigned(64, 7), --5
+		"1111111" when others;
+
 end architecture;
