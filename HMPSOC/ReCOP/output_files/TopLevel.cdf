@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/Documents/UOA/2024/no_space/CS701/repos/HMPSoC/HMPSOC/ReCOP/output_files/") File("TopLevel.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/output_files/") File("TopLevel.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

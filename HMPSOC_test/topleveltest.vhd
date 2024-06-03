@@ -18,8 +18,8 @@ architecture sim of topleveltest is
 
     	signal adc_data_ready : std_logic := '0';
 
-   	    signal send_port  : tdma_min_ports(0 to 4);
-	    signal recv_port  : tdma_min_ports(0 to 4);
+   	    signal send_port  : tdma_min_ports(0 to ports-1);
+	    signal recv_port  : tdma_min_ports(0 to ports-1);
 
 
 begin
@@ -61,6 +61,11 @@ begin
         clk => clock,
         send => send_port(3),
         recv => recv_port(3)
+    );
+
+    test_recop : entity work.recopTest port map(
+        clk => clock,
+        send => send_port(4)
     );
 
     reset             <= '0' after 15 ns;

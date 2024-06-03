@@ -16,5 +16,6 @@ begin
 	with mux_select select mux_out<=
 		mux_in_0 when '0',
 		mux_in_1 when '1';
+		
 end architecture;
 

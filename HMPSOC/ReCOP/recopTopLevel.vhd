@@ -19,7 +19,8 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
 
-LIBRARY work;
+library work;
+use work.TdmaMinTypes.all;
 
 ENTITY RecopTopLevel IS 
 	PORT
@@ -62,7 +63,9 @@ ENTITY RecopTopLevel IS
 		REG_RZ :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
 		RFInputSel :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0);
 		SIP_R :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
-		SOP :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0)
+		SOP :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		
+		send : OUT tdma_min_port
 	);
 END RecopTopLevel;
 
@@ -246,5 +249,8 @@ OP <= OP_ALTERA_SYNTHESIZED;
 Op1Sel <= Op1Sel_ALTERA_SYNTHESIZED;
 Op2Sel <= Op2Sel_ALTERA_SYNTHESIZED;
 RFInputSel <= RFInputSel_ALTERA_SYNTHESIZED;
+
+send.data <= dpcr_ALTERA_SYNTHESIZED(31 downto 0); -- tdma port for sending dpcr 
+send.addr <= x"0" & dpcr_ALTERA_SYNTHESIZED(22 downto 19); -- send address
 
 END bdf_type;

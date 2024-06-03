@@ -84,7 +84,7 @@ begin
                         buffer_full := '0';
                     end if;
                 end if;
-            elsif recv.data(31 downto 27) = "10111" then
+            elsif recv.data(31 downto 27) = "10011" then
                 -- +++++++++ HARDCODED FOR TESTING ++++++++++
                 addr_v := x"0" & recv.data(22 downto 19);
                 -- ++++++++++++++++++++++++++++++++++++++++++
