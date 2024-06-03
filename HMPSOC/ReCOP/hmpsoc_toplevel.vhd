@@ -85,16 +85,16 @@ begin
 --		recv => recv_port(4)
 --	);
 	
---	recop : entity work.recopTopLevel
---	port map (
---		clk => clock,
---		reset => '0',
---		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
---		DPCR => send_port(5).data, -- config packet
---		CONF_ADDR => send_port(5).addr(3 downto 0),
---		LED_PARAM => LEDR(4 downto 0), -- output packet param
---		LED_ID => LEDR(9 downto 5) -- output packet id
---	);
+	recop : entity work.recopTopLevel
+	port map (
+		clk => clock,
+		reset => '0',
+		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
+		DPCR => send_port(5).data, -- config packet
+		CONF_ADDR => send_port(5).addr(3 downto 0),
+		LED_PARAM => LEDR(4 downto 0), -- output packet param
+		LED_ID => LEDR(9 downto 5) -- output packet id
+	);
 
 
 
