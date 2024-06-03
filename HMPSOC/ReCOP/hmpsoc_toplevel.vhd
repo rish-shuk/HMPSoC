@@ -104,32 +104,32 @@ begin
 --		recv => recv_port(4)
 --	);
 	
-	recop : entity work.recopTopLevel
-	port map (
-		clk => clock,
-		reset => '0',
-		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
-		DPCR => send_port(5).data, -- config packet
-		CONF_ADDR => send_port(5).addr(3 downto 0),
-		LED_PARAM => LEDR(4 downto 0), -- output packet param
-		LED_ID => LEDR(9 downto 5) -- output packet id
-	);
+--	recop : entity work.recopTopLevel
+--	port map (
+--		clk => clock,
+--		reset => '0',
+--		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
+--		DPCR => send_port(5).data, -- config packet
+--		CONF_ADDR => send_port(5).addr(3 downto 0),
+--		LED_PARAM => LEDR(4 downto 0), -- output packet param
+--		LED_ID => LEDR(9 downto 5) -- output packet id
+--	);
 
-		 u0 : component nios_v1
-		 port map (
-		 	clk_clk                                  => clock,                                  --                               clk.clk
-		 	hex_0_external_connection_export         => HEX0,         --         hex_0_external_connection.export
-		 	hex_1_external_connection_export         => HEX1,         --         hex_1_external_connection.export
-		 	hex_2_external_connection_export         => HEX2,         --         hex_2_external_connection.export
-		 	hex_3_external_connection_export         => HEX3,         --         hex_3_external_connection.export
-		 	hex_4_external_connection_export         => HEX4,         --         hex_4_external_connection.export
-		 	hex_5_external_connection_export         => HEX5,         --         hex_5_external_connection.export
-		 	input_pio_external_connection_export     => pio_input,     --     input_pio_external_connection.export
-		 	pk_detect_external_connection_export     => pk_detect,     --     pk_detect_external_connection.export
-		 	recv_addr_pio_external_connection_export => recv_port(4).addr, -- recv_addr_pio_external_connection.export
-		 	recv_data_pio_external_connection_export => recv_port(4).data, -- recv_data_pio_external_connection.export
-		 	reset_reset_n                            => '1'                             --                             reset.reset_n
-		 );
+--		 u0 : component nios_v1
+--		 port map (
+--		 	clk_clk                                  => clock,                                  --                               clk.clk
+--		 	hex_0_external_connection_export         => HEX0,         --         hex_0_external_connection.export
+--		 	hex_1_external_connection_export         => HEX1,         --         hex_1_external_connection.export
+--		 	hex_2_external_connection_export         => HEX2,         --         hex_2_external_connection.export
+--		 	hex_3_external_connection_export         => HEX3,         --         hex_3_external_connection.export
+--		 	hex_4_external_connection_export         => HEX4,         --         hex_4_external_connection.export
+--		 	hex_5_external_connection_export         => HEX5,         --         hex_5_external_connection.export
+--		 	input_pio_external_connection_export     => pio_input,     --     input_pio_external_connection.export
+--		 	pk_detect_external_connection_export     => pk_detect,     --     pk_detect_external_connection.export
+--		 	recv_addr_pio_external_connection_export => recv_port(4).addr, -- recv_addr_pio_external_connection.export
+--		 	recv_data_pio_external_connection_export => recv_port(4).data, -- recv_data_pio_external_connection.export
+--		 	reset_reset_n                            => '1'                             --                             reset.reset_n
+--		 );
 
 
 

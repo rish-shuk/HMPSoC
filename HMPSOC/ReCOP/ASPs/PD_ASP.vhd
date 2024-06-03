@@ -26,7 +26,7 @@ entity PD_ASP is
 end PD_ASP;
 
 architecture find_peak of PD_ASP is
-    type state_type is (IDLE, PEAK_OR_TROUGH, POSITIVE_SLOPE, NEGATIVE_SLOPE);
+    type state_type is (IDLE, PEAK_OR_TROUGH, POSITIVE_SLOPE, NEGATIVE_SLOPE);		
 
     signal current_state : state_type := IDLE;
     signal counter : unsigned(20 downto 0) := x"00000"&'0';

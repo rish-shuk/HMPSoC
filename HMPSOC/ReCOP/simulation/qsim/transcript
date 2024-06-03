@@ -1,7 +1,7 @@
 # do TopLevel.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:06:13 on Jun 03,2024
+# Start time: 17:57:56 on Jun 03,2024
 # vcom -work work TopLevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity RecopTopLevel
 # -- Compiling architecture structure of RecopTopLevel
-# End time: 12:06:13 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 17:57:57 on Jun 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:06:13 on Jun 03,2024
+# Start time: 17:57:57 on Jun 03,2024
 # vcom -work work testbenches/TopLevel/TopLevel_Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RecopTopLevel_vhd_vec_tst
 # -- Compiling architecture RecopTopLevel_arch of RecopTopLevel_vhd_vec_tst
-# End time: 12:06:13 on Jun 03,2024, Elapsed time: 0:00:00
+# End time: 17:57:57 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.RecopTopLevel_vhd_vec_tst 
-# Start time: 12:06:14 on Jun 03,2024
+# Start time: 17:57:57 on Jun 03,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -64,8 +64,13 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 1630000 ps
-# Simulation time: 1630000 ps
-# Simulation time: 1630000 ps
-# End time: 12:06:44 on Jun 03,2024, Elapsed time: 0:00:30
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# Simulation time: 1580000 ps
+# End time: 17:58:39 on Jun 03,2024, Elapsed time: 0:00:42
 # Errors: 0, Warnings: 1
