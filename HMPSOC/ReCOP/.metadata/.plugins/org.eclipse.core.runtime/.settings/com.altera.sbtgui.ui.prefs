@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=Z\:\\projects\\HMPSoC\\HMPSOC\\ReCOP\\software\\freq
+newSoftwareExampleWizardPage.sopcinfoFile=Z\:\\projects\\HMPSoC\\HMPSOC\\ReCOP\\nios_v1.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=Z\:\\projects\\HMPSoC\\HMPSOC\\ReCOP\\software\\freq_bsp
