@@ -23,7 +23,9 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         LDR R4 R4 ; load top & bottom half of config from DM							20
                         LDR R5 R5 ;																		21
                         DATACALL R4 R5 ; Send Config to NOC												22
-                        JMP initialise_dc ; restart the proccess										23,24
+                        LDR R6 #0     ;                                                                 23                              
+                        DATACALL R6 R6 ;                                                                24
+                        JMP initialise_dc ; restart the proccess										25
 
 ENDPROG
 END

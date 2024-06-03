@@ -59,8 +59,8 @@ begin
 
     asp_pd : entity work.PD_ASP port map(
         clk => clock,
-        send => send_port(4),
-        recv => recv_port(4)
+        send => send_port(3),
+        recv => recv_port(3)
     );
 
     reset             <= '0' after 15 ns;

@@ -34,7 +34,7 @@ begin
     variable temp_corr_win : unsigned(6 downto 0) := to_unsigned(4, 7); -- correlation window
     variable valid_flag : std_logic := '0';
     variable data_flag : std_logic := '0';
-    variable addr_v : std_logic_vector(7 downto 0) := x"04";
+    variable addr_v : std_logic_vector(7 downto 0) := x"03";
 	begin
 		if rising_edge(clock) then
             data_flag := '0';
