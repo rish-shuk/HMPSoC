@@ -48,20 +48,23 @@ begin
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE_int then
-                    case WINDOWSIZE_int is 
-                        when 4 =>
-                            avg_32 <= shift_right(unsigned(sum), 2);
-                        when 8 =>
-                            avg_32 <= shift_right(unsigned(sum), 3);
-                        when 16 =>
-                            avg_32 <= shift_right(unsigned(sum), 4);
-                        when 32 =>
-                            avg_32 <= shift_right(unsigned(sum), 5);
-                        when 64 =>
-                            avg_32 <= shift_right(unsigned(sum), 6);
-                        when others =>
-                    end case;
-                    avg <= avg_32(15 downto 0); -- output 16 bits
+			avg <= resize(sum/windowsize_int,16);
+--                    case WINDOWSIZE_int is 
+--                        when 4 =>
+--                            -- avg_32 <= shift_right(unsigned(sum), 2);
+--			       avg <= resize(sum/4, 16);
+--                        when 8 =>
+--                            --avg_32 <= shift_right(unsigned(sum), 3);
+--			    avg <= resize(sum/8, 16);
+--                        when 16 =>
+--                            avg_32 <= shift_right(unsigned(sum), 4);
+--                        when 32 =>
+--                            avg_32 <= shift_right(unsigned(sum), 5);
+--                        when 64 =>
+--                            avg_32 <= shift_right(unsigned(sum), 6);
+--                        when others =>
+--                    end case;
+                    --avg <= avg_32(15 downto 0); -- output 16 bits
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
                     newData <= '1'; -- enable write for autocorrelator
