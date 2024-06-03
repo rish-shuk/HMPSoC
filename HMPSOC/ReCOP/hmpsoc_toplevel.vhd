@@ -54,7 +54,7 @@ begin
 	port map (
 		clock => clock,
 		reset => '0',
-		adc_data_ready => open,
+		adc_data_ready => OPEN,
 		send  => send_port(0),
 		recv  => recv_port(0)
 	);
@@ -64,6 +64,8 @@ begin
 		clock => clock,
 		send => send_port(1),
 		recv => recv_port(1),
+		foundConfig => LEDR(0),
+
 		segOut => HEX5 -- FOR TESTING
 	);
 	
@@ -89,18 +91,19 @@ begin
 --		recv => recv_port(4)
 --	);
 	
-	recop : entity work.recopTopLevel
-	port map (
-		clk => clock,
-		reset => '0',
-		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
-		-- DPCR => send_port(5).data, -- config packet
-		-- CONF_ADDR => send_port(5).addr(3 downto 0),
-		LED_PARAM => LEDR(4 downto 0), -- output packet param
-		LED_ID => LEDR(9 downto 5), -- output packet id
-		
-		send => send_port(5)
-	);
+--	recop : entity work.recopTopLevel
+--	port map (
+--		clk => clock,
+--		reset => '0',
+--		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
+--		--DPCR => send_port(5).data, -- config packet
+--		--CONF_ADDR => send_port(5).addr(3 downto 0),
+--		LED_PARAM => LEDR(4 downto 0), -- output packet param
+--		--LED_ID => LEDR(9 downto 5), -- output packet id
+--		LED_ID => open, -- output packet id
+--		
+--		send => send_port(5)
+--	);
 	
 	HEX0 <= SW(6 downto 0);
 	

@@ -10,12 +10,13 @@ entity aspAvg is
         clock : in  std_logic;
         send  : out tdma_min_port;
         recv  : in  tdma_min_port;
-		  segOut	: out std_logic_vector(6 downto 0)
+		  segOut	: out std_logic_vector(6 downto 0);
+		  foundConfig : out std_logic := '0'
     );
 end entity;
 
 architecture sim of aspAvg is
-    signal foundConfig : std_logic := '0';
+    
 
     signal WINDOWSIZE : unsigned(6 downto 0);  -- window size
     signal WINDOWSIZE_int : integer; 
@@ -42,12 +43,13 @@ begin
 
     begin
         if rising_edge(clock) then
-            foundConfig <= '0';
+            --foundConfig <= '0';
             send.data <= recv.data; -- passthrough 
             newData <= '0';
             
             -- process adc data
             if recv.data(31 downto 27) = "10101"then
+					 foundConfig <= '1';
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE_int then
@@ -70,7 +72,7 @@ begin
                 end if;
             -- check for config packet and update windowsize
             elsif recv.data(31 downto 27) = "10010" then
-                foundConfig <= '1';
+                --foundConfig <= '1';
                 addr <= "0000" & recv.data(22 downto 19);
                 -- select windowsize
                 case recv.data(4 downto 0) is
