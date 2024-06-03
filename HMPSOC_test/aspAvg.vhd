@@ -17,7 +17,7 @@ architecture sim of aspAvg is
     signal foundConfig : std_logic := '0';
 
     signal WINDOWSIZE : unsigned(6 downto 0);  -- window size
-    signal WINDOWSIZE_int : integer := 32; 
+    signal WINDOWSIZE_int : integer; 
     type memory_type is array (0 to 63) of std_logic_vector(15 downto 0);
 
     constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
@@ -26,7 +26,6 @@ architecture sim of aspAvg is
 
     signal sum     : unsigned(31 downto 0) := x"00000000";  -- Sum for averaging
 
-    signal avg_32 : unsigned(31 downto 0) := x"00000000";
     signal avg     : unsigned(15 downto 0) := x"0000"; -- output average
     signal data     : std_logic_vector(15 downto 0); -- input data
     signal addr     : std_logic_vector(7 downto 0) := x"02"; -- default send to COR
@@ -48,23 +47,7 @@ begin
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE_int then
-			avg <= resize(sum/windowsize_int,16);
---                    case WINDOWSIZE_int is 
---                        when 4 =>
---                            -- avg_32 <= shift_right(unsigned(sum), 2);
---			       avg <= resize(sum/4, 16);
---                        when 8 =>
---                            --avg_32 <= shift_right(unsigned(sum), 3);
---			    avg <= resize(sum/8, 16);
---                        when 16 =>
---                            avg_32 <= shift_right(unsigned(sum), 4);
---                        when 32 =>
---                            avg_32 <= shift_right(unsigned(sum), 5);
---                        when 64 =>
---                            avg_32 <= shift_right(unsigned(sum), 6);
---                        when others =>
---                    end case;
-                    --avg <= avg_32(15 downto 0); -- output 16 bits
+			        avg <= resize(sum/windowsize_int,16);
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
                     newData <= '1'; -- enable write for autocorrelator

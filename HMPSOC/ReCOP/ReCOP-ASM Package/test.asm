@@ -23,7 +23,7 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         LDR R4 R4 ; load top & bottom half of config from DM							20
                         LDR R5 R5 ;																		21
                         DATACALL R4 R5 ; Send Config to NOC												22
-                        AND R4 R4 #32767 ; AND R6 "0111111111111111"                                    23,24                              
+                        AND R4 R4 #32767 ; AND R4 "0111111111111111"                                    23,24                              
                         DATACALL R4 R5 ; Disables tdma_min port, but still shows params                 25
                         JMP initialise_dc ; restart the proccess										26
 

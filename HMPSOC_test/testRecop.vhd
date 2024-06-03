@@ -15,6 +15,6 @@ end entity recopTest;
 
 architecture beh of recopTest is
 begin
-	send.data <= "00010000000100000000000000001000";-- send config packet
+	send.data <= "10010000000100000000000000001000";-- send config packet
 	send.addr <= x"01";
 end beh;
