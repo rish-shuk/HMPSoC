@@ -1,0 +1,19 @@
+
+
+D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/recop_pll.vhd
+
+May 19 06AM:13:32>: Error in CNX file format.
+
+Error messages are listed in file
+D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/recop_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/recop_pll.vhd
+
+May 19 06AM:13:34>: Error in CNX file format.
+
+Error messages are listed in file
+D:/Documents/UOA/2024/no_space/CS701/2024_701_ReCOP_Project/ReCOP/recop_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)

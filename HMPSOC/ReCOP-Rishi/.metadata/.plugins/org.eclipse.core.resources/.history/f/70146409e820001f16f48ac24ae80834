@@ -1,0 +1,32 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 3, 2024
+ *      Author: rishishukla
+ */
+
+#include "system.h"
+#include "io.h"
+#include "alt_types.h"
+#include "altera_avalon_pio_regs.h"
+#include <stdio.h>
+
+// Use the custom instruction defined in system.h
+#define DISPLAY_NUMBER_ON_SEVEN_SEGMENT(number) ALT_CI_HEX_ENC_INSTRUCTION_0((alt_u32)number, 0)
+
+void display_number_on_seven_segment(int number) {
+    if (number < 0 || number > 9) {
+        return; // Only handle single-digit numbers (0-9)
+    }
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX_0_BASE, DISPLAY_NUMBER_ON_SEVEN_SEGMENT(number));
+}
+
+int main() {
+	for (int i = 9; i >= 0; i--) {
+				// display tens
+		display_number_on_seven_segment(i);
+    return 0;
+}
+}
+
+

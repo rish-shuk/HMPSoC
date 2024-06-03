@@ -1,0 +1,31 @@
+12:48:29 **** Incremental Build of configuration Nios II for project counter_test ****
+make all 
+Info: Building ../counter_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../counter_test_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../counter_test_bsp//HAL/inc -I../counter_test_bsp/ -I../counter_test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:34:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(10000);
+     ^
+Info: Linking counter_test.elf
+nios2-elf-g++  -T'../counter_test_bsp//linker.x' -msys-crt0='../counter_test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../counter_test_bsp/  -msmallc  -Wl,-Map=counter_test.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o counter_test.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert counter_test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_v1 --quartus_project_dir "Z:/projects/HMPSoC/HMPSOC/ReCOP" --jdi ../..//output_files/TopLevel.jdi --sopcinfo Z:/projects/HMPSoC/HMPSOC/ReCOP/software/counter_test_bsp/../../nios_v1.sopcinfo
+Info: (counter_test.elf) 8868 Bytes program size (code + initialized data).
+Info:                    10 KBytes free for stack + heap.
+Info: Creating counter_test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source counter_test.elf >counter_test.objdump
+[counter_test build complete]
+12:48:51 **** Build of configuration Nios II for project counter_test ****
+make all 
+Info: Building ../counter_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../counter_test_bsp/
+[BSP build complete]
+[counter_test build complete]
+12:48:58 **** Incremental Build of configuration Nios II for project counter_test ****
+make all 
+Info: Building ../counter_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../counter_test_bsp/
+[BSP build complete]
+[counter_test build complete]

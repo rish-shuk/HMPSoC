@@ -1,0 +1,10 @@
+# File names are either absolute or relative to the parent folder of the
+# vhdl_ls.toml file and supports glob-style patterns.
+
+[libraries]
+
+# Define library
+defaultlib.files = [
+  'reCopCanvasFiles\Selected VHDL source design files\various_constants.vhd',
+  'reCopCanvasFiles\Selected VHDL source design files\recop_types.vhd',
+]
