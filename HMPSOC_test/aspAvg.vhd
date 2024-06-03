@@ -14,8 +14,8 @@ entity aspAvg is
 end entity;
 
 architecture sim of aspAvg is
-    constant MAX_DEPTH : integer := 32;  -- Maximum FIFO size
-    signal WINDOWSIZE : integer := 16;  -- window size 
+    constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
+    signal WINDOWSIZE : integer := 64;  -- window size 
     type memory_type is array (0 to MAX_DEPTH-1) of std_logic_vector(15 downto 0);
     signal mem     : memory_type;
     signal count   : integer range 0 to MAX_DEPTH := 0;
@@ -32,7 +32,8 @@ begin
     process(clock)
     begin
         if rising_edge(clock) then
-            send.data <= recv.data; -- passthrough 
+            -- send.data <= recv.data; -- passthrough 
+	    send.data <= "11000" & std_logic_vector(to_unsigned(WINDOWSIZE, 7)) & x"00000";
             newData <= '0';
 
             -- check for config packet and update windowsize
