@@ -37,6 +37,7 @@
 #define COR_CONFIG_IDENTIFIER 0x98000000
 
 volatile float frequency = 0;
+int correlation_count = 0;
 int cor_window_size = 0;
 int avg_window_size = 0;
 
@@ -71,12 +72,16 @@ int main() {
 		switch (packetIdentifier){
 			case(PD_DATA_IDENTIFIER):
 				printf("PD DATA Packet, received\n\r");
-				int isr_pt_bits = recievedPacket & 0xC00000;
+				int isr_pt_bits = recievedPacket & 0x600000;
 				isr_pt_bits = isr_pt_bits >> 21;
+				//if peak detected
 				printf("The ISR bits are 0x%x\n\r", isr_pt_bits);
 				if (isr_pt_bits == 0b11){
-					printf("PEAK: calculate frequency\n\r");
-				} else if (isr_pt_bits == 0b10){
+					correlation_count = recievedPacket & 0x1FFFFF;
+					printf("PEAK: correlation count 0x%x\n\r", correlation_count);
+				}
+				// if trough detected
+				else if (isr_pt_bits == 0b10){
 					printf("Trough detected");
 				}
 			break;
