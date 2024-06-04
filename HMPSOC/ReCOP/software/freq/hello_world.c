@@ -62,6 +62,7 @@ alt_u32 seven_seg_timer_isr(void* context){
 int main() {
 	int packetIdentifier = 0;
 	int recievedPacket = 0;
+	int windowPacket = 0;
 	//initialise timer, reinitialisign done with the return
 	//empty context
 	int timeCountMain = 0;
@@ -72,7 +73,10 @@ int main() {
 	printf("Setup the frequency calculation\n\r");
 
 	while(1){
+
 		recievedPacket = IORD_ALTERA_AVALON_PIO_DATA(RECV_DATA_PIO_BASE);
+
+
 		//Extract identifier
 		packetIdentifier = recievedPacket & 0xF8000000;
 
@@ -99,31 +103,38 @@ int main() {
 				}
 			break;
 			}
-			case(PD_WS_COR):
-				printf("Avg DATA Packet, received %0xd\n\r", recievedPacket);
-				avg_window_size = recievedPacket & 0x3F;
-				// extract whether it is a avg or corrolation packet
-				int avg_cor_bit = recievedPacket & 0x800000;
-				avg_cor_bit = avg_cor_bit >> 23;
 
-				//Average Window Size
-				if (avg_cor_bit == 0){
-					avg_window_size = recievedPacket & 0x1F;
-					avg_window_size = avg_window_size*2;
-					printf("\n\r AVG WINDOW CHANGED");
-					printf("avg Window Size is 0x%d\n\r", avg_window_size);
-					printf("cor Window Size %x\n\r", cor_window_size);
-				}
-				// Corrolation Window Size
-				else if (avg_cor_bit == 1){
-					printf("\n\r COR WINDOW CHANGED");
-					cor_window_size = recievedPacket & 0x1F;
-					cor_window_size = cor_window_size*2;
-					printf("avg Window Size is 0x%d\n\r", avg_window_size);
-					printf("cor Window Size %x\n\r", cor_window_size);
-				}
-			break;
+//			case(PD_WS_COR):
+//				printf("Avg DATA Packet, received %0xd\n\r", recievedPacket);
+//				avg_window_size = recievedPacket & 0x3F;
+//				// extract whether it is a avg or corrolation packet
+//				int avg_cor_bit = recievedPacket & 0x800000;
+//				avg_cor_bit = avg_cor_bit >> 23;
+//
+//				//Average Window Size
+//				if (avg_cor_bit == 0){
+//					avg_window_size = recievedPacket & 0x1F;
+//					printf("\n\r AVG WINDOW CHANGED");
+//					printf("avg Window Size is 0x%d\n\r", avg_window_size);
+//					printf("cor Window Size %x\n\r", cor_window_size);
+//				}
+//				// Corrolation Window Size
+//				else if (avg_cor_bit == 1){
+//					printf("\n\r COR WINDOW CHANGED");
+//					cor_window_size = recievedPacket & 0x1F;
+//					cor_window_size = cor_window_size*2;
+//					printf("avg Window Size is 0x%d\n\r", avg_window_size);
+//					printf("cor Window Size %x\n\r", cor_window_size);
+//				}
+//			break;
 		}
+		//Read the window PIO
+		windowPacket = IORD_ALTERA_AVALON_PIO_DATA(INPUT_PIO_BASE);
+		avg_window_size = windowPacket & 0xFE000000;
+		avg_window_size = avg_window_size >> 25;
+		cor_window_size = windowPacket & 0x7F;
+		printf("WINDOW = %d and %d\n\r", avg_window_size, cor_window_size);
+
 	}
 
 }

@@ -35,6 +35,8 @@ architecture rtl of hmpsoc_TopLevel is
 
 	signal send_port : tdma_min_ports(0 to ports-1);
 	signal recv_port : tdma_min_ports(0 to ports-1);
+	signal avg_window_size : std_logic_vector(6 downto 0);
+	signal cor_window_size : std_logic_vector(6 downto 0);
 
 	 component nios_v1 is
 	 	port (
@@ -80,7 +82,8 @@ begin
 	port map (
 		clock => clock,
 		send => send_port(1),
-		recv => recv_port(1)
+		recv => recv_port(1),
+		ws_out => avg_window_size
 	);
 	
 	asp_cor : entity work.AspCor
@@ -88,7 +91,8 @@ begin
 		clock => clock,
 		send => send_port(2),
 		recv => recv_port(2),
-		corrVal => open
+		corrVal => open,
+		ws_out => cor_window_size
 	);
 	
 	asp_pd : entity work.PD_ASP
@@ -125,7 +129,7 @@ begin
 		 	hex_3_external_connection_export         => HEX3,         --         hex_3_external_connection.export
 		 	hex_4_external_connection_export         => HEX4,         --         hex_4_external_connection.export
 		 	hex_5_external_connection_export         => HEX5,         --         hex_5_external_connection.export
-		 	input_pio_external_connection_export     => pio_input,     --     input_pio_external_connection.export
+		 	input_pio_external_connection_export     => avg_window_size&"000000000000000000"&cor_window_size,     --     input_pio_external_connection.export
 		 	pk_detect_external_connection_export     => pk_detect,     --     pk_detect_external_connection.export
 		 	recv_addr_pio_external_connection_export => recv_port(4).addr, -- recv_addr_pio_external_connection.export
 		 	recv_data_pio_external_connection_export => recv_port(4).data, -- recv_data_pio_external_connection.export
