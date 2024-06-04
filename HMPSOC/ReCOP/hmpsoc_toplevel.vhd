@@ -25,22 +25,22 @@ entity hmpsoc_TopLevel is
 		HEX5          : out   std_logic_vector(6 downto 0);
 		
 		DPCR_v		  : out std_logic_vector(31 downto 0);
-		operand		  : out std_logic_vector(15 downto 0);
-		rxsel			  : out std_logic_vector(3 downto 0);
-		rzsel			  : out std_logic_vector(3 downto 0);
-		rxdata		  : out std_logic_vector(15 downto 0);
-		rzdata		  : out std_logic_vector(15 downto 0);
-		sop_v			  : out std_logic_vector(15 downto 0);
-		sip_v			  : out std_logic_vector(15 downto 0);
-		op1sel		  : out std_logic_vector(2 downto 0);
-		op2sel		  : out std_logic_vector(2 downto 0);
-		op1			  : out std_logic_vector(15 downto 0);
-		op2			  : out std_logic_vector(15 downto 0);
-		dmout_v		  : out std_logic_vector(15 downto 0);
-		pm_v			  : out std_logic_vector(15 downto 0);
-		pc_v			  : out std_logic_vector(15 downto 0);
-		opcode		  : out std_logic_vector(5 downto 0);
-		rfsel			  : out std_logic_vector(2 downto 0);
+--		operand		  : out std_logic_vector(15 downto 0);
+--		rxsel			  : out std_logic_vector(3 downto 0);
+--		rzsel			  : out std_logic_vector(3 downto 0);
+--		rxdata		  : out std_logic_vector(15 downto 0);
+--		rzdata		  : out std_logic_vector(15 downto 0);
+--		sop_v			  : out std_logic_vector(15 downto 0);
+--		sip_v			  : out std_logic_vector(15 downto 0);
+--		op1sel		  : out std_logic_vector(2 downto 0);
+--		op2sel		  : out std_logic_vector(2 downto 0);
+--		op1			  : out std_logic_vector(15 downto 0);
+--		op2			  : out std_logic_vector(15 downto 0);
+--		dmout_v		  : out std_logic_vector(15 downto 0);
+--		pm_v			  : out std_logic_vector(15 downto 0);
+--		pc_v			  : out std_logic_vector(15 downto 0);
+--		opcode		  : out std_logic_vector(5 downto 0);
+--		rfsel			  : out std_logic_vector(2 downto 0);
 		
 		send_data	  : out std_logic_vector(31 downto 0);
 		send_addr	  : out std_logic_vector(7 downto 0);
@@ -124,24 +124,24 @@ begin
 		--CONF_ADDR => send_port(5).addr(3 downto 0),
 		--LED_PARAM => LEDR(4 downto 0), -- output packet param
 		LED_PARAM => open,
-		LED_ID => LEDR(9 downto 5), -- output packet id
+		LED_ID => LEDR(9 downto 5) -- output packet id
 
-		Func => operand,
-		IR_RX => rxsel,
-		IR_RZ => rzsel,
-		OP =>  opcode,
-		Op1Sel =>  op1sel,
-		Op2Sel =>  op2sel,
-		OP_1 =>  op1,
-		OP_2 =>  op2,
-		PC =>  pc_v,
-		PM_OUT =>  pm_v,
-		REG_RX =>  rxdata,
-		REG_RZ =>  rzdata,
-		RFInputSel => rfsel,
-		SIP_R =>  sip_v,
-		SOP =>  sop_v,
-		DMOut => dmout_v
+--		Func => operand,
+--		IR_RX => rxsel,
+--		IR_RZ => rzsel,
+--		OP =>  opcode,
+--		Op1Sel =>  op1sel,
+--		Op2Sel =>  op2sel,
+--		OP_1 =>  op1,
+--		OP_2 =>  op2,
+--		PC =>  pc_v,
+--		PM_OUT =>  pm_v,
+--		REG_RX =>  rxdata,
+--		REG_RZ =>  rzdata,
+--		RFInputSel => rfsel,
+--		SIP_R =>  sip_v,
+--		SOP =>  sop_v,
+--		DMOut => dmout_v
 	);
 	
 	addrCalculator : entity work.addrCalculator
