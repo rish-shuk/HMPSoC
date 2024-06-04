@@ -10,18 +10,21 @@ entity AspCor is
 		clock : in  std_logic;
 		send  : out tdma_min_port;
 		recv  : in  tdma_min_port;
-        CorrVal : out std_logic_vector(31 downto 0)
+      CorrVal : out std_logic_vector(31 downto 0);
+		segOut	: out std_logic_vector(6 downto 0);
+		
+		packFound : out std_logic
 	);
 end entity;
 
 architecture rtl of AspCor is
 
-    signal correlation_window : unsigned(6 downto 0) := to_unsigned(8, 7);
+    signal correlation_window : unsigned(6 downto 0) := to_unsigned(4, 7);
 
     type buffer_type is array (63 downto 0) of std_logic_vector(15 downto 0);
     signal avg_buffer : buffer_type := (others => (others => '0'));
     signal buffer_index :  integer range 0 to 64 := 0;
-    signal CorrN : integer range 0 to 32 := 4; --centre of correlation array
+    signal CorrN : integer range 0 to 32 := 2; --centre of correlation array
     signal enableCor : std_logic := '1'; -- hardcoded for testing
 
 begin
@@ -42,8 +45,8 @@ begin
             temp_correlation := (others => '0');
             send.data <= recv.data;
             -- CHECK IF DATA PACKET IS A AVERAGE PACKET
-            -- if recv.data(31 downto 28) = "1000" then
             if recv.data(31 downto 27) = "10110" then
+					 packFound <= '1';
                 data_flag := '1';
                 temp_correlation := x"0000" & signed(recv.data(15 downto 0));
                 -- +++++++++++++ HARDCODED FOR TESTING ++++++++++++++
@@ -103,7 +106,6 @@ begin
                     when others =>
                 end case;
 
-
                 -- IF THE PROVIDED CORRELATION WINDOW IS GREATER THAN 64, SET THE WINDOW TO 64
                 if (temp_corr_win > 64) then
                     temp_corr_win := to_unsigned(64, 7);
@@ -128,4 +130,13 @@ begin
     send.addr <= addr_v;
     -- send.data <= "100" & valid_flag & std_logic_vector(temp_correlation(27 downto 0));
 	end process;
+	
+	with correlation_window select segOut <=
+		"1111001" when to_unsigned(4, 7),  --1
+		"0100100" when to_unsigned(8, 7),  --2
+		"0110000" when to_unsigned(16, 7), --3
+		"0011001" when to_unsigned(32, 7), --4
+		"0010010" when to_unsigned(64, 7), --5
+		"1111111" when others;
+
 end architecture;

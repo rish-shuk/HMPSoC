@@ -1,7 +1,7 @@
 # do TopLevel.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:45 on Jun 04,2024
+# Start time: 21:46:24 on Jun 04,2024
 # vcom -work work TopLevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Compiling entity hmpsoc_TopLevel
 # -- Compiling architecture structure of hmpsoc_TopLevel
 # -- Loading package STANDARD
-# End time: 15:41:49 on Jun 04,2024, Elapsed time: 0:00:04
+# End time: 21:46:27 on Jun 04,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:49 on Jun 04,2024
+# Start time: 21:46:27 on Jun 04,2024
 # vcom -work work testbenches/hmpsoc_testbench.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity hmpsoc_TopLevel_vhd_vec_tst
 # -- Compiling architecture hmpsoc_TopLevel_arch of hmpsoc_TopLevel_vhd_vec_tst
-# End time: 15:41:49 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 21:46:28 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.hmpsoc_toplevel_vhd_vec_tst 
-# Start time: 15:41:49 on Jun 04,2024
+# Start time: 21:46:28 on Jun 04,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -179,7 +179,7 @@
 #    Time: 0 ps  Iteration: 0  Protected: /hmpsoc_toplevel_vhd_vec_tst/i1/\asp_cor|Mult31~mac\/inst/<protected> File: nofile
 # ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
 #    Time: 0 ps  Iteration: 0  Protected: /hmpsoc_toplevel_vhd_vec_tst/i1/\asp_cor|Mult31~mac\/inst/<protected> File: nofile
-# ** Warning: Design size of 2050672 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 2065656 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#37
 # Simulation time: 0 ps
@@ -190,22 +190,53 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 110000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 990000 ps
-# Simulation time: 1830000 ps
-# End time: 15:42:59 on Jun 04,2024, Elapsed time: 0:01:10
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 870000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 1740000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 2620000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 3450000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# Simulation time: 4110000 ps
+# End time: 21:48:58 on Jun 04,2024, Elapsed time: 0:02:30
 # Errors: 0, Warnings: 63

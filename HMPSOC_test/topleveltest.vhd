@@ -69,10 +69,10 @@ begin
 --   recv => recv_port(4)
 --);
 
-    test_recop : entity work.recopTest port map(
-        clk => clock,
-        send => send_port(4)
-    );
+--    test_recop : entity work.recopTest port map(
+--        clk => clock,
+--        send => send_port(4)
+--    );
 
     reset             <= '0' after 15 ns;
     clock             <= not  clock after 5 ns;

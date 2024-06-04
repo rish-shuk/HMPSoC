@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/04/2024 15:41:40"
+-- Generated on "06/04/2024 21:46:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          hmpsoc_TopLevel
 -- 
@@ -147,7 +147,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	CLOCK_50 <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 5000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_CLOCK_50;
 
@@ -160,13 +160,13 @@ END PROCESS t_prcs_KEY_1;
 -- SW[9]
 t_prcs_SW_9: PROCESS
 BEGIN
-	SW(9) <= '0';
+	SW(9) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_9;
 -- SW[8]
 t_prcs_SW_8: PROCESS
 BEGIN
-	SW(8) <= '1';
+	SW(8) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_8;
 -- SW[7]
@@ -178,7 +178,7 @@ END PROCESS t_prcs_SW_7;
 -- SW[6]
 t_prcs_SW_6: PROCESS
 BEGIN
-	SW(6) <= '1';
+	SW(6) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_6;
 -- SW[5]
@@ -208,13 +208,13 @@ END PROCESS t_prcs_SW_2;
 -- SW[1]
 t_prcs_SW_1: PROCESS
 BEGIN
-	SW(1) <= '0';
+	SW(1) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
-	SW(0) <= '1';
+	SW(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_0;
 END hmpsoc_TopLevel_arch;

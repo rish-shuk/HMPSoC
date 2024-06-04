@@ -20,7 +20,9 @@ entity PD_ASP is
         clk : in std_logic;
 
         send : out tdma_min_port;  
-        recv : in tdma_min_port
+        recv : in tdma_min_port;
+		  
+		  segOut : out std_logic_vector(6 downto 0)
         
     );
 end PD_ASP;
@@ -42,11 +44,14 @@ architecture find_peak of PD_ASP is
 
     signal current_correlation_out : std_logic_vector(27 downto 0) := (others => '0');
     signal last_correlation_out : std_logic_vector(27 downto 0);
+	 
+	 signal mode : unsigned(1 downto 0);
 
 
 begin
     process(clk)
-        variable send_addr_v : std_logic_vector(7 downto 0) := x"04";
+		  -- send to Nios by default
+        variable send_addr_v : std_logic_vector(7 downto 0) := x"07";
 
         variable last_corr : std_logic_vector(27 downto 0) := (others => '0');
         variable current_corr : std_logic_vector(27 downto 0) := (others => '0');
@@ -57,24 +62,48 @@ begin
                 --Congig
                 -- Handle config packet -NOTE: Set config proccesors port
                 if recv.data(31 downto 27) = "10100" then
-                    send_addr_v := (7 downto 4 => '0') & recv.data(22 downto 19);
-                    -- Check if we must detect toughs
-                    if (recv.data(18 downto 15) = "0000") then
-                        detect_troughs <= '0';
-                        current_state <= IDLE;
+						case recv.data(3 downto 0) is
+							when "0001" =>
+								detect_troughs <= '0'; -- off
+                        current_state <= IDLE; 
                         last_correlation <= x"0000000";
                         counter <= x"00000"&'0';
                         system_on <= '0';
                         load_initials := '0';
                         both_loaded  := '0';
-                    elsif (recv.data(18 downto 15) = "0001") then
-                        system_on <= '1';
-                    elsif (recv.data(18 downto 15) = "0010") then
-                         detect_troughs <= '1';
-                    elsif (recv.data(18 downto 15) = "0011") then
-                        detect_troughs <= '0';
-                    end if;
-                end if;
+								mode <= "00";
+							when "0010" => -- on
+								system_on <= '1';
+								mode <= "01";
+							when "0100" => -- 
+								detect_troughs <= '1';
+								mode <= "10";
+							when "1000" =>
+								detect_troughs <= '0';
+								mode <= "11";
+							when others =>
+						end case;
+						
+                    send_addr_v := (7 downto 4 => '0') & recv.data(22 downto 19);
+						  
+					end if;
+--                    -- Check if we must detect toughs
+--                    if (recv.data(18 downto 15) = "0000") then
+--                        detect_troughs <= '0';
+--                        current_state <= IDLE;
+--                        last_correlation <= x"0000000";
+--                        counter <= x"00000"&'0';
+--                        system_on <= '0';
+--                        load_initials := '0';
+--                        both_loaded  := '0';
+--                    elsif (recv.data(18 downto 15) = "0001") then
+--                        system_on <= '1';
+--                    elsif (recv.data(18 downto 15) = "0010") then
+--                         detect_troughs <= '1';
+--                    elsif (recv.data(18 downto 15) = "0011") then
+--                        detect_troughs <= '0';
+--                    end if;
+--                end if;
 
                 -- Initial loading and setting of the current and load registers
                 -- Can source reg to find where data came from
@@ -126,7 +155,7 @@ begin
                         both_loaded := '0';
                 else
                     -- Clear the data sent to nios
-                    send.data <= x"80000000";
+                    send.data <= x"B8000069";
                 end if;
                 
                 -- case (recv.addr) is
@@ -142,9 +171,14 @@ begin
     current_correlation_out <= recv.data(27 downto 0) when system_on = '1';
     correlation_count <= std_logic_vector(counter);
 
-
-
     state <= "000" when current_state = IDLE else
         "001" when current_state = POSITIVE_SLOPE else
         "010" when current_state = NEGATIVE_SLOPE;
+		  
+	 with mode select segOut <=
+		"1111001" when "00", --1 off
+		"0100100" when "01", --2 on
+		"0110000" when "10", --3 trough
+		"0011001" when "11", --4 peak
+		"1111111" when others;
 end find_peak;

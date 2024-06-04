@@ -9,15 +9,17 @@ entity aspAvg is
     port (
         clock : in  std_logic;
         send  : out tdma_min_port;
-        recv  : in  tdma_min_port
+        recv  : in  tdma_min_port;
+		  segOut	: out std_logic_vector(6 downto 0);
+		  foundConfig : out std_logic := '0'
     );
 end entity;
 
 architecture sim of aspAvg is
-    signal foundConfig : std_logic := '0';
+    
 
-    signal WINDOWSIZE : unsigned(6 downto 0);  -- window size
-    signal WINDOWSIZE_int : integer; 
+    signal WINDOWSIZE : unsigned(6 downto 0) := "0000100";  -- window size
+    signal WINDOWSIZE_int : integer := 4; 
     type memory_type is array (0 to 63) of std_logic_vector(15 downto 0);
 
     constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
@@ -31,23 +33,24 @@ architecture sim of aspAvg is
     signal addr     : std_logic_vector(7 downto 0) := x"02"; -- default send to COR
     signal newData : std_logic := '0'; -- flag indicating new data
 begin
-    
+    -- config data to determine window size
     -- process for the data
     process(clock)
     variable temp_windowsize : unsigned(6 downto 0);
 
     begin
         if rising_edge(clock) then
-            foundConfig <= '0';
+            --foundConfig <= '0';
             send.data <= recv.data; -- passthrough 
             newData <= '0';
             
             -- process adc data
             if recv.data(31 downto 27) = "10101"then
+					 --foundConfig <= '1';
                 data <= recv.data(15 downto 0); -- read new data
 
                 if count = WINDOWSIZE_int then
-			        avg <= resize(sum/windowsize_int,16);
+		    avg <= resize(sum/windowsize_int,16);
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
                     newData <= '1'; -- enable write for autocorrelator
@@ -93,6 +96,16 @@ begin
         end if;
     end process;
     
+    send.addr <= addr; -- send to autocorrelator in port 2
+	 
+	 with WINDOWSIZE_int select segOut <=
+		"1111001" when 4,  --1
+		"0100100" when 8,  --2
+		"0110000" when 16, --3
+		"0011001" when 32, --4
+		"0010010" when 64, --5
+		"1111111" when others;
+		
     send.addr <= addr; -- send to autocorrelator in port 2
 
 end sim;
