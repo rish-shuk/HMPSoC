@@ -10,7 +10,9 @@ entity addrCalculator is
 		dpcr_val : in std_logic_vector(31 downto 0);
 		add_in_1 : in std_logic_vector(3 downto 0);
 		add_out : out std_logic_vector(7 downto 0);
-		send : out tdma_min_port
+		send : out tdma_min_port;
+		
+		dpcr_val_out : out std_logic_vector(31 downto 0)
 		);
 end entity addrCalculator;
 
@@ -18,6 +20,8 @@ architecture adder of addrCalculator is
 
 begin 
 	add_out <= x"0" & (add_in_1 - 1);
+	
+	dpcr_val_out <= dpcr_val;
 	send.data <= dpcr_val;
 	send.addr <= x"0"&(add_in_1 - 1);
 end architecture;

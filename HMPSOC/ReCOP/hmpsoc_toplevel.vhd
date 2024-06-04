@@ -41,8 +41,11 @@ entity hmpsoc_TopLevel is
 		pc_v			  : out std_logic_vector(15 downto 0);
 		opcode		  : out std_logic_vector(5 downto 0);
 		rfsel			  : out std_logic_vector(2 downto 0);
+		
 		send_data	  : out std_logic_vector(31 downto 0);
-		send_addr	  : out std_logic_vector(7 downto 0)
+		send_addr	  : out std_logic_vector(7 downto 0);
+		
+		compAddr 	  : out std_logic_vector(7 downto 0)
 		
 	);
 end entity;
@@ -53,7 +56,7 @@ architecture rtl of hmpsoc_TopLevel is
 
 	signal send_port : tdma_min_ports(0 to ports-1);
 	signal recv_port : tdma_min_ports(0 to ports-1);
-	signal dpcr_test : tdma_min_port;
+	signal dpcr_test : std_logic_vector(31 downto 0);
 	
 	signal corWinSize : integer range 0 to 64;
 	signal avgWinSize : integer range 0 to 64;
@@ -117,7 +120,7 @@ begin
 		clk => clock,
 		reset => '0',
 		SIP => "00000" & KEY(1) & SW, -- switches and buttons input
-		DPCR => DPCR_v, -- config packet
+		DPCR => dpcr_test, -- config packet (internal signal)
 		--CONF_ADDR => send_port(5).addr(3 downto 0),
 		--LED_PARAM => LEDR(4 downto 0), -- output packet param
 		LED_PARAM => open,
@@ -138,31 +141,18 @@ begin
 		RFInputSel => rfsel,
 		SIP_R =>  sip_v,
 		SOP =>  sop_v,
-		DMOut => dmout_v,
-		send => dpcr_test
+		DMOut => dmout_v
+	);
+	
+	addrCalculator : entity work.addrCalculator
+	port map (
+		dpcr_val => dpcr_test, -- takes output of recop
+		add_in_1 => dpcr_test(30 downto 27), -- identifier in
+		add_out => 	compAddr,	-- address of configured component- for testing
+		dpcr_val_out => send_data,
+		send => send_port(5)	-- send to NOC		
 	);
 	
 	HEX0 <= SW(6 downto 0);
-	send_data <= dpcr_test.data;
-	send_addr <= dpcr_test.addr;
-	
-
-
---	asp_example : entity work.AspExample
---	port map (
---		clock => clock,
---		key   => KEY,
---		sw    => SW,
---		ledr  => LEDR,
---		hex0  => HEX0,
---		hex1  => HEX1,
---		hex2  => HEX2,
---		hex3  => HEX3,
---		hex4  => HEX4,
---		hex5  => HEX5,
---
---		send  => send_port(3),
---		recv  => recv_port(3)
---	);
 
 end architecture;

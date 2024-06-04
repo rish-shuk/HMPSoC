@@ -250,7 +250,6 @@ Op1Sel <= Op1Sel_ALTERA_SYNTHESIZED;
 Op2Sel <= Op2Sel_ALTERA_SYNTHESIZED;
 RFInputSel <= RFInputSel_ALTERA_SYNTHESIZED;
 
-send.data <= dpcr_ALTERA_SYNTHESIZED; -- tdma port for sending dpcr 
-send.addr <= x"0" & dpcr_ALTERA_SYNTHESIZED(22 downto 19); -- send address
+
 
 END bdf_type;

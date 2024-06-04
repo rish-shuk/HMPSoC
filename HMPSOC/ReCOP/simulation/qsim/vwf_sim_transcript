@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 04 13:33:06 2024
+    Info: Processing started: Tue Jun 04 15:41:38 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/testbenches/hmpsoc_testbench.vwf --testbench_file=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/testbenches/hmpsoc_testbench.vwf.vht
 Warning (20013): Ignored 102 assignments for entity "TopLevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity TopLevel was ignored
@@ -132,10 +132,11 @@ ssignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity TopLevel -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity TopLevel -section_id Top was ignored
 Info (119006): Selected device 5CSEMA5F31C6 for design "TopLevel"
-Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled. One instance is listed below as an example.
+Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled
+. One instance is listed below as an example.
     Info (119043): Atom "TdmaMin:tdma_min|TdmaMinInterface:\interfaces:4:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|ram_block1a29" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 
-ing test bench files
+iles
 
 Completed successfully. 
 
@@ -159,7 +160,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 04 13:33:08 2024
+    Info: Processing started: Tue Jun 04 15:41:40 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/ TopLevel -c TopLevel
 Warning (20013): Ignored 102 assignments for entity "TopLevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity TopLevel was ignored
@@ -271,9 +272,9 @@ Warning (18550): Found RAM instances implemented as ROM because the write logic 
 rface:\interfaces:4:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l191:auto_generated|a_dpfifo_s791:dpfifo|altsyncram_r3i1:FIFOram|ram_block1a29" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Info (204019): Generated file TopLevel.vho in folder "C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Tue Jun 04 13:33:12 2024
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Tue Jun 04 15:41:45 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
@@ -296,7 +297,7 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:33:13 on Jun 04,2024
+# Start time: 15:41:45 on Jun 04,2024
 # vcom -work work TopLevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -313,22 +314,21 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # -- Loading package STANDARD
 
-# End time: 13:33:17 on Jun 04,2024, Elapsed time: 0:00:04
+# End time: 15:41:49 on Jun 04,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:33:17 on Jun 04,2024
+# Start time: 15:41:49 on Jun 04,2024
 # vcom -work work testbenches/hmpsoc_testbench.vwf.vht 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity hmpsoc_TopLevel_vhd_vec_tst
 # -- Compiling architecture hmpsoc_TopLevel_arch of hmpsoc_TopLevel_vhd_vec_tst
-# End time: 13:33:17 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 15:41:49 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.hmpsoc_toplevel_vhd_vec_tst 
-# Start time: 13:33:17 on Jun 04,2024
+# Start time: 15:41:49 on Jun 04,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -479,8 +479,9 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 #    Time: 0 ps  Iteration: 0  Protected: /hmpsoc_toplevel_vhd_vec_tst/i1/\asp_cor|Mult31~mac\/inst/ File: nofile
 # ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
 #    Time: 0 ps  Iteration: 0  Protected: /hmpsoc_toplevel_vhd_vec_tst/i1/\asp_cor|Mult31~mac\/inst/ File: nofile
-# ** Warning: Design size of 2065106 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 2050672 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+
 # after#37
 
 # Simulation time: 0 ps
@@ -499,41 +500,41 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 180000 ps
+# Simulation time: 110000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1030000 ps
+# Simulation time: 990000 ps
 
-# Simulation time: 1890000 ps
+# Simulation time: 1830000 ps
 
-# End time: 13:34:28 on Jun 04,2024, Elapsed time: 0:01:11
+# End time: 15:42:59 on Jun 04,2024, Elapsed time: 0:01:10
 # Errors: 0, Warnings: 63
 
 Completed successfully. 
@@ -546,7 +547,39 @@ Reading C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/TopL
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/TopLevel_20240604133428.sim.vwf
+Warning: dmout[15] - signal not found in VCD.
+
+Warning: dmout[14] - signal not found in VCD.
+
+Warning: dmout[13] - signal not found in VCD.
+
+Warning: dmout[12] - signal not found in VCD.
+
+Warning: dmout[11] - signal not found in VCD.
+
+Warning: dmout[10] - signal not found in VCD.
+
+Warning: dmout[9] - signal not found in VCD.
+
+Warning: dmout[8] - signal not found in VCD.
+
+Warning: dmout[7] - signal not found in VCD.
+
+Warning: dmout[6] - signal not found in VCD.
+
+Warning: dmout[5] - signal not found in VCD.
+
+Warning: dmout[4] - signal not found in VCD.
+
+Warning: dmout[3] - signal not found in VCD.
+
+Warning: dmout[2] - signal not found in VCD.
+
+Warning: dmout[1] - signal not found in VCD.
+
+Warning: dmout[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/TopLevel_20240604154259.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/04/2024 13:44:06"
+-- Generated on "06/04/2024 15:41:40"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          hmpsoc_TopLevel
 -- 
@@ -36,6 +36,7 @@ ARCHITECTURE hmpsoc_TopLevel_arch OF hmpsoc_TopLevel_vhd_vec_tst IS
 SIGNAL CLOCK2_50 : STD_LOGIC;
 SIGNAL CLOCK3_50 : STD_LOGIC;
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL compAddr : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL dmout_v : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL DPCR_v : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -59,8 +60,8 @@ SIGNAL rxdata : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rxsel : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL rzdata : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rzsel : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL send_v.addr : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL send_v.data : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL send_addr : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL send_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL sip_v : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sop_v : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -69,6 +70,7 @@ COMPONENT hmpsoc_TopLevel
 	CLOCK2_50 : IN STD_LOGIC;
 	CLOCK3_50 : IN STD_LOGIC;
 	CLOCK_50 : IN STD_LOGIC;
+	compAddr : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	dmout_v : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	DPCR_v : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -92,8 +94,8 @@ COMPONENT hmpsoc_TopLevel
 	rxsel : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	rzdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	rzsel : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	\send_v.addr\ : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	\send_v.data\ : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	send_addr : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	send_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	sip_v : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sop_v : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
@@ -106,6 +108,7 @@ BEGIN
 	CLOCK2_50 => CLOCK2_50,
 	CLOCK3_50 => CLOCK3_50,
 	CLOCK_50 => CLOCK_50,
+	compAddr => compAddr,
 	dmout_v => dmout_v,
 	DPCR_v => DPCR_v,
 	HEX0 => HEX0,
@@ -129,8 +132,8 @@ BEGIN
 	rxsel => rxsel,
 	rzdata => rzdata,
 	rzsel => rzsel,
-	\send_v.addr\ => send_v.addr,
-	\send_v.data\ => send_v.data,
+	send_addr => send_addr,
+	send_data => send_data,
 	sip_v => sip_v,
 	sop_v => sop_v,
 	SW => SW
