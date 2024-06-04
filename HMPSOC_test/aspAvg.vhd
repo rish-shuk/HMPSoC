@@ -35,8 +35,30 @@ begin
             send.data <= recv.data; -- passthrough 
             newData <= '0';
 
+            -- process data from adc
+            if recv.data(31 downto 27) = "10101" then
+                data <= recv.data(15 downto 0); -- read new data
+
+                if count = WINDOWSIZE then
+                    avg <= resize(sum / to_unsigned(WINDOWSIZE, 32),16); -- calculate average
+                    count <= 0; -- reset count
+                    sum <= x"00000000"; -- reset sum
+                    newData <= '1'; -- enable write for autocorrelator
+                    send.data <= "101100000000000" & '1' & std_logic_vector(avg);
+                else
+                    for i in 0 to MAX_DEPTH - 2 loop
+                        if i < WINDOWSIZE - 1 then
+                            mem(i) <= mem(i+1); -- shift everything down, fill window, remove tail
+                        end if;
+                    end loop;
+
+                    mem(WINDOWSIZE-1) <= recv.data(15 downto 0); -- update head in window
+                    sum <= sum + unsigned(recv.data(15 downto 0)); -- increment sum
+                    count <= count + 1; -- increment count
+                    
+                end if;
             -- check for config packet and update windowsize
-            if recv.data(31 downto 27) = "10010" then
+            elsif recv.data(31 downto 27) = "10010" then
                 addr <= "0000" & recv.data(22 downto 19);
                 -- select windowsize
                 case recv.data(4 downto 0) is
@@ -52,34 +74,6 @@ begin
                         WINDOWSIZE <= 64;
                     WHEN OTHERS =>
                 end case;
-                send.data <= recv.data; -- passthrough
-
-            else
-                -- process data from adc
-                if recv.data(31 downto 27) = "10101" then
-                    data <= recv.data(15 downto 0); -- read new data
-
-                    if count = WINDOWSIZE then
-                        avg <= resize(sum / to_unsigned(WINDOWSIZE, 32),16); -- calculate average
-                        count <= 0; -- reset count
-                        sum <= x"00000000"; -- reset sum
-                        newData <= '1'; -- enable write for autocorrelator
-                        send.data <= "101100000000000" & '1' & std_logic_vector(avg);
-                    else
-                        for i in 0 to MAX_DEPTH - 2 loop
-                            if i < WINDOWSIZE - 1 then
-                                mem(i) <= mem(i+1); -- shift everything down, fill window, remove tail
-                            end if;
-                        end loop;
-
-                        mem(WINDOWSIZE-1) <= recv.data(15 downto 0); -- update head in window
-                        sum <= sum + unsigned(recv.data(15 downto 0)); -- increment sum
-                        count <= count + 1; -- increment count
-                        
-                    end if;
-                else
-                    -- data <= x"0000";
-                end if;
             end if;
         end if;
     end process;

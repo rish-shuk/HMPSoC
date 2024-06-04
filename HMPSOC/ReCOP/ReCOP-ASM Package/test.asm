@@ -22,9 +22,12 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         ADD R5 R1 #2 ;																	18,19
                         LDR R4 R4 ; load top & bottom half of config from DM							20
                         LDR R5 R5 ;																		21
+                        LDR R1 #60000    ; ABJ  23,24
+                        CLFZ            ; ABJ   25
+delay_loop              SUBV R1 R1 #1   ; ABJ   26,27
                         DATACALL R4 R5 ; Send Config to NOC												22
-                        AND R4 R4 #32767 ; AND R6 "0111111111111111"                                    23,24                              
-                        DATACALL R4 R5 ; Disables tdma_min port, but still shows params                 25
+                        SZ $20          ; ABJ   31, 32
+                        JMP delay_loop  ; ABJ   33,34 ;AND R4 R4 #32767 ; AND R6 "0111111111111111"                                    23,24                              ;DATACALL R4 R5 ; Disables tdma_min port, but still shows params                 25
                         JMP initialise_dc ; restart the proccess										26
 
 ENDPROG
