@@ -8,6 +8,8 @@ This project consists of four main VHDL files that are noteworthy:
 3. `aspadc_tdma.vhd`
 4. `test_adc_tdma.vhd`
 
+The main quartus project is located in HMPSOC/ReCOP/TopLevel.qpf.
+
 ## Simulation Instructions
 
 To run the simulations and observe the waveform of the 8-bit quantized signal, follow these steps:
@@ -17,11 +19,14 @@ To run the simulations and observe the waveform of the 8-bit quantized signal, f
    
 2. **Run the Simulation**:
    - Run the `test_adc` file for 50 ms to generate and observe the waveform of the 8-bit quantized signal.
+   - The test bench for all the ASP components connected via the TDMA-MIN interface is located in the HMPSOC_test directory.
+      - To run the test, set your modelsim directory to this directory, and compile all the files in the root directory. Then, run topleveltest.vhd. A reccomended simulation time is 40ms.
 
 ## Configuration
 
 - **Modifying the Input MIF File**:
   - The input `.mif` file used in the `aspadc` or `aspadc_tdma` components can be changed by updating the `init_file` parameter inside the `altsyncram` component within the respective VHDL files.
+  - The program `.mif` file used in the ReCOP processor can be generated with assembly code with the help of the provided assembler, which can be located at HMPSOC/ReCOP/ReCOP-ASM Package
 
 - **TDMA Configuration**:
   - The `test_adc_tdma` and `aspadc_tdma` files are integrated with the NoC.  
