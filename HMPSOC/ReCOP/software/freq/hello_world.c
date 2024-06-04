@@ -47,7 +47,6 @@ void freq_calc(){
 }
 
 alt_u32 seven_seg_timer_isr(void* context){
-	printf("sevensegISR\n\r");
 	int firstDigit = (int)frequency % 10;
 	int secondDigit = frequency/10;
 	HEX0_display(firstDigit);
@@ -68,10 +67,9 @@ int main() {
 	alt_alarm_start(&seven_seg_timer, 200, seven_seg_timer_isr, timerContext);
 
 	while(1){
-		printf("Whole Packet 0x%x\n\r", recievedPacket);
 		switch (packetIdentifier){
 			case(PD_DATA_IDENTIFIER):
-				printf("PD DATA Packet, received\n\r");
+				printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
 				int isr_pt_bits = recievedPacket & 0x600000;
 				isr_pt_bits = isr_pt_bits >> 21;
 				//if peak detected
@@ -86,6 +84,7 @@ int main() {
 				}
 			break;
 			case(AVG_CONFIG_IDENTIFIER):
+				printf("Avg DATA Packet, received %0xd\n\r", recievedPacket);
 				avg_window_size = recievedPacket & 0x3F;
 				printf("Avg config Packet, avg_windows = 0x%x\n\r", avg_window_size);
 			break;

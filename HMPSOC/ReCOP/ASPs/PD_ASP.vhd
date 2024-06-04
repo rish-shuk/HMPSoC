@@ -46,6 +46,7 @@ architecture find_peak of PD_ASP is
 
 begin
     process(clk)
+		  -- send to Nios by default
         variable send_addr_v : std_logic_vector(7 downto 0) := x"04";
 
         variable last_corr : std_logic_vector(27 downto 0) := (others => '0');
