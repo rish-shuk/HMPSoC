@@ -33,13 +33,14 @@
 #include "inc/sevenSegCustom.h"
 
 #define PD_DATA_IDENTIFIER 0xB8000000
-#define AVG_CONFIG_IDENTIFIER 0x90000000
-#define COR_CONFIG_IDENTIFIER 0x98000000
+#define PD_WS_COR 0xC0000000
 
 volatile float frequency = 0;
 int correlation_count = 0;
 int cor_window_size = 0;
 int avg_window_size = 0;
+
+int current_packet = 0;
 
 void freq_calc(){
 
@@ -56,9 +57,7 @@ alt_u32 seven_seg_timer_isr(void* context){
 
 int main() {
 	int packetIdentifier = 0;
-	int recievedPacket = IORD_ALTERA_AVALON_PIO_DATA(RECV_DATA_PIO_BASE);
-	packetIdentifier = recievedPacket & 0xF8000000;
-
+	int recievedPacket = 0;
 	//initialise timer, reinitialisign done with the return
 	//empty context
 	int timeCountMain = 0;
@@ -66,7 +65,17 @@ int main() {
 	alt_alarm seven_seg_timer;
 	alt_alarm_start(&seven_seg_timer, 200, seven_seg_timer_isr, timerContext);
 
+	printf("Setup the frequency calculation\n\r");
+
 	while(1){
+		recievedPacket = IORD_ALTERA_AVALON_PIO_DATA(RECV_DATA_PIO_BASE);
+		//Extract identifier
+		packetIdentifier = recievedPacket & 0xF8000000;
+
+//		if (recievedPacket != current_packet){
+//			printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
+//			current_packet = recievedPacket;
+//		}
 		switch (packetIdentifier){
 			case(PD_DATA_IDENTIFIER):
 				printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
@@ -77,23 +86,39 @@ int main() {
 				if (isr_pt_bits == 0b11){
 					correlation_count = recievedPacket & 0x1FFFFF;
 					printf("PEAK: correlation count 0x%x\n\r", correlation_count);
+					//TODO: Change to calculate frequency
+					frequency = correlation_count;
 				}
 				// if trough detected
 				else if (isr_pt_bits == 0b10){
 					printf("Trough detected");
 				}
 			break;
-			case(AVG_CONFIG_IDENTIFIER):
+			case(PD_WS_COR):
 				printf("Avg DATA Packet, received %0xd\n\r", recievedPacket);
 				avg_window_size = recievedPacket & 0x3F;
-				printf("Avg config Packet, avg_windows = 0x%x\n\r", avg_window_size);
-			break;
-			case(COR_CONFIG_IDENTIFIER):
-				cor_window_size = recievedPacket & 0x3F;
-				printf("Cor config Packet, cor_windows = 0x%x\n\r", cor_window_size);
+				// extract whether it is a avg or corrolation packet
+				int avg_cor_bit = recievedPacket & 0x800000;
+				avg_cor_bit = avg_cor_bit >> 23;
+
+				//Average Window Size
+				if (avg_cor_bit == 0){
+					avg_window_size = recievedPacket & 0x1F;
+					avg_window_size = avg_window_size*2;
+					printf("\n\r AVG WINDOW CHANGED");
+					printf("avg Window Size is 0x%d\n\r", avg_window_size);
+					printf("cor Window Size %x\n\r", cor_window_size);
+				}
+				// Corrolation Window Size
+				else if (avg_cor_bit == 1){
+					printf("\n\r COR WINDOW CHANGED");
+					cor_window_size = recievedPacket & 0x1F;
+					cor_window_size = cor_window_size*2;
+					printf("avg Window Size is 0x%d\n\r", avg_window_size);
+					printf("cor Window Size %x\n\r", cor_window_size);
+				}
 			break;
 		}
 	}
 
 }
-

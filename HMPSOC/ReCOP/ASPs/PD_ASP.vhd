@@ -127,7 +127,7 @@ begin
                         both_loaded := '0';
                 else
                     -- Clear the data sent to nios
-                    send.data <= x"80000000";
+                    send.data <= x"B8000069";
                 end if;
                 
                 -- case (recv.addr) is
