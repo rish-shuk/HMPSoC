@@ -19,6 +19,8 @@ end entity addrCalculator;
 architecture adder of addrCalculator is
 
 begin 
+
+	
 	add_out <= x"0" & (add_in_1 - 1);
 	
 	dpcr_val_out <= dpcr_val;

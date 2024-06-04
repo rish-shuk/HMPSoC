@@ -25,11 +25,15 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         DATACALL R4 R5 ; Send Config to NOC                                             22
                         LDR R6 #49152; check for avg or cor packet and with 11------ 					23,24
                         SUB R6 #16384; check for avg packet 01                                          25,26
-                        SZ ; send to nios                                                               27,28
+                        SZ send_avg_ws; send to nios                                                    27,28
                         SUB R6 #32768; check for cor packet 10                                          29,30
-                        SZ ; send to nios                                                               31,32
-                        JMP initialise_dc ; restart the proccess										33,34
-send_ws_to_nios         LDR                         
-
+                        SZ send_cor_ws; send to nios                                                    31,32
+                        JMP initialise_dc ; restart the process										    33,34
+send_avg_ws             LDR R7 #49152;  load 1100000000000000                                           35,36
+                        DATACALL R7 R5; send params to NOC (addr 7)                                     37,38
+                        JMP initialise_dc;                                                              39,40
+send_cor_ws             LDR R7 #49216; load 1100000010000000                                            41,42
+                        DATACALL R7 R5; send params to NOC (addr 7)                                     43,44
+                        JMP initialise_dc;                                                              45,46
 ENDPROG
 END
