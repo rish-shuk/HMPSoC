@@ -16,12 +16,12 @@ end entity;
 
 architecture rtl of AspCor is
 
-    signal correlation_window : unsigned(6 downto 0) := to_unsigned(4, 7);
+    signal correlation_window : unsigned(6 downto 0) := to_unsigned(8, 7);
 
     type buffer_type is array (63 downto 0) of std_logic_vector(15 downto 0);
     signal avg_buffer : buffer_type := (others => (others => '0'));
     signal buffer_index :  integer range 0 to 64 := 0;
-    signal CorrN : integer range 0 to 32 := 2; --centre of correlation array
+    signal CorrN : integer range 0 to 32 := 4; --centre of correlation array
     signal enableCor : std_logic := '1'; -- hardcoded for testing
 
 begin
@@ -31,7 +31,7 @@ begin
 	process(clock)
     variable buffer_full : std_logic := '0';
     variable temp_correlation : signed(31 downto 0) := (others => '1');
-    variable temp_corr_win : unsigned(6 downto 0) := to_unsigned(4, 7); -- correlation window
+    variable temp_corr_win : unsigned(6 downto 0) := to_unsigned(8, 7); -- correlation window
     variable valid_flag : std_logic := '0';
     variable data_flag : std_logic := '0';
     variable addr_v : std_logic_vector(7 downto 0) := x"03";
