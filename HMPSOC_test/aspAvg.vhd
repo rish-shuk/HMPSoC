@@ -17,17 +17,18 @@ architecture sim of aspAvg is
     signal foundConfig : std_logic := '0';
 
     signal WINDOWSIZE : unsigned(6 downto 0);  -- window size
-    signal WINDOWSIZE_int : integer := 64; 
+    signal WINDOWSIZE_int : integer; 
     type memory_type is array (0 to 63) of std_logic_vector(15 downto 0);
 
     constant MAX_DEPTH : integer := 64;  -- Maximum FIFO size
     signal mem     : memory_type;   -- fifo instance
-    signal count   : integer range 0 to MAX_DEPTH := 0; -- index of fifo
+    signal count   : integer range 0 to 64 := 0; -- index of fifo
 
     signal sum     : unsigned(31 downto 0) := x"00000000";  -- Sum for averaging
+
     signal avg     : unsigned(15 downto 0) := x"0000"; -- output average
     signal data     : std_logic_vector(15 downto 0); -- input data
-    signal addr     : std_logic_vector(7 downto 0) := x"00"; -- default send to COR
+    signal addr     : std_logic_vector(7 downto 0) := x"02"; -- default send to COR
     signal newData : std_logic := '0'; -- flag indicating new data
 begin
     
@@ -38,22 +39,22 @@ begin
     begin
         if rising_edge(clock) then
             foundConfig <= '0';
-            -- send.data <= recv.data; -- passthrough 
+            send.data <= recv.data; -- passthrough 
             newData <= '0';
             
             -- process adc data
             if recv.data(31 downto 27) = "10101"then
                 data <= recv.data(15 downto 0); -- read new data
 
-                if count = WINDOWSIZE then
-                    avg <= resize(sum / WINDOWSIZE,16); -- calculate average
+                if count = WINDOWSIZE_int then
+			        avg <= resize(sum/windowsize_int,16);
                     count <= 0; -- reset count
                     sum <= x"00000000"; -- reset sum
                     newData <= '1'; -- enable write for autocorrelator
                     send.data <= "101100000000000" & '1' & std_logic_vector(avg);
                 else
                     for i in 0 to MAX_DEPTH - 2 loop
-                        if i < WINDOWSIZE-to_unsigned(1,7) then
+                        if i < WINDOWSIZE_int-1 then
                             mem(i) <= mem(i+1); -- shift everything down, fill window, remove tail
                         end if;
                     end loop;

@@ -1,0 +1,614 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP
+Easpadc
+Z1 w1717280533
+Z2 DPx4 work 12 tdmamintypes 0 22 zUbdIXj5XgoVHmag:X:zR3
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R0
+Z8 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspadc_tdma.vhd
+Z9 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspadc_tdma.vhd
+l0
+L14
+VXk1GMP]J_:MlhM>cb0dJn2
+!s100 H9Ld6_F?<kj1>W;YI6>@c3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1717455023
+!i10b 1
+Z12 !s108 1717455023.000000
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspadc_tdma.vhd|
+Z14 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspadc_tdma.vhd|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 6 aspadc 0 22 Xk1GMP]J_:MlhM>cb0dJn2
+l60
+L25
+VMURbLLR@[[Q:g;BRe3DO<2
+!s100 J1OYi<g;BZb6?26QlNI]l2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Easpavg
+Z17 w1717452393
+R2
+R5
+R6
+R7
+R0
+Z18 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspAvg.vhd
+Z19 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspAvg.vhd
+l0
+L8
+VjiAT5i9FXO3aj9:iFajmM1
+!s100 Z^=>>Lnj[^LKPPkNocXz33
+R10
+32
+Z20 !s110 1717455022
+!i10b 1
+Z21 !s108 1717455022.000000
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspAvg.vhd|
+Z23 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/aspAvg.vhd|
+!i113 1
+R15
+R16
+Asim
+R2
+R5
+R6
+R7
+DEx4 work 6 aspavg 0 22 jiAT5i9FXO3aj9:iFajmM1
+l34
+L17
+VW[a=l@9_4fhkIb=e6E@Hj0
+!s100 d9KjMiHzodYbTC@fTM5:O1
+R10
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R15
+R16
+Easpcor
+Z24 w1717444564
+R2
+R5
+R6
+R7
+R0
+Z25 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/AspCor.vhd
+Z26 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/AspCor.vhd
+l0
+L8
+V5NL=limdWE1@d>Ge@QHN11
+!s100 WJB_o^Am0:U=K>InaOHfW2
+R10
+32
+Z27 !s110 1717455020
+!i10b 1
+Z28 !s108 1717455020.000000
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/AspCor.vhd|
+Z30 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/AspCor.vhd|
+!i113 1
+R15
+R16
+Artl
+R2
+R5
+R6
+R7
+DEx4 work 6 aspcor 0 22 5NL=limdWE1@d>Ge@QHN11
+l28
+L18
+V?Mm1<gK`GZBfHTV@d[iXC0
+!s100 URI6=N>c0:oQ3TYGaUMM_3
+R10
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R15
+R16
+Ehmpsoc_toplevel
+w1717453080
+R2
+R5
+R6
+R7
+R0
+8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/hmpsoc_toplevel.vhd
+FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/hmpsoc_toplevel.vhd
+l0
+L8
+VeK]NAMd2GFYKR?P<G=00Z2
+!s100 1We_0Klg`=GF2=fmEoi<h0
+R10
+32
+!s110 1717455105
+!i10b 1
+!s108 1717455105.000000
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/hmpsoc_toplevel.vhd|
+!s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/hmpsoc_toplevel.vhd|
+!i113 1
+R15
+R16
+Pmacros
+R1
+R0
+8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/macros.vhd
+FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/macros.vhd
+l0
+L1
+V8QlPUF7I4d@0@Xg>ndO[<0
+!s100 Q`=Qa1zgohB9Qa?0YggCm3
+R10
+32
+!s110 1717455019
+!i10b 1
+!s108 1717455019.000000
+!s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/macros.vhd|
+!s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/macros.vhd|
+!i113 1
+R15
+R16
+Epd_asp
+Z31 w1717442040
+R2
+R7
+R6
+R5
+R0
+Z32 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/PD_ASP.vhd
+Z33 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/PD_ASP.vhd
+l0
+L18
+VGlh;Hi4ccdTlA[c[GVcEM0
+!s100 h8ZN7^<?ATBFRhBKOF>L@2
+R10
+32
+Z34 !s110 1717455018
+!i10b 1
+Z35 !s108 1717455018.000000
+Z36 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/PD_ASP.vhd|
+Z37 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/PD_ASP.vhd|
+!i113 1
+R15
+R16
+Afind_peak
+R2
+R7
+R6
+R5
+DEx4 work 6 pd_asp 0 22 Glh;Hi4ccdTlA[c[GVcEM0
+l47
+L28
+VNCdL0S4_fC6UDZRKzOZ;X1
+!s100 _8Vd;50<^ABWEfdTG[zfW1
+R10
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R15
+R16
+Erecoptoplevel
+Z38 w1717453099
+R7
+R2
+R6
+R5
+R0
+Z39 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/recopTopLevel.vhd
+Z40 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/recopTopLevel.vhd
+l0
+L25
+VJ?o>^H`hJoDl`ZUz4e@6V0
+!s100 haTn8W`U:X7m8:dN8FTXS1
+R10
+32
+Z41 !s110 1717455034
+!i10b 1
+Z42 !s108 1717455034.000000
+Z43 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/recopTopLevel.vhd|
+Z44 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/recopTopLevel.vhd|
+!i113 1
+R15
+R16
+Abdf_type
+R7
+R2
+R6
+R5
+DEx4 work 13 recoptoplevel 0 22 J?o>^H`hJoDl`ZUz4e@6V0
+l162
+L72
+VUL3InTZ?n5D_Uc3k;365l3
+!s100 ?1UPESDWl[8J6V5;E;WP73
+R10
+32
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R15
+R16
+Etdmamin
+R1
+R2
+R5
+R6
+R7
+R0
+Z45 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMin.vhd
+Z46 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMin.vhd
+l0
+L8
+V=S6e89o6o0;L?4kiAPgXo0
+!s100 6;L8z`bBSW^j[_>G_J?Gd2
+R10
+32
+Z47 !s110 1717455009
+!i10b 1
+Z48 !s108 1717455009.000000
+Z49 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMin.vhd|
+Z50 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMin.vhd|
+!i113 1
+R15
+R16
+Artl
+Z51 DEx4 work 16 tdmamininterface 0 22 gT^kX:2W=4RT7PNm7H11F2
+Z52 DEx4 work 13 tdmaminfabric 0 22 =XdmE:2YnL8N6`N_i3QlI2
+Z53 DEx4 work 12 tdmaminslots 0 22 mk_HdOSQUCX0X[0_`0G111
+R2
+R5
+R6
+R7
+DEx4 work 7 tdmamin 0 22 =S6e89o6o0;L?4kiAPgXo0
+l27
+L19
+VU@GY`FPJ`_6gPEQJ@9KE>0
+!s100 <5<>>iFjPXUU82XzWAI403
+R10
+32
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R15
+R16
+Etdmaminfabric
+R1
+R2
+R5
+R6
+R7
+R0
+Z54 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFabric.vhd
+Z55 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFabric.vhd
+l0
+L8
+V=XdmE:2YnL8N6`N_i3QlI2
+!s100 gPIDA1YCE:[;DEnj@Y>0i3
+R10
+32
+Z56 !s110 1717455007
+!i10b 1
+Z57 !s108 1717455007.000000
+Z58 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFabric.vhd|
+Z59 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFabric.vhd|
+!i113 1
+R15
+R16
+Artl
+Z60 DEx4 work 12 tdmaminstage 0 22 l@eJX5;XGK`nhfZQ7j:[F2
+R2
+R5
+R6
+R7
+R52
+l27
+L20
+VOK^jicn78;lPom<<2X`?I2
+!s100 JSmh>bieLZoMlenZQ0T<:1
+R10
+32
+R56
+!i10b 1
+R57
+R58
+R59
+!i113 1
+R15
+R16
+Etdmaminfifo
+R1
+R6
+R5
+R0
+Z61 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFifo.vhd
+Z62 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFifo.vhd
+l0
+L43
+VOz?]G`AV^1>^4iQa[;O>Q3
+!s100 8FemG`GCM5dSE;ZO1MWzf2
+R10
+32
+Z63 !s110 1717455006
+!i10b 1
+Z64 !s108 1717455006.000000
+Z65 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFifo.vhd|
+Z66 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinFifo.vhd|
+!i113 1
+R15
+R16
+Asyn
+R6
+R5
+Z67 DEx4 work 11 tdmaminfifo 0 22 Oz?]G`AV^1>^4iQa[;O>Q3
+l89
+L57
+VnVRAKhDUaT;OPaUVX48@d3
+!s100 nV:U_b?O:ZbYEG97<H`3G1
+R10
+32
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R15
+R16
+Etdmamininterface
+R1
+R2
+R5
+R6
+R7
+R0
+Z68 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinInterface.vhd
+Z69 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinInterface.vhd
+l0
+L10
+VgT^kX:2W=4RT7PNm7H11F2
+!s100 ;1PD82_<6I>fjQK=G=U0B2
+R10
+32
+Z70 !s110 1717455008
+!i10b 1
+Z71 !s108 1717455008.000000
+Z72 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinInterface.vhd|
+Z73 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinInterface.vhd|
+!i113 1
+R15
+R16
+Artl
+R67
+R2
+R5
+R6
+R7
+R51
+l40
+L26
+Vl@^iSDgmIz_n^ARnEXD8<3
+!s100 7CB8agV:j<NBePY8lM1^^1
+R10
+32
+R70
+!i10b 1
+R71
+R72
+R73
+!i113 1
+R15
+R16
+Etdmaminslots
+R1
+R5
+R6
+R7
+R0
+Z74 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSlots.vhd
+Z75 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSlots.vhd
+l0
+L5
+Vmk_HdOSQUCX0X[0_`0G111
+!s100 bY70hkiSWIonW84Wkb5=Y2
+R10
+32
+Z76 !s110 1717455002
+!i10b 1
+Z77 !s108 1717455002.000000
+Z78 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSlots.vhd|
+Z79 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSlots.vhd|
+!i113 1
+R15
+R16
+Artl
+R5
+R6
+R7
+R53
+l19
+L15
+VNi03TlYW8E7nkCedUWQNj3
+!s100 8ZE?LJj4zV?JVY`ITHFDQ1
+R10
+32
+R76
+!i10b 1
+R77
+R78
+R79
+!i113 1
+R15
+R16
+Etdmaminstage
+R1
+R2
+R5
+R6
+R7
+R0
+Z80 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinStage.vhd
+Z81 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinStage.vhd
+l0
+L8
+Vl@eJX5;XGK`nhfZQ7j:[F2
+!s100 FF_3G3M34h_O0k2e3RoCo2
+R10
+32
+R76
+!i10b 1
+R77
+Z82 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinStage.vhd|
+Z83 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinStage.vhd|
+!i113 1
+R15
+R16
+Artl
+Z84 DEx4 work 13 tdmaminswitch 0 22 ha<ZO:0=<6zJT>@X_3kc92
+R2
+R5
+R6
+R7
+R60
+l20
+L19
+V^i[Se9TNAQW]l[XH=z?zU3
+!s100 S;h7UbjJAC@j?j@O3^C@D1
+R10
+32
+R76
+!i10b 1
+R77
+R82
+R83
+!i113 1
+R15
+R16
+Etdmaminswitch
+R1
+R2
+R5
+R6
+R7
+R0
+Z85 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSwitch.vhd
+Z86 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSwitch.vhd
+l0
+L8
+Vha<ZO:0=<6zJT>@X_3kc92
+!s100 h[e;lEbjCXFWZ]MK6d]=d1
+R10
+32
+Z87 !s110 1717455001
+!i10b 1
+Z88 !s108 1717455001.000000
+Z89 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSwitch.vhd|
+Z90 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinSwitch.vhd|
+!i113 1
+R15
+R16
+Artl
+R2
+R5
+R6
+R7
+R84
+l19
+L18
+V`KlX9@nTfmU@A?GQQK4>23
+!s100 1a`QCVX^=HfRSbXEgSbnN1
+R10
+32
+R87
+!i10b 1
+R88
+R89
+R90
+!i113 1
+R15
+R16
+Ptdmamintypes
+R5
+R6
+R7
+R1
+R0
+Z91 8C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinTypes.vhd
+Z92 FC:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinTypes.vhd
+l0
+L5
+VzUbdIXj5XgoVHmag:X:zR3
+!s100 RO]^LXRIn]Gj8NO>kodKH0
+R10
+32
+b1
+Z93 !s110 1717455000
+!i10b 1
+Z94 !s108 1717455000.000000
+Z95 !s90 -reportprogress|300|-work|work|C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinTypes.vhd|
+Z96 !s107 C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/ASPs/TdmaMin/TdmaMinTypes.vhd|
+!i113 1
+R15
+R16
+Bbody
+R2
+R5
+R6
+R7
+l0
+L23
+V<A1G_[MEAzN9V>]FnD[HW1
+!s100 0>WOSehlFYi]icGfEjD0:1
+R10
+32
+R93
+!i10b 1
+R94
+R95
+R96
+!i113 1
+R15
+R16

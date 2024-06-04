@@ -1,7 +1,7 @@
 # do TopLevel.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:06:13 on Jun 03,2024
+# Start time: 13:44:11 on Jun 04,2024
 # vcom -work work TopLevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,59 +13,27 @@
 # -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
-# -- Compiling entity RecopTopLevel
-# -- Compiling architecture structure of RecopTopLevel
-# End time: 12:06:13 on Jun 03,2024, Elapsed time: 0:00:00
+# -- Compiling entity hmpsoc_TopLevel
+# -- Compiling architecture structure of hmpsoc_TopLevel
+# -- Loading package STANDARD
+# End time: 13:44:15 on Jun 04,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:06:13 on Jun 03,2024
-# vcom -work work testbenches/TopLevel/TopLevel_Waveform.vwf.vht 
+# Start time: 13:44:15 on Jun 04,2024
+# vcom -work work testbenches/hmpsoc_testbench.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity RecopTopLevel_vhd_vec_tst
-# -- Compiling architecture RecopTopLevel_arch of RecopTopLevel_vhd_vec_tst
-# End time: 12:06:13 on Jun 03,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.RecopTopLevel_vhd_vec_tst 
-# Start time: 12:06:14 on Jun 03,2024
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.recoptoplevel_vhd_vec_tst(recoptoplevel_arch)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
-# Loading altera_lnsim.altera_lnsim_components
-# Loading cyclonev.cyclonev_atom_pack(body)
-# Loading cyclonev.cyclonev_components
-# Loading work.recoptoplevel(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading cyclonev.cyclonev_io_obuf(arch)
-# Loading cyclonev.cyclonev_io_ibuf(arch)
-# Loading altera.dffeas(vital_dffeas)
-# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
-# Loading cyclonev.cyclonev_ram_block(block_arch)
-# Loading sv_std.std
-# Loading altera_lnsim.generic_m10k
-# Loading altera_lnsim.altera_lnsim_functions
-# Loading altera_lnsim.common_28nm_ram_block
-# Loading altera_lnsim.common_28nm_ram_register
-# Loading altera_lnsim.common_28nm_ram_pulse_generator
-# ** Warning: Design size of 309684 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#34
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 1630000 ps
-# Simulation time: 1630000 ps
-# Simulation time: 1630000 ps
-# End time: 12:06:44 on Jun 03,2024, Elapsed time: 0:00:30
-# Errors: 0, Warnings: 1
+# -- Compiling entity hmpsoc_TopLevel_vhd_vec_tst
+# -- Compiling architecture hmpsoc_TopLevel_arch of hmpsoc_TopLevel_vhd_vec_tst
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(62): near ".": (vcom-1576) expecting ':'.
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(63): near ".": (vcom-1576) expecting ':'.
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(132): (vcom-1136) Unknown identifier "send_v".
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(133): (vcom-1136) Unknown identifier "send_v".
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(132): (vcom-1454) Formal "\send_v.addr\" of mode OUT cannot be associated with an expression.
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(133): (vcom-1454) Formal "\send_v.data\" of mode OUT cannot be associated with an expression.
+# ** Error: testbenches/hmpsoc_testbench.vwf.vht(217): VHDL Compiler exiting
+# End time: 13:44:16 on Jun 04,2024, Elapsed time: 0:00:01
+# Errors: 7, Warnings: 0
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./TopLevel.do line 4

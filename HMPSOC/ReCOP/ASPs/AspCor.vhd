@@ -11,7 +11,9 @@ entity AspCor is
 		send  : out tdma_min_port;
 		recv  : in  tdma_min_port;
       CorrVal : out std_logic_vector(31 downto 0);
-		segOut	: out std_logic_vector(6 downto 0)
+		segOut	: out std_logic_vector(6 downto 0);
+		
+		packFound : out std_logic
 	);
 end entity;
 
@@ -43,8 +45,8 @@ begin
             temp_correlation := (others => '0');
             send.data <= recv.data;
             -- CHECK IF DATA PACKET IS A AVERAGE PACKET
-            -- if recv.data(31 downto 28) = "1000" then
             if recv.data(31 downto 27) = "10110" then
+					 packFound <= '1';
                 data_flag := '1';
                 temp_correlation := x"0000" & signed(recv.data(15 downto 0));
                 -- +++++++++++++ HARDCODED FOR TESTING ++++++++++++++
