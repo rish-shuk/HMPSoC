@@ -63,6 +63,12 @@ begin
         recv => recv_port(3)
     );
 
+    -- pd_send_check : entity work.PD_SENDCHECK port map(
+-- clk => clock,
+--   send => send_port(4),
+--   recv => recv_port(4)
+--);
+
     test_recop : entity work.recopTest port map(
         clk => clock,
         send => send_port(4)

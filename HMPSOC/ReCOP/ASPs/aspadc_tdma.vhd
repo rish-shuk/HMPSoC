@@ -91,7 +91,7 @@ begin
 	begin
 		if rising_edge(clock) then
 			if (recv.data(31 downto 27) = "10001") then 	-- if config message is received
-				addr   <= recv.data(22 downto 19);		-- Address to where to port NEXT
+				addr <= recv.data(22 downto 19);		-- Address to where to port NEXT
 				data_bit <= recv.data(2 downto 0);		-- Data-bit configuration
 			end if;	
 		end if;
@@ -138,10 +138,10 @@ begin
 
     end process;
 
-	 with bit_width_out select segOut <=
-		"1111001" when "00", --1 bit width 8
-		"0100100" when "01", --2 bit width 10
-		"0110000" when "10", --3 bit width 12
+	 with data_bit select segOut <=
+		"1111001" when "001", --1 bit width 8
+		"0100100" when "010", --2 bit width 10
+		"0110000" when "100", --3 bit width 12
 		"1111111" when others;
    
 end architecture behaviour;
