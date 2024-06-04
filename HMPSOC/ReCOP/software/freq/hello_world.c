@@ -29,22 +29,26 @@
 #include "altera_avalon_pio_regs.h"
 #include <sys/alt_alarm.h>
 #include <stdio.h>
+#include <stdint.h>
 
 #include "inc/sevenSegCustom.h"
 
 #define PD_DATA_IDENTIFIER 0xB8000000
 #define PD_WS_COR 0xC0000000
+#define SAMPLING_RATE 6249
 
 volatile float frequency = 0;
 int correlation_count = 0;
-int cor_window_size = 0;
-int avg_window_size = 0;
+int cor_window_size = 4;
+int avg_window_size = 4;
 
 int current_packet = 0;
 
 void freq_calc(){
+	//TODO: change the time between samples
+	frequency = (SAMPLING_RATE * avg_window_size * cor_window_size * correlation_count);
+	frequency = 50*10*10*10*10*10*10 / frequency;
 
-	printf("The peak packet is: %d", IORD_ALTERA_AVALON_PIO_DATA(RECV_DATA_PIO_BASE));
 }
 
 alt_u32 seven_seg_timer_isr(void* context){
@@ -72,28 +76,29 @@ int main() {
 		//Extract identifier
 		packetIdentifier = recievedPacket & 0xF8000000;
 
-//		if (recievedPacket != current_packet){
-//			printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
-//			current_packet = recievedPacket;
-//		}
+		if (recievedPacket != current_packet){
+			printf("PD DATA Packet, received 0x%x\n\r", recievedPacket);
+			current_packet = recievedPacket;
+		}
 		switch (packetIdentifier){
-			case(PD_DATA_IDENTIFIER):
-				printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
+			case(PD_DATA_IDENTIFIER):{
+				//printf("PD DATA Packet, received %0xd\n\r", recievedPacket);
 				int isr_pt_bits = recievedPacket & 0x600000;
 				isr_pt_bits = isr_pt_bits >> 21;
 				//if peak detected
-				printf("The ISR bits are 0x%x\n\r", isr_pt_bits);
+				//printf("The ISR bits are 0x%x\n\r", isr_pt_bits);
 				if (isr_pt_bits == 0b11){
 					correlation_count = recievedPacket & 0x1FFFFF;
 					printf("PEAK: correlation count 0x%x\n\r", correlation_count);
 					//TODO: Change to calculate frequency
-					frequency = correlation_count;
+					freq_calc();
 				}
 				// if trough detected
 				else if (isr_pt_bits == 0b10){
 					printf("Trough detected");
 				}
 			break;
+			}
 			case(PD_WS_COR):
 				printf("Avg DATA Packet, received %0xd\n\r", recievedPacket);
 				avg_window_size = recievedPacket & 0x3F;
