@@ -18,11 +18,14 @@ entity AspAdc is
 			adc_data_ready      : out std_logic;
 			
 			send : out tdma_min_port;
-			recv : in tdma_min_port
+			recv : in tdma_min_port;
+			
+			segOut : out std_logic_vector(6 downto 0)
     );
 end entity AspAdc;
 
 architecture behaviour of AspAdc is
+	signal bit_width_out : std_logic_vector(1 downto 0);
 
     COMPONENT altsyncram
 	GENERIC (
@@ -52,9 +55,9 @@ architecture behaviour of AspAdc is
     signal data                 : std_logic_vector(11 downto 0) := (others => '0');
     signal sampling_counter     : std_logic_vector(31 downto 0) := (others => '0');
     signal clock_a              : std_logic := '1';
-	signal addr 				: std_logic_vector(3 downto 0) := "0001";
-	signal data_bit 			: std_logic_vector(2 downto 0) := "011";-- (others => '0'); -- 001 = 8bit, 010 = 10bit, 011 = 12bit
-	signal data_request 		: std_logic := '1'; -- initialised as 1
+	 signal addr 				: std_logic_vector(3 downto 0) := "0001";
+	 signal data_bit 			: std_logic_vector(2 downto 0) := "011";-- (others => '0'); -- 001 = 8bit, 010 = 10bit, 011 = 12bit
+	 signal data_request 		: std_logic := '1'; -- initialised as 1
 
 
 begin
@@ -97,39 +100,48 @@ begin
 
 	-- To access ROM and send data
     process(clock, reset)
-	variable data_width :integer;
-	variable data_to_send : std_logic_vector(15 downto 0) := (others => '0');
-    begin 
-        if (reset = '1') then
-        elsif rising_edge(clock) then
-            sampling_counter <= sampling_counter + conv_std_logic_vector(1, 32);
-            if (sampling_counter = conv_std_logic_vector(6249, 32)) then -- sampling rate configurable here
-                sampling_counter <= conv_std_logic_vector(0, 32);
-                rom_address <= rom_address + conv_std_logic_vector(1, 12);
-                if (rom_address = conv_std_logic_vector(1600, 12)) then
-                    rom_address <= conv_std_logic_vector(0, 12);
-                end if;
-				-- once sampling counter has been reached, then send new sample
-				-- check bit width
-				case data_bit is
-					when "001" => data_width := 8;
-					when "010" => data_width := 10;
-					when "100" => data_width := 12;
-					when others =>data_width := 12;
-				end case;
-				data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
-				send.addr <= "0000" & addr;	-- send to next component (port 1)
-				send.data <= "1010100000000000" & data_to_send(15 downto 0); -- send with data head
-				adc_data_ready <= '1';
-			else
-				send.addr <= "0000" & addr;
-					send.data <= (others => '0');
-					adc_data_ready <= '0';
-            end if;
-        end if;
+		 variable data_width :integer;
+		 variable data_to_send : std_logic_vector(15 downto 0) := (others => '0');
+		 begin 
+			  if (reset = '1') then
+			  elsif rising_edge(clock) then
+					sampling_counter <= sampling_counter + conv_std_logic_vector(1, 32);
+					if (sampling_counter = conv_std_logic_vector(6249, 32)) then -- sampling rate configurable here
+						 sampling_counter <= conv_std_logic_vector(0, 32);
+						 rom_address <= rom_address + conv_std_logic_vector(1, 12);
+						 if (rom_address = conv_std_logic_vector(1600, 12)) then
+							  rom_address <= conv_std_logic_vector(0, 12);
+						 end if;
+					-- once sampling counter has been reached, then send new sample
+					-- check bit width
+					case data_bit is
+						when "001" => 
+							data_width := 8;
+							bit_width_out <= "00";
+						when "010" => 
+							data_width := 10;
+							bit_width_out <= "01";
+						when "100" => data_width := 12;
+							bit_width_out <= "10";
+						when others => data_width := 12;
+					end case;
+					data_to_send(data_width - 1 downto 0) := data(data_width-1 downto 0); -- send data received from ROM
+					send.addr <= "0000" & addr;	-- send to next component (port 1)
+					send.data <= "1010100000000000" & data_to_send(15 downto 0); -- send with data head
+					adc_data_ready <= '1';
+				else
+					send.addr <= "0000" & addr;
+						send.data <= (others => '0');
+						adc_data_ready <= '0';
+					end if;
+			  end if;
 
     end process;
 
-	
+	 with bit_width_out select segOut <=
+		"1111001" when "00", --1 bit width 8
+		"0100100" when "01", --2 bit width 10
+		"0110000" when "10", --3 bit width 12
+		"1111111" when others;
    
 end architecture behaviour;

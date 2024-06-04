@@ -80,7 +80,8 @@ begin
 		reset => '0',
 		adc_data_ready => OPEN,
 		send  => send_port(0),
-		recv  => recv_port(0)
+		recv  => recv_port(0),
+		segOut => HEX5
 	);
 
 	asp_avg : entity work.AspAvg
@@ -89,7 +90,7 @@ begin
 		send => send_port(1),
 		recv => recv_port(1),
 		foundConfig => LEDR(1),
-		segOut => HEX5 -- FOR TESTING
+		segOut => HEX4 
 	);
 	
 	asp_cor : entity work.AspCor
@@ -99,14 +100,15 @@ begin
 		recv => recv_port(2),
 		corrVal => open,
 		packFound => LEDR(0),
-		segOut => HEX4 -- FOR TESTING
+		segOut => HEX3
 	);
 	
 	asp_pd : entity work.PD_ASP
 	port map (
 		clk => clock,
 		send => send_port(3),
-		recv => recv_port(3) -- should be 3
+		recv => recv_port(3), -- should be 3
+		segOut => HEX2
 	);
 	
 	-- nios : entity work.nios
@@ -148,8 +150,8 @@ begin
 	port map (
 		dpcr_val => dpcr_test, -- takes output of recop
 		add_in_1 => dpcr_test(30 downto 27), -- identifier in
-		add_out => 	compAddr,	-- address of configured component- for testing
-		dpcr_val_out => send_data,
+		add_out => 	compAddr,	-- address of configured component- for testing (recop send.addr)
+		dpcr_val_out => send_data, -- recop send.data
 		send => send_port(5)	-- send to NOC		
 	);
 	

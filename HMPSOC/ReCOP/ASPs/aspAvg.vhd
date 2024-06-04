@@ -102,8 +102,8 @@ begin
     send.addr <= addr; -- send to autocorrelator in port 2
 	 
 	 with WINDOWSIZE_int select segOut <=
-		"1111001" when 4, --1
-		"0100100" when 8, --2
+		"1111001" when 4,  --1
+		"0100100" when 8,  --2
 		"0110000" when 16, --3
 		"0011001" when 32, --4
 		"0010010" when 64, --5

@@ -22,10 +22,14 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         ADD R5 R1 #2 ;																	18,19
                         LDR R4 R4 ; load top & bottom half of config from DM							20
                         LDR R5 R5 ;																		21
-                        DATACALL R4 R5 ; Send Config to NOC												22
-                        ;AND R4 R4 #32767 ; AND R4 "0111111111111111"                                    23,24                              
-                        ;DATACALL R4 R5 ; Disables tdma_min port, but still shows params                 25
-                        JMP initialise_dc ; restart the proccess										26
+                        DATACALL R4 R5 ; Send Config to NOC                                             22
+                        LDR R6 #49152; check for avg or cor packet and with 11------ 					23,24
+                        SUB R6 #16384; check for avg packet 01                                          25,26
+                        SZ ; send to nios                                                               27,28
+                        SUB R6 #32768; check for cor packet 10                                          29,30
+                        SZ ; send to nios                                                               31,32
+                        JMP initialise_dc ; restart the proccess										33,34
+send_ws_to_nios         LDR                         
 
 ENDPROG
 END

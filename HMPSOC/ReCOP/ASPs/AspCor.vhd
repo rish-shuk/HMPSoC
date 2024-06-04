@@ -132,9 +132,9 @@ begin
 	end process;
 	
 	with correlation_window select segOut <=
-		"1111001" when to_unsigned(4, 7), --1
-		"0100100" when to_unsigned(8, 7), --2
-		"0010000" when to_unsigned(16, 7), --3
+		"1111001" when to_unsigned(4, 7),  --1
+		"0100100" when to_unsigned(8, 7),  --2
+		"0110000" when to_unsigned(16, 7), --3
 		"0011001" when to_unsigned(32, 7), --4
 		"0010010" when to_unsigned(64, 7), --5
 		"1111111" when others;
