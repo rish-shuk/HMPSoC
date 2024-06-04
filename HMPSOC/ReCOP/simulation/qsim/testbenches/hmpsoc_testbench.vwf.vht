@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/04/2024 21:46:19"
+-- Generated on "06/04/2024 23:29:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          hmpsoc_TopLevel
 -- 
@@ -172,7 +172,7 @@ END PROCESS t_prcs_SW_8;
 -- SW[7]
 t_prcs_SW_7: PROCESS
 BEGIN
-	SW(7) <= '0';
+	SW(7) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_7;
 -- SW[6]
@@ -208,13 +208,13 @@ END PROCESS t_prcs_SW_2;
 -- SW[1]
 t_prcs_SW_1: PROCESS
 BEGIN
-	SW(1) <= '1';
+	SW(1) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
-	SW(0) <= '0';
+	SW(0) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_0;
 END hmpsoc_TopLevel_arch;

@@ -9,7 +9,7 @@
 
 
 start                   NOOP ; starting the program                                                     0
-initialise_dc           LDR R1 #1 ; data memory counter                                               1,2
+initialise_dc           LDR R1 #142 ; data memory counter                                               1,2
 load_sw                 LSIP R2   ;                                                                     3                                                                              
                         LDR R3 R1 ; load data memory at dc                                              4
                         SUB R2 R3 ; compare physical switches to data memory switch case                5
@@ -23,17 +23,19 @@ load_config_packet      ADD R4 R1 #1 ; get address of top and bottom half of con
                         LDR R4 R4 ; load top & bottom half of config from DM							20
                         LDR R5 R5 ;																		21
                         DATACALL R4 R5 ; Send Config to NOC                                             22
-                        AND R6 R4 #49152; check for avg or cor packet and with 11------ 			    23,24
-                        SUB R6 #16384; check for avg packet 01                                          25,26
-                        SZ send_avg_ws; send to nios                                                    27,28
-                        SUB R6 #32768; check for cor packet 10                                          29,30
-                        SZ send_cor_ws; send to nios                                                    31,32
-                        JMP initialise_dc ; restart the process										    33,34
-send_avg_ws             LDR R7 #49152;  load 1100000000000000                                           35,36
-                        DATACALL R7 R5; send params to NOC (addr 7)                                     37,38
-                        JMP initialise_dc;                                                              39,40
-send_cor_ws             LDR R7 #49280; load 1100000010000000                                            41,42
-                        DATACALL R7 R5; send params to NOC (addr 7)                                     43,44
-                        JMP initialise_dc;                                                              45,46
+                        AND R6 R2 #768; check for avg or cor SW CONFIG and with 0000011000000000 	    23,24
+                        SUB R6 #768; if peak detector sw (bit 9 = 1, bit 8 = 1)                         25,26
+                        SZ initialise_dc; go back to beginning if found pd sw                           27,28
+                        SUB R6 #256; check for avg packet 0000001000000000                              29,30
+                        SZ send_avg_ws; send to nios                                                    31,32
+                        SUB R6 #512; check for cor packet 0000010000000000                              33,34
+                        SZ send_cor_ws; send to nios                                                    35.36
+                        JMP initialise_dc ; restart the process										    37,38
+send_avg_ws             LDR R7 #49152;  load 1100000000000000                                           39,40
+                        DATACALL R7 R5; send params to NOC (addr 7)                                     41,42
+                        JMP initialise_dc;                                                              43,44
+send_cor_ws             LDR R7 #49280; load 1100000010000000                                            45,46
+                        DATACALL R7 R5; send params to NOC (addr 7)                                     47,48
+                        JMP initialise_dc;                                                              49,50
 ENDPROG
 END

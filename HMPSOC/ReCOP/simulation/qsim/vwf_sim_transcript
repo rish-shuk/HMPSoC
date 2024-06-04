@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 04 21:46:16 2024
+    Info: Processing started: Tue Jun 04 23:29:16 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TopLevel -c TopLevel --vector_source=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/testbenches/hmpsoc_testbench.vwf --testbench_file=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/testbenches/hmpsoc_testbench.vwf.vht
 Warning (20013): Ignored 102 assignments for entity "TopLevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity TopLevel was ignored
@@ -159,7 +159,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 04 21:46:19 2024
+    Info: Processing started: Tue Jun 04 23:29:19 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/ TopLevel -c TopLevel
 Warning (20013): Ignored 102 assignments for entity "TopLevel" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity TopLevel was ignored
@@ -272,8 +272,8 @@ rface:\interfaces:4:interface|TdmaMinFifo:fifo|scfifo:scfifo_component|scfifo_l1
 Info (204019): Generated file TopLevel.vho in folder "C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 104 warnings
     Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Tue Jun 04 21:46:23 2024
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Tue Jun 04 23:29:24 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
@@ -296,12 +296,12 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # do TopLevel.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:46:24 on Jun 04,2024
-
+# Start time: 23:29:25 on Jun 04,2024
 # vcom -work work TopLevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
 # -- Loading package dffeas_pack
@@ -313,24 +313,23 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Compiling architecture structure of hmpsoc_TopLevel
 
 # -- Loading package STANDARD
-# End time: 21:46:27 on Jun 04,2024, Elapsed time: 0:00:03
+# End time: 23:29:29 on Jun 04,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:46:27 on Jun 04,2024
+# Start time: 23:29:29 on Jun 04,2024
 # vcom -work work testbenches/hmpsoc_testbench.vwf.vht 
 # -- Loading package STANDARD
 
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity hmpsoc_TopLevel_vhd_vec_tst
-
 # -- Compiling architecture hmpsoc_TopLevel_arch of hmpsoc_TopLevel_vhd_vec_tst
-# End time: 21:46:28 on Jun 04,2024, Elapsed time: 0:00:01
+
+# End time: 23:29:29 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.hmpsoc_toplevel_vhd_vec_tst 
-# Start time: 21:46:28 on Jun 04,2024
+# Start time: 23:29:30 on Jun 04,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -483,6 +482,7 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 #    Time: 0 ps  Iteration: 0  Protected: /hmpsoc_toplevel_vhd_vec_tst/i1/\asp_cor|Mult31~mac\/inst/ File: nofile
 # ** Warning: Design size of 2065656 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+
 # after#37
 
 # Simulation time: 0 ps
@@ -501,69 +501,85 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 0 ps
+# Simulation time: 70000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 870000 ps
+# Simulation time: 760000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 1740000 ps
+# Simulation time: 1450000 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
 
-# Simulation time: 2620000 ps
+# Simulation time: 2120001 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
+
+# Simulation time: 2790000 ps
 
 # Simulation time: 3450000 ps
 
@@ -579,25 +595,29 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Simulation time: 3450000 ps
 
-# Simulation time: 3450000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4130001 ps
 
-# Simulation time: 4110000 ps
+# Simulation time: 4780000 ps
 
-# End time: 21:48:58 on Jun 04,2024, Elapsed time: 0:02:30
+# Simulation time: 4780000 ps
+
+# Simulation time: 4780000 ps
+
+# End time: 23:32:22 on Jun 04,2024, Elapsed time: 0:02:52
 # Errors: 0, Warnings: 63
 
 Completed successfully. 
@@ -642,7 +662,7 @@ Warning: dmout[1] - signal not found in VCD.
 
 Warning: dmout[0] - signal not found in VCD.
 
-Writing the resulting VWF to C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/TopLevel_20240604214858.sim.vwf
+Writing the resulting VWF to C:/Users/ianku/Documents/github/HMPSoC/HMPSOC/ReCOP/simulation/qsim/TopLevel_20240604233222.sim.vwf
 
 Finished VCD to VWF conversion.
 

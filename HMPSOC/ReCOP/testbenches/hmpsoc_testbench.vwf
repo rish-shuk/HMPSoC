@@ -22,6 +22,8 @@ run -all
 quit -f
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -40,6 +42,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 </modelsim_script_timing>
@@ -2875,7 +2879,7 @@ TRANSITION_LIST("SW[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
 	}
 }
 
@@ -2929,7 +2933,7 @@ TRANSITION_LIST("SW[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
 	}
 }
 
@@ -2938,7 +2942,7 @@ TRANSITION_LIST("SW[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
 	}
 }
 

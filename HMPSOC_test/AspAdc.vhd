@@ -61,7 +61,7 @@ architecture behaviour of AspAdc is
 
 
 begin
-    clock_a <= clock;
+re    clock_a <= clock;
 
     altsyncram_component : altsyncram
 	GENERIC MAP (
